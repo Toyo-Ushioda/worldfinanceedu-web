@@ -151,10 +151,26 @@
 
   /* ===== FOUNDER ===== */
   .founder-section { background: var(--paper); }
+  .founder-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .founder-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--line);
+    background: var(--mint-wash);
+  }
+  .founder-header-text { flex: 1; }
   .founder-name {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: -0.015em;
     color: var(--ink);
     margin-bottom: 4px;
@@ -190,6 +206,25 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--soft-ink);
+  }
+
+  /* ===== SERVICE CARD PHOTO ===== */
+  .service-photo {
+    margin: -28px -24px 24px -24px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+  }
+  .service-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14,26,20,0) 50%, rgba(14,26,20,0.22) 100%);
+    border-radius: 6px 6px 0 0;
+    pointer-events: none;
   }
 
   /* ===== SERVICES ===== */
@@ -415,8 +450,13 @@
 <!-- FOUNDER -->
 <section class="founder-section">
   <div class="eyebrow">The person behind WFE</div>
-  <div class="founder-name">Toyo <em>Ushioda</em></div>
-  <div class="founder-role">Founder · CPA · INSEAD GEMBA</div>
+  <div class="founder-header">
+    <img class="founder-photo" src="/img/photo1.jpg" alt="Toyo Ushioda" />
+    <div class="founder-header-text">
+      <div class="founder-name">Toyo <em>Ushioda</em></div>
+      <div class="founder-role">Founder · CPA · INSEAD GEMBA</div>
+    </div>
+  </div>
   <div class="founder-bio">
     <p>
       Toyo brings <strong>20+ years in financial and operational management</strong>, most recently as <strong>Global Head of FP&amp;A at a US$125B asset management firm</strong> covering Real Estate, Private Equity and Venture Capital strategies.
@@ -444,6 +484,7 @@
 
   <!-- Education -->
   <div class="service-card edu">
+    <div class="service-photo" style="background-image: url('/img/photo3.jpg');"></div>
     <div class="service-num">01</div>
     <div class="service-title">Finance Education</div>
     <p class="service-desc">Programmes that build practical fluency in financial modelling, valuation, and business communication — for individuals and corporate finance teams.</p>
@@ -461,6 +502,7 @@
 
   <!-- Fractional CFO -->
   <div class="service-card cfo">
+    <div class="service-photo" style="background-image: url('/img/photo7.jpg');"></div>
     <div class="service-num">02</div>
     <div class="service-title">Fractional CFO</div>
     <p class="service-desc">Senior finance capability for companies that need model build, projections, fundraising preparation, or finance team setup — without a full-time CFO.</p>
@@ -477,6 +519,7 @@
 
   <!-- Investment -->
   <div class="service-card inv">
+    <div class="service-photo" style="background-image: url('/img/photo4.jpg');"></div>
     <div class="service-num">03</div>
     <div class="service-title">Investment</div>
     <p class="service-desc">WFE invests its own capital directly into early-stage startups at pre-seed and seed stage. 10+ direct investments and stakes in 2 VC funds covering 40+ startups.</p>
