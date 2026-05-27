@@ -4,16 +4,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>World Finance Edu</title>
+<meta name="description" content="World Finance Edu — corporate finance education, fractional CFO services, and early-stage investment. Based in Singapore." />
+<meta property="og:title" content="World Finance Edu" />
+<meta property="og:description" content="Finance expertise built from the inside. Corporate finance education, fractional CFO services, and early-stage investment." />
+<meta property="og:url" content="https://worldfinanceedu.com" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="World Finance Edu" />
+<meta name="twitter:description" content="Finance expertise built from the inside. Corporate finance education, fractional CFO services, and early-stage investment." />
 <script>
-  // Redirect mobile users to the mobile-optimised page
-  if (window.innerWidth < 768) {
-    window.location.replace('/mobile.html');
-  } else {
-    window.location.replace('/deck.html');
-  }
+  var ua = navigator.userAgent || '';
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile/i.test(ua)
+                 || window.innerWidth < 768;
+  window.location.replace(isMobile ? '/mobile.html' : '/deck.html');
 </script>
 <noscript>
-  <meta http-equiv="refresh" content="0;url=/deck.html" />
+  <meta http-equiv="refresh" content="0;url=/mobile.html" />
 </noscript>
 </head>
 <body></body>
