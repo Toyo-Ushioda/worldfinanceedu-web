@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) — shared WFE GA4 property (WFE NEW). Filter by Hostname contains "gyoseki". -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>AI時代の、ファイナンス・キャリア再設計 | 企業価値の「測り方」と「つくり方」| GYOSEKI × World Finance Edu</title>
+<meta name="description" content="元ニューヨークのヘッジファンド運用者 × 元シンガポール本社・不動産プライベートエクイティのグローバル経営企画責任者。2人から直接学ぶ、企業価値の「測り方」と「つくり方」。AI時代のファイナンス・キャリアに残る「判断の技術」を3〜3.5時間に凝縮。オンライン講座としてUdemyで配信。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI時代の、ファイナンス・キャリア再設計">
+<meta property="og:description" content="元ニューヨークのヘッジファンド運用者 × 元シンガポール本社・不動産プライベートエクイティのグローバル経営企画責任者。2人から直接学ぶ、企業価値の「測り方」と「つくり方」。GYOSEKI × World Finance Edu 共同制作(Udemy)。">
+<meta property="og:site_name" content="GYOSEKI × World Finance Edu">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230F1526'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%232E5BFF'%3EG%3C/text%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23FFFFFF' opacity='0.9' dx='-14'%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --ink:        #0F1526;
+  --ink-2:      #171F38;
+  --ink-3:      #202A4A;
+  --bg:         #F6F7F9;
+  --white:      #FFFFFF;
+  --accent:     #2E5BFF;
+  --accent-dk:  #1F43C9;
+  --accent-lt:  #86A2FF;
+  --grey:       #4A5060;
+  --grey-soft:  #8A90A2;
+  --line:       #E3E6EC;
+  --line-dark:  rgba(255,255,255,0.13);
+  --inv-green:  #1F7A55;
+  --corp-blue:  #2C4BA3;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Noto Sans JP', 'Yu Gothic UI', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 2;
+  font-size: 15.5px;
+  overflow-x: hidden;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
+
+/* ── reveal animation ── */
+.rv { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rv { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── section furniture ── */
+.sec-head { margin-bottom: 52px; }
+.sec-no {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; letter-spacing: 4px; font-weight: 700; color: var(--accent);
+  display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+}
+.sec-no::after { content:""; height:1px; width:56px; background: var(--accent); opacity: 0.5; }
+.dark .sec-no { color: var(--accent-lt); }
+.dark .sec-no::after { background: var(--accent-lt); }
+.sec-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 33px; font-weight: 900; line-height: 1.7; letter-spacing: 0.01em;
+}
+.dark .sec-title { color: var(--white); }
+.sec-lead { margin-top: 20px; max-width: 640px; color: var(--grey); }
+.dark .sec-lead { color: #AEB6CC; }
+
+/* ═══════ header ═══════ */
+header {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(246,247,249,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1120px; margin: 0 auto; padding: 15px 28px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px; font-weight: 700; letter-spacing: 0.5px;
+}
+.brand .x { color: var(--accent); padding: 0 6px; }
+.header-cta {
+  font-size: 13px; font-weight: 700; letter-spacing: 1px;
+  color: var(--white); background: var(--ink);
+  text-decoration: none; padding: 10px 26px; border-radius: 4px;
+  transition: background 0.2s;
+}
+.header-cta:hover { background: var(--accent); }
+
+/* ═══════ hero ═══════ */
+.hero {
+  background: var(--ink); color: var(--white);
+  position: relative; overflow: hidden;
+  padding: 110px 0 96px;
+}
+.hero::after {
+  content: "";
+  position: absolute; right: -140px; top: -140px;
+  width: 560px; height: 560px; border-radius: 50%;
+  border: 1px solid rgba(46,91,255,0.4);
+}
+.hero::before {
+  content: "";
+  position: absolute; right: -50px; top: -50px;
+  width: 380px; height: 380px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.hero .container { position: relative; }
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; letter-spacing: 3px; font-weight: 600;
+  color: #9AA3BC; margin-bottom: 44px;
+}
+.hero-kicker .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.hero h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900; font-size: 46px; line-height: 1.8; letter-spacing: 0.01em;
+}
+.hero h1 .thin { color: #7C86A4; }
+.hero h1 .acc { color: var(--accent-lt); }
+.hero-deck {
+  margin-top: 28px; max-width: 720px;
+  font-size: 19px; font-weight: 700; line-height: 2; color: #DDE2EF;
+  padding-left: 20px; border-left: 3px solid var(--accent);
+}
+.hero-deck .acc { color: var(--accent-lt); }
+.hero-deck .q { color: var(--white); }
+@media (max-width: 860px) { .hero-deck { font-size: 16px; } .hero-deck .deck-br { display: none; } }
+.hero-sub {
+  margin-top: 30px; max-width: 620px;
+  color: #99A2BB; font-size: 14.5px; line-height: 2.1;
+}
+.hero-cta-row { margin-top: 46px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.btn-main {
+  display: inline-block; background: var(--accent); color: var(--white);
+  font-size: 15.5px; font-weight: 700; letter-spacing: 1.5px;
+  padding: 17px 52px; border-radius: 6px; text-decoration: none;
+  box-shadow: 0 8px 28px rgba(46,91,255,0.35);
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-main:hover { background: var(--accent-dk); transform: translateY(-2px); }
+.cta-note { font-size: 12.5px; color: #8A93AE; line-height: 1.8; }
+.hero-meta {
+  max-width: 1120px; margin: 76px auto 0; padding: 0 28px;
+  display: flex; border-top: 1px solid var(--line-dark);
+  position: relative;
+}
+.hero-meta div {
+  flex: 1; padding: 22px 24px 0 8px; margin-right: 24px;
+  font-size: 12.5px; color: #8A93AE;
+  border-right: 1px solid var(--line-dark);
+  letter-spacing: 0.3px; line-height: 1.9;
+}
+.hero-meta div:last-child { border-right: none; margin-right: 0; }
+.hero-meta b { display: block; color: var(--white); font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+
+/* ═══════ 01 ladder ═══════ */
+.ladder { padding: 110px 0; }
+.ladder-body { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; }
+.ladder-text p { margin-bottom: 26px; color: var(--grey); }
+.ladder-text p b { color: var(--ink); font-weight: 700; }
+.ladder-pull {
+  font-size: 20px; line-height: 2; font-weight: 900; color: var(--ink);
+  border-left: 3px solid var(--accent); padding: 6px 0 6px 26px;
+  margin-top: 38px;
+}
+.ladder-visual { position: sticky; top: 110px; }
+.step-box {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 8px; padding: 30px 32px;
+  box-shadow: 0 2px 12px rgba(15,21,38,0.04);
+}
+.step-box + .step-box { margin-top: 14px; }
+.step-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; letter-spacing: 2.5px; color: var(--grey-soft); font-weight: 700; margin-bottom: 14px;
+}
+.step-line { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; padding: 9px 2px; border-bottom: 1px dashed var(--line); }
+.step-line:last-child { border-bottom: none; }
+.step-tag { flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 2px 10px; border-radius: 3px; }
+.t-ai { background: #EDEFF4; color: var(--grey-soft); }
+.t-you { background: #E1E9FF; color: var(--accent-dk); }
+.gone { color: var(--grey-soft); text-decoration: line-through; text-decoration-color: rgba(46,91,255,0.5); text-decoration-thickness: 1.5px; }
+
+/* ═══════ 02 concept ═══════ */
+.concept { background: var(--ink); color: var(--white); padding: 110px 0 120px; position: relative; overflow: hidden; }
+.concept-stage {
+  margin-top: 10px;
+  background: var(--ink-2); border: 1px solid var(--line-dark);
+  padding: 44px 48px; border-radius: 10px;
+}
+.stage-title { font-size: 24px; font-weight: 900; letter-spacing: 0.03em; margin-bottom: 6px; }
+.stage-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; color: #8A93AE; letter-spacing: 2px; font-weight: 600; margin-bottom: 26px;
+}
+.stage-facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.fact {
+  font-size: 12.5px; letter-spacing: 0.5px; color: #BCC3D8;
+  border: 1px solid var(--line-dark); padding: 6px 16px; border-radius: 20px;
+}
+.stage-you {
+  margin-top: 30px; padding-top: 26px; border-top: 1px dashed var(--line-dark);
+  font-size: 16.5px; font-weight: 700; line-height: 2.1; color: #E6E9F2;
+}
+.lens-wrap { margin-top: 64px; display: grid; grid-template-columns: 1fr 90px 1fr; align-items: stretch; }
+.lens {
+  padding: 40px 38px; border: 1px solid var(--line-dark); border-radius: 10px;
+  background: linear-gradient(170deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+}
+.lens-verb {
+  display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px;
+  padding: 5px 14px; border-radius: 3px; margin-bottom: 16px;
+}
+.lens-inv .lens-verb { background: rgba(111,207,163,0.14); color: #6FCFA3; }
+.lens-corp .lens-verb { background: rgba(143,169,245,0.14); color: #8FA9F5; }
+.lens-eye { font-size: 23px; font-weight: 900; letter-spacing: 0.05em; margin-bottom: 4px; }
+.lens-by {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; letter-spacing: 2.5px; margin-bottom: 26px; font-weight: 700;
+}
+.lens-inv .lens-by { color: #6FCFA3; }
+.lens-corp .lens-by { color: #8FA9F5; }
+.lens ul { list-style: none; }
+.lens li {
+  font-size: 14px; color: #BCC3D8; line-height: 1.9;
+  padding: 10px 0 10px 20px; position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.lens li:last-child { border-bottom: none; }
+.lens li::before { content: ""; position: absolute; left: 0; top: 20px; width: 8px; height: 2px; background: var(--accent-lt); }
+.lens-vs {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 800; color: var(--accent-lt);
+}
+.concept-close {
+  margin-top: 60px; text-align: center;
+  font-size: 21px; font-weight: 900; line-height: 2.1; letter-spacing: 0.02em;
+}
+.concept-close .acc { color: var(--accent-lt); }
+
+/* ═══════ 03 dialogue ═══════ */
+.dialogue { padding: 110px 0; background: #EDEFF3; }
+.script {
+  max-width: 760px; margin: 0 auto;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 52px 56px 44px; position: relative;
+  box-shadow: 0 4px 24px rgba(15,21,38,0.06);
+}
+.script::before {
+  content: "MODULE 3 PREVIEW"; position: absolute; top: -13px; left: 40px;
+  font-family: 'Inter', sans-serif;
+  background: var(--ink); color: var(--white); border-radius: 3px;
+  font-size: 11px; letter-spacing: 3px; font-weight: 700; padding: 4px 18px;
+}
+.line { display: grid; grid-template-columns: 86px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px dashed var(--line); }
+.line:last-of-type { border-bottom: none; }
+.speaker { font-size: 12px; font-weight: 900; letter-spacing: 2px; padding-top: 8px; }
+.sp-inv { color: var(--inv-green); }
+.sp-corp { color: var(--corp-blue); }
+.words { font-size: 15.5px; line-height: 2.1; color: var(--ink); font-weight: 500; }
+.script-q { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--line); text-align: center; }
+.script-q .q1 { font-size: 19px; font-weight: 900; line-height: 2; }
+.script-q .q2 { font-size: 14px; color: var(--grey); margin-top: 12px; }
+.script-q .q2 b { color: var(--accent-dk); }
+
+/* ═══════ 04 curriculum ═══════ */
+.curr { padding: 110px 0; }
+.mod-list { border-top: 2px solid var(--ink); }
+.mod {
+  display: grid; grid-template-columns: 120px 1fr 130px; gap: 32px;
+  padding: 34px 6px; border-bottom: 1px solid var(--line); align-items: start;
+}
+.mod-no {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; letter-spacing: 2px; font-weight: 700; color: var(--grey-soft); padding-top: 4px;
+}
+.mod-no b { display: block; font-size: 30px; color: var(--ink); font-weight: 800; line-height: 1.3; }
+.mod h3 { font-size: 19px; font-weight: 900; margin-bottom: 10px; letter-spacing: 0.01em; }
+.mod p { font-size: 14px; color: var(--grey); line-height: 2; }
+.mod-who { text-align: right; padding-top: 6px; }
+.who-tag {
+  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+  padding: 5px 14px; border-radius: 3px;
+}
+.w-corp { background: #E4EAF8; color: var(--corp-blue); }
+.w-inv { background: #E0F0E8; color: var(--inv-green); }
+.w-joint { background: #E1E9FF; color: var(--accent-dk); }
+.curr-note { margin-top: 20px; font-size: 12.5px; color: var(--grey-soft); text-align: right; }
+
+/* ═══════ 05 instructors ═══════ */
+.inst { background: var(--ink); color: var(--white); padding: 110px 0; }
+.inst-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 10px; }
+.inst-card {
+  background: var(--ink-2); border: 1px solid var(--line-dark);
+  padding: 44px 40px; border-radius: 10px;
+}
+.inst-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; letter-spacing: 3px; font-weight: 700; margin-bottom: 20px;
+}
+.inst-card.corp .inst-role { color: #8FA9F5; }
+.inst-card.inv .inst-role { color: #6FCFA3; }
+.inst-name { font-size: 26px; font-weight: 900; letter-spacing: 0.06em; }
+.inst-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px; color: #8A93AE; letter-spacing: 2.5px; font-weight: 600; margin: 4px 0 8px;
+}
+.inst-title { font-size: 13.5px; color: #BCC3D8; font-weight: 700; margin-bottom: 24px; line-height: 1.9; }
+.inst-card ul { list-style: none; }
+.inst-card li {
+  font-size: 13.5px; color: #AEB6CC; line-height: 1.95;
+  padding: 9px 0 9px 18px; position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.inst-card li:last-child { border-bottom: none; }
+.inst-card li::before { content: ""; position: absolute; left: 0; top: 19px; width: 8px; height: 2px; background: var(--accent-lt); }
+.inst-card li b { color: var(--white); }
+.inst-stats {
+  margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line-dark);
+}
+.inst-stat { padding: 34px 20px 0; text-align: center; border-right: 1px solid var(--line-dark); }
+.inst-stat:last-child { border-right: none; }
+.inst-stat .num {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px; font-weight: 800; color: var(--white); line-height: 1.3; letter-spacing: -0.5px;
+}
+.inst-stat .num small { font-size: 19px; font-weight: 700; }
+.inst-stat .lab { font-size: 12.5px; color: #8A93AE; letter-spacing: 0.5px; margin-top: 6px; }
+
+/* ═══════ 06 gains ═══════ */
+.gains { padding: 110px 0; }
+.gain-list { border-top: 2px solid var(--ink); }
+.gain {
+  display: grid; grid-template-columns: 64px 1fr; gap: 30px;
+  padding: 32px 6px; border-bottom: 1px solid var(--line); align-items: baseline;
+}
+.gain-no {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px; color: var(--accent); font-weight: 800; letter-spacing: 1px;
+}
+.gain h3 { font-size: 18px; font-weight: 900; margin-bottom: 8px; }
+.gain p { font-size: 14px; color: var(--grey); max-width: 680px; }
+
+/* ═══════ 07 audience ═══════ */
+.aud { padding: 0 0 110px; }
+.aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.aud-box { padding: 40px 38px; border-radius: 10px; }
+.aud-yes { background: var(--ink); color: var(--white); }
+.aud-no { background: var(--white); border: 1px solid var(--line); }
+.aud-box h3 { font-size: 18px; font-weight: 900; margin-bottom: 22px; }
+.aud-box ul { list-style: none; }
+.aud-box li { font-size: 14px; line-height: 1.9; padding: 10px 0 10px 26px; position: relative; }
+.aud-yes li { border-bottom: 1px solid rgba(255,255,255,0.09); color: #BCC3D8; }
+.aud-yes li:last-child { border-bottom: none; }
+.aud-yes li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-lt); font-weight: 800; }
+.aud-no li { border-bottom: 1px dashed var(--line); color: var(--grey); }
+.aud-no li:last-child { border-bottom: none; }
+.aud-no li::before { content: "△"; position: absolute; left: 0; color: var(--grey-soft); }
+
+/* ═══════ 08 faq ═══════ */
+.faq { padding: 0 0 110px; }
+.faq-list { max-width: 760px; }
+details { border-bottom: 1px solid var(--line); }
+details:first-of-type { border-top: 2px solid var(--ink); }
+summary {
+  cursor: pointer; list-style: none;
+  font-size: 16px; font-weight: 700; letter-spacing: 0.01em;
+  padding: 24px 48px 24px 2px; position: relative;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400; color: var(--accent);
+}
+details[open] summary::after { content: "−"; }
+details .a { padding: 0 2px 28px; font-size: 14px; color: var(--grey); max-width: 660px; }
+
+/* ═══════ final ═══════ */
+.final {
+  background: var(--ink); color: var(--white);
+  padding: 130px 0; text-align: center; position: relative; overflow: hidden;
+}
+.final::before {
+  content: ""; position: absolute; left: 50%; top: -180px; transform: translateX(-50%);
+  width: 640px; height: 640px; border-radius: 50%;
+  border: 1px solid rgba(46,91,255,0.3);
+}
+.final h2 {
+  font-size: 36px; font-weight: 900; line-height: 2; letter-spacing: 0.02em;
+  position: relative;
+}
+.final h2 .acc { color: var(--accent-lt); }
+.final p { margin: 26px auto 46px; color: #AEB6CC; max-width: 560px; position: relative; }
+.final .cta-note { display: block; margin-top: 20px; }
+
+footer {
+  background: #0A0F1D; color: #6E7690;
+  padding: 30px 0; text-align: center; font-size: 12px; letter-spacing: 1px;
+}
+footer .fb { font-family: 'Inter', sans-serif; color: #9AA3BC; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+footer .fb .x { color: var(--accent-lt); padding: 0 5px; }
+
+@media (max-width: 860px) {
+  body { font-size: 15px; }
+  .hero { padding: 80px 0 70px; }
+  .hero h1 { font-size: 30px; }
+  .hero-meta { flex-direction: column; }
+  .hero-meta div { border-right: none; margin-right: 0; padding: 16px 0 0; }
+  .sec-title { font-size: 25px; }
+  .ladder-body, .inst-grid, .aud-grid { grid-template-columns: 1fr; gap: 40px; }
+  .lens-wrap { grid-template-columns: 1fr; }
+  .lens-vs { padding: 20px 0; }
+  .mod { grid-template-columns: 1fr; gap: 10px; }
+  .mod-who { text-align: left; }
+  .script { padding: 44px 26px 36px; }
+  .line { grid-template-columns: 1fr; gap: 4px; }
+  .inst-stats { grid-template-columns: 1fr; }
+  .inst-stat { border-right: none; border-bottom: 1px solid var(--line-dark); padding-bottom: 28px; }
+  .final h2 { font-size: 25px; }
+  .ladder, .concept, .dialogue, .curr, .inst, .gains { padding: 72px 0; }
+}
+
+/* ═══════ waitlist modal ═══════ */
+.wl-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(9,13,26,0.72); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; opacity: 0; visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.wl-overlay.open { opacity: 1; visibility: visible; }
+.wl-card {
+  background: var(--white); border-radius: 14px;
+  width: 100%; max-width: 460px; position: relative;
+  padding: 46px 44px 38px;
+  box-shadow: 0 30px 80px rgba(9,13,26,0.5);
+  transform: translateY(16px) scale(0.98); transition: transform 0.28s ease;
+  max-height: 92vh; overflow-y: auto;
+}
+.wl-overlay.open .wl-card { transform: none; }
+.wl-close {
+  position: absolute; top: 16px; right: 18px;
+  background: none; border: none; cursor: pointer;
+  font-size: 26px; line-height: 1; color: var(--grey-soft);
+  width: 34px; height: 34px; border-radius: 6px; transition: background 0.15s, color 0.15s;
+}
+.wl-close:hover { background: #EDEFF4; color: var(--ink); }
+.wl-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px; letter-spacing: 2.5px; font-weight: 700; color: var(--accent);
+  margin-bottom: 12px;
+}
+.wl-title { font-size: 22px; font-weight: 900; line-height: 1.6; letter-spacing: 0.01em; color: var(--ink); }
+.wl-lead { margin-top: 12px; font-size: 13.5px; line-height: 1.9; color: var(--grey); }
+.wl-label {
+  display: block; margin-top: 22px; margin-bottom: 8px;
+  font-size: 12.5px; font-weight: 700; color: var(--ink);
+}
+.wl-label span { font-size: 10.5px; font-weight: 700; margin-left: 8px; padding: 2px 8px; border-radius: 3px; }
+.wl-label span { background: #E1E9FF; color: var(--accent-dk); }
+.wl-label:has(+ #wlName) span, .wl-label[for="wlName"] span { background: #EDEFF4; color: var(--grey-soft); }
+.wl-input {
+  width: 100%; font-size: 15px; font-family: inherit;
+  padding: 13px 15px; border: 1px solid var(--line); border-radius: 7px;
+  color: var(--ink); background: var(--bg); transition: border-color 0.15s, box-shadow 0.15s;
+}
+.wl-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,91,255,0.12); background: var(--white); }
+.wl-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.wl-err { margin-top: 14px; font-size: 12.5px; color: #C0392B; min-height: 0; }
+.wl-err:empty { margin-top: 0; }
+.wl-submit {
+  width: 100%; margin-top: 24px; cursor: pointer;
+  background: var(--accent); color: var(--white); border: none;
+  font-size: 15px; font-weight: 700; letter-spacing: 0.5px; font-family: inherit;
+  padding: 15px 20px; border-radius: 7px;
+  box-shadow: 0 8px 24px rgba(46,91,255,0.3); transition: background 0.2s, transform 0.15s;
+}
+.wl-submit:hover { background: var(--accent-dk); transform: translateY(-1px); }
+.wl-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+.wl-fine { margin-top: 16px; font-size: 11.5px; line-height: 1.7; color: var(--grey-soft); text-align: center; }
+.wl-done { text-align: center; padding: 8px 0; }
+.wl-check {
+  width: 58px; height: 58px; margin: 0 auto 20px;
+  border-radius: 50%; background: #E0F0E8; color: var(--inv-green);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; font-weight: 800;
+}
+.wl-done .wl-lead { max-width: 340px; margin-left: auto; margin-right: auto; }
+.wl-done .wl-submit { max-width: 200px; margin-left: auto; margin-right: auto; }
+@media (max-width: 480px) { .wl-card { padding: 40px 26px 30px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">GYOSEKI<span class="x">×</span>World Finance Edu</div>
+    <a class="header-cta" href="#cta" data-waitlist>先行案内を受け取る</a>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-kicker"><span class="dot"></span>GYOSEKI × WORLD FINANCE EDU JOINT PROGRAM ON UDEMY</div>
+    <h1 class="rv">
+      AI時代の、<br>
+      ファイナンス・<wbr>キャリア<span class="acc">再設計</span>
+    </h1>
+    <p class="hero-deck rv">
+      元ニューヨークのヘッジファンド運用者 <span class="acc">×</span><br class="deck-br">
+      元シンガポール本社・不動産プライベートエクイティのグローバル経営企画責任者。<br>
+      2人から直接学ぶ、企業価値の<span class="q">「測り方」</span>と<span class="q">「つくり方」</span>
+    </p>
+    <p class="hero-sub rv">
+      数字を「作る」仕事は、AIへ。数字で「決める」仕事を、あなたへ。
+      同じ決算書を正反対の側から読む2人の実務家が、AI時代のキャリアに残る「判断の技術」だけを3〜3.5時間に絞り込みました。
+      教科書の要約ではありません。現場で今日使われている思考をそのまま渡します。
+    </p>
+    <div class="hero-cta-row rv">
+      <a class="btn-main" href="#cta" data-waitlist>開講の先行案内を受け取る</a>
+      <span class="cta-note">メールアドレスのみで登録完了。<br>開講が決まり次第、最初にご案内します。</span>
+    </div>
+  </div>
+  <div class="hero-meta rv">
+    <div><b>3〜3.5時間</b>のオンライン講座。Udemyで配信、通勤時間で1本ずつ進められる</div>
+    <div><b>1つの架空企業</b>を全編で追う。上場不動産会社のリアルな決算書</div>
+    <div><b>現役の実務家</b>が講師。ニューヨークの運用とシンガポール本社の経営の現場から</div>
+  </div>
+</section>
+
+<!-- ═══════════════ 01 LADDER ═══════════════ -->
+<section class="ladder">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">01 / WHY NOW</div>
+      <h2 class="sec-title">下積みで学ぶ時代は、<br>静かに終わりました。</h2>
+    </div>
+    <div class="ladder-body">
+      <div class="ladder-text rv">
+        <p>
+          これまで若手は、データ集計、資料作成、数字合わせといった「作業」を通じて、
+          少しずつ数字の感覚を身につけてきました。10年かけて階段を上れば、
+          いつか判断する側に回れる。それがファイナンス・キャリアの前提でした。
+        </p>
+        <p>
+          その作業を、いまAIが数分でこなします。<b>作業が消えるとは、楽になることではありません。
+          判断力を育ててきた「経験の階段」ごと消える</b>ということです。
+          実際に、ジュニア層の採用を絞る動きは金融の現場ですでに始まっています。
+        </p>
+        <p>
+          では、階段が消えた時代に、判断力はどこで身につけるのか。
+          答えは一つしかありません。<b>いま現場で判断している人間から、直接受け取る</b>ことです。
+          理論の網羅ではなく、判断の現物を。
+        </p>
+        <p class="ladder-pull">
+          これから価値が下がるのは、数字を作る人。<br>
+          上がるのは、数字で決められる人。
+        </p>
+      </div>
+      <div class="ladder-visual rv">
+        <div class="step-box">
+          <div class="step-label">これまでの若手の仕事</div>
+          <div class="step-line"><span class="gone">データ集計・レポート作成</span><span class="step-tag t-ai">AIへ</span></div>
+          <div class="step-line"><span class="gone">予実の数字合わせ</span><span class="step-tag t-ai">AIへ</span></div>
+          <div class="step-line"><span class="gone">会議資料のドラフト</span><span class="step-tag t-ai">AIへ</span></div>
+        </div>
+        <div class="step-box">
+          <div class="step-label">これからも残る仕事</div>
+          <div class="step-line"><span>数字の意味を事業の言葉に翻訳する</span><span class="step-tag t-you">人間</span></div>
+          <div class="step-line"><span>投資するか、撤退するかを判断する</span><span class="step-tag t-you">人間</span></div>
+          <div class="step-line"><span>投資家・経営者と対話し、信頼を得る</span><span class="step-tag t-you">人間</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 02 CONCEPT ═══════════════ -->
+<section class="concept dark">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">02 / THE PROGRAM</div>
+      <h2 class="sec-title">企業価値を、<br>測る側と、つくる側から見る。</h2>
+      <p class="sec-lead">
+        このコースの仕掛けはシンプルです。舞台となる会社を一社だけ用意し、
+        全モジュールを通してその会社の数字を、投資家と経営者の両側から追いかけます。
+      </p>
+    </div>
+
+    <div class="concept-stage rv">
+      <div class="stage-title">Wリアルエステート株式会社</div>
+      <div class="stage-sub">CASE COMPANY(架空)</div>
+      <div class="stage-facts">
+        <span class="fact">上場不動産会社</span>
+        <span class="fact">総資産 2,000億円超</span>
+        <span class="fact">営業利益率 約40%</span>
+        <span class="fact">それなのに ROE 1%台</span>
+        <span class="fact">実際の決算短信・アニュアルレポートと同じ形式</span>
+      </div>
+      <p class="stage-you">
+        高い利益率なのに、資本効率は低い。この会社は「良い会社」でしょうか。<br>
+        あなたの最初の仕事は、この会社の決算書を読むことです。
+      </p>
+    </div>
+
+    <div class="lens-wrap rv">
+      <div class="lens lens-inv">
+        <div class="lens-verb">企業価値の「測り方」</div>
+        <div class="lens-eye">投資家の眼</div>
+        <div class="lens-by">INVESTOR LENS / GYOSEKI</div>
+        <ul>
+          <li>投資とは何か。リスクとリターンの本当の関係</li>
+          <li>株式・債券・オルタナティブ。資産クラスと市場のプレイヤー</li>
+          <li>PER・PBR・EV / EBITDA。市場は会社にいくらの値段を付けるか</li>
+          <li>業績予想とコンセンサス。市場の「期待」をどう読むか</li>
+          <li>同業他社とのKPI比較で、割安か割高かを判断する</li>
+          <li>開示資料と決算説明会から、投資判断の材料を引き出す</li>
+          <li>結論を出す。ロングか、ショートか</li>
+        </ul>
+      </div>
+      <div class="lens-vs">×</div>
+      <div class="lens lens-corp">
+        <div class="lens-verb">企業価値の「つくり方」</div>
+        <div class="lens-eye">経営者の眼</div>
+        <div class="lens-by">CORPORATE LENS / WORLD FINANCE EDU</div>
+        <ul>
+          <li>財務諸表は誰が、何のために使うのか</li>
+          <li>PL・BS・CFを「つながった一つの物語」として読む</li>
+          <li>フォーキャストと予算は、現場でどう作られているか</li>
+          <li>NPV・IRR・DCFで、この投資をやるか見送るかを決める</li>
+          <li>WACC・CAPM。「資本のコスト」という物差し</li>
+          <li>ROE・ROA・マージンを経営判断にどう使うか</li>
+          <li>この全プロセスで、AIをどう道具にするか</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="concept-close rv">
+      価値を測る技術と、価値をつくる技術。<br>
+      その両方を持つ人材が、<span class="acc">AI時代に選ばれます</span>。
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ 03 DIALOGUE ═══════════════ -->
+<section class="dialogue">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">03 / THE FINAL MODULE</div>
+      <h2 class="sec-title">最終モジュールは、決算説明会のQ&amp;Aです。</h2>
+      <p class="sec-lead">
+        両方の視点を学んだあと、アナリストと経営陣が実際に向き合ったら何が起きるのか。
+        その質疑応答に、あなたは立ち会います。たとえば、こんな一往復。
+      </p>
+    </div>
+    <div class="script rv">
+      <div class="line">
+        <div class="speaker sp-inv">アナリスト</div>
+        <div class="words">営業利益率は40%近い。素晴らしい数字です。ただ、経常利益は前期から3割以上減っていますね。金利負担が利益を食いつぶしていませんか。</div>
+      </div>
+      <div class="line">
+        <div class="speaker sp-corp">CFO</div>
+        <div class="words">借り換えで調達コストが上がったのは事実です。ただ、保有物件の稼働率は高水準を維持しており、本業の収益力は落ちていません。</div>
+      </div>
+      <div class="line">
+        <div class="speaker sp-inv">アナリスト</div>
+        <div class="words">では伺いますが、御社のROEは1%台です。株主資本コストを何ポイント下回っているか、社内では議論されていますか。</div>
+      </div>
+      <div class="script-q">
+        <p class="q1">この質疑に、あなたはどこまでついて来られたでしょうか。</p>
+        <p class="q2">コースを終えたとき、この一往復の裏で動いている<b>計算と問いの組み立て方</b>が、両側から見えるようになっています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 04 CURRICULUM ═══════════════ -->
+<section class="curr">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">04 / CURRICULUM</div>
+      <h2 class="sec-title">カリキュラム</h2>
+    </div>
+    <div class="mod-list rv">
+      <div class="mod">
+        <div class="mod-no">MODULE<b>00</b></div>
+        <div>
+          <h3>入社初日。ファイナンス・キャリアとAI</h3>
+          <p>ファイナンスの仕事はどう変わるのか。AIが奪うもの、奪えないもの。そしてケース企業Wリアルエステートの紹介。「入社したあなたへ」から物語が始まります。</p>
+        </div>
+        <div class="mod-who"><span class="who-tag w-joint">共同</span></div>
+      </div>
+      <div class="mod">
+        <div class="mod-no">MODULE<b>01</b></div>
+        <div>
+          <h3>経営者の眼。数字で会社を動かす</h3>
+          <p>財務諸表は誰のためにあるのか。PL・BS・CFのつながり、フォーキャストと予算の作り方、NPV・IRR・DCFによる投資判断、資本コスト(WACC)、KPIによる経営管理。運用資産US$125B企業のグローバル経営企画責任者が実際にやってきた仕事を、そのまま教材にします。</p>
+        </div>
+        <div class="mod-who"><span class="who-tag w-corp">WFE</span></div>
+      </div>
+      <div class="mod">
+        <div class="mod-no">MODULE<b>02</b></div>
+        <div>
+          <h3>投資家の眼。数字で会社を選ぶ</h3>
+          <p>リスクとリターンの関係から、資産クラスと市場のプレイヤー、PER・PBR・EV/EBITDAによる株式のバリュエーション、業績予想とコンセンサスの読み方、同業他社とのKPI比較まで。最後は「この会社はロングか、ショートか」という投資家の結論の出し方に踏み込みます。</p>
+        </div>
+        <div class="mod-who"><span class="who-tag w-inv">GYOSEKI</span></div>
+      </div>
+      <div class="mod">
+        <div class="mod-no">MODULE<b>03</b></div>
+        <div>
+          <h3>決算説明会。二つの視点が向かい合う</h3>
+          <p>アナリストと経営陣のQ&amp;Aを再現。アナリストは開示のどこに疑問を持ち、経営陣はどう答え、どこで信頼が生まれるのか。両方の視点を持ったあなたには、質疑の「裏側」まで見えるはずです。</p>
+        </div>
+        <div class="mod-who"><span class="who-tag w-joint">共同</span></div>
+      </div>
+    </div>
+    <p class="curr-note">※ 構成は制作中のドラフトです。最終版で変わる場合があります。</p>
+  </div>
+</section>
+
+<!-- ═══════════════ 05 INSTRUCTORS ═══════════════ -->
+<section class="inst dark">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">05 / INSTRUCTORS</div>
+      <h2 class="sec-title">教壇の人ではなく、<br>現場の人が教えます。</h2>
+      <p class="sec-lead">
+        学者でも専業講師でもありません。ニューヨークの運用の現場と、シンガポール本社の経営の現場。
+        そこで意思決定をしてきた2人が、いまも実務を続けながら、現場の言葉で教えます。
+      </p>
+    </div>
+    <div class="inst-grid">
+      <div class="inst-card inv rv">
+        <div class="inst-role">INVESTOR LENS / 投資家の眼</div>
+        <div class="inst-name">加藤 寛之</div>
+        <div class="inst-en">HIRONOBU KATOH</div>
+        <div class="inst-title">Gyoseki株式会社 代表取締役<br>元 ヘッジファンド アナリスト / ポートフォリオマネージャー(ニューヨーク)</div>
+        <ul>
+          <li><b>リーマン・ブラザーズ</b> <b>投資銀行部門</b>でテクノロジーセクターを担当後、<b>ドイツ証券</b> <b>株式調査部</b>で、機関投資家向けに日本のテクノロジー企業を分析</li>
+          <li><b>インダスキャピタル(ニューヨーク)、現Point72(ニューヨーク・東京)、ゆうちょ銀行</b>にて、テクノロジーセクターを中心に<b>アナリストおよびポートフォリオマネージャー</b>として資産運用に従事</li>
+          <li>ファンダメンタル投資家向けリサーチ支援ツール「GYOSEKI」を手がけるGyoseki株式会社を創業</li>
+          <li>日本最大級の学生ファンダメンタル分析大会<b>「Gyoseki Competition」を主催。</b>累計750名超・50大学以上が参加</li>
+          <li>大会にはPoint72・BlackRock・Fortressなど<b>世界的な金融機関が参画。</b>J-FLEC・東京都などが後援</li>
+          <li>米国コロンビア大学 電気工学部卒</li>
+        </ul>
+      </div>
+      <div class="inst-card corp rv">
+        <div class="inst-role">CORPORATE LENS / 経営者の眼</div>
+        <div class="inst-name">潮田 豊幸</div>
+        <div class="inst-en">TOYOYUKI USHIODA</div>
+        <div class="inst-title">World Finance Edu 創業者<br>元 不動産プライベートエクイティ(シンガポール本社) グローバル経営企画責任者</div>
+        <ul>
+          <li><b>グローバル金融・不動産の最前線で20年。</b>日本とシンガポールで実務を積む</li>
+          <li>世界最大級の物流不動産ファンド運用会社(GLP)の日本法人で経営企画・財務・経理を統括する執行役員として、日本の運用資産をUS$10Bへ拡大</li>
+          <li>その後シンガポール本社へ。<b>グローバル経営企画責任者(Global Head)として全世界の運用資産 約US$125B を統括。</b>日本人としては稀なグローバル本社の責任者ポジション</li>
+          <li>シンガポールの大手不動産投資会社Mapletree Investmentsでは<b>グループ全体の経営企画・財務リスク管理を統括するSVP</b>(運用資産 約S$80B)。取締役会・監査委員会レベルの報告を担当</li>
+          <li>現在はシンガポールで複数のスタートアップや中小企業の<b>CFO</b>を務める</li>
+          <li>INSEAD Global Executive MBA / 米国公認会計士(USCPA) / 証券アナリスト(CMA)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 06 GAINS ═══════════════ -->
+<section class="gains">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">06 / WHAT CHANGES</div>
+      <h2 class="sec-title">受講後、あなたに起きる4つの変化</h2>
+    </div>
+    <div class="gain-list rv">
+      <div class="gain">
+        <div class="gain-no">01</div>
+        <div>
+          <h3>決算書が「表」ではなく「物語」に見える</h3>
+          <p>PL・BS・CFを別々の表として眺めるのをやめ、一つの事業の流れとして読めるようになります。数字の裏にある経営の意図まで読み取れます。</p>
+        </div>
+      </div>
+      <div class="gain">
+        <div class="gain-no">02</div>
+        <div>
+          <h3>投資家の「次の質問」が予測できる</h3>
+          <p>投資家が何を見て、何を疑い、次に何を聞いてくるか。IR、資金調達、経営会議、どの場面でも一歩先回りした準備ができます。</p>
+        </div>
+      </div>
+      <div class="gain">
+        <div class="gain-no">03</div>
+        <div>
+          <h3>会議で、数字を根拠に発言できる</h3>
+          <p>NPV・IRR・ROE・PERを「知っている」から「判断に使える」へ。聞く側から、意思決定を支える側に席が変わります。</p>
+        </div>
+      </div>
+      <div class="gain">
+        <div class="gain-no">04</div>
+        <div>
+          <h3>AIとの分業線を、自分で引ける</h3>
+          <p>AIに任せるべき作業と、人間が握るべき判断の境界がわかります。自分のキャリアをどちら側に置くべきか、迷いが消えます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 07 AUDIENCE ═══════════════ -->
+<section class="aud">
+  <div class="container">
+    <div class="aud-grid rv">
+      <div class="aud-box aud-yes">
+        <h3>このコースが役に立つ方</h3>
+        <ul>
+          <li>金融・財務・経理でキャリアを築きたい若手・中堅の社会人</li>
+          <li>金融業界への転職を考えている異業種の方</li>
+          <li>経理・財務・経営企画で「作業者」から抜け出したい方</li>
+          <li>スタートアップや事業会社で、数字で語れるようになりたい方</li>
+          <li>AIによる仕事の変化に、漠然とした危機感がある方</li>
+        </ul>
+      </div>
+      <div class="aud-box aud-no">
+        <h3>おすすめしない方</h3>
+        <ul>
+          <li>資格試験の対策だけが目的の方(試験対策講座ではありません)</li>
+          <li>個別銘柄の推奨や投資アドバイスを求める方</li>
+          <li>理論を網羅的に学びたい方(実務で使う部分に絞っています)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 08 FAQ ═══════════════ -->
+<section class="faq">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-no">07 / FAQ</div>
+      <h2 class="sec-title">よくある質問</h2>
+    </div>
+    <div class="faq-list rv">
+      <details>
+        <summary>ファイナンスの知識がなくても大丈夫ですか。</summary>
+        <p class="a">大丈夫です。財務諸表とは何か、というところから始めます。ただし「簡単なことを浅く」ではありません。初学者が実務レベルの理解に最短で届くよう設計しています。</p>
+      </details>
+      <details>
+        <summary>簿記や会計資格の講座とは何が違いますか。</summary>
+        <p class="a">資格講座の目的は「ルールを覚えること」ですが、このコースの目的は「数字を判断に使うこと」です。仕訳の仕方ではなく、経営者と投資家が数字をどう読み、どう決めるかを学びます。</p>
+      </details>
+      <details>
+        <summary>金融業界にいなくても役立ちますか。</summary>
+        <p class="a">役立ちます。むしろ事業会社にいる方こそ、投資家の視点を知ることで社内での見え方が変わります。数字で語れる人材は、どの業界でも希少です。</p>
+      </details>
+      <details>
+        <summary>どのように受講しますか。</summary>
+        <p class="a">完全オンラインのオンデマンド動画講座です。プラットフォームはUdemyを予定しており、開講後はPCやスマートフォンからお好きな時間に受講できます。</p>
+      </details>
+      <details>
+        <summary>どのくらいの時間がかかりますか。</summary>
+        <p class="a">全体で約3〜3.5時間です。モジュール構成なので、通勤時間などの隙間時間で1本ずつ進められます。</p>
+      </details>
+      <details>
+        <summary>合わなかった場合、返金はできますか。</summary>
+        <p class="a">Udemyの30日間返金保証の対象です。内容が期待と違った場合は、理由を問わず返金をリクエストできます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section class="final" id="cta">
+  <div class="container">
+    <h2 class="rv">
+      作業は、AIに任せればいい。<br>
+      <span class="acc">決めるのは、あなたの仕事だ。</span>
+    </h2>
+    <p class="rv">
+      投資家の視点と、経営者の視点。<br>
+      二つの視点を、あなたのキャリアの武器にしてください。
+    </p>
+    <div class="rv">
+      <a class="btn-main" href="#" data-waitlist>開講の先行案内を受け取る</a>
+      <span class="cta-note">登録無料 / メールアドレスのみ / 配信はいつでも解除できます</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">GYOSEKI<span class="x">×</span>World Finance Edu</div>
+  <div>© 2026 Gyoseki Co., Ltd. / World Finance Edu. All rights reserved.</div>
+</footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+<!-- ═══════════════ WAITLIST MODAL ═══════════════ -->
+<div class="wl-overlay" id="wlOverlay" aria-hidden="true">
+  <div class="wl-card" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
+    <button class="wl-close" id="wlClose" type="button" aria-label="閉じる">×</button>
+    <div id="wlForm">
+      <div class="wl-kicker">GYOSEKI × WORLD FINANCE EDU</div>
+      <h3 class="wl-title" id="wlTitle">開講の先行案内を受け取る</h3>
+      <p class="wl-lead">このコースは現在制作中です。開講が決まり次第、ご登録いただいた方へ最初にメールでご案内します。登録は無料で、配信はいつでも解除できます。</p>
+      <label class="wl-label" for="wlEmail">メールアドレス <span>必須</span></label>
+      <input class="wl-input" id="wlEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+      <label class="wl-label" for="wlName">お名前 <span>任意</span></label>
+      <input class="wl-input" id="wlName" type="text" autocomplete="name" placeholder="山田 太郎">
+      <input class="wl-hp" id="wlCompany" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="wl-err" id="wlErr"></p>
+      <button class="wl-submit" id="wlSubmit" type="button">先行案内リストに登録する</button>
+      <p class="wl-fine">ご登録は開講のご案内のみに利用し、第三者に提供することはありません。</p>
+    </div>
+    <div id="wlDone" class="wl-done" hidden>
+      <div class="wl-check">✓</div>
+      <h3 class="wl-title">ご登録ありがとうございます</h3>
+      <p class="wl-lead">開講が決まり次第、ご案内メールをお送りします。楽しみにお待ちください。</p>
+      <button class="wl-submit" id="wlDoneClose" type="button">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const app = initializeApp({
+  apiKey: "AIzaSyCYrNQfL4CzRyaKJMdSx-S0xDoDfFrVrGQ",
+  authDomain: "wfe-to-do-list.web.app",
+  projectId: "wfe-to-do-list",
+  storageBucket: "wfe-to-do-list.firebasestorage.app",
+  messagingSenderId: "614510292339",
+  appId: "1:614510292339:web:63c51c7110819b16646906"
+});
+const db = getFirestore(app);
+
+const overlay  = document.getElementById('wlOverlay');
+const formView = document.getElementById('wlForm');
+const doneView = document.getElementById('wlDone');
+const emailEl  = document.getElementById('wlEmail');
+const nameEl   = document.getElementById('wlName');
+const hpEl     = document.getElementById('wlCompany');
+const errEl    = document.getElementById('wlErr');
+const submitBtn = document.getElementById('wlSubmit');
+const emailRe  = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+function openModal(e){
+  if (e) e.preventDefault();
+  formView.hidden = false; doneView.hidden = true;
+  errEl.textContent = '';
+  submitBtn.disabled = false; submitBtn.textContent = '先行案内リストに登録する';
+  overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(function(){ emailEl.focus(); }, 90);
+}
+function closeModal(){
+  overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-waitlist]').forEach(function(el){ el.addEventListener('click', openModal); });
+document.getElementById('wlClose').addEventListener('click', closeModal);
+document.getElementById('wlDoneClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+emailEl.addEventListener('keydown', function(e){ if (e.key === 'Enter') { e.preventDefault(); submitBtn.click(); } });
+
+submitBtn.addEventListener('click', async function(){
+  errEl.textContent = '';
+  if (hpEl.value) { closeModal(); return; }            // honeypot: silently drop bots
+  const email = emailEl.value.trim();
+  const name  = nameEl.value.trim();
+  if (!emailRe.test(email) || email.length >= 200) {
+    errEl.textContent = '正しいメールアドレスをご入力ください。';
+    emailEl.focus(); return;
+  }
+  submitBtn.disabled = true; submitBtn.textContent = '送信中...';
+  try {
+    await addDoc(collection(db, 'gyoseki_waitlist'), {
+      email: email, name: name, source: 'landing_page', createdAt: serverTimestamp()
+    });
+    // Confirmation email (fire and forget — signup is already saved even if this fails)
+    fetch('https://wfe-po-system.up.railway.app/gyoseki-waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, name: name }),
+      keepalive: true
+    }).catch(function(){});
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', { source: 'gyoseki_lp' });
+    formView.hidden = true; doneView.hidden = false;
+  } catch (err) {
+    errEl.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+    submitBtn.disabled = false; submitBtn.textContent = '先行案内リストに登録する';
+  }
+});
+</script>
+
+</body>
+</html>
