@@ -47,38 +47,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#fff;line-height:1.9}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
 a{color:#1F43C9}
-.nav{border-bottom:1px solid #E3E6EC;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
-.nav .brand{font-weight:800;color:#0F1526;text-decoration:none;font-size:15px}
-.nav .brand span{color:#2E5BFF}
-.nav a.hub{font-size:13px;text-decoration:none;color:#4A5060}
-main{max-width:720px;margin:0 auto;padding:40px 20px 60px}
-.crumb{font-size:12px;color:#8A90A2;margin-bottom:18px}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
 .crumb a{color:#8A90A2;text-decoration:none}
-h1{font-size:28px;line-height:1.5;font-weight:800;margin-bottom:14px}
-.meta{font-size:13px;color:#8A90A2;margin-bottom:28px}
-h2{font-size:21px;font-weight:700;margin:36px 0 12px}
-h3{font-size:17px;font-weight:700;margin:24px 0 8px}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
 p{margin:0 0 16px;font-size:15.5px}
 ul,ol{margin:0 0 16px 22px;font-size:15.5px}
 li{margin-bottom:6px}
-.box{background:#F6F7F9;border-radius:10px;padding:18px 20px;margin:0 0 16px;font-size:15px}
-table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14.5px}
-th,td{border:1px solid #E3E6EC;padding:8px 10px;text-align:left}
-th{background:#F6F7F9}
-.cta{background:#EEF3FF;border-radius:12px;padding:24px;margin:40px 0}
-.cta h2{margin:0 0 10px;font-size:19px}
-.cta p{font-size:14.5px}
-.cta a.btn{display:inline-block;background:#2E5BFF;color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:14.5px}
-.author{background:#F6F7F9;border-radius:12px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
 .author b{color:#0F1526;font-size:14.5px}
 .rel{margin-top:36px}
-.rel h2{font-size:17px}
+.rel h2{font-size:16.5px;margin-top:0}
 .rel ul{list-style:none;margin:8px 0 0}
-.rel li{margin-bottom:8px}
-footer{border-top:1px solid #E3E6EC;padding:24px 20px;text-align:center;font-size:12.5px;color:#8A90A2;margin-top:40px}
-@media(max-width:600px){h1{font-size:23px}h2{font-size:19px}}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
 </style>
 </head>
 <body>

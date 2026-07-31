@@ -32,61 +32,83 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#fff;line-height:1.9}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.8}
 a{color:#1F43C9}
-.nav{border-bottom:1px solid #E3E6EC;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
-.nav .brand{font-weight:800;color:#0F1526;text-decoration:none;font-size:15px}
-.nav .brand span{color:#2E5BFF}
-.nav a.hub{font-size:13px;text-decoration:none;color:#4A5060}
-main{max-width:720px;margin:0 auto;padding:40px 20px 60px}
-h1{font-size:28px;line-height:1.5;font-weight:800;margin-bottom:10px}
-.lead{font-size:15.5px;color:#4A5060;margin-bottom:34px}
-.card{display:block;border:1px solid #E3E6EC;border-radius:12px;padding:20px 22px;margin-bottom:14px;text-decoration:none;color:#0F1526}
-.card:hover{background:#F6F7F9}
-.card .t{font-size:17px;font-weight:700;margin-bottom:6px}
-.card .d{font-size:14px;color:#4A5060}
-.cta{background:#EEF3FF;border-radius:12px;padding:24px;margin:40px 0 0}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.hero{background:linear-gradient(160deg,#0F1526 0%,#17203B 55%,#1F2C55 100%);color:#fff;padding:38px 20px 42px;text-align:center}
+.hero h1{font-size:26px;font-weight:900}
+.hero p{font-size:14px;color:#C6CFE6;margin-top:10px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.9}
+main{max-width:640px;margin:22px auto 0;padding:0 16px 48px}
+.card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #DCE1EC;border-radius:14px;padding:15px 16px;margin-bottom:10px;text-decoration:none;color:#0F1526;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,21,38,.12)}
+.card .tx{flex:1;min-width:0}
+.card .t{font-size:15px;font-weight:700;line-height:1.5}
+.card .d{font-size:12.5px;color:#5A6072;margin-top:3px}
+.go{display:inline-flex;align-items:center;background:#2E5BFF;color:#fff;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;white-space:nowrap}
+.card:hover .go{background:#1F43C9}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:28px 0 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
 .cta h2{margin:0 0 10px;font-size:19px}
-.cta p{font-size:14.5px;margin:0 0 14px}
-.cta a.btn{display:inline-block;background:#2E5BFF;color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:14.5px}
-footer{border-top:1px solid #E3E6EC;padding:24px 20px;text-align:center;font-size:12.5px;color:#8A90A2;margin-top:40px}
-@media(max-width:600px){h1{font-size:23px}}
+.cta p{font-size:14.5px;color:#DCE5FF;margin:0 0 14px}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+footer{padding:22px 20px 36px;text-align:center;font-size:12.5px;color:#8A90A2}
+footer a{color:#8A90A2}
+@media(max-width:400px){.hero h1{font-size:22px}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <a class="brand" href="/">World Finance <span>Edu</span></a>
-  <a class="hub" href="/">ホーム</a>
+  <a class="hub" href="/links/">リンク集</a>
 </nav>
+<div class="hero">
+  <h1>ファイナンス学習コラム</h1>
+  <p>企業価値評価(バリュエーション)、DCF法、決算書の読み方、コーポレートファイナンスの学び方まで。実務でファイナンスを使ってきた立場から、初心者にもわかりやすく解説します。</p>
+</div>
 <main>
-<h1>ファイナンス学習コラム</h1>
-<p class="lead">企業価値評価(バリュエーション)、DCF法、決算書の読み方、コーポレートファイナンスの学び方まで。実務でファイナンスを使ってきた立場から、初心者にもわかりやすく解説します。</p>
 
 <a class="card" href="/articles/corporate-valuation/">
-  <div class="t">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</div>
-  <div class="d">DCF法・マルチプル法・純資産法の3つのアプローチと、企業価値と株式価値の違い。まずはここから。</div>
+  <div class="tx">
+    <div class="t">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</div>
+    <div class="d">DCF法・マルチプル法・純資産法の3つのアプローチと、企業価値と株式価値の違い。まずはここから。</div>
+  </div>
+  <span class="go">読む ›</span>
 </a>
 <a class="card" href="/articles/dcf-method/">
-  <div class="t">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</div>
-  <div class="d">将来のキャッシュフローを現在価値に割り引く、企業価値評価の中心的手法。WACCとターミナルバリューまで。</div>
+  <div class="tx">
+    <div class="t">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</div>
+    <div class="d">将来のキャッシュフローを現在価値に割り引く、企業価値評価の中心的手法。WACCとターミナルバリューまで。</div>
+  </div>
+  <span class="go">読む ›</span>
 </a>
 <a class="card" href="/articles/multiples-valuation/">
-  <div class="t">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</div>
-  <div class="d">3つの代表的な倍率の意味・計算方法・使い分けと、類似会社比較の実務手順。</div>
+  <div class="tx">
+    <div class="t">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</div>
+    <div class="d">3つの代表的な倍率の意味・計算方法・使い分けと、類似会社比較の実務手順。</div>
+  </div>
+  <span class="go">読む ›</span>
 </a>
 <a class="card" href="/articles/financial-statements-basics/">
-  <div class="t">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</div>
-  <div class="d">PL・BS・CFのつながりと、売上の推移・キャッシュフロー・資本効率という投資家の着眼点。</div>
+  <div class="tx">
+    <div class="t">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</div>
+    <div class="d">PL・BS・CFのつながりと、売上の推移・キャッシュフロー・資本効率という投資家の着眼点。</div>
+  </div>
+  <span class="go">読む ›</span>
 </a>
 <a class="card" href="/articles/corporate-finance-self-study/">
-  <div class="t">コーポレートファイナンスの独学ロードマップ|何を、どの順番で学ぶか</div>
-  <div class="d">会計との違い、学ぶべき4つのテーマ、挫折しない教材の使い分け。</div>
+  <div class="tx">
+    <div class="t">コーポレートファイナンスの独学ロードマップ|何を、どの順番で学ぶか</div>
+    <div class="d">会計との違い、学ぶべき4つのテーマ、挫折しない教材の使い分け。</div>
+  </div>
+  <span class="go">読む ›</span>
 </a>
 
 <div class="cta">
   <h2>体系的に学ぶなら:オンライン講座</h2>
   <p>GYOSEKI × World Finance Edu 共同制作「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
-  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る ›</a>
 </div>
 </main>
 <footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
