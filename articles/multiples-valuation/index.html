@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門 | World Finance Edu</title>
+<meta name="description" content="PER(株価収益率)・PBR(株価純資産倍率)・EV/EBITDA倍率の意味と計算方法、使い分けをわかりやすく解説。マルチプル法(類似会社比較法)で株式や企業の割安・割高を判断する実務の手順も紹介します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/multiples-valuation/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門">
+<meta property="og:description" content="3つの代表的なバリュエーション倍率の意味・計算方法・使い分けを実務家が解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/multiples-valuation/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門",
+      "description": "PER・PBR・EV/EBITDA倍率の意味と計算方法、マルチプル法(類似会社比較法)の実務手順を解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸" },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/multiples-valuation/",
+      "datePublished": "2026-07-31"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "ファイナンス学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "PER・PBR・EV/EBITDAとは", "item": "https://worldfinanceedu.com/articles/multiples-valuation/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#fff;line-height:1.9}
+a{color:#1F43C9}
+.nav{border-bottom:1px solid #E3E6EC;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#0F1526;text-decoration:none;font-size:15px}
+.nav .brand span{color:#2E5BFF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#4A5060}
+main{max-width:720px;margin:0 auto;padding:40px 20px 60px}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:18px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:800;margin-bottom:14px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:28px}
+h2{font-size:21px;font-weight:700;margin:36px 0 12px}
+h3{font-size:17px;font-weight:700;margin:24px 0 8px}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+.box{background:#F6F7F9;border-radius:10px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14.5px}
+th,td{border:1px solid #E3E6EC;padding:8px 10px;text-align:left}
+th{background:#F6F7F9}
+.cta{background:#EEF3FF;border-radius:12px;padding:24px;margin:40px 0}
+.cta h2{margin:0 0 10px;font-size:19px}
+.cta p{font-size:14.5px}
+.cta a.btn{display:inline-block;background:#2E5BFF;color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:14.5px}
+.author{background:#F6F7F9;border-radius:12px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author b{color:#0F1526;font-size:14.5px}
+.rel{margin-top:36px}
+.rel h2{font-size:17px}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px}
+footer{border-top:1px solid #E3E6EC;padding:24px 20px;text-align:center;font-size:12.5px;color:#8A90A2;margin-top:40px}
+@media(max-width:600px){h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">ファイナンス学習コラム</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">ファイナンス学習コラム</a> › PER・PBR・EV/EBITDAとは</div>
+<h1>PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</h1>
+<div class="meta">2026年7月31日 · 潮田 豊幸(World Finance Edu)</div>
+
+<p>株式や会社の「割安・割高」を判断するとき、実務で最もよく使われるのがマルチプル(倍率)です。PER、PBR、EV/EBITDAという3つの代表的な倍率の意味と計算方法、そして使い分けを、初心者にもわかりやすく解説します。</p>
+
+<h2>マルチプル法(類似会社比較法)とは</h2>
+<p>マルチプル法とは、事業内容の近い会社が市場でどう評価されているかを倍率で捉え、対象の会社に当てはめて価値を推定する方法です。「隣の似た家が坪単価100万円で売れたなら、この家もだいたい坪100万円だろう」という不動産の相場感と同じ発想です。企業価値評価(バリュエーション)の3つのアプローチのうち、マーケット・アプローチに分類されます。</p>
+
+<h2>PER(株価収益率)</h2>
+<div class="box">
+PER = 株価 ÷ 1株あたり純利益(EPS) = 時価総額 ÷ 純利益
+</div>
+<p>PER(Price Earnings Ratio)は、株価が純利益の何倍まで買われているかを示します。「その会社の利益の何年分で投資額を回収できるか」と読むこともできます。</p>
+<ul>
+  <li>成長期待が高い会社ほどPERは高くなる傾向があります。</li>
+  <li>純利益が赤字の会社には使えません。</li>
+  <li>一時的な特別損益で純利益が歪んでいるときは、その影響を除いて見る必要があります。</li>
+</ul>
+
+<h2>PBR(株価純資産倍率)</h2>
+<div class="box">
+PBR = 株価 ÷ 1株あたり純資産(BPS) = 時価総額 ÷ 純資産
+</div>
+<p>PBR(Price Book-value Ratio)は、株価が会社の純資産(解散価値に近い概念)の何倍かを示します。PBRが1倍を下回る状態は、市場がその会社の資本を「持っているだけでは価値を生まない」と評価しているサインとされ、東京証券取引所が上場企業に資本コストを意識した経営を求める文脈でも注目されました。</p>
+<p>PBRは銀行など資産の大きさが事業の中心になる業種でよく使われる一方、ソフトウェアのように無形資産中心の会社では参考になりにくい指標です。</p>
+
+<h2>EV/EBITDA倍率</h2>
+<div class="box">
+EV/EBITDA = 企業価値(EV) ÷ EBITDA(償却前営業利益)
+</div>
+<p>EV(Enterprise Value、企業価値)は時価総額に純有利子負債を加えたもの、EBITDA(Earnings Before Interest, Taxes, Depreciation and Amortization)は営業利益に減価償却費を足し戻した利益です。</p>
+<p>EV/EBITDAが実務、特にM&Aで好まれる理由は2つあります。</p>
+<ul>
+  <li><b>資本構成の影響を受けにくい:</b>借入の多い会社と少ない会社を同じ土俵で比較できます。</li>
+  <li><b>会計方針の影響を受けにくい:</b>減価償却の方法の違いによる利益の歪みを避けられます。</li>
+  <li>国際的なM&Aでは「EV/EBITDAで何倍か」が価格交渉の共通言語になっています。</li>
+</ul>
+
+<h2>3つの倍率の使い分け</h2>
+<table>
+  <tr><th>倍率</th><th>向いている場面</th><th>注意点</th></tr>
+  <tr><td>PER</td><td>黒字の上場企業の株式比較</td><td>赤字企業に使えない。特別損益に注意</td></tr>
+  <tr><td>PBR</td><td>銀行・資産型ビジネス。解散価値との比較</td><td>無形資産中心の会社には不向き</td></tr>
+  <tr><td>EV/EBITDA</td><td>M&A。借入水準の異なる会社の比較</td><td>設備投資の負担差は見えない</td></tr>
+</table>
+
+<h2>実務でのマルチプル評価の手順</h2>
+<ol>
+  <li><b>類似会社を選ぶ:</b>事業内容、規模、成長性、地域の近い上場企業を5〜10社程度選びます。この選定が結果を最も左右します。</li>
+  <li><b>倍率を計算する:</b>各社のPERやEV/EBITDAを計算し、外れ値を除いて中央値やレンジを取ります。</li>
+  <li><b>対象会社に当てはめる:</b>対象会社の利益やEBITDAに倍率を掛けて、価値のレンジを算定します。</li>
+  <li><b>DCF法と突き合わせる:</b>理論値であるDCF法の結果と比較し、評価の妥当性を確認します。DCF法の手順は<a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説</a>を参照してください。</li>
+</ol>
+
+<h2>まとめ</h2>
+<ul>
+  <li>マルチプル法は、似た会社の市場評価を倍率で当てはめる企業価値評価の手法。</li>
+  <li>PERは利益、PBRは純資産、EV/EBITDAは資本構成に中立な収益力に注目する。</li>
+  <li>倍率は単独で使わず、類似会社の選定とDCF法との突き合わせが実務の基本。</li>
+</ul>
+
+<div class="cta">
+  <h2>企業価値評価を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、PER・PBR・EV/EBITDAを使った株式のバリュエーションを含む、企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+    <li>› <a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</a></li>
+    <li>› <a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント</a></li>
+  </ul>
+</div>
+
+<div class="author">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表。米国公認会計士(USCPA)。シンガポール在住。運用資産US$125Bの不動産プライベートエクイティでグローバル経営企画責任者(Global Head)を務めた後、World Finance Eduを設立。コーポレートファイナンス教育、フラクショナルCFOサービス、エンジェル投資を手がける。
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>

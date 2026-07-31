@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例 | World Finance Edu</title>
+<meta name="description" content="DCF法(ディスカウンテッド・キャッシュフロー法)とは、将来のキャッシュフローを現在価値に割り引いて企業価値を計算する方法です。計算式、割引率(WACC)、ターミナルバリュー、具体例まで、初心者にもわかりやすく解説します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/dcf-method/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例">
+<meta property="og:description" content="DCF法の考え方、計算式、割引率(WACC)、ターミナルバリューまで。実務家がわかりやすく解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/dcf-method/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例",
+      "description": "DCF法(割引キャッシュフロー法)の考え方、計算式、割引率(WACC)、ターミナルバリューを初心者向けに解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸" },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/dcf-method/",
+      "datePublished": "2026-07-31"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "ファイナンス学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "DCF法とは", "item": "https://worldfinanceedu.com/articles/dcf-method/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#fff;line-height:1.9}
+a{color:#1F43C9}
+.nav{border-bottom:1px solid #E3E6EC;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#0F1526;text-decoration:none;font-size:15px}
+.nav .brand span{color:#2E5BFF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#4A5060}
+main{max-width:720px;margin:0 auto;padding:40px 20px 60px}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:18px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:800;margin-bottom:14px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:28px}
+h2{font-size:21px;font-weight:700;margin:36px 0 12px}
+h3{font-size:17px;font-weight:700;margin:24px 0 8px}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+.box{background:#F6F7F9;border-radius:10px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14.5px}
+th,td{border:1px solid #E3E6EC;padding:8px 10px;text-align:left}
+th{background:#F6F7F9}
+.cta{background:#EEF3FF;border-radius:12px;padding:24px;margin:40px 0}
+.cta h2{margin:0 0 10px;font-size:19px}
+.cta p{font-size:14.5px}
+.cta a.btn{display:inline-block;background:#2E5BFF;color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:14.5px}
+.author{background:#F6F7F9;border-radius:12px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author b{color:#0F1526;font-size:14.5px}
+.rel{margin-top:36px}
+.rel h2{font-size:17px}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px}
+footer{border-top:1px solid #E3E6EC;padding:24px 20px;text-align:center;font-size:12.5px;color:#8A90A2;margin-top:40px}
+@media(max-width:600px){h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">ファイナンス学習コラム</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">ファイナンス学習コラム</a> › DCF法とは</div>
+<h1>DCF法とは?初心者にもわかりやすく解説</h1>
+<div class="meta">2026年7月31日 · 潮田 豊幸(World Finance Edu)</div>
+
+<p>DCF法(Discounted Cash Flow法、割引キャッシュフロー法)とは、企業や資産が将来生み出すキャッシュフローを現在の価値に割り引いて、その価値を計算する方法です。M&A(企業の合併・買収)の価格算定、株式投資、不動産評価、社内の投資判断まで、ファイナンスの実務で最も広く使われる企業価値評価の手法です。</p>
+<p>この記事では、DCF法の考え方、計算式、割引率の意味、そして実務で数字がどう動くかを、初心者にもわかりやすく解説します。</p>
+
+<h2>DCF法の基本的な考え方</h2>
+<p>DCF法の出発点は、「今日の100万円は、1年後の100万円より価値が高い」という考え方です。今日の100万円は運用すれば増やせるからです。これを「お金の時間的価値」と呼びます。</p>
+<p>逆に言えば、将来受け取るお金は、その分だけ割り引いて評価する必要があります。この「割り引く」操作がディスカウント(Discount)です。企業の価値は、その企業が将来生み出すキャッシュフローをすべて現在価値に割り引いて合計したもの、というのがDCF法の核心です。</p>
+
+<h2>DCF法の計算式</h2>
+<div class="box">
+企業価値 = FCF1 ÷ (1+r) + FCF2 ÷ (1+r)<sup>2</sup> + FCF3 ÷ (1+r)<sup>3</sup> + … + ターミナルバリューの現在価値
+</div>
+<p>それぞれの意味は次のとおりです。</p>
+<ul>
+  <li><b>FCF(フリーキャッシュフロー)</b>:事業が生み出す現金から、事業を維持・成長させるための投資を差し引いた、自由に使える現金。</li>
+  <li><b>r(割引率)</b>:将来のキャッシュフローを現在価値に割り引くためのレート。通常はWACC(Weighted Average Cost of Capital、加重平均資本コスト)を使います。</li>
+  <li><b>ターミナルバリュー(継続価値)</b>:予測期間(通常5〜10年)より先の全期間の価値をまとめて計算したもの。</li>
+</ul>
+
+<h2>計算のステップ(具体例つき)</h2>
+<h3>ステップ1:フリーキャッシュフローを予測する</h3>
+<p>まず、今後5年程度の事業計画をもとにフリーキャッシュフローを予測します。たとえば、毎年100億円のFCFを生み出し、年3%で成長する会社を考えます。</p>
+<h3>ステップ2:割引率(WACC)を決める</h3>
+<p>WACCは、株主が要求するリターン(株主資本コスト)と、銀行など債権者が要求するリターン(負債コスト)を、資本構成で加重平均したものです。ここでは8%とします。</p>
+<h3>ステップ3:ターミナルバリューを計算する</h3>
+<div class="box">
+ターミナルバリュー = 最終年度FCF × (1+永続成長率) ÷ (割引率 − 永続成長率)
+</div>
+<p>永続成長率は、長期的な経済成長率やインフレ率を参考に、通常0〜2%程度の保守的な数字を置きます。</p>
+<h3>ステップ4:すべてを現在価値に割り引いて合計する</h3>
+<p>各年のFCFとターミナルバリューを割引率で現在価値に直し、合計したものが事業価値(エンタープライズバリュー)です。そこから純有利子負債を引くと、株式価値が出ます。</p>
+
+<h2>DCF法の注意点:結果は前提次第で大きく動く</h2>
+<p>DCF法は理論的に最も正しいとされる一方、実務では「前提の置き方で結果がいくらでも動く」ことが最大の注意点です。特に影響が大きいのは次の2つです。</p>
+<ul>
+  <li><b>割引率:</b>WACCを1%変えるだけで、企業価値は数十%動くことがあります。</li>
+  <li><b>永続成長率:</b>ターミナルバリューは企業価値全体の5〜7割を占めることが多く、ここの成長率の置き方が結果を大きく左右します。</li>
+</ul>
+<p>だからこそ実務では、DCF法の結果を単独で使わず、PERやEV/EBITDAといったマルチプル(倍率)による評価と突き合わせて妥当性を確認します。マルチプル法については、<a href="/articles/multiples-valuation/">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</a>で解説しています。</p>
+
+<h2>不動産のDCF法</h2>
+<p>DCF法は不動産評価でも標準的な手法です。考え方は同じで、物件が生み出す賃料収入から経費を引いたキャッシュフローを予測し、売却想定価格(復帰価格)とあわせて割り引きます。不動産鑑定評価や収益物件の投資判断で広く使われています。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>DCF法は、将来のキャッシュフローを現在価値に割り引いて企業価値を計算する方法。</li>
+  <li>計算にはFCFの予測、割引率(WACC)、ターミナルバリューの3つの要素が必要。</li>
+  <li>前提次第で結果が大きく動くため、マルチプル法との併用が実務の基本。</li>
+</ul>
+
+<div class="cta">
+  <h2>企業価値評価を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、DCF法を含む企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+    <li>› <a href="/articles/multiples-valuation/">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</a></li>
+    <li>› <a href="/articles/corporate-finance-self-study/">コーポレートファイナンスの独学ロードマップ</a></li>
+  </ul>
+</div>
+
+<div class="author">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表。米国公認会計士(USCPA)。シンガポール在住。運用資産US$125Bの不動産プライベートエクイティでグローバル経営企画責任者(Global Head)を務めた後、World Finance Eduを設立。コーポレートファイナンス教育、フラクショナルCFOサービス、エンジェル投資を手がける。
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
