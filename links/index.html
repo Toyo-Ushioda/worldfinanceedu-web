@@ -18,89 +18,160 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#F6F7F9;line-height:1.8}
-main{max-width:520px;margin:0 auto;padding:44px 20px 60px}
-.head{text-align:center;margin-bottom:30px}
-.head .brand{font-size:22px;font-weight:800}
-.head .brand span{color:#2E5BFF}
-.head .name{font-size:14.5px;color:#4A5060;margin-top:6px}
-.sec{font-size:12.5px;font-weight:700;color:#8A90A2;letter-spacing:.08em;margin:26px 0 10px;text-transform:uppercase}
-.card{display:block;background:#fff;border:1px solid #E3E6EC;border-radius:14px;padding:16px 20px;margin-bottom:12px;text-decoration:none;color:#0F1526}
-.card:hover{border-color:#2E5BFF}
-.card .t{font-size:15.5px;font-weight:700}
-.card .d{font-size:13px;color:#4A5060;margin-top:2px}
-.card.main{background:#2E5BFF;border-color:#2E5BFF;color:#fff}
-.card.main .d{color:#DCE5FF}
-footer{text-align:center;font-size:12px;color:#8A90A2;margin-top:34px}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#F2F4F8;line-height:1.7}
+
+.hero{background:linear-gradient(160deg,#0F1526 0%,#17203B 55%,#1F2C55 100%);color:#fff;padding:52px 20px 74px;text-align:center;position:relative}
+.hero .photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.85);box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.hero .name{font-size:24px;font-weight:800;margin-top:14px;letter-spacing:.01em}
+.hero .name span{color:#86A2FF}
+.hero .title{font-size:14px;color:#C6CFE6;margin-top:6px;line-height:1.8;max-width:480px;margin-left:auto;margin-right:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.chip{font-size:12px;font-weight:600;color:#DCE5FF;background:rgba(255,255,255,.10);padding:5px 12px;border-radius:999px}
+
+main{max-width:560px;margin:-40px auto 0;padding:0 16px 56px;position:relative}
+.sec{font-size:12px;font-weight:800;color:#6B7285;letter-spacing:.14em;margin:30px 4px 10px;text-transform:uppercase}
+.sec:first-child{margin-top:0}
+
+.card{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:16px 18px;margin-bottom:12px;text-decoration:none;color:#0F1526;box-shadow:0 1px 3px rgba(15,21,38,.06);transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,21,38,.12)}
+.card .ico{flex:0 0 44px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:21px;background:#EEF3FF}
+.card .tx{flex:1;min-width:0}
+.card .t{font-size:15px;font-weight:700;line-height:1.45}
+.card .d{font-size:12.5px;color:#5A6072;margin-top:2px}
+.card .arw{flex:0 0 auto;color:#B4BACB;font-size:18px;font-weight:700}
+
+.card.hero-card{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;box-shadow:0 10px 26px rgba(46,91,255,.35);padding:20px 18px}
+.card.hero-card .ico{background:rgba(255,255,255,.16);font-size:23px}
+.card.hero-card .t{font-size:16px}
+.card.hero-card .d{color:#D6E0FF}
+.card.hero-card .arw{color:rgba(255,255,255,.75)}
+.badge{display:inline-block;font-size:10.5px;font-weight:800;background:#FFD84D;color:#4A3A00;border-radius:999px;padding:2px 9px;margin-bottom:6px;letter-spacing:.05em}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2 .card{margin-bottom:0;flex-direction:column;text-align:center;gap:8px;padding:16px 10px}
+.grid2 .card .ico{width:42px;height:42px}
+.grid2 .card .d{display:none}
+.grid2 .card .arw{display:none}
+.grid2 .card .t{font-size:13.5px}
+
+.quote{background:#fff;border-radius:16px;padding:18px 20px;margin-bottom:12px;box-shadow:0 1px 3px rgba(15,21,38,.06)}
+.quote .q{font-size:13.5px;color:#3A4055;line-height:1.9}
+.quote a{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#1F43C9;text-decoration:none}
+.quote a:hover{text-decoration:underline}
+
+footer{text-align:center;font-size:12px;color:#8A90A2;padding:0 20px 40px}
 footer a{color:#8A90A2}
+@media(max-width:400px){.hero .name{font-size:21px}}
 </style>
 </head>
 <body>
-<main>
-<div class="head">
-  <div class="brand">World Finance <span>Edu</span></div>
-  <div class="name">潮田 豊幸(Toyoyuki Ushioda)· 元外資系企業本社 経営企画グローバル責任者 · INSEAD MBA · USCPA · シンガポール在住</div>
+
+<div class="hero">
+  <img class="photo" src="toyo_profile.jpeg" alt="潮田豊幸(Toyoyuki Ushioda)">
+  <div class="name">潮田 豊幸 <span>/ World Finance Edu</span></div>
+  <div class="title">元外資系企業本社 経営企画グローバル責任者。<br>ファイナンス教育 × フラクショナルCFO × エンジェル投資</div>
+  <div class="chips">
+    <span class="chip">INSEAD MBA</span>
+    <span class="chip">USCPA</span>
+    <span class="chip">シンガポール在住</span>
+    <span class="chip">運用資産 US$125B 経験</span>
+  </div>
 </div>
 
+<main>
+
 <div class="sec">オンライン講座</div>
-<a class="card main" href="https://worldfinanceedu.com/gyoseki/">
-  <div class="t">AI時代の、ファイナンス・キャリア再設計</div>
-  <div class="d">GYOSEKI × WFE 共同制作。企業価値評価を学ぶ講座(先行案内 受付中)</div>
+<a class="card hero-card" href="https://worldfinanceedu.com/gyoseki/">
+  <div class="ico">📈</div>
+  <div class="tx">
+    <span class="badge">先行案内 受付中</span>
+    <div class="t">AI時代の、ファイナンス・キャリア再設計</div>
+    <div class="d">GYOSEKI × WFE 共同制作。企業価値評価を投資家と経営者の2つの視点で学ぶ</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 <a class="card" href="https://www.udemy.com/course/8-thyjqd/?referralCode=CE688B1F8E9480D90609">
-  <div class="t">英語戦略コース(Udemyで公開中)</div>
-  <div class="d">ビジネス英語の発音・リズム・印象を変える。30日間返金保証</div>
+  <div class="ico">🎧</div>
+  <div class="tx">
+    <div class="t">英語戦略コース(Udemyで公開中)</div>
+    <div class="d">ビジネス英語の発音・リズム・印象を変える。30日間返金保証</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 
 <div class="sec">無料で読める学習コラム</div>
 <a class="card" href="https://worldfinanceedu.com/articles/">
-  <div class="t">ファイナンス学習コラム</div>
-  <div class="d">企業価値評価・DCF法・決算書の読み方</div>
+  <div class="ico">📊</div>
+  <div class="tx">
+    <div class="t">ファイナンス学習コラム</div>
+    <div class="d">企業価値評価・DCF法・決算書の読み方</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 <a class="card" href="https://english.worldfinanceedu.com/articles/">
-  <div class="t">英語学習コラム</div>
-  <div class="d">発音・抑揚・英語会議・金融英語</div>
-</a>
-
-<div class="sec">発信・SNS</div>
-<a class="card" href="https://note.com/toyo_ushioda">
-  <div class="t">note</div>
-  <div class="d">キャリアとファイナンスの読み物</div>
-</a>
-<a class="card" href="https://x.com/Toyo25805074">
-  <div class="t">X(旧Twitter)</div>
-  <div class="d">ファイナンス・投資の学びを毎日発信</div>
-</a>
-<a class="card" href="https://toyoyukiushioda.substack.com/">
-  <div class="t">Substack</div>
-  <div class="d">Japanese Business Culture(英語)</div>
-</a>
-<a class="card" href="https://www.linkedin.com/in/toyoyuki-ushioda/">
-  <div class="t">LinkedIn</div>
-  <div class="d">プロフィール・実績</div>
-</a>
-<a class="card" href="https://www.linkedin.com/newsletters/becoming-world-class-finance-7363914708984193025">
-  <div class="t">Becoming World Class Finance(英語)</div>
-  <div class="d">LinkedInニュースレター · AI×ファイナンス実務の週刊連載</div>
-</a>
-<a class="card" href="https://www.linkedin.com/newsletters/basics-of-japanese-cultures-7347888751349481472">
-  <div class="t">Basics of Japanese Cultures(英語)</div>
-  <div class="d">LinkedInニュースレター · 日本のビジネス文化を解説する全10回シリーズ</div>
+  <div class="ico">🗣️</div>
+  <div class="tx">
+    <div class="t">英語学習コラム</div>
+    <div class="d">発音・抑揚・英語会議・金融英語</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 
 <div class="sec">メディア掲載</div>
-<a class="card" href="https://www.bizreach.jp/column/career-story-08/">
-  <div class="t">ビズリーチ キャリア特集(取材記事)</div>
-  <div class="d">「劣等感からの逆転キャリア グローバル企業の部門責任者に」</div>
+<div class="quote">
+  <div class="q">「元ミュージシャン志望のフリーター、劣等感からの逆転キャリア グローバル企業の部門責任者に」。キャリアがビズリーチの特集で紹介されました。</div>
+  <a href="https://www.bizreach.jp/column/career-story-08/">取材記事を読む ›</a>
+</div>
+
+<div class="sec">発信・SNS</div>
+<div class="grid2">
+  <a class="card" href="https://x.com/Toyo25805074">
+    <div class="ico">𝕏</div>
+    <div class="tx"><div class="t">X(旧Twitter)</div></div>
+  </a>
+  <a class="card" href="https://note.com/toyo_ushioda">
+    <div class="ico">📝</div>
+    <div class="tx"><div class="t">note</div></div>
+  </a>
+  <a class="card" href="https://www.linkedin.com/in/toyoyuki-ushioda/">
+    <div class="ico">💼</div>
+    <div class="tx"><div class="t">LinkedIn</div></div>
+  </a>
+  <a class="card" href="https://toyoyukiushioda.substack.com/">
+    <div class="ico">✉️</div>
+    <div class="tx"><div class="t">Substack</div></div>
+  </a>
+</div>
+
+<div class="sec">ニュースレター(英語・LinkedIn)</div>
+<a class="card" href="https://www.linkedin.com/newsletters/becoming-world-class-finance-7363914708984193025">
+  <div class="ico">🌏</div>
+  <div class="tx">
+    <div class="t">Becoming World Class Finance</div>
+    <div class="d">AI×ファイナンス実務の週刊連載 · 2,500人以上が購読</div>
+  </div>
+  <div class="arw">›</div>
+</a>
+<a class="card" href="https://www.linkedin.com/newsletters/basics-of-japanese-cultures-7347888751349481472">
+  <div class="ico">🎌</div>
+  <div class="tx">
+    <div class="t">Basics of Japanese Cultures</div>
+    <div class="d">日本のビジネス文化を解説する全10回シリーズ · 3,200人以上が購読</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 
 <div class="sec">会社</div>
 <a class="card" href="https://worldfinanceedu.com/">
-  <div class="t">World Finance Edu</div>
-  <div class="d">ファイナンス教育 · フラクショナルCFO · エンジェル投資(シンガポール)</div>
+  <div class="ico">🏛️</div>
+  <div class="tx">
+    <div class="t">World Finance Edu</div>
+    <div class="d">ファイナンス教育 · フラクショナルCFO · エンジェル投資(シンガポール)</div>
+  </div>
+  <div class="arw">›</div>
 </a>
 
-<footer>© 2026 World Finance Edu · <a href="https://worldfinanceedu.com/">worldfinanceedu.com</a></footer>
 </main>
+<footer>© 2026 World Finance Edu · <a href="https://worldfinanceedu.com/">worldfinanceedu.com</a></footer>
 </body>
 </html>
