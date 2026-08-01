@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>NPVとIRRの違いと使い分け|投資判断の2大指標をわかりやすく解説 | World Finance Edu</title>
+<meta name="description" content="NPV(正味現在価値)とIRR(内部収益率)の違いを、計算式と具体例でわかりやすく解説。同じ案件で結論が割れる理由、ハードルレートと資本コストの関係、実務でどちらを優先するかまで、実務家が整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/npv-irr/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPVとIRRの違いと使い分け|投資判断の2大指標をわかりやすく解説">
+<meta property="og:description" content="NPV(正味現在価値)とIRR(内部収益率)の違い、結論が割れる具体例、ハードルレートの決め方まで。実務家がわかりやすく解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/npv-irr/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "NPVとIRRの違いと使い分け|投資判断の2大指標をわかりやすく解説",
+      "description": "NPV(正味現在価値)とIRR(内部収益率)の違い、結論が割れる理由、ハードルレートと資本コストの関係を初心者向けに解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/"] },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/npv-irr/",
+      "datePublished": "2026-08-01"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "NPVとIRRの違い", "item": "https://worldfinanceedu.com/articles/npv-irr/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author b{color:#0F1526;font-size:14.5px}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › NPVとIRRの違い</div>
+<h1>NPVとIRRの違いと使い分け</h1>
+<div class="meta">2026年8月1日 · 潮田 豊幸(World Finance Edu)</div>
+
+<p>設備投資、新規事業、M&A(Mergers and Acquisitions、企業の合併・買収)。会社が大きなお金を使うとき、その判断を数字で支える指標が2つあります。NPV(Net Present Value、正味現在価値)とIRR(Internal Rate of Return、内部収益率)です。</p>
+<p>どちらも「将来のキャッシュフローを現在価値に割り引く」という同じ土台の上に立っています。それでも、同じ案件を評価して結論が逆になることがあります。この記事では、2つの指標の違い、結論が割れる仕組み、そして実務でどちらを優先すべきかを、わかりやすく解説します。</p>
+
+<h2>NPV(正味現在価値)とは</h2>
+<p>NPV(正味現在価値)は、投資が生み出す将来キャッシュフローの現在価値の合計から、初期投資額を引いた金額です。単位は「円」で、価値がいくら増えるかを直接あらわします。</p>
+<div class="box">
+NPV = 各年のキャッシュフローの現在価値の合計 − 初期投資額
+</div>
+<p>判定はシンプルです。NPVがプラスなら、その投資は資本コストを上回るリターンを生み、会社の価値を増やします。マイナスなら価値を減らします。将来キャッシュフローを割り引くという考え方そのものは、<a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説</a>で扱っている企業価値評価とまったく同じです。</p>
+
+<h2>IRR(内部収益率)とは</h2>
+<p>IRR(内部収益率)は、NPVがちょうどゼロになる割引率のことです。単位は「%」で、その投資の利回りをあらわします。</p>
+<div class="box">
+IRR = NPVをゼロにする割引率<br>
+判定:IRR &gt; ハードルレート(要求利回り)なら投資する
+</div>
+<p>IRRが直感的に伝わりやすいのは、「この案件は年利何%か」という一言で語れるからです。経営会議で「この投資のIRRは18%です」と言えば、銀行金利や他の投資機会とすぐに比較できます。だからこそ実務ではIRRが好まれます。</p>
+
+<h2>2つの指標の違いを一覧で整理する</h2>
+<table>
+  <tr><th>項目</th><th>NPV(正味現在価値)</th><th>IRR(内部収益率)</th></tr>
+  <tr><td>単位</td><td>金額(円)</td><td>率(%)</td></tr>
+  <tr><td>意味</td><td>価値がいくら増えるか</td><td>その投資の利回り</td></tr>
+  <tr><td>判定基準</td><td>NPV &gt; 0 なら実行</td><td>IRR &gt; ハードルレート なら実行</td></tr>
+  <tr><td>割引率</td><td>事前に決めて入力する</td><td>計算結果として出てくる</td></tr>
+  <tr><td>投資規模</td><td>反映される</td><td>反映されない</td></tr>
+  <tr><td>伝わりやすさ</td><td>やや伝わりにくい</td><td>直感的で伝わりやすい</td></tr>
+  <tr><td>理論上の優劣</td><td>こちらが正しい</td><td>補助指標</td></tr>
+</table>
+
+<h2>同じ案件で結論が割れる例</h2>
+<p>2つの案件があり、予算の都合でどちらか一方しか実行できないとします。資本コスト(ハードルレート)は8%とします。</p>
+<table>
+  <tr><th>案件</th><th>初期投資</th><th>1年後の回収額</th><th>IRR</th><th>NPV(割引率8%)</th></tr>
+  <tr><td>A(小型)</td><td>100億円</td><td>130億円</td><td>30%</td><td>+20.4億円</td></tr>
+  <tr><td>B(大型)</td><td>500億円</td><td>620億円</td><td>24%</td><td>+74.1億円</td></tr>
+</table>
+<p>IRRで選ぶと、30%の案件Aが勝ちます。NPVで選ぶと、74.1億円の案件Bが勝ちます。結論が逆になりました。</p>
+<p>どちらが正しいかというと、株主にとってはBです。IRRは率なので投資規模を無視します。「100億円を30%で回す」より「500億円を24%で回す」ほうが、増える価値の絶対額は大きいのです。会社の価値を最大化するのが目的である以上、二者択一ではNPVの大きいほうを選ぶのが原則になります。</p>
+<p>ただし現実の投資委員会では、資金や人員に制約があります。使える資本が限られているなら、限られた資本あたりの効率、つまりIRRの高い案件を並べていくほうが合理的な場面もあります。だから実務では両方を並べて見ます。</p>
+
+<h2>ハードルレートと資本コストの関係</h2>
+<p>IRRの判定に使うハードルレートは、どこから持ってくるのでしょうか。出発点は資本コスト、具体的にはWACC(Weighted Average Cost of Capital、加重平均資本コスト)です。</p>
+<p>WACC(加重平均資本コスト)は、株主が要求するリターンと、銀行など債権者が要求するリターンを、資本構成で加重平均したものです。これは会社がお金を調達するのにかかっている実質的なコストであり、投資が最低限クリアすべき水準を意味します。</p>
+<p>実務では、この資本コストにリスクプレミアムを上乗せしてハードルレートを決めることが一般的です。</p>
+<ul>
+  <li><b>既存事業の維持更新投資:</b>WACCとほぼ同水準。リスクが読めているため上乗せは小さい。</li>
+  <li><b>国内の新規案件:</b>WACCに数%上乗せ。計画の未達リスクを織り込む。</li>
+  <li><b>新興国や新規事業:</b>さらに上乗せ。カントリーリスクや事業の不確実性を反映。</li>
+</ul>
+<p>ここで注意したいのが、ハードルレートを高く置きすぎる会社が多いことです。資本コストが6%なのにハードルレートを一律15%にすると、価値を生むはずの投資が却下されます。逆に低すぎると、価値を壊す投資が通ってしまいます。ハードルレートの設定は、事務手続きではなく資本配分の意思決定そのものです。</p>
+
+<h2>IRRの3つの落とし穴</h2>
+<h3>1. 投資規模を反映しない</h3>
+<p>先ほどの例のとおりです。率だけで比べると、小さくて効率の良い案件が常に勝ちます。実際に会社を成長させるのは、金額の大きな価値創出です。</p>
+<h3>2. 再投資の前提が現実的でない</h3>
+<p>IRRの計算は、途中で回収したキャッシュをIRRと同じ利回りで再投資できることを暗黙の前提にしています。IRRが40%と出た案件で、回収した資金をずっと40%で回し続けられる保証はありません。この点を補正した指標がMIRR(Modified Internal Rate of Return、修正内部収益率)で、再投資利回りを別途指定して計算します。</p>
+<h3>3. 解が複数出る、または出ないことがある</h3>
+<p>途中で大型の追加投資が入るなど、キャッシュフローの符号がプラスとマイナスの間で何度も入れ替わる案件では、数学的にIRRが複数存在したり、計算できなかったりします。プラント投資や、期末に大きな原状回復費用が発生する案件で起こりやすいパターンです。こうなるとIRRは判断材料になりません。NPVなら、どんなキャッシュフローの形でも必ず1つの答えが出ます。</p>
+
+<h2>実務での使い分け</h2>
+<p>整理すると、次のようになります。</p>
+<ul>
+  <li><b>意思決定の主軸はNPV。</b>価値がいくら増えるかが最終的な判断基準。</li>
+  <li><b>コミュニケーションと比較にはIRR。</b>案件を横並びで語るときに便利。</li>
+  <li><b>回収期間もあわせて見る。</b>何年で投資を回収できるかは、資金繰りとリスク管理の観点で重要。</li>
+</ul>
+<p>そして最も大事なのは、どちらの指標も入力となるキャッシュフロー予測の質を超えられないという点です。事業計画の売上前提が甘ければ、NPVもIRRもきれいな数字を返すだけです。実務でモデルを検証するときは、指標の数字より先に、前提となる数量、単価、コストの積み上げを疑います。決算数値からキャッシュフローを読み解く基本は、<a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント</a>で解説しています。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>NPV(正味現在価値)は金額、IRR(内部収益率)は率。同じ割引の考え方から出てくる。</li>
+  <li>二者択一の場面ではNPVが優先。IRRは投資規模を反映しないため、結論が逆になることがある。</li>
+  <li>ハードルレートの出発点はWACC(加重平均資本コスト)。高すぎる設定は良い投資を殺す。</li>
+  <li>どちらの指標も、キャッシュフロー予測の質を超える精度は持たない。</li>
+</ul>
+<p>投資判断の指標は、コーポレートファイナンスを学ぶうえで最初に押さえるべき領域です。学ぶ順番については、<a href="/articles/corporate-finance-self-study/">コーポレートファイナンスの独学ロードマップ</a>にまとめています。</p>
+
+<div class="cta">
+  <h2>企業価値評価を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、DCF法を含む企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</a></li>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+    <li>› <a href="/articles/corporate-finance-self-study/">コーポレートファイナンスの独学ロードマップ</a></li>
+  </ul>
+</div>
+
+<div class="author">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表。米国公認会計士(USCPA)。シンガポール在住。運用資産US$125Bの不動産プライベートエクイティでグローバル経営企画責任者(Global Head)を務めた後、World Finance Eduを設立。コーポレートファイナンス教育、フラクショナルCFOサービス、エンジェル投資を手がける。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a> · <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ掲載記事</a></span>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
