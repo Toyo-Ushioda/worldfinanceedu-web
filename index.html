@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>World Finance Edu | Corporate Finance Training and Fractional CFO, Singapore</title>
 <meta name="description" content="World Finance Edu delivers corporate finance training and seminars for working professionals, and fractional CFO support for companies that need senior finance capability without a full-time hire. Based in Singapore." />
-<link rel="canonical" href="https://worldfinanceedu.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="World Finance Edu" />
 <meta property="og:title" content="World Finance Edu | Corporate Finance Training and Fractional CFO" />
 <meta property="og:description" content="Corporate finance training and seminars for working professionals, plus fractional CFO support. Singapore." />
 <meta property="og:url" content="https://worldfinanceedu.com/" />
-<meta property="og:image" content="https://worldfinanceedu.com/img/photo1.jpg" />
+<meta property="og:image" content="https://worldfinanceedu.com/img/deck-founder.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="World Finance Edu | Corporate Finance Training and Fractional CFO" />
 <meta name="twitter:description" content="Corporate finance training and seminars for working professionals, plus fractional CFO support. Singapore." />
-<meta name="twitter:image" content="https://worldfinanceedu.com/img/photo1.jpg" />
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/deck-founder.jpg" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,6 +60,7 @@
   ]
 }
 </script>
+<link rel="canonical" href="https://worldfinanceedu.com/" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -72,12 +72,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
+  /* ===== Brand tokens ===== */
   :root {
     --mint:        #A8E6D0;
     --mint-deep:   #6FCBA8;
     --mint-soft:   #E8F8F1;
     --mint-wash:   #EFF8F4;
-    --mint-tint:   #F5FBF8;
+    --mint-tint:   #F5FBF8;   /* even softer mint for page wash */
+    --slate:       #ECEEEA;
+    --slate-deep:  #4A5550;
+    --sand:        #F4EFE6;   /* warm sand neutral */
+    --sand-soft:   #FAF6EE;   /* soft sand */
+    --sky:         #EEF1F2;   /* cool grey-blue */
     --ink:         #0E1A14;
     --ink-2:       #2A3530;
     --soft-ink:    #3A4842;
@@ -86,13 +92,9 @@
     --line:        #D8DCD9;
     --paper:       #FAFAF7;
     --paper-2:     #F2F3EF;
-    --sand:        #F4EFE6;
-    --sand-soft:   #FAF6EE;
-    --slate:       #ECEEEA;
-    --slate-deep:  #4A5550;
 
-    --serif: "Playfair Display", Georgia, serif;
-    --sans:  "Inter", -apple-system, sans-serif;
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:  "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     --mono:  "JetBrains Mono", monospace;
   }
 
@@ -102,159 +104,468 @@
     background: var(--paper);
     color: var(--ink);
     font-family: var(--sans);
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
   }
 
-  /* ===== PROGRESS BAR ===== */
-  .progress-bar {
-    position: fixed;
-    top: 0; left: 0;
-    height: 3px;
-    background: var(--mint-deep);
-    z-index: 200;
-    transition: width 0.1s ease;
-    width: 0%;
-  }
-
-  /* ===== HEADER ===== */
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(250, 250, 247, 0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-    padding: 14px 20px;
+  /* ===== Slide framework ===== */
+  .slide {
+    min-height: 100vh;
+    width: 100%;
+    padding: 80px 96px;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
   }
-  .header-logo {
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .header-logo em { font-style: italic; color: var(--mint-deep); }
-  .header-tag {
+
+  /* Three color zones — clearly distinct backgrounds */
+  .zone-paper { background: var(--paper); }
+  .zone-mint  { background: var(--mint-wash); }
+  .zone-slate { background: var(--slate); }
+
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 48px;
     font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.15em;
     color: var(--muted);
+    text-transform: uppercase;
   }
-
-  /* ===== BASE SECTION ===== */
-  .section { padding: 52px 20px; }
-  .section + .section { border-top: 1px solid var(--line); }
-
-  /* ===== EYEBROW ===== */
-  .eyebrow {
+  .slide-marker {
+    position: absolute;
+    top: 32px;
+    left: 48px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 12px;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  .eyebrow::before {
+  .slide-marker::before {
     content: "";
-    width: 16px; height: 1px;
-    background: var(--mint-deep);
-    flex-shrink: 0;
+    width: 18px;
+    height: 1px;
+    background: var(--ink);
   }
 
-  /* ===== BIZ BADGE ===== */
-  .biz-badge {
+  /* ===== Persistent business chip — visible on every business slide ===== */
+  .biz-chip {
+    position: absolute;
+    top: 28px;
+    left: 48px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 20px;
+    gap: 12px;
+    padding: 10px 16px;
+    background: var(--soft-ink);
+    color: var(--paper);
+    border-radius: 30px;
     font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.18em;
+    font-size: 11px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 500;
-    margin-bottom: 20px;
+    z-index: 5;
   }
-  .biz-badge .num {
-    width: 18px; height: 18px;
+  .biz-chip .num {
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px; font-weight: 600;
-  }
-  .badge-edu { background: var(--soft-ink); color: var(--paper); }
-  .badge-edu .num { background: var(--mint); color: var(--soft-ink); }
-  .badge-cfo { background: var(--mint-deep); color: var(--ink); }
-  .badge-cfo .num { background: var(--soft-ink); color: var(--paper); }
-  .badge-inv { background: var(--slate-deep); color: var(--paper); }
-  .badge-inv .num { background: var(--mint); color: var(--soft-ink); }
-
-  /* ===== SECTION HEADING ===== */
-  .section-h2 {
+    background: var(--mint);
+    color: var(--soft-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: 28px;
-    letter-spacing: -0.015em;
-    color: var(--ink);
-    line-height: 1.15;
-    margin-bottom: 16px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0;
   }
-  .section-h2 em { font-style: italic; color: var(--mint-deep); }
+  .biz-chip.education { background: var(--soft-ink); }
+  .biz-chip.education .num { background: var(--mint); color: var(--soft-ink); }
+  .biz-chip.cfo { background: var(--mint-deep); color: var(--soft-ink); }
+  .biz-chip.cfo .num { background: var(--soft-ink); color: var(--mint); }
+  .biz-chip.angel { background: var(--slate-deep); color: var(--paper); }
+  .biz-chip.angel .num { background: var(--paper); color: var(--slate-deep); }
 
-  .section-lead {
-    font-size: 14px;
-    line-height: 1.7;
+  /* ===== Typography utilities ===== */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
     color: var(--ink-2);
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--mint-deep);
+  }
+  .h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 4.2vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mint-deep);
+  }
+  .lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 60ch;
+  }
+  .body {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-2);
   }
 
-  /* ===== DIVIDER SECTION ===== */
-  .divider-section {
-    padding: 52px 20px;
+  /* ===== SLIDE 01 — Cover ===== */
+  .cover {
+    background:
+      radial-gradient(circle at 80% 20%, rgba(168, 230, 208, 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 15% 85%, rgba(168, 230, 208, 0.18) 0%, transparent 50%),
+      var(--paper);
+    padding: 60px 96px;
+    justify-content: space-between;
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-w {
+    width: 56px;
+    height: 56px;
+    background: var(--mint) url('/img/deck-logo.png') center/72% no-repeat;
+    border-radius: 6px;
+    box-shadow: 0 1px 0 rgba(14, 26, 20, 0.04), 0 8px 16px -8px rgba(14, 26, 20, 0.15);
+  }
+  .logo-text {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .cover-meta {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .cover-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+    position: relative;
+  }
+  .cover-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 6.2vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 14ch;
+    position: relative;
+    z-index: 2;
+  }
+  .cover-title .accent-italic {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mint-deep);
+  }
+  .cover-mission {
+    margin-top: 36px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 48ch;
+    position: relative;
+    z-index: 2;
+  }
+  .cover-mission strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .cover-decoration {
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px;
+    height: 380px;
+    border-radius: 12px;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 50px 100px -30px rgba(14, 26, 20, 0.30),
+      0 30px 60px -25px rgba(14, 26, 20, 0.22);
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    background: var(--mint);
+  }
+  .cover-decoration-mark {
+    width: 100%;
+    height: 100%;
+    background-size: 78%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid var(--ink);
+    padding-top: 24px;
+  }
+  .cover-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  /* ===== SLIDE 02 — Founder ===== */
+  .founder {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .founder-photo {
+    aspect-ratio: 3/4;
+    max-width: 360px;
+    justify-self: start;
+    width: 100%;
+    background-image: url("/img/deck-founder.jpg");
+    background-size: cover;
+    background-position: center top;
+    border-radius: 4px;
     position: relative;
     overflow: hidden;
   }
-  .divider-h1 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 18px;
-  }
-  .divider-h1 em { font-style: italic; color: var(--mint-deep); }
-  .divider-meta-row {
+  .founder-photo-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
     font-family: var(--mono);
     font-size: 10px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: rgba(14, 26, 20, 0.65);
+    padding: 6px 10px;
+    border-radius: 2px;
+    backdrop-filter: blur(4px);
+  }
+  .founder-name {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .founder-name em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mint-deep);
+  }
+  .founder-role {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 18px;
+    margin-bottom: 32px;
   }
-  .divider-summary {
-    font-size: 14px;
+  .founder-bio p {
+    font-size: 16px;
     line-height: 1.7;
     color: var(--ink-2);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
-  .divider-stats {
+  .founder-bio strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .credential-row {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 28px;
     border-top: 1px solid var(--line);
-    padding-top: 20px;
   }
-  .divider-stat { flex: 1; }
-  .divider-stat-label {
+  .credential {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 8px 14px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .credential:nth-child(1) { background: var(--mint-soft); border-color: var(--mint); }
+  .credential:nth-child(2) { background: var(--sand-soft); border-color: #E5DCC8; }
+  .credential:nth-child(3) { background: var(--sky); border-color: #DCE1E3; }
+  .credential:nth-child(4) { background: var(--paper); border-color: var(--line); }
+
+  /* ===== SECTION DIVIDER SLIDES ===== */
+  .divider {
+    justify-content: center;
+    padding: 80px 96px;
+  }
+  .divider-content {
+    max-width: 1100px;
+    position: relative;
+    z-index: 2;
+  }
+  /* When a foreground photo exists on the divider slide, reserve space on the right */
+  .divider:has(.divider-foreground-photo) .divider-content {
+    max-width: 60%;
+    margin-right: auto;
+  }
+  /* When detail-foreground-photo exists on a section slide, narrow the section-header lead */
+  .slide:has(.detail-foreground-photo) .section-header {
+    padding-right: 32%;
+  }
+  /* Education divider photo — Toyo lecturing */
+  .divider-photo {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    width: 280px;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center top;
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 30px 60px -20px rgba(14, 26, 20, 0.25),
+      0 18px 36px -18px rgba(14, 26, 20, 0.18);
+    z-index: 1;
+    overflow: hidden;
+  }
+  .divider-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(14, 26, 20, 0.18));
+  }
+  .divider-photo-caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
     font-family: var(--mono);
     font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 247, 0.92);
+    line-height: 1.5;
+  }
+  @media (max-width: 1180px) {
+    .divider-photo { width: 220px; right: 40px; }
+  }
+  @media (max-width: 900px) {
+    .divider-photo { display: none; }
+  }
+  .divider-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .divider-meta .meta-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 36px;
+    color: var(--mint-deep);
+    letter-spacing: 0;
+  }
+  .divider-meta .meta-line {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+    max-width: 200px;
+  }
+  .divider h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(72px, 11vw, 180px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+  .divider h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mint-deep);
+  }
+  .divider .divider-summary {
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 64ch;
+    margin-bottom: 40px;
+  }
+  .divider-meta-stats {
+    display: flex;
+    gap: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--ink);
+  }
+  .divider-stat-label {
+    font-family: var(--mono);
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
@@ -263,712 +574,1162 @@
   .divider-stat-value {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 22px;
     color: var(--ink);
   }
-  .divider-stat-value em { font-style: italic; color: var(--mint-deep); }
-
-  /* ===== HERO / COVER ===== */
-  .hero-section {
-    background: linear-gradient(180deg, var(--paper) 0%, var(--mint-tint) 100%);
-    padding: 64px 20px 56px;
+  .divider-stat-value em {
+    font-style: italic;
+    color: var(--mint-deep);
   }
-  .hero-tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-  .hero-h1 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 20px;
-  }
-  .hero-h1 em { font-style: italic; color: var(--mint-deep); }
-  .hero-mission {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--ink-2);
+  .divider-photo-strip {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
     margin-bottom: 32px;
-  }
-  .hero-mission strong { color: var(--ink); font-weight: 600; }
-  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .hero-chip {
-    padding: 6px 14px;
-    background: var(--mint-deep);
-    color: var(--ink);
-    border-radius: 20px;
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    margin-top: 16px;
   }
 
-  /* ===== FOUNDER ===== */
-  .founder-header {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 24px;
-  }
-  .founder-photo {
-    width: 76px; height: 76px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    border: 2px solid var(--line);
-    background: var(--mint-wash);
-  }
-  .founder-name {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 24px;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    margin-bottom: 3px;
-  }
-  .founder-name em { font-style: italic; color: var(--mint-deep); }
-  .founder-role {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .founder-bio p {
-    font-size: 14px;
-    line-height: 1.75;
-    color: var(--ink-2);
-    margin-bottom: 12px;
-  }
-  .founder-bio p:last-child { margin-bottom: 0; }
-  .credential-row {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-top: 20px;
-  }
-  .credential {
-    padding: 5px 12px;
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--soft-ink);
-  }
 
-  /* ===== AUDIENCE BLOCKS ===== */
-  .audience-grid {
+  /* ===== SLIDE 04 — Education detail ===== */
+  .section-header {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 56px;
+    margin-top: 40px;
+    position: relative;
+  }
+  /* Accent photo for track record / education slides */
+  .section-header-accent-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 18px 36px -16px rgba(14, 26, 20, 0.22);
+    overflow: hidden;
+  }
+  .section-header-accent-photo .accent-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    right: 12px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 247, 0.95);
+    text-shadow: 0 1px 4px rgba(14, 26, 20, 0.55);
+  }
+  @media (max-width: 1180px) {
+    .section-header-accent-photo { width: 160px; }
+  }
+  @media (max-width: 900px) {
+    .section-header-accent-photo { display: none; }
+  }
+  .section-header h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .section-header h2 em {
+    font-style: italic;
+    color: var(--mint-deep);
+  }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
   }
   .audience-block {
-    background: var(--sand-soft);
-    border-radius: 6px;
-    padding: 24px 20px;
+    padding: 36px 32px;
+    background: #C8E8DC;
+    border-radius: 4px;
     position: relative;
+  }
+  .audience-block.corporate {
+    background: #E8DCC4;
+    color: var(--ink);
   }
   .audience-block::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
-    width: 48px; height: 3px;
+    width: 60px;
+    height: 3px;
     background: var(--mint-deep);
-    border-radius: 6px 0 0 0;
   }
-  .audience-block.corporate { background: #E8DCC4; }
+  .audience-block.corporate::before { background: var(--mint-deep); }
   .audience-tag {
     font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.2em;
+    font-size: 11px;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
+  .audience-block.corporate .audience-tag { color: var(--muted); }
   .audience-title {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
     color: var(--ink);
-    margin-bottom: 16px;
   }
-  .audience-list { list-style: none; }
+  .audience-block.corporate .audience-title { color: var(--ink); }
+  .audience-list {
+    list-style: none;
+  }
   .audience-list li {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.5;
     color: var(--ink-2);
-    padding: 8px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--line);
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+  }
+  .audience-block.corporate .audience-list li {
+    color: var(--ink-2);
+    border-color: var(--line);
   }
   .audience-list li:last-child { border-bottom: none; }
   .audience-list li.sub {
-    padding-left: 18px;
-    font-size: 12px;
+    padding-left: 22px;
+    font-size: 13px;
     color: var(--muted);
     border-bottom: none;
-    padding-top: 3px; padding-bottom: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
+  .audience-block.corporate .audience-list li.sub { color: var(--muted); }
   .audience-list li .dot {
-    width: 5px; height: 5px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--mint-deep);
-    margin-top: 7px;
+    margin-top: 9px;
     flex-shrink: 0;
   }
+  .audience-block.corporate .audience-list li .dot { background: var(--mint-deep); }
 
-  /* ===== PILLARS ===== */
   .pillars-strip {
+    margin-top: 16px;
+    padding: 32px 28px 8px 28px;
+    border-top: 1px solid var(--ink);
     background: var(--sand-soft);
-    border-radius: 6px;
-    padding: 24px 20px;
-    border-top: 2px solid var(--ink);
+    border-radius: 4px;
   }
   .pillars-strip-title {
     font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.2em;
+    font-size: 11px;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--ink);
     margin-bottom: 20px;
   }
-  .pillar {
-    padding-left: 16px;
-    border-left: 2px solid var(--mint-deep);
-    margin-bottom: 20px;
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
   }
-  .pillar:last-child { margin-bottom: 0; }
+  .pillar {
+    padding-left: 20px;
+    border-left: 2px solid var(--mint-deep);
+  }
   .pillar-num {
     font-family: var(--serif);
     font-style: italic;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 18px;
     color: var(--mint-deep);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
   .pillar-title {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.25;
     color: var(--ink);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .pillar-desc {
     font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+
+  /* ===== SLIDE 06 — Fractional CFO detail ===== */
+  .cfo-zone {
+    background: var(--mint-wash);
+  }
+  .cfo-zone .audience-block {
+    background: var(--paper);
+  }
+  .cfo-scope {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .cfo-scope-item {
+    background: #C8E8DC;
+    padding: 28px 24px;
+    border-radius: 4px;
+    border-top: 3px solid var(--mint-deep);
+  }
+  .cfo-scope-item:nth-child(2) { background: #E8DCC4; }
+  .cfo-scope-item:nth-child(3) { background: #D4DEE0; }
+  .cfo-scope-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--mint-deep);
+    margin-bottom: 10px;
+  }
+  .cfo-scope-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .cfo-scope-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+
+  .pricing-eyebrow {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .pricing-card {
+    padding: 32px 28px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .pricing-card.tier-1 { background: #C8E8DC; }
+  .pricing-card.tier-2 { background: #E8DCC4; }
+  .pricing-card.tier-3 { background: #D4DEE0; }
+  .pricing-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--mint-deep);
+  }
+  .pricing-tier {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .pricing-name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  .pricing-amount {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .pricing-currency {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .pricing-value {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .pricing-unit {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pricing-includes {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    flex: 1;
+  }
+
+  .deel-note {
+    margin-top: 36px;
+    padding: 20px 24px;
+    background: var(--paper);
+    border-left: 3px solid var(--mint-deep);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .deel-note-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mint-deep);
+    font-weight: 500;
+  }
+  .deel-note-text {
+    font-size: 14px;
+    color: var(--ink-2);
+    flex: 1;
+    min-width: 280px;
+  }
+
+  /* ===== SLIDE 07 — Angel Investment (single page) ===== */
+  .angel-zone {
+    background: var(--slate);
+  }
+  .angel-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+    margin-top: 40px;
+  }
+  .angel-bullets {
+    list-style: none;
+  }
+  .angel-bullets li {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .angel-bullets li:first-child { padding-top: 0; }
+  .angel-bullets li:last-child { border-bottom: none; }
+  .angel-bullets .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--mint-deep);
+  }
+  .angel-bullets .b-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .angel-bullets .b-desc {
+    font-size: 14px;
     line-height: 1.6;
     color: var(--ink-2);
   }
 
-  /* ===== TRACK CARDS ===== */
-  .track-card {
+  .disclaimer-card {
+    padding: 32px 28px;
     background: var(--paper);
-    border-radius: 6px;
-    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    border-left: 3px solid var(--ink);
+  }
+  .disclaimer-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .disclaimer-label::before {
+    content: "!";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .disclaimer-text {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin-bottom: 14px;
+  }
+  .disclaimer-text:last-child { margin-bottom: 0; }
+  .disclaimer-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ===== Track record cards (Education slide) ===== */
+  .track-record-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+  .track-card {
+    padding: 28px 24px;
+    border-radius: 4px;
+    position: relative;
+    border-top: 3px solid var(--mint-deep);
+    display: flex;
+    flex-direction: column;
+  }
+  .track-card-1 { background: #C8E8DC; }
+  .track-card-2 { background: #E8DCC4; }
+  .track-card-3 { background: #D4DEE0; }
+  .track-card-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 12px;
+  }
+  .track-card-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .track-card-org {
+    font-size: 12px;
+    color: var(--ink-2);
+    margin-bottom: 16px;
+    font-style: italic;
+    font-family: var(--serif);
+  }
+  .track-card-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .track-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(14, 26, 20, 0.12);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .voices-strip {
+    margin-top: 16px;
+    padding-top: 32px;
+    border-top: 1px solid var(--ink);
+  }
+
+  /* ===== Course meta strip (BWCFP voices slide) ===== */
+  .course-meta-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 16px;
+    padding: 24px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .course-meta-item {
+    padding: 0 32px;
+    border-right: 1px solid var(--line);
+  }
+  .course-meta-item:first-child { padding-left: 0; }
+  .course-meta-item:last-child { border-right: none; padding-right: 0; }
+  .course-meta-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .course-meta-value {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  /* ===== Testimonials ===== */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 56px;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 36px 28px;
+    background: #C8E8DC;
+    border-radius: 4px;
+    position: relative;
+  }
+  .testimonial:nth-child(2) { background: #E8DCC4; }
+  .testimonial:nth-child(3) { background: #D4DEE0; }
+  .testimonial::before {
+    content: "“";
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 1;
+    color: var(--mint-deep);
+  }
+  .testimonial-quote {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    padding-top: 28px;
+    flex: 1;
+  }
+  .testimonial-author {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .author-photo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--paper);
+  }
+  .author-text { flex: 1; min-width: 0; }
+  .author-name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .author-role {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+
+  /* ===== Contact ===== */
+  .contact-slide {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(168, 230, 208, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 85% 75%, rgba(168, 230, 208, 0.25) 0%, transparent 45%),
+      var(--paper);
+    padding: 80px 96px;
+  }
+  .contact-display {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(60px, 8vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 80px;
+    max-width: 14ch;
+  }
+  .contact-display em {
+    font-style: italic;
+    color: var(--mint-deep);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .contact-item {
+    background: var(--paper);
+    padding: 28px 0;
+    padding-right: 32px;
+  }
+  .contact-item:nth-child(odd) { padding-left: 0; }
+  .contact-item:nth-child(even) { padding-left: 32px; }
+  .contact-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .contact-value {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--ink);
+    word-break: break-word;
+  }
+  .contact-value a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--mint-deep);
+    padding-bottom: 2px;
+  }
+  .closing-mark {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .closing-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ===== Side navigation with color-coded zones ===== */
+  .nav-rail {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 100;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
     border: 1px solid var(--line);
   }
-  .track-card:last-child { margin-bottom: 0; }
+  .nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--line);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    position: relative;
+  }
+  .nav-dot:hover, .nav-dot.active {
+    transform: scale(1.4);
+  }
+  .nav-dot.zone-paper-dot.active { background: var(--ink); }
+  .nav-dot.zone-mint-dot.active { background: var(--mint-deep); }
+  .nav-dot.zone-slate-dot.active { background: var(--slate-deep); }
+  .nav-dot:hover { background: var(--ink); }
+  .nav-dot::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 5px 11px;
+    border-radius: 3px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .nav-dot:hover::after { opacity: 1; }
+
+  /* ===== Page progress ===== */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--mint-deep);
+    z-index: 200;
+    transition: width 0.1s ease, background 0.3s ease;
+  }
+  .progress-bar.in-mint { background: var(--mint-deep); }
+  .progress-bar.in-slate { background: var(--slate-deep); }
+  .progress-bar.in-paper { background: var(--ink); }
+
+  /* ===== Foreground photos (replaces background treatment) ===== */
+  /* Track record cards: photo banner at top of card */
+  .track-card {
+    overflow: hidden;
+  }
   .track-card-photo {
-    height: 150px;
+    margin: -32px -32px 24px -32px;
+    height: 180px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(14, 26, 20, 0.06);
     position: relative;
   }
   .track-card-photo::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(14,26,20,0.2) 100%);
+    background: linear-gradient(180deg, rgba(14, 26, 20, 0) 60%, rgba(14, 26, 20, 0.18) 100%);
+    pointer-events: none;
   }
-  .track-card-body { padding: 20px; }
-  .track-card-tag {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
+  /* Some track-card paddings differ — account for inner padding override */
+  .track-card.track-card-1 .track-card-photo,
+  .track-card.track-card-2 .track-card-photo,
+  .track-card.track-card-3 .track-card-photo {
+    margin-top: -32px;
+    margin-left: -32px;
+    margin-right: -32px;
   }
-  .track-card-title {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--ink);
-    margin-bottom: 4px;
+
+  /* Section photo panel: a visible photo placed on the right side of detail/divider slides */
+  .section-photo-panel {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 30px 60px -30px rgba(14, 26, 20, 0.25);
+    overflow: hidden;
   }
-  .track-card-org {
+  .section-photo-caption {
+    margin-top: 14px;
     font-size: 12px;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-  .track-card-desc {
-    font-size: 13px;
-    line-height: 1.65;
-    color: var(--ink-2);
-    margin-bottom: 14px;
-  }
-  .track-card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .track-card-meta span {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 4px 10px;
-    background: var(--paper-2);
-    border-radius: 3px;
-  }
-
-  /* ===== TESTIMONIALS ===== */
-  .testimonial {
-    background: var(--paper);
-    border-radius: 6px;
-    padding: 24px 20px;
-    margin-bottom: 16px;
-    border-left: 3px solid var(--mint-deep);
-    position: relative;
-  }
-  .testimonial:last-child { margin-bottom: 0; }
-  .testimonial-quote {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--ink-2);
+    color: var(--soft-ink);
+    line-height: 1.5;
     font-style: italic;
-    margin-bottom: 16px;
+    opacity: 0.8;
   }
-  .testimonial-quote::before {
-    content: "\201C";
-    font-family: var(--serif);
-    font-size: 32px;
-    color: var(--mint-deep);
-    line-height: 0;
-    vertical-align: -14px;
-    margin-right: 4px;
+  /* Divider slide layout helper: split title left, photo right */
+  .divider-with-photo {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    height: 100%;
   }
-  .author-name {
-    font-family: var(--sans);
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--ink);
-    margin-bottom: 2px;
-  }
-  .author-role {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-  .course-meta-strip {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 24px;
-  }
-  .course-meta-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .course-meta-item:last-child { border-bottom: none; }
-  .course-meta-label {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .course-meta-value {
-    font-size: 13px;
-    color: var(--ink-2);
-    text-align: right;
-    max-width: 60%;
+  .divider-with-photo .divider-text { max-width: 580px; }
+  .divider-with-photo .section-photo-panel {
+    aspect-ratio: 5 / 4;
+    max-height: 70vh;
   }
 
-  /* ===== CFO SCOPE ===== */
-  .cfo-scope { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-  .cfo-scope-item {
-    border-radius: 6px;
-    padding: 20px;
-    border-top: 3px solid var(--mint-deep);
+  /* ===== Foreground photo panels for divider/detail slides ===== */
+  /* Positioned on the right side, anchored absolutely so existing layout is preserved */
+  .divider-foreground-photo {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    width: 38%;
+    max-width: 460px;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 30px 60px -25px rgba(14, 26, 20, 0.30),
+      0 60px 120px -50px rgba(14, 26, 20, 0.25);
+    z-index: 1;
   }
-  .cfo-scope-item:nth-child(1) { background: #C8E8DC; }
-  .cfo-scope-item:nth-child(2) { background: #E8DCC4; }
-  .cfo-scope-item:nth-child(3) { background: #D4DEE0; }
-  .cfo-scope-num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 15px;
-    color: var(--mint-deep);
-    margin-bottom: 6px;
+  .divider-foreground-photo-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .cfo-scope-title {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .cfo-scope-desc {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--ink-2);
-  }
-
-  /* ===== PRICING ===== */
-  .pricing-eyebrow {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 14px;
-  }
-  .pricing-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
-  .pricing-card {
-    border-radius: 6px;
-    padding: 22px 20px;
-    position: relative;
-  }
-  .pricing-card::before {
+  .divider-foreground-photo::after {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 36px; height: 3px;
-    background: var(--mint-deep);
-    border-radius: 6px 0 0 0;
-  }
-  .pricing-card.tier-1 { background: #C8E8DC; }
-  .pricing-card.tier-2 { background: #E8DCC4; }
-  .pricing-card.tier-3 { background: #D4DEE0; }
-  .pricing-tier {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .pricing-name {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--ink);
-    margin-bottom: 10px;
-  }
-  .pricing-amount {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-    margin-bottom: 4px;
-  }
-  .pricing-currency {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--ink);
-  }
-  .pricing-value {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 32px;
-    color: var(--ink);
-    line-height: 1;
-  }
-  .pricing-unit {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-  .pricing-includes {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--ink-2);
-  }
-  .deel-note {
-    background: var(--paper-2);
-    border-radius: 6px;
-    padding: 16px 18px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .deel-note-label {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    flex-shrink: 0;
-    padding-top: 2px;
-  }
-  .deel-note-text {
-    font-size: 13px;
-    line-height: 1.55;
-    color: var(--ink-2);
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14, 26, 20, 0) 70%, rgba(14, 26, 20, 0.18) 100%);
+    pointer-events: none;
   }
 
-  /* ===== INVESTMENT ===== */
-  .angel-bullets { list-style: none; }
-  .angel-bullets li {
-    display: flex;
-    gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--line);
-    align-items: flex-start;
+  /* Detail photo panel — same idea but smaller, top-right corner of detail slides */
+  .detail-foreground-photo {
+    position: absolute;
+    top: 88px;
+    right: 80px;
+    width: 30%;
+    max-width: 360px;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 rgba(14, 26, 20, 0.05),
+      0 20px 40px -20px rgba(14, 26, 20, 0.25);
+    z-index: 1;
   }
-  .angel-bullets li:last-child { border-bottom: none; }
-  .angel-num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 18px;
-    color: var(--mint-deep);
-    flex-shrink: 0;
-    min-width: 24px;
+  .detail-foreground-photo-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .b-title {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-  .b-desc {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--ink-2);
-  }
-  .disclaimer-card {
-    background: var(--slate);
-    border-radius: 6px;
-    padding: 20px;
-    margin-top: 20px;
-    border-left: 3px solid var(--slate-deep);
-  }
-  .disclaimer-label {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--slate-deep);
-    margin-bottom: 10px;
-  }
-  .disclaimer-text {
-    font-size: 12px;
-    line-height: 1.65;
-    color: var(--soft-ink);
-    margin-bottom: 8px;
-  }
-  .disclaimer-text:last-child { margin-bottom: 0; }
 
-  /* ===== CONTACT ===== */
-  .contact-section {
-    background:
-      radial-gradient(circle at 15% 25%, rgba(168,230,208,0.35) 0%, transparent 55%),
-      radial-gradient(circle at 85% 80%, rgba(168,230,208,0.2) 0%, transparent 50%),
-      var(--paper);
+  @media (max-width: 1100px) {
+    .divider-foreground-photo { width: 34%; right: 48px; }
+    .detail-foreground-photo { width: 26%; right: 48px; }
   }
-  .contact-headline {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 1.0;
-    letter-spacing: -0.025em;
-    color: var(--ink);
-    margin-bottom: 36px;
+  @media (max-width: 900px) {
+    .divider-with-photo { grid-template-columns: 1fr; gap: 32px; }
+    .track-card-photo { height: 140px; }
+    .divider-foreground-photo,
+    .detail-foreground-photo { display: none; }
   }
-  .contact-headline em { font-style: italic; color: var(--mint-deep); }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--line);
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
-    margin-bottom: 32px;
-  }
-  .contact-item { background: var(--paper); padding: 18px 14px; }
-  .contact-label {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .contact-value {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--ink);
-    word-break: break-word;
-    line-height: 1.4;
-  }
-  .contact-value a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid var(--mint-deep);
-  }
-  .contact-footer {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-align: center;
-    margin-top: 28px;
-  }
-  .deck-btn {
-    display: block;
-    text-align: center;
-    padding: 14px 24px;
-    background: var(--soft-ink);
-    color: var(--paper);
-    border-radius: 4px;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-bottom: 0;
-  }
-  .deck-btn:active { opacity: 0.8; }
 
-  /* ===== DESKTOP CONTAINER (added 2026-08-01) =====
-     Source page was authored mobile-first with no max-width. On wider screens
-     keep backgrounds full-bleed and centre content into a readable column. */
-  @media (min-width: 760px) {
-    .header,
-    .hero-section,
-    .section,
-    .divider-section {
-      padding-left: max(24px, calc((100% - 880px) / 2));
-      padding-right: max(24px, calc((100% - 880px) / 2));
+  /* ===== Print ===== */
+  @media print {
+    .nav-rail, .progress-bar { display: none; }
+    .slide { page-break-after: always; min-height: auto; height: 100vh; }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px) {
+    .slide { padding: 60px 48px; }
+    .cover, .divider { padding: 40px 48px; }
+    .founder, .angel-layout { grid-template-columns: 1fr; gap: 48px; }
+    .edu-grid, .pricing-grid, .testimonials-grid, .pillars-grid, .cfo-scope {
+      grid-template-columns: 1fr;
     }
-    .hero-section { padding-top: 88px; padding-bottom: 72px; }
-    .section, .divider-section { padding-top: 68px; padding-bottom: 68px; }
-    .hero-h1 { font-size: 46px; }
-    .founder-photo { width: 96px; height: 96px; }
+    .section-header { grid-template-columns: 1fr; gap: 24px; }
+    .cover-decoration { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-item:nth-child(even) { padding-left: 0; }
+    .biz-chip { position: static; margin-bottom: 24px; display: inline-flex; }
+    .slide-num { display: none; }
+    .divider-meta-stats { gap: 24px; flex-wrap: wrap; }
   }
-  .header-right { display: flex; align-items: center; gap: 14px; }
-  .header-deck {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--slate-deep);
-    text-decoration: none;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 5px 9px;
-    white-space: nowrap;
+  @media (max-width: 640px) {
+    .slide { padding: 48px 24px; }
+    .cover, .divider { padding: 32px 24px; }
+    .nav-rail { display: none; }
   }
-  .header-deck:hover { background: var(--mint-soft); color: var(--ink); }
+
+  /* ===== DENSITY REDUCTION — fit all slides within 810px viewport ===== */
+
+  /* Global slide padding */
+  .slide  { padding: 44px 96px; }
+  .divider { padding: 44px 96px; }
+
+  /* Divider h1 — was clamp(72px,11vw,180px), far too large */
+  .divider h1 { font-size: clamp(52px, 7vw, 90px); line-height: 0.95; margin-bottom: 16px; }
+
+  /* Divider summary text */
+  .divider .divider-summary { font-size: 17px; line-height: 1.45; margin-bottom: 20px; }
+  .divider-meta { margin-bottom: 10px; }
+  .divider-meta-stats { padding-top: 16px; gap: 40px; }
+
+  /* Section header h2 — was clamp(40px,5vw,64px), wraps to 4 lines */
+  .section-header h2 { font-size: clamp(28px, 3vw, 44px); }
+  .section-header { margin-top: 12px; margin-bottom: 20px; gap: 48px; }
+  .lead { font-size: 16px; line-height: 1.5; }
+
+  /* Education slide (slide-4) */
+  .edu-grid { margin-bottom: 16px; }
+  .audience-block { padding: 20px 24px; }
+  .audience-tag { margin-bottom: 6px; }
+  .audience-title { margin-bottom: 10px; }
+  .audience-list li { padding: 6px 0; }
+  .pillars-strip { padding: 14px 24px 8px 24px; margin-top: 0; }
+  .pillars-strip-title { margin-bottom: 10px; }
+  .pillars-grid { gap: 16px; }
+  .pillar-desc { font-size: 13px; line-height: 1.4; }
+
+  /* Track record slide (slide-5) */
+  .track-record-grid { margin-bottom: 20px; gap: 14px; }
+  .track-card { padding: 16px 18px; }
+  .track-card-photo { height: 130px; margin: -16px -18px 16px -18px; }
+  .track-card.track-card-1 .track-card-photo,
+  .track-card.track-card-2 .track-card-photo,
+  .track-card.track-card-3 .track-card-photo { margin-top: -16px; margin-left: -18px; margin-right: -18px; }
+
+  /* Testimonials slide (slide-6) */
+  .testimonials-grid { margin-top: 16px; gap: 20px; }
+  .testimonial { padding: 24px 22px; gap: 14px; }
+
+  /* CFO slide (slide-8) — flex-start so content never creeps under the biz-chip */
+  #slide-8 { justify-content: flex-start; padding: 76px 96px 28px; }
+  .cfo-scope { margin-bottom: 12px; gap: 12px; }
+  .cfo-scope-item { padding: 14px 16px; }
+  .pricing-eyebrow { margin-bottom: 8px; }
+  .pricing-grid { gap: 12px; }
+  .pricing-card { padding: 16px 16px; }
+  .deel-note { margin-top: 8px; padding: 10px 18px; }
+
+  /* Angel investment slide (slide-9) */
+  .angel-layout { gap: 32px; margin-top: 20px; }
+  .angel-bullets li { padding: 10px 0; }
+
+  /* ===== READABILITY PASS (2026-08-01) =====
+     Deck became the homepage. Type was sized for a projected slide, which
+     reads as too small on a monitor. Each step below is a +1 to +2px bump
+     that preserves the existing hierarchy. Paired with min-height slides so
+     nothing clips at the new sizes. */
+  .slide { height: auto; min-height: 100vh; }
+
+  .track-card-tag { font-size: 12px; }
+
+  .cover-meta, .cover-tag, .credential, .audience-tag,
+  .pillars-strip-title, .divider-stat-label, .pricing-eyebrow { font-size: 13px; }
+
+  .eyebrow, .founder-role, .track-card-org, .author-role { font-size: 14px; }
+
+  .logo-text, .sub, .pillar-desc, .track-card-desc,
+  .cfo-scope-desc, .pricing-unit, .disclaimer-text { font-size: 15px; }
+
+  .author-name, .pricing-includes, .deel-note-text, .b-desc { font-size: 16px; }
+
+  .lead { font-size: 18px; line-height: 1.65; }
+
+  .cover-mission, .divider-summary, .testimonial-quote { font-size: 19px; line-height: 1.6; }
+
+  .pillar-title, .course-meta-value { font-size: 20px; }
+  .cfo-scope-title, .b-title { font-size: 20px; }
+
+  /* Second pass: the small mono labels. Floor is 13px, nothing below.
+     Some need the extra specificity to beat the original rules. */
+  .course-meta-label, .slide-marker, .pricing-tier, .deel-note-label,
+  .disclaimer-label, .contact-label, .closing-tag, .track-card-tag { font-size: 13px; }
+
+  .track-card-meta, .track-card-meta span,
+  .biz-chip, .biz-chip span,
+  .divider-meta, .divider-meta span { font-size: 13px; }
+
+  span.credential { font-size: 14px; }
+  li.sub { font-size: 15px; }
+  span.pricing-currency { font-size: 15px; }
+
+  /* On phones a 100vh lock is what clips slide content. Let them breathe. */
+  @media (max-width: 640px) {
+    .slide { min-height: auto; padding-top: 56px; padding-bottom: 56px; }
+    .lead { font-size: 17px; }
+  }
+
+  /* Print/PDF keeps the one-slide-per-page behaviour. */
+  @media print {
+    .slide { height: 100vh; min-height: 0; page-break-after: always; }
+  }
 </style>
 </head>
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar in-paper" id="progressBar"></div>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header-logo">World <em>Finance</em> Edu</div>
-  <div class="header-right">
-    <span class="header-tag">Singapore</span>
-    <a class="header-deck" href="/deck.html">Deck &rarr;</a>
+<nav class="nav-rail" id="navRail">
+  <button class="nav-dot zone-paper-dot active" data-target="slide-1" data-zone="paper" data-tooltip="Cover" aria-label="Cover"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-2" data-zone="paper" data-tooltip="Founder" aria-label="Founder"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-3" data-zone="paper" data-tooltip="01 · Education" aria-label="Education divider"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-4" data-zone="paper" data-tooltip="01 · Education detail" aria-label="Education detail"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-5" data-zone="paper" data-tooltip="01 · Track record" aria-label="Track record"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-6" data-zone="paper" data-tooltip="01 · Voices" aria-label="Voices"></button>
+  <button class="nav-dot zone-mint-dot" data-target="slide-7" data-zone="mint" data-tooltip="02 · Fractional CFO" aria-label="Fractional CFO divider"></button>
+  <button class="nav-dot zone-mint-dot" data-target="slide-8" data-zone="mint" data-tooltip="02 · Fractional CFO detail" aria-label="Fractional CFO detail"></button>
+  <button class="nav-dot zone-slate-dot" data-target="slide-9" data-zone="slate" data-tooltip="03 · Investment" aria-label="Investment"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-10" data-zone="paper" data-tooltip="Contact" aria-label="Contact"></button>
+</nav>
+
+<!-- ===================== SLIDE 01 — COVER ===================== -->
+<section class="slide cover" id="slide-1" data-zone="paper">
+  <div class="cover-top">
+    <div class="logo-mark">
+      <div class="logo-w" aria-label="WFE logo"></div>
+      <div class="logo-text">World Finance<br/>Edu</div>
+    </div>
+    <div class="cover-meta">
+      Corporate Introduction<br/>
+      Version 4.0 · 2026
+    </div>
   </div>
-</header>
 
-<!-- HERO / COVER -->
-<section class="hero-section">
-  <div class="hero-tag">Corporate Introduction · Version 4.0 · 2026</div>
-  <h1 class="hero-h1">A finance training practice for <em>working professionals.</em></h1>
-  <p class="hero-mission">
-    <strong>World Finance Edu helps finance professionals and finance teams get better at their craft.</strong>
-    We deliver corporate finance training and seminars, and offer fractional CFO support to companies that need senior finance capability without a full-time hire.
-  </p>
-  <div class="hero-chips">
-    <span class="hero-chip">Education</span>
-    <span class="hero-chip">Fractional CFO</span>
-    <span class="hero-chip">Investment</span>
-    <span class="hero-chip">Singapore · Est. 2024</span>
+  <div class="cover-center">
+    <div class="cover-decoration" aria-hidden="true"><div class="cover-decoration-mark" style="background-image: url(/img/deck-logo.png)"></div></div>
+    <h1 class="cover-title">
+      A finance training practice for <span class="accent-italic">working professionals.</span>
+    </h1>
+    <p class="cover-mission">
+      <strong>World Finance Edu helps finance professionals and finance teams get better at their craft.</strong>
+      We deliver corporate finance training and seminars, and offer fractional CFO support to companies
+      that need senior finance capability without a full-time hire.
+    </p>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-tag">Singapore · Established 2024</div>
+    <div class="cover-tag">worldfinanceedu.com</div>
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section class="section">
-  <div class="eyebrow">The person behind WFE</div>
-  <div class="founder-header">
-    <img class="founder-photo" src="/img/photo1.jpg" alt="Toyo Ushioda" />
+<!-- ===================== SLIDE 02 — FOUNDER ===================== -->
+<section class="slide zone-paper" id="slide-2" data-zone="paper" style="background: linear-gradient(180deg, var(--paper) 0%, var(--mint-tint) 100%)">
+  <div class="slide-marker">Founder</div>
+  <div class="slide-num">02</div>
+
+  <div class="founder">
+    <div class="founder-photo"></div>
+
     <div>
-      <div class="founder-name">Toyo <em>Ushioda</em></div>
+      <div class="eyebrow">The person behind WFE</div>
+      <h2 class="founder-name">Toyo <em>Ushioda</em></h2>
       <div class="founder-role">Founder · CPA · INSEAD GEMBA</div>
-    </div>
-  </div>
-  <div class="founder-bio">
-    <p>
-      Toyo brings <strong>20+ years in financial and operational management</strong>, including as <strong>Global Head of FP&amp;A at a US$125B asset management firm</strong> covering Real Estate, Private Equity and Venture Capital strategies.
-    </p>
-    <p>
-      He founded World Finance Edu in 2024 to share that experience with finance professionals and finance teams. Outside WFE, he is also active as an angel investor, VC Limited Partner, Venture Partner and financial advisor, separately from the WFE business.
-    </p>
-    <p>
-      He is a <strong>Certified Public Accountant</strong> (Washington State), holds an <strong>INSEAD Global Executive MBA</strong>, and a certificate in business excellence from Columbia Business School's Private Equity &amp; Venture Capital Program.
-    </p>
-  </div>
-  <div class="credential-row">
-    <span class="credential">INSEAD GEMBA</span>
-    <span class="credential">Columbia PE/VC</span>
-    <span class="credential">CPA · WA</span>
-    <span class="credential">Deel Partner '25</span>
-  </div>
-</section>
 
-<!-- EDUCATION DIVIDER -->
-<section class="divider-section section" style="background: var(--mint-tint);">
-  <div class="biz-badge badge-edu"><span class="num">01</span> Practice 01 of 03 · Education</div>
-  <div class="divider-meta-row">Core practice · Corporate finance training</div>
-  <h2 class="divider-h1">Corporate finance <em>training.</em></h2>
-  <p class="divider-summary">
-    Programmes covering the full range of corporate finance topics: financial statement fundamentals, financial projections, investment metrics (IRR, WACC, NPV, payback period), capital budgeting, valuation, and fundraising. Each programme integrates practical AI tools so participants stay current with how modern finance teams actually work.
-  </p>
-  <div class="divider-stats">
-    <div class="divider-stat">
-      <div class="divider-stat-label">Format</div>
-      <div class="divider-stat-value">Seminars · workshops · in-house</div>
-    </div>
-    <div class="divider-stat">
-      <div class="divider-stat-label">Co-delivery</div>
-      <div class="divider-stat-value">With <em>instructor partners</em></div>
+      <div class="founder-bio">
+        <p>
+          Toyo brings <strong>20+ years in financial and operational management</strong>, including as <strong>Global Head of FP&amp;A at a US$125B asset management firm</strong> covering Real Estate, Private Equity and Venture Capital strategies.
+        </p>
+        <p>
+          He founded World Finance Edu in 2024 to share that experience with finance professionals
+          and finance teams. Outside WFE, he is also active as an angel investor, VC Limited Partner,
+          Venture Partner and financial advisor — separately from the WFE business.
+        </p>
+        <p>
+          He is a <strong>Certified Public Accountant</strong> (Washington State), holds an
+          <strong>INSEAD Global Executive MBA</strong>, and a certificate in business excellence
+          from Columbia Business School's Private Equity &amp; Venture Capital Program.
+        </p>
+      </div>
+
+      <div class="credential-row">
+        <span class="credential">INSEAD GEMBA</span>
+        <span class="credential">Columbia PE/VC</span>
+        <span class="credential">CPA · WA</span>
+        <span class="credential">Deel Partner '25</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION DETAIL — Client segments -->
-<section class="section" style="background: var(--mint-tint);">
-  <div class="biz-badge badge-edu"><span class="num">01</span> Practice 01 of 03 · Education</div>
-  <div class="eyebrow">Who we serve</div>
-  <h2 class="section-h2">Two client segments. <em>Two</em> delivery formats.</h2>
-  <p class="section-lead">WFE serves individual learners through open enrolment programmes (B to C), and corporate finance teams through tailored in-house engagements (B to B).</p>
+<!-- ===================== SLIDE 03 — DIVIDER: EDUCATION ===================== -->
+<section class="slide divider zone-paper" id="slide-3" data-zone="paper" style="background: var(--mint-tint)">
+  <div class="divider-foreground-photo">
+    <div class="divider-foreground-photo-img" style="background-image: url('/img/deck-divider-1.jpg');"></div>
+  </div>
 
-  <div class="audience-grid">
+  <div class="biz-chip education">
+    <span class="num">01</span>
+    <span>Practice 01 of 03 · Education</span>
+  </div>
+  <div class="slide-num">03</div>
+
+  <div class="divider-content">
+    <div class="divider-meta">
+      <span class="meta-num">01</span>
+      <span>Core practice · Corporate finance training</span>
+      <span class="meta-line"></span>
+    </div>
+    <h2>Corporate finance <em>training.</em></h2>
+    <p class="divider-summary">
+      Programmes covering the full range of corporate finance topics: financial statement fundamentals, financial projections, investment metrics (IRR, WACC, NPV, payback period), capital budgeting, valuation, and fundraising. Each programme integrates practical AI tools so participants stay current with how modern finance teams actually work.
+    </p>
+      <div>
+        <div class="divider-stat-label">Format</div>
+        <div class="divider-stat-value">Seminars · workshops · in-house</div>
+      </div>
+      <div>
+        <div class="divider-stat-label">Co-delivery</div>
+        <div class="divider-stat-value">With <em>instructor partners</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SLIDE 04 — EDUCATION DETAIL ===================== -->
+<section class="slide zone-paper" id="slide-4" data-zone="paper" style="background: var(--mint-tint)">
+  <div class="biz-chip education">
+    <span class="num">01</span>
+    <span>Practice 01 of 03 · Education</span>
+  </div>
+  <div class="slide-num">04</div>
+
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Who we serve</div>
+      <h2>Two client segments. <em>Two</em> delivery formats.</h2>
+    </div>
+    <p class="lead">
+      WFE serves individual learners through open enrolment programmes (B to C), and corporate finance teams through tailored in-house engagements (B to B).
+    </p>
+  </div>
+
+  <div class="edu-grid">
+
     <div class="audience-block">
       <div class="audience-tag">Format A · Individual learners</div>
       <h3 class="audience-title">Open seminars and certificate programmes</h3>
@@ -977,12 +1738,13 @@
         <li><span class="dot"></span>Corporate valuation (DCF, comparables, transaction)</li>
         <li><span class="dot"></span>FP&amp;A foundations and management reporting</li>
         <li><span class="dot"></span>Specialised programmes co-taught with instructor partners</li>
-        <li class="sub">Leadership &amp; Management</li>
-        <li class="sub">Communication &amp; Presentation</li>
-        <li class="sub">Data Science &amp; Decision-Making</li>
-        <li class="sub">Artificial Intelligence &amp; Robotics</li>
+        <li class="sub">— Leadership &amp; Management</li>
+        <li class="sub">— Communication &amp; Presentation</li>
+        <li class="sub">— Data Science &amp; Decision-Making</li>
+        <li class="sub">— Artificial Intelligence &amp; Robotics</li>
       </ul>
     </div>
+
     <div class="audience-block corporate">
       <div class="audience-tag">Format B · Corporate clients</div>
       <h3 class="audience-title">In-house programmes for finance teams</h3>
@@ -994,158 +1756,256 @@
         <li><span class="dot"></span>Specialised modules with instructor partners</li>
       </ul>
     </div>
+
   </div>
 
   <div class="pillars-strip">
     <div class="pillars-strip-title">Three things every WFE programme is judged on</div>
-    <div class="pillar">
-      <div class="pillar-num">i.</div>
-      <div class="pillar-title">Modelling that holds up under scrutiny</div>
-      <div class="pillar-desc">Structured, auditable models that actually get used in decisions, not just built to satisfy a deliverable.</div>
-    </div>
-    <div class="pillar">
-      <div class="pillar-num">ii.</div>
-      <div class="pillar-title">Presentation that changes the room</div>
-      <div class="pillar-desc">Translating numbers into the structured argument the audience needs to act on.</div>
-    </div>
-    <div class="pillar">
-      <div class="pillar-num">iii.</div>
-      <div class="pillar-title">Business context, not just spreadsheets</div>
-      <div class="pillar-desc">Knowing where the numbers come from, why they move, and what to ask the rest of the business.</div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">i.</div>
+        <div class="pillar-title">Modelling that holds up under scrutiny</div>
+        <div class="pillar-desc">Structured, auditable models that actually get used in decisions — not just built to satisfy a deliverable.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">ii.</div>
+        <div class="pillar-title">Presentation that changes the room</div>
+        <div class="pillar-desc">Translating numbers into the structured argument the audience needs to act on.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">iii.</div>
+        <div class="pillar-title">Business context, not just spreadsheets</div>
+        <div class="pillar-desc">Knowing where the numbers come from, why they move, and what to ask the rest of the business.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRACK RECORD -->
-<section class="section" style="background: var(--mint-tint);">
-  <div class="biz-badge badge-edu"><span class="num">01</span> Practice 01 of 03 · Education</div>
-  <div class="eyebrow">Where we teach · institutional partners</div>
-  <h2 class="section-h2">Programmes <em>delivered</em> with academic and MBA partners.</h2>
-  <p class="section-lead">Beyond direct corporate engagements, WFE delivers sessions through partner programmes across NUS, NTU and international MBA platforms.</p>
+<!-- ===================== SLIDE 05 — EDUCATION TRACK RECORD ===================== -->
+<section class="slide zone-paper" id="slide-5" data-zone="paper" style="background: var(--mint-tint)">
+  <div class="biz-chip education">
+    <span class="num">01</span>
+    <span>Practice 01 of 03 · Education</span>
+  </div>
+  <div class="slide-num">05</div>
 
-  <div class="track-card">
-    <div class="track-card-photo" style="background-image: url('/img/photo4.jpg');"></div>
-    <div class="track-card-body">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Where we teach · institutional partners</div>
+      <h2>Programmes <em>delivered</em> with academic and MBA partners.</h2>
+    </div>
+    <p class="lead">
+      Beyond direct corporate engagements, WFE delivers sessions through partner programmes
+      across NUS, NTU and international MBA platforms — bringing corporate finance into
+      founder education and academic curricula.
+      Newest: two Japanese-language online programs, a
+      <a href="/gyoseki/" style="color:inherit; text-decoration:underline;">corporate valuation course</a>
+      created jointly with Gyoseki, and a
+      <a href="https://english.worldfinanceedu.com/" style="color:inherit; text-decoration:underline;">business-English pronunciation and impression course</a>
+      live on Udemy.
+    </p>
+    </div>
+  </div>
+
+  <!-- Track record cards -->
+  <div class="track-record-grid">
+
+    <div class="track-card track-card-1">
+      <div class="track-card-photo" style="background-image: url('/img/deck-track-1.jpg');"></div>
       <div class="track-card-tag">MBA Partner · Global</div>
       <h3 class="track-card-title">LaunchPilot Founder MBA</h3>
       <div class="track-card-org">by Mentogram College · Woolf-affiliated MBA pathway</div>
-      <p class="track-card-desc">Delivers corporate finance modules within a 12-month global immersion MBA programme spanning Singapore, Mumbai, Dubai, Silicon Valley and other cities.</p>
+      <p class="track-card-desc">
+        Delivers corporate finance modules within a 12-month global immersion MBA
+        programme spanning Singapore, Mumbai, Dubai, Silicon Valley and other cities.
+      </p>
       <div class="track-card-meta">
         <span>Format · Founder MBA module</span>
         <span>Audience · Aspiring founders</span>
       </div>
     </div>
-  </div>
 
-  <div class="track-card">
-    <div class="track-card-photo" style="background-image: url('/img/photo5.jpg');"></div>
-    <div class="track-card-body">
+    <div class="track-card track-card-2">
+      <div class="track-card-photo" style="background-image: url('/img/deck-track-2.jpg');"></div>
       <div class="track-card-tag">Academic Partner · Singapore</div>
       <h3 class="track-card-title">National GRIP</h3>
       <div class="track-card-org">NUS &amp; NTU · National deep-tech venture programme</div>
-      <p class="track-card-desc">Lecture sessions for deep-tech founders within the national venture creation programme, covering financial projections, business modelling, and investor-readiness for PhD-stage and research-led teams.</p>
+      <p class="track-card-desc">
+        Lecture sessions for deep-tech founders within the national venture creation
+        programme — financial projections, business modelling, and investor-readiness
+        for PhD-stage and research-led teams.
+      </p>
       <div class="track-card-meta">
         <span>Format · Founder lectures</span>
         <span>Audience · Deep-tech founders</span>
       </div>
     </div>
-  </div>
 
-  <div class="track-card">
-    <div class="track-card-photo" style="background-image: url('/img/photo6.jpg');"></div>
-    <div class="track-card-body">
+    <div class="track-card track-card-3">
+      <div class="track-card-photo" style="background-image: url('/img/deck-track-3.jpg');"></div>
       <div class="track-card-tag">University Session · Feb 2026</div>
       <h3 class="track-card-title">NUS Real Estate Bidding Simulation</h3>
       <div class="track-card-org">NUS Real Estate Fund Management Club · REBA</div>
-      <p class="track-card-desc">Live simulation: students competed on land bidding using a real estate underwriting model, then revealed how a 12% target IRR turns into a negative outcome under realistic market assumptions.</p>
+      <p class="track-card-desc">
+        Live simulation: students competed on land bidding using a real estate underwriting
+        model, then revealed how a 12% target IRR turns into a negative outcome under realistic
+        market assumptions — illustrating bidding discipline through experience, not theory.
+      </p>
       <div class="track-card-meta">
         <span>Format · Simulation workshop</span>
         <span>Audience · Real estate students</span>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ===================== SLIDE 06 — VOICES (BWCFP COURSE) ===================== -->
+<section class="slide zone-paper" id="slide-6" data-zone="paper" style="background: var(--mint-tint)">
+  <div class="biz-chip education">
+    <span class="num">01</span>
+    <span>Practice 01 of 03 · Education</span>
+  </div>
+  <div class="slide-num">06</div>
+
+  <div class="section-header">
+    </div>
+    <div>
+      <div class="eyebrow">Voices · individual learners</div>
+      <h2>From the <em>Becoming a World Class Finance Professional</em> course.</h2>
+    </div>
+    <p class="lead">
+      WFE's flagship course for individual learners — combining live sessions and pre-recorded
+      modules, designed for non-finance professionals and junior finance professionals.
+      Organised and conducted by WFE.
+    </p>
   </div>
 
-  <div class="track-card">
-    <div class="track-card-body">
-      <div class="track-card-tag">Joint Program · Japan · Online</div>
-      <h3 class="track-card-title">Corporate Valuation Course with Gyoseki</h3>
-      <div class="track-card-org">with Gyoseki Co., Ltd. · Udemy online course (Japanese)</div>
-      <p class="track-card-desc">A Japanese-language online course on corporate valuation, teaching how investors measure value and how operators build it. Created jointly with Gyoseki, host of Japan's largest student fundamental-analysis competition.</p>
-      <div class="track-card-meta">
-        <span>Format · On-demand video</span>
-        <span>Audience · Finance professionals (Japanese)</span>
+  <!-- Course meta strip -->
+  <div class="course-meta-strip">
+    <div class="course-meta-item">
+      <div class="course-meta-label">Format</div>
+      <div class="course-meta-value">Live + pre-recorded</div>
+    </div>
+    <div class="course-meta-item">
+      <div class="course-meta-label">Audience</div>
+      <div class="course-meta-value">Non-finance &amp; junior finance professionals</div>
+    </div>
+    <div class="course-meta-item">
+      <div class="course-meta-label">Delivery</div>
+      <div class="course-meta-value">Organised &amp; conducted by WFE</div>
+    </div>
+  </div>
+
+  <!-- Voices -->
+  <div class="testimonials-grid" style="margin-top: 40px;">
+
+    <div class="testimonial">
+      <p class="testimonial-quote">
+        Toyo combined deep global expertise with a style that spoke directly to
+        experienced professionals. The mix of practical insights, structured frameworks,
+        and real-world applications made the program engaging and impactful.
+      </p>
+      <div class="testimonial-author">
+        <img class="author-photo" alt="Aditya Karnani" src="/img/deck-author-aditya.jpg" decoding="async" width="400" height="400" />
+        <div class="author-text">
+          <div class="author-name">Aditya Karnani</div>
+          <div class="author-role">Business Strategy &amp; Digital Transformation · Mars / Colgate / Britannia</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial-quote">
+        Toyo has real-world understanding of business and financial applications in
+        various contexts. Approachable, knowledgeable and friendly — I appreciate his
+        sincere commitment to share his knowledge and experience.
+      </p>
+      <div class="testimonial-author">
+        <img class="author-photo" alt="Edmund Lin" src="/img/deck-author-edmund.jpg" decoding="async" width="400" height="400" />
+        <div class="author-text">
+          <div class="author-name">Edmund Lin</div>
+          <div class="author-role">Partner &amp; Principal Consultant · Singapore Education Consulting Group</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial-quote">
+        A transformative experience for me as a marketing professional. Toyo-san
+        clearly articulated the connection between finance and business operations —
+        his thoughtful explanations kept my motivation high throughout.
+      </p>
+      <div class="testimonial-author">
+        <img class="author-photo" alt="Makiko Miyazawa" src="/img/deck-author-makiko.jpg" decoding="async" width="400" height="400" />
+        <div class="author-text">
+          <div class="author-name">Makiko Miyazawa</div>
+          <div class="author-role">Global Marketing Management</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SLIDE 07 — DIVIDER: FRACTIONAL CFO ===================== -->
+<section class="slide divider zone-mint" id="slide-7" data-zone="mint" >
+  <div class="divider-foreground-photo">
+    <div class="divider-foreground-photo-img" style="background-image: url('/img/deck-divider-2.jpg');"></div>
+  </div>
+
+  <div class="biz-chip cfo">
+    <span class="num">02</span>
+    <span>Practice 02 of 03 · Fractional CFO</span>
+  </div>
+  <div class="slide-num">07</div>
+
+  <div class="divider-content">
+    <div class="divider-meta">
+      <span class="meta-num">02</span>
+      <span>Adjacent service · Senior finance, on retainer</span>
+      <span class="meta-line"></span>
+    </div>
+    <h2>Fractional <em>CFO</em> services.</h2>
+    <p class="divider-summary">
+      For companies that need senior finance capability — model build, projections, fundraising
+      preparation, finance team setup — but aren't ready for a full-time CFO. You get direct access to 20+ years of senior finance expertise across real estate, private equity and venture capital, plus a genuine investor's perspective from 40+ startups across direct angel investments and two VC fund stakes, all in a personal capacity.
+    </p>
+      <div>
+        <div class="divider-stat-label">Embedded option</div>
+        <div class="divider-stat-value">From <em>S$5,000/mo</em></div>
+      </div>
+      <div>
+        <div class="divider-stat-label">Add-on</div>
+        <div class="divider-stat-value">Global HR via <em>Deel</em></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VOICES / TESTIMONIALS -->
-<section class="section" style="background: var(--mint-tint);">
-  <div class="biz-badge badge-edu"><span class="num">01</span> Practice 01 of 03 · Education</div>
-  <div class="eyebrow">Voices · individual learners</div>
-  <h2 class="section-h2">From the <em>Becoming a World Class Finance Professional</em> course.</h2>
-  <p class="section-lead">WFE's flagship course for individual learners, combining live sessions and pre-recorded modules, designed for non-finance professionals and junior finance professionals.</p>
-
-  <div class="course-meta-strip">
-    <div class="course-meta-item">
-      <span class="course-meta-label">Format</span>
-      <span class="course-meta-value">Live + pre-recorded</span>
-    </div>
-    <div class="course-meta-item">
-      <span class="course-meta-label">Audience</span>
-      <span class="course-meta-value">Non-finance &amp; junior finance professionals</span>
-    </div>
-    <div class="course-meta-item">
-      <span class="course-meta-label">Delivery</span>
-      <span class="course-meta-value">Organised &amp; conducted by WFE</span>
-    </div>
+<!-- ===================== SLIDE 06 — FRACTIONAL CFO DETAIL ===================== -->
+<section class="slide zone-mint cfo-zone" id="slide-8" data-zone="mint" >
+  <!-- detail-foreground-photo removed: was overlapping scope cards -->
+  <div class="detail-photo-removed" style="display:none">
+    <div class="detail-foreground-photo-img" style="background-image: url('');"></div>
   </div>
 
-  <div class="testimonial">
-    <p class="testimonial-quote">Toyo combined deep global expertise with a style that spoke directly to experienced professionals. The mix of practical insights, structured frameworks, and real-world applications made the program engaging and impactful.</p>
-    <div class="author-name">Aditya Karnani</div>
-    <div class="author-role">Business Strategy &amp; Digital Transformation · Mars / Colgate / Britannia</div>
+  <div class="biz-chip cfo">
+    <span class="num">02</span>
+    <span>Practice 02 of 03 · Fractional CFO</span>
   </div>
+  <div class="slide-num">08</div>
 
-  <div class="testimonial">
-    <p class="testimonial-quote">Toyo has real-world understanding of business and financial applications in various contexts. Approachable, knowledgeable and friendly — I appreciate his sincere commitment to share his knowledge and experience.</p>
-    <div class="author-name">Edmund Lin</div>
-    <div class="author-role">Partner &amp; Principal Consultant · Singapore Education Consulting Group</div>
-  </div>
-
-  <div class="testimonial">
-    <p class="testimonial-quote">A transformative experience for me as a marketing professional. Toyo-san clearly articulated the connection between finance and business operations — his thoughtful explanations kept my motivation high throughout.</p>
-    <div class="author-name">Makiko Miyazawa</div>
-    <div class="author-role">Global Marketing Management</div>
-  </div>
-</section>
-
-<!-- CFO DIVIDER -->
-<section class="divider-section section" style="background: var(--mint-wash);">
-  <div class="biz-badge badge-cfo"><span class="num">02</span> Practice 02 of 03 · Fractional CFO</div>
-  <div class="divider-meta-row">Adjacent service · Senior finance, on retainer</div>
-  <h2 class="divider-h1">Fractional <em>CFO</em> services.</h2>
-  <p class="divider-summary">
-    For companies that need senior finance capability: model build, projections, fundraising preparation, finance team setup, but aren't ready for a full-time CFO. You get direct access to 20+ years of senior finance expertise across real estate, private equity and venture capital, plus a genuine investor's perspective from 40+ startups across direct angel investments and two VC fund stakes, all in a personal capacity.
-  </p>
-  <div class="divider-stats">
-    <div class="divider-stat">
-      <div class="divider-stat-label">Embedded option</div>
-      <div class="divider-stat-value">From <em>S$5,000/mo</em></div>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Scope &amp; pricing</div>
+      <h2>What you get, <em>what it costs.</em></h2>
     </div>
-    <div class="divider-stat">
-      <div class="divider-stat-label">Add-on</div>
-      <div class="divider-stat-value">Global HR via <em>Deel</em></div>
-    </div>
+    <p class="lead">
+      Three levels of engagement — from a single hour of senior advice to embedded
+      finance leadership. Scope below applies across all three.
+    </p>
   </div>
-</section>
-
-<!-- CFO DETAIL -->
-<section class="section" style="background: var(--mint-wash);">
-  <div class="biz-badge badge-cfo"><span class="num">02</span> Practice 02 of 03 · Fractional CFO</div>
-  <div class="eyebrow">Scope &amp; pricing</div>
-  <h2 class="section-h2">What you get, <em>what it costs.</em></h2>
-  <p class="section-lead">Three levels of engagement, from a single hour of senior advice to embedded finance leadership. Scope below applies across all three.</p>
 
   <div class="cfo-scope">
     <div class="cfo-scope-item">
@@ -1156,7 +2016,7 @@
     <div class="cfo-scope-item">
       <div class="cfo-scope-num">ii.</div>
       <div class="cfo-scope-title">Financial modelling &amp; projections</div>
-      <div class="cfo-scope-desc">Reviewing or building financial models from scratch, usable tools that drive efficient and informed business decisions.</div>
+      <div class="cfo-scope-desc">Reviewing or building financial models from scratch — usable tools that drive efficient and informed business decisions.</div>
     </div>
     <div class="cfo-scope-item">
       <div class="cfo-scope-num">iii.</div>
@@ -1167,6 +2027,7 @@
 
   <div class="pricing-eyebrow">Engagement options</div>
   <div class="pricing-grid">
+
     <div class="pricing-card tier-1">
       <div class="pricing-tier">Tier 01 · Light Touch</div>
       <h3 class="pricing-name">Ad-hoc Consulting</h3>
@@ -1175,8 +2036,11 @@
         <span class="pricing-value">300</span>
       </div>
       <div class="pricing-unit">per hour · one-off sessions</div>
-      <p class="pricing-includes">On-demand expertise for specific questions, model reviews, or management discussions.</p>
+      <p class="pricing-includes">
+        On-demand expertise for specific questions, model reviews, or management discussions.
+      </p>
     </div>
+
     <div class="pricing-card tier-2">
       <div class="pricing-tier">Tier 02 · Strategic</div>
       <h3 class="pricing-name">Advisory Agreement</h3>
@@ -1185,8 +2049,11 @@
         <span class="pricing-value">1,000</span>
       </div>
       <div class="pricing-unit">monthly retainer</div>
-      <p class="pricing-includes">4+ hours of meetings per month, a sounding board for finance and capital decisions.</p>
+      <p class="pricing-includes">
+        4+ hours of meetings per month — a sounding board for finance and capital decisions.
+      </p>
     </div>
+
     <div class="pricing-card tier-3">
       <div class="pricing-tier">Tier 03 · Embedded</div>
       <h3 class="pricing-name">Comprehensive Support</h3>
@@ -1195,73 +2062,93 @@
         <span class="pricing-value">5,000</span>
       </div>
       <div class="pricing-unit">monthly retainer</div>
-      <p class="pricing-includes">3+ working days per month, working alongside your team on models, projections and finance build-out.</p>
+      <p class="pricing-includes">
+        3+ working days per month, working alongside your team on models, projections and finance build-out.
+      </p>
     </div>
+
   </div>
 
   <div class="deel-note">
     <div class="deel-note-label">Add-on · Global HR</div>
-    <div class="deel-note-text">Global HR Solution available alongside Fractional CFO engagements, in partnership with Deel, effective September 2025.</div>
+    <div class="deel-note-text">
+      Global HR Solution available alongside Fractional CFO engagements — in partnership with Deel, effective September 2025.
+    </div>
   </div>
 </section>
 
-<!-- INVESTMENT -->
-<section class="section" style="background: var(--slate);">
-  <div class="biz-badge badge-inv"><span class="num">03</span> Practice 03 of 03 · Investment</div>
-  <div class="eyebrow">Beyond training and CFO services</div>
-  <h2 class="section-h2">WFE also <em>invests in startups.</em></h2>
-  <p class="section-lead">WFE invests its own capital directly into early-stage startups at pre-seed and seed stage. To date, WFE has backed 10+ startups directly and holds stakes in 2 VC funds covering 40+ startups. Each investment is personal and conviction-driven, focused on the founding team and the problem they are solving.</p>
+<!-- ===================== SLIDE 07 — ANGEL INVESTMENT (single page) ===================== -->
+<section class="slide zone-slate angel-zone" id="slide-9" data-zone="slate">
+  <div class="biz-chip angel">
+    <span class="num">03</span>
+    <span>Practice 03 of 03 · Investment</span>
+  </div>
+  <div class="slide-num">09</div>
 
-  <ul class="angel-bullets">
-    <li>
-      <span class="angel-num">01</span>
-      <div>
-        <div class="b-title">Pre-seed and seed only</div>
-        <div class="b-desc">Stage focus is pre-seed and seed, the points where founder selection, network and judgement matter most relative to capital.</div>
-      </div>
-    </li>
-    <li>
-      <span class="angel-num">02</span>
-      <div>
-        <div class="b-title">Sector-agnostic, founder-led</div>
-        <div class="b-desc">Sector is open. The decision is driven by the founding team and the problem they are solving, not by category preferences.</div>
-      </div>
-    </li>
-    <li>
-      <span class="angel-num">03</span>
-      <div>
-        <div class="b-title">Post-investment support</div>
-        <div class="b-desc">Startups backed by WFE get access to WFE's finance and operating experience, separate from any paid engagement.</div>
-      </div>
-    </li>
-  </ul>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Beyond training and CFO services</div>
+      <h2>WFE also <em>invests in startups.</em></h2>
+    </div>
+    <p class="lead">
+      WFE invests its own capital directly into early-stage startups at pre-seed and seed stage.
+      To date, WFE has backed 10+ startups directly and holds stakes in 2 VC funds covering 40+ startups.
+      Each investment is personal and conviction-driven, focused on the founding team and the problem they are solving.
+    </p>
+  </div>
 
-  <div class="disclaimer-card">
-    <div class="disclaimer-label">Regulatory note</div>
-    <p class="disclaimer-text">WFE invests its own capital as a <strong>sole proprietorship</strong>. WFE does not solicit, pool, or manage capital from third parties.</p>
-    <p class="disclaimer-text">WFE does not provide investment advice, deal sourcing, fund management, or any other regulated financial activity, and is <strong>not licensed by the Monetary Authority of Singapore (MAS)</strong> for any such activity.</p>
-    <p class="disclaimer-text">Nothing on this page constitutes a solicitation or offer of securities, or an invitation to invest alongside WFE.</p>
+  <div class="angel-layout">
+
+    <div>
+      <ul class="angel-bullets">
+        <li>
+          <span class="num">01</span>
+          <div>
+            <div class="b-title">Pre-seed and seed only</div>
+            <div class="b-desc">Stage focus is pre-seed and seed — the points where founder selection, network and judgement matter most relative to capital.</div>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div>
+            <div class="b-title">Sector-agnostic, founder-led</div>
+            <div class="b-desc">Sector is open. The decision is driven by the founding team and the problem they are solving, not by category preferences.</div>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div>
+            <div class="b-title">Post-investment support</div>
+            <div class="b-desc">Startups backed by WFE get access to WFE's finance and operating experience, separate from any paid engagement.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="disclaimer-card">
+      <div class="disclaimer-label">Regulatory note</div>
+      <p class="disclaimer-text">
+        WFE invests its own capital as a <strong>sole proprietorship</strong>. WFE does not solicit, pool, or manage capital from third parties.
+      </p>
+      <p class="disclaimer-text">
+        WFE does not provide investment advice, deal sourcing, fund management, or any other regulated financial activity, and is <strong>not licensed by the Monetary Authority of Singapore (MAS)</strong> for any such activity.
+      </p>
+      <p class="disclaimer-text">
+        Nothing on this page constitutes a solicitation or offer of securities, or an invitation to invest alongside WFE.
+      </p>
+    </div>
+
   </div>
 </section>
 
-<!-- JAPANESE-LANGUAGE RESOURCES -->
-<section class="section">
-  <div class="eyebrow">For Japanese speakers · 日本語</div>
-  <h2 class="section-h2">Japanese-language <em>programs.</em></h2>
-  <p class="section-lead">日本語で学べるオンライン講座と学習コラムはこちらから。</p>
-  <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px;">
-    <a href="/gyoseki/" style="display:block;background:#fff;border:1px solid #E0E4E8;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;font-weight:600;">AI時代の、ファイナンス・キャリア再設計(企業価値評価講座・GYOSEKI × WFE) →</a>
-    <a href="https://english.worldfinanceedu.com/" style="display:block;background:#fff;border:1px solid #E0E4E8;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;font-weight:600;">グローバルなビジネス環境で正しく評価されるための英語戦略(Udemy) →</a>
-    <a href="/articles/" style="display:block;background:#fff;border:1px solid #E0E4E8;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;font-weight:600;">AI時代に生き残るファイナンス　学習コラム →</a>
-    <a href="https://english.worldfinanceedu.com/articles/" style="display:block;background:#fff;border:1px solid #E0E4E8;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;font-weight:600;">グローバルに活躍する日本人になるための英語力向上コラム →</a>
-    <a href="/links/" style="display:block;background:#fff;border:1px solid #E0E4E8;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;font-weight:600;">リンク集(潮田豊幸 / World Finance Edu) →</a>
-  </div>
-</section>
+<!-- ===================== SLIDE 09 — CONTACT ===================== -->
+<section class="slide contact-slide" id="slide-10" data-zone="paper" >
+  <div class="slide-marker">Get in touch</div>
+  <div class="slide-num">10</div>
 
-<!-- CONTACT -->
-<section class="section contact-section">
-  <div class="eyebrow">Get in touch</div>
-  <h2 class="contact-headline">Let's <em>talk.</em></h2>
+  <h2 class="contact-display">
+    Let's <em>talk.</em>
+  </h2>
 
   <div class="contact-grid">
     <div class="contact-item">
@@ -1274,29 +2161,88 @@
     </div>
     <div class="contact-item">
       <div class="contact-label">Email</div>
-      <div class="contact-value"><a href="mailto:Operation@worldfinanceedu.com">Operation@<br>worldfinanceedu.com</a></div>
+      <div class="contact-value"><a href="mailto:Operation@worldfinanceedu.com">Operation@worldfinanceedu.com</a></div>
     </div>
     <div class="contact-item">
       <div class="contact-label">Website</div>
       <div class="contact-value"><a href="https://worldfinanceedu.com" target="_blank" rel="noopener">worldfinanceedu.com</a></div>
     </div>
-    <div class="contact-item" style="grid-column: 1 / -1;">
+    <div class="contact-item">
+      <div class="contact-label">日本語 · Japanese-language courses and columns</div>
+      <div class="contact-value"><a href="/links/">日本語の講座・学習コラムはこちら</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">学習コラム · Finance</div>
+      <div class="contact-value"><a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">学習コラム · English</div>
+      <div class="contact-value"><a href="https://english.worldfinanceedu.com/articles/">グローバルに活躍する日本人になるための英語力向上コラム</a></div>
+    </div>
+    <div class="contact-item">
       <div class="contact-label">LinkedIn · Company</div>
       <div class="contact-value"><a href="https://www.linkedin.com/company/world-finance-edu" target="_blank" rel="noopener">/company/world-finance-edu</a></div>
     </div>
   </div>
 
-  <a class="deck-btn" href="/deck.html">View full presentation deck</a>
-  <div class="contact-footer">World Finance Edu · Singapore · &copy; 2026 · All rights reserved</div>
+  <div class="closing-mark">
+    <div class="logo-mark">
+      <div class="logo-w" aria-label="WFE logo"></div>
+      <div class="logo-text">World Finance<br/>Edu</div>
+    </div>
+    <div class="closing-tag">© 2026 World Finance Edu · All rights reserved</div>
+  </div>
 </section>
 
 <script>
-  const bar = document.getElementById('progressBar');
+  // Progress bar with zone-based coloring
+  const progressBar = document.getElementById('progressBar');
+  const slides = document.querySelectorAll('.slide');
+
   window.addEventListener('scroll', () => {
     const h = document.documentElement;
-    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-    bar.style.width = pct + '%';
+    const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // Navigation dots
+  const dots = document.querySelectorAll('.nav-dot');
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const target = document.getElementById(dot.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Active dot + progress color on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const zone = entry.target.dataset.zone;
+        dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+        progressBar.classList.remove('in-paper', 'in-mint', 'in-slate');
+        progressBar.classList.add('in-' + zone);
+      }
+    });
+  }, { threshold: 0.5 });
+  slides.forEach(s => observer.observe(s));
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    const current = Array.from(slides).findIndex(s => {
+      const rect = s.getBoundingClientRect();
+      return rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+    });
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault();
+      if (current < slides.length - 1) slides[current + 1].scrollIntoView({ behavior: 'smooth' });
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      if (current > 0) slides[current - 1].scrollIntoView({ behavior: 'smooth' });
+    }
   });
 </script>
+
 </body>
 </html>
