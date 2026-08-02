@@ -1309,6 +1309,19 @@
   }
   .nav-dot:hover::after { opacity: 1; }
 
+  /* Media slide */
+  .media-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+  .media-card{display:block;background:#fff;border:1px solid #E0E4E8;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 2px 10px rgba(15,21,38,.06);transition:transform .15s ease, box-shadow .15s ease}
+  .media-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(15,21,38,.14)}
+  .media-card .mimg{height:150px;background-size:cover;background-position:center}
+  .media-card .mbody{padding:14px 16px 16px}
+  .media-card .moutlet{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1F43C9}
+  .media-card .mtitle{font-size:14.5px;font-weight:700;line-height:1.5;margin-top:4px}
+  .media-card .mlink{font-size:12.5px;font-weight:700;color:#1F43C9;margin-top:8px;display:inline-block}
+  .media-more{margin-top:24px;font-size:14.5px}
+  @media(max-width:900px){.media-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.media-grid{grid-template-columns:1fr}}
+
   /* ===== Page progress ===== */
   .progress-bar {
     position: fixed;
@@ -1603,6 +1616,7 @@
   <button class="nav-dot zone-mint-dot" data-target="slide-7" data-zone="mint" data-tooltip="02 · Fractional CFO" aria-label="Fractional CFO divider"></button>
   <button class="nav-dot zone-mint-dot" data-target="slide-8" data-zone="mint" data-tooltip="02 · Fractional CFO detail" aria-label="Fractional CFO detail"></button>
   <button class="nav-dot zone-slate-dot" data-target="slide-9" data-zone="slate" data-tooltip="03 · Investment" aria-label="Investment"></button>
+  <button class="nav-dot zone-paper-dot" data-target="slide-media" data-zone="paper" data-tooltip="Media &amp; Speaking" aria-label="Media and Speaking"></button>
   <button class="nav-dot zone-paper-dot" data-target="slide-10" data-zone="paper" data-tooltip="Contact" aria-label="Contact"></button>
 </nav>
 
@@ -2141,10 +2155,67 @@
   </div>
 </section>
 
-<!-- ===================== SLIDE 09 — CONTACT ===================== -->
+<!-- ===================== SLIDE 10 — MEDIA ===================== -->
+<section class="slide zone-paper" id="slide-media" data-zone="paper" style="background: var(--paper)">
+  <div class="slide-marker">Media &amp; Speaking</div>
+  <div class="slide-num">10</div>
+
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Third-party interviews and features</div>
+      <h2>Featured in <em>media.</em></h2>
+    </div>
+    <p class="lead">
+      Toyo's career and work have been covered by independent media and platforms in Japan,
+      the US, Australia and Singapore — from career-story features to expert interviews.
+    </p>
+  </div>
+
+  <div class="media-grid">
+    <a class="media-card" href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">
+      <div class="mimg" style="background-image:url('/media/bizreach_top.jpg');background-position:right center"></div>
+      <div class="mbody">
+        <div class="moutlet">BizReach · Japan</div>
+        <div class="mtitle">From aspiring musician to global division head</div>
+        <span class="mlink">Read the article ›</span>
+      </div>
+    </a>
+    <a class="media-card" href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">
+      <div class="mimg" style="background-image:url('/links/toyo_profile.jpeg')"></div>
+      <div class="mbody">
+        <div class="moutlet">Executives Diary · USA</div>
+        <div class="mtitle">The Power of Never Feeling Finished</div>
+        <span class="mlink">Read the story ›</span>
+      </div>
+    </a>
+    <a class="media-card" href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">
+      <div class="mimg" style="background-image:url('/media/maestro_logo.jpg');background-size:contain;background-repeat:no-repeat;background-color:#000"></div>
+      <div class="mbody">
+        <div class="moutlet">Maestro · AU / SG</div>
+        <div class="mtitle">Meet the Maestro: Toyoyuki</div>
+        <span class="mlink">Read the interview ›</span>
+      </div>
+    </a>
+    <a class="media-card" href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">
+      <div class="mimg" style="background-image:url('/media/jobhunting_cover.png')"></div>
+      <div class="mbody">
+        <div class="moutlet">Ricky Foo · "Jobhunting"</div>
+        <div class="mtitle">Interviewed by the author of "Jobhunting"</div>
+        <span class="mlink">Read the story ›</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="media-more">
+    <a href="/media/">View all media features and speaking engagements ›</a>
+    &nbsp;·&nbsp; <a href="/media/jp/">日本語版はこちら ›</a>
+  </p>
+</section>
+
+<!-- ===================== SLIDE 11 — CONTACT ===================== -->
 <section class="slide contact-slide" id="slide-10" data-zone="paper" >
   <div class="slide-marker">Get in touch</div>
-  <div class="slide-num">10</div>
+  <div class="slide-num">11</div>
 
   <h2 class="contact-display">
     Let's <em>talk.</em>
