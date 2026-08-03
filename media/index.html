@@ -40,8 +40,7 @@ main{max-width:760px;margin:24px auto 0;padding:0 16px 56px}
 .mcard{display:flex;gap:0;background:#fff;border:1px solid #DCE1EC;border-radius:16px;overflow:hidden;margin-bottom:14px;text-decoration:none;color:#0F1526;transition:transform .15s ease,box-shadow .15s ease}
 .mcard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,21,38,.14)}
 .mcard .photo{flex:0 0 150px;background-size:cover;background-position:center;min-height:150px}
-.mcard .photo.evt{display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#0F1526 0%,#1F2C55 100%);color:#fff;font-weight:900;font-size:19px;line-height:1.35;text-align:center;letter-spacing:.04em;padding:10px}
-.mcard .photo.evt em{display:block;font-style:normal;font-size:11px;font-weight:700;color:#86A2FF;letter-spacing:.1em;margin-top:6px}
+.mcard.ev .photo{flex:0 0 250px}
 .mcard .body{flex:1;padding:16px 18px}
 .mcard .outlet{font-size:11.5px;font-weight:800;color:#2E5BFF;letter-spacing:.06em;text-transform:uppercase}
 .mcard .t{font-size:16.5px;font-weight:800;line-height:1.45;margin-top:4px}
@@ -54,12 +53,13 @@ main{max-width:760px;margin:24px auto 0;padding:0 16px 56px}
 .gal figcaption{font-size:12.5px;color:#4A5060;padding:10px 14px;line-height:1.6}
 .gal figure.wide{grid-column:1 / -1}
 .gal figure.wide img{height:240px}
+.gal figure.board img{height:auto}
 .cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:24px;margin-top:30px;text-align:center}
 .cta p{font-size:14.5px;color:#DCE5FF;margin-bottom:14px}
 .cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
 footer{padding:22px 20px 36px;text-align:center;font-size:12.5px;color:#8A90A2}
 footer a{color:#8A90A2}
-@media(max-width:560px){.mcard{flex-direction:column}.mcard .photo{min-height:170px}.gal{grid-template-columns:1fr}.hero h1{font-size:24px}}
+@media(max-width:560px){.mcard{flex-direction:column}.mcard .photo{min-height:170px}.mcard.ev .photo{flex:0 0 190px}.gal{grid-template-columns:1fr}.hero h1{font-size:24px}}
 </style>
 </head>
 <body>
@@ -112,24 +112,30 @@ footer a{color:#8A90A2}
 </a>
 
 <div class="sec">Startup pitch judging</div>
-<a class="mcard" href="https://gric.forstartups.com/en/2025speakers/toyoyuki-ushioda">
-  <div class="photo evt">GRIC<br>2025<em>TOKYO</em></div>
+<a class="mcard ev" href="https://gric.forstartups.com/en/2025speakers/toyoyuki-ushioda">
+  <div class="photo" style="background-image:url('/media/gric2025_stage.jpg')"></div>
   <div class="body">
     <div class="outlet">GRIC2025 · Japan</div>
     <div class="t">Pitch judge at GRIC2025 (Growth Industry Conference)</div>
-    <div class="d">GRIC is one of Japan's largest growth industry conferences, hosted by for Startups, Inc. Toyo served as one of the 100+ judges from Japan and abroad for GRIC PITCH, held in Shibuya, Tokyo in November 2025 with over 11,000 registrations.</div>
+    <div class="d">GRIC is one of Japan's largest growth industry conferences, hosted by for Startups, Inc. Toyo served as a judge for GRIC PITCH, held in Shibuya, Tokyo in November 2025 with over 11,000 registrations.</div>
     <span class="go">View the judge profile ›</span>
   </div>
 </a>
-<a class="mcard" href="https://www.intrinsicsea.com/event-details/asean-tech-summit">
-  <div class="photo evt">ATCDS<br>2025<em>KUALA LUMPUR</em></div>
+<a class="mcard ev" href="https://www.intrinsicsea.com/event-details/asean-tech-summit">
+  <div class="photo" style="background-image:url('/media/atcds2025_banner.jpg');background-position:right 28%"></div>
   <div class="body">
     <div class="outlet">ATCDS2025 · Malaysia</div>
     <div class="t">Pitch judge at the ASEAN Technology Cooperation &amp; Development Summit 2025</div>
-    <div class="d">An official programme under Malaysia's ASEAN Chairmanship 2025, organised by Intrinsic SEA and held at MITEC in Kuala Lumpur in November 2025, with more than 2,000 onsite delegates from 13 countries. Toyo judged startup pitches at the summit.</div>
+    <div class="d">An official programme under Malaysia's ASEAN Chairmanship 2025, organised by Intrinsic SEA and held at MITEC in Kuala Lumpur in November 2025, with more than 2,000 onsite delegates from 13 countries. Toyo judged startup pitches, and World Finance Edu is listed among the summit's venture capital participants.</div>
     <span class="go">Visit the summit page ›</span>
   </div>
 </a>
+<div class="gal">
+  <figure class="wide board">
+    <img src="/media/atcds2025_vc_board.jpg" alt="World Finance Edu listed on the ATCDS2025 venture capital board">
+    <figcaption>The summit board at ATCDS2025. <b>World Finance Edu</b> appears in the venture capital line-up (the green logo, centre of the bottom row), alongside Google, Gobi Partners, Plug and Play, Qualgro and Vynn Capital.</figcaption>
+  </figure>
+</div>
 
 <div class="sec">Speaking &amp; teaching</div>
 <div class="gal">
