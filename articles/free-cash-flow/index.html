@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>フリーキャッシュフロー(FCF)とは|計算式と「マイナス」の意味 | World Finance Edu</title>
+<meta name="description" content="フリーキャッシュフロー(FCF)とは、事業が生み出す現金から投資を差し引いた、自由に使える現金です。営業キャッシュフローと投資キャッシュフローからの計算式、FCFがマイナスの会社をどう読むか、DCF法の入力としての使い方までを実務家が解説します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/free-cash-flow/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="フリーキャッシュフロー(FCF)とは|計算式と「マイナス」の意味">
+<meta property="og:description" content="FCFの計算式、マイナスの読み方、DCF法での使われ方まで。実務家がわかりやすく解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/free-cash-flow/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "フリーキャッシュフロー(FCF)とは|計算式と「マイナス」の意味",
+      "description": "フリーキャッシュフロー(FCF)の計算式、営業キャッシュフローと投資キャッシュフローからの求め方、マイナスの読み方、DCF法での使い方を解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/free-cash-flow/",
+      "datePublished": "2026-08-03"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "フリーキャッシュフローとは", "item": "https://worldfinanceedu.com/articles/free-cash-flow/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › フリーキャッシュフローとは</div>
+<h1>フリーキャッシュフロー(FCF)とは|計算式と「マイナス」の意味</h1>
+<div class="meta">2026年8月3日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、Mentogram のMBAプログラムでのコーポレートファイナンス講義を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>フリーキャッシュフロー(FCF、Free Cash Flow、自由現金流量)とは、事業が生み出した現金から、その事業を維持・成長させるために必要な投資を差し引いて残る現金のことです。会社が自由に使えるお金、つまり借入の返済、配当、自社株買い、次の投資に回せるお金を指します。</p>
+<p>利益ではなくフリーキャッシュフローが重視されるのは、企業価値評価の基礎になる数字だからです。この記事では、計算式、決算書のどこを見れば求められるのか、そしてよく検索される「フリーキャッシュフローがマイナス」の意味を、実務の感覚を交えて解説します。</p>
+
+<h2>フリーキャッシュフローの計算式</h2>
+<p>最もシンプルで、決算書からすぐ計算できるのが次の式です。</p>
+<div class="box">
+フリーキャッシュフロー = 営業キャッシュフロー + 投資キャッシュフロー
+</div>
+<p>投資キャッシュフローは通常マイナスの数字なので、実質は「営業キャッシュフローから投資額を引く」という意味になります。上場企業のキャッシュフロー計算書を開けば、この2つの数字はそのまま載っています。</p>
+<p>より厳密には、投資キャッシュフローの中から本業の維持に必要な設備投資(資本的支出、CAPEX)だけを取り出して引く方法もあります。投資キャッシュフローには有価証券の売買など本業と関係のない動きも混ざるためです。</p>
+<div class="box">
+フリーキャッシュフロー = 営業キャッシュフロー − 設備投資額
+</div>
+<p>キャッシュフロー計算書の位置づけや、損益計算書(PL)・貸借対照表(BS)とのつながりは、<a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント</a>で解説しています。</p>
+
+<h3>企業価値評価で使う計算式</h3>
+<p>DCF法(Discounted Cash Flow法、割引キャッシュフロー法)などの評価実務では、資本構成の影響を除いた「事業そのもののFCF」を使います。これをFCFF(Free Cash Flow to Firm、企業全体に帰属するフリーキャッシュフロー)と呼びます。</p>
+<div class="box">
+FCFF = 営業利益 ×(1 − 税率)+ 減価償却費 − 設備投資 − 運転資本の増加額
+</div>
+<p>支払利息を引く前の営業利益から出発するのがポイントです。株主と債権者の両方に帰属する現金を計算しているため、ここで利息を引くと二重に控除してしまいます。</p>
+
+<h2>4つの構成要素の意味</h2>
+<table>
+  <tr><th>項目</th><th>なぜ足す・引くのか</th></tr>
+  <tr><td>営業利益 ×(1 − 税率)</td><td>本業が稼いだ利益から税金分を落とした、現金の源泉</td></tr>
+  <tr><td>+ 減価償却費</td><td>費用として引かれているが現金は出ていかないため足し戻す</td></tr>
+  <tr><td>− 設備投資</td><td>費用計上されないが現金は実際に出ていくため引く</td></tr>
+  <tr><td>− 運転資本の増加</td><td>売掛金や在庫が増えた分だけ現金が事業に寝てしまうため引く</td></tr>
+</table>
+<p>実務でつまずきやすいのは運転資本です。売上が伸びていても、その売上が売掛金や在庫として滞留していれば現金は増えません。急成長企業ほど運転資本が膨らみ、利益は黒字でもフリーキャッシュフローがマイナスになりやすいのはこのためです。</p>
+
+<h2>フリーキャッシュフローがマイナスなら危ないのか</h2>
+<p>結論から言えば、マイナスそのものは良い悪いを決めません。判断すべきは「なぜマイナスなのか」です。</p>
+
+<h3>問題のないマイナス</h3>
+<p>営業キャッシュフローがしっかりプラスで、それを上回る設備投資をしているケースです。工場の新設、店舗展開、データセンターの構築など、将来のリターンを取りに行った結果のマイナスであれば、経営判断としてはむしろ前向きです。この場合に見るべきは、その投資が本当に資本コストを上回るリターンを生むかどうかで、判断の道具が正味現在価値(NPV)と内部収益率(IRR)です。詳しくは<a href="/articles/npv-irr/">NPVとIRRの違いと使い分け</a>で解説しています。</p>
+
+<h3>注意すべきマイナス</h3>
+<p>営業キャッシュフロー自体がマイナスの場合です。本業で現金が出ていっているため、外部からの資金調達か手元資金の取り崩しでしか会社が回りません。特に、損益計算書では黒字なのに営業キャッシュフローがマイナスという組み合わせは、売掛金の回収遅れや在庫の積み上がりを疑うべきサインです。</p>
+
+<table>
+  <tr><th>パターン</th><th>営業CF</th><th>投資CF</th><th>読み方</th></tr>
+  <tr><td>成長投資型</td><td>大きくプラス</td><td>大きくマイナス</td><td>攻めの投資。投資の質を確認する</td></tr>
+  <tr><td>安定成熟型</td><td>プラス</td><td>小さくマイナス</td><td>株主還元や借入返済に回せる状態</td></tr>
+  <tr><td>要注意型</td><td>マイナス</td><td>マイナス</td><td>資金調達なしでは継続が難しい</td></tr>
+  <tr><td>縮小型</td><td>プラス</td><td>プラス</td><td>資産売却で現金化。理由の確認が必要</td></tr>
+</table>
+<p>単年度で判断せず、3年から5年の推移で見ることが実務の基本です。設備投資には波があるため、1年だけ切り取ると誤読します。</p>
+
+<h2>企業価値評価での使われ方</h2>
+<p>DCF法では、将来のフリーキャッシュフローをWACC(Weighted Average Cost of Capital、加重平均資本コスト)で現在価値に割り引いて事業価値を計算します。つまりフリーキャッシュフローは、企業価値評価という計算全体の入力データそのものです。</p>
+<p>ここに実務上の重みがあります。割引率をどれだけ丁寧に議論しても、入力するフリーキャッシュフローの予測が甘ければ結果は動きません。M&A(企業の合併・買収)の現場で買い手が事業計画を執拗に検証するのは、この入力の精度が価格を決めるからです。DCF法の全体像は<a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説</a>にまとめています。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>フリーキャッシュフローは「営業キャッシュフロー + 投資キャッシュフロー」で概算でき、会社が自由に使える現金を表す。</li>
+  <li>評価実務では、営業利益から出発するFCFF(企業全体に帰属するフリーキャッシュフロー)を使う。</li>
+  <li>マイナスは良し悪しを決めない。営業キャッシュフローがプラスかどうかと、複数年の推移で判断する。</li>
+  <li>DCF法の入力データそのものであり、予測の質が企業価値の質を決める。</li>
+</ul>
+
+<div class="cta">
+  <h2>企業価値評価を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、DCF法を含む企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</a></li>
+    <li>› <a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</a></li>
+    <li>› <a href="/articles/npv-irr/">NPVとIRRの違いと使い分け|投資判断の2大指標をわかりやすく解説</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
