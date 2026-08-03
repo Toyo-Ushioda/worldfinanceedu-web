@@ -8,8 +8,8 @@ Status values: pending → done (完了したら done に書き換え、公開�
 ヘッドキーワードでは大手と戦わず、実務者が検索する具体的な問いを取る。難易度は入門〜実務まで混在させ、
 実務レベルの記事ほどToyoの実体験(経営企画グローバル責任者・USCPA・エンジェル投資家)の視点を効かせる。
 
-## 執筆済み (2026-08-01時点、6本)
-corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr
+## 執筆済み (2026-08-03時点、7本)
+corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow
 
 ## キュー(優先順。上から1本ずつ書く)
 
@@ -19,7 +19,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 入門。同じ案件でNPVとIRRの結論が割れる例。ハードルレートと資本コストの関係。内部リンク: dcf-method, corporate-finance-self-study
    Cluster: コーポレートファイナンス実務(入門)
 
-2. slug: free-cash-flow | status: pending
+2. slug: free-cash-flow | status: done (published 2026-08-03)
    Title案: フリーキャッシュフロー(FCF)とは|計算式と「マイナス」の意味
    KW: フリーキャッシュフロー とは, FCF 計算式, フリーキャッシュフロー マイナス
    Angle: 入門。営業CFと投資CFからの計算、成長企業のFCFマイナスは悪か、DCFの入力としてのFCF。内部リンク: dcf-method, financial-statements-basics
