@@ -1606,6 +1606,39 @@
     .lead { font-size: 17px; }
   }
 
+  /* ===== RESPONSIVE REPAIR (2026-08-04) =====
+     The DENSITY REDUCTION block above sits AFTER the @media rules and re-sets
+     .slide/.divider/#slide-8 padding at the same specificity, so it was winning
+     everywhere and phones kept the 96px desktop side padding. On a 375px screen
+     that left a 183px content column, and every multi-column strip inside it
+     overflowed into .slide's overflow:hidden, so content was silently cut off.
+     These rules come last on purpose. Use padding-left/right longhand so the
+     vertical padding set above survives. Do not move this block up. */
+  @media (max-width: 1024px) {
+    .slide, .cover, .divider { padding-left: 48px; padding-right: 48px; }
+    #slide-8 { padding-left: 48px; padding-right: 48px; }
+    .track-record-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .slide, .cover, .divider { padding-left: 20px; padding-right: 20px; }
+    #slide-8 { padding-left: 20px; padding-right: 20px; }
+
+    /* Three-column strips that had no mobile rule at all. The items carry a
+       border-right as the column separator, which reads as a stray vertical
+       line once they stack, so it goes. */
+    .course-meta-strip { grid-template-columns: 1fr; gap: 14px; }
+    .course-meta-item,
+    .course-meta-item:first-child,
+    .course-meta-item:last-child { padding-left: 0; padding-right: 0; border-right: 0; }
+
+    /* Flex rows that were sized for a wide slide. Once they stack, the
+       right-aligned meta block has to become left-aligned or it reads ragged. */
+    .cover-top, .cover-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .cover-meta { text-align: left; }
+    .deel-note { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .divider-meta-stats { gap: 20px; }
+  }
+
   /* Print/PDF keeps the one-slide-per-page behaviour. */
   @media print {
     .slide { height: 100vh; min-height: 0; page-break-after: always; }
