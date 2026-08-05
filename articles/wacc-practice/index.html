@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!/^(localhost|127\.0\.0\.1|\[::1\]|0\.0\.0\.0)$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>WACC(割引率)の求め方と実務の相場感|何%に設定すべきか | World Finance Edu</title>
+<meta name="description" content="WACC(加重平均資本コスト)の求め方を実務目線で解説。CAPMの各パラメータの置き方、負債コストと節税効果、業種別のざっくりした相場感、そしてWACCが1%違うだけで企業価値が数十%動く感覚まで。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/wacc-practice/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WACC(割引率)の求め方と実務の相場感|何%に設定すべきか">
+<meta property="og:description" content="CAPMの各パラメータの実務的な置き方、業種別の相場感、1%の違いが企業価値に効く大きさ。実務家が解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/wacc-practice/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "WACC(割引率)の求め方と実務の相場感|何%に設定すべきか",
+      "description": "WACC(加重平均資本コスト)の計算式、CAPMのパラメータの実務的な置き方、業種別の相場感、企業価値への感応度を解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/wacc-practice/",
+      "datePublished": "2026-08-05"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "WACCの求め方", "item": "https://worldfinanceedu.com/articles/wacc-practice/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › WACCの求め方</div>
+<h1>WACC(割引率)の求め方と実務の相場感</h1>
+<div class="meta">2026年8月5日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>WACC(Weighted Average Cost of Capital、加重平均資本コスト)は、企業価値評価で使う割引率です。教科書には計算式が載っていますが、実務でつまずくのはそこではありません。「で、結局何%を入れればいいのか」という一点です。</p>
+<p>この記事では、WACC(加重平均資本コスト)の計算式そのものより、各パラメータを実務でどう置くか、業種ごとにどのあたりの水準に落ち着くのか、そして1%の違いが企業価値をどれだけ動かすのかを整理します。</p>
+
+<h2>WACCの計算式</h2>
+<div class="box">
+WACC = 株主資本コスト × 株式の比率 + 負債コスト × (1 − 実効税率) × 負債の比率
+</div>
+<p>会社は株主と債権者の両方からお金を集めています。株主が期待するリターンと、銀行など債権者が求める金利を、それぞれの調達比率で加重平均したものがWACCです。会社全体として「最低限これだけは稼がないと資金の出し手に報いられない」という水準、と考えるとイメージしやすくなります。</p>
+<p>ここで比率に使うのは簿価ではなく<b>時価</b>です。上場企業なら株式時価総額を使います。負債コストに (1 − 実効税率) を掛けるのは、支払利息が損金になって税金を減らすためです。これを節税効果(タックスシールド)と呼びます。</p>
+
+<h2>株主資本コストの求め方:CAPMの3つのパラメータ</h2>
+<p>実務で難しいのは株主資本コストです。株主は「利回り何%でお願いします」と言ってくれないので、市場データから推定します。標準的な道具がCAPM(Capital Asset Pricing Model、資本資産評価モデル)です。</p>
+<div class="box">
+株主資本コスト = リスクフリーレート + β(ベータ)× 株式リスクプレミアム
+</div>
+<p>それぞれ、実務では次のように置くことが多いです。</p>
+<table>
+  <tr><th>パラメータ</th><th>実務でよく使う置き方</th><th>注意点</th></tr>
+  <tr><td>リスクフリーレート</td><td>10年国債利回り。評価日時点の水準か、直近数か月の平均</td><td>金利が動いた局面では、どの日付を使ったかを必ず記録する</td></tr>
+  <tr><td>株式リスクプレミアム</td><td>おおむね5〜7%。調査機関の公表値や社内の統一前提を使う</td><td>案件ごとに変えると比較可能性が失われる。会社として固定するのが実務</td></tr>
+  <tr><td>β(ベータ)</td><td>類似上場企業のβを負債の影響を除いて平均し、評価対象の資本構成で組み直す</td><td>個社の実測βは振れが大きい。非上場企業なら類似企業からの推定が基本</td></tr>
+  <tr><td>サイズプレミアム</td><td>小規模企業には1〜3%程度を上乗せすることがある</td><td>使うなら根拠と一貫性を持つ。恣意的な調整に見えやすい項目</td></tr>
+</table>
+<p>この4つを積み上げると、日本の上場企業の株主資本コストはおおむね6〜10%あたりに収まります。負債を混ぜて加重平均すると、WACCはそれより低い水準になります。</p>
+
+<h2>業種別のざっくりした相場感</h2>
+<p>細かい計算に入る前に、答えの「だいたいの居場所」を持っておくと、計算ミスにすぐ気づけます。以下は日本企業を念頭に置いた目安で、金利水準や個社の財務状況で当然動きます。</p>
+<table>
+  <tr><th>業種のタイプ</th><th>WACCの目安</th><th>背景</th></tr>
+  <tr><td>電力・鉄道・インフラ</td><td>3〜5%</td><td>収益が安定し、負債を多く使える</td></tr>
+  <tr><td>食品・医薬・生活必需品</td><td>5〜7%</td><td>景気変動の影響を受けにくい</td></tr>
+  <tr><td>製造業(一般)</td><td>6〜8%</td><td>景気連動があり、設備投資も重い</td></tr>
+  <tr><td>IT・サービス・半導体</td><td>8〜11%</td><td>業績の振れが大きく、負債を使いにくい</td></tr>
+  <tr><td>スタートアップ</td><td>15〜30%超</td><td>WACCではなく投資家の要求リターンで議論される領域</td></tr>
+</table>
+<p>計算結果がこのレンジから大きく外れたら、まず疑うべきは前提の入力ミスです。βの取り違え、負債比率に簿価を使ってしまった、税率が実効税率になっていない。この3つが定番です。</p>
+
+<h2>1%の違いが、企業価値をどれだけ動かすか</h2>
+<p>WACCの議論が延々と続くのは、細かさが好きだからではありません。ここが企業価値の答えをほぼ決めてしまうからです。毎年100億円のフリーキャッシュフローを生み、永続的に年1%成長する会社を、割引率だけ変えて評価すると次のようになります。</p>
+<table>
+  <tr><th>WACC</th><th>企業価値</th><th>6%のときとの差</th></tr>
+  <tr><td>6%</td><td>2,000億円</td><td>基準</td></tr>
+  <tr><td>7%</td><td>1,667億円</td><td>−17%</td></tr>
+  <tr><td>8%</td><td>1,429億円</td><td>−29%</td></tr>
+  <tr><td>9%</td><td>1,250億円</td><td>−38%</td></tr>
+</table>
+<p>WACCを1%動かすだけで企業価値が2割近く変わります。事業計画を1か月かけて精緻化しても、割引率の1%には勝てません。だからこそ実務では、単一のWACCで出した1つの数字を答えとせず、7〜9%といったレンジで感応度表を作り、幅で意思決定します。この考え方は<a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説</a>でも触れています。</p>
+
+<h2>実務で迷ったときの決め方</h2>
+<h3>1. 社内で1つに固定する</h3>
+<p>投資判断に使うハードルレートは、案件ごとに再計算するより、全社で共通の水準を決めて年1回見直すほうがうまく回ります。案件ごとに動かせると、通したい案件のWACCだけ下がるからです。ハードルレートと投資判断の関係は<a href="/articles/npv-irr/">NPVとIRRの違いと使い分け</a>で詳しく整理しています。</p>
+<h3>2. リスクは割引率ではなくキャッシュフローで調整する</h3>
+<p>「この事業はリスクが高いからWACCに3%上乗せ」という調整は、一見合理的ですが根拠を説明しにくくなります。特定の事業に固有のリスクは、割引率をいじるのではなく、キャッシュフロー予測のシナリオで表現するほうが議論が透明になります。フリーキャッシュフローの作り方は<a href="/articles/free-cash-flow/">フリーキャッシュフロー(FCF)とは</a>を参照してください。</p>
+<h3>3. 出した数字を第三者に説明できる形で残す</h3>
+<p>WACCは監査法人、投資家、買い手の財務担当者から必ず質問される項目です。どの日付のリスクフリーレートを使い、どの類似企業からβを取り、なぜその資本構成にしたのか。この3点をメモに残しておくだけで、後の議論の速度が変わります。</p>
+
+<h2>よくある誤解</h2>
+<ul>
+  <li><b>「無借金だからWACCは低い」:</b>逆です。負債は株式より資本コストが低く、節税効果もあるため、無借金企業のWACCは株主資本コストそのものになり、むしろ高くなります。</li>
+  <li><b>「借入を増やせばWACCは下がり続ける」:</b>ある水準を超えると信用リスクが上がり、負債コストも株主資本コストも上昇します。下がり続けはしません。</li>
+  <li><b>「WACCは1つに決まる正解がある」:</b>ありません。合理的な前提の置き方が複数ある以上、答えはレンジです。<a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは</a>で述べたとおり、複数手法との突き合わせが前提になります。</li>
+</ul>
+
+<h2>まとめ</h2>
+<ul>
+  <li>WACC(加重平均資本コスト)は、株主資本コストと税引後の負債コストを、時価ベースの資本構成で加重平均したもの。</li>
+  <li>実務の難所はCAPM(資本資産評価モデル)のパラメータの置き方。会社として前提を固定し、案件ごとに動かさない。</li>
+  <li>WACCが1%違えば企業価値は2割前後動く。1つの数字ではなくレンジで意思決定する。</li>
+</ul>
+
+<div class="cta">
+  <h2>企業価値評価を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、DCF法を含む企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</a></li>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+    <li>› <a href="/articles/npv-irr/">NPVとIRRの違いと使い分け|投資判断の2大指標をわかりやすく解説</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
