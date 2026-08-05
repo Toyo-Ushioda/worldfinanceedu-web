@@ -8,8 +8,8 @@ Status values: pending → done (完了したら done に書き換え、公開�
 ヘッドキーワードでは大手と戦わず、実務者が検索する具体的な問いを取る。難易度は入門〜実務まで混在させ、
 実務レベルの記事ほどToyoの実体験(経営企画グローバル責任者・USCPA・エンジェル投資家)の視点を効かせる。
 
-## 執筆済み (2026-08-03時点、7本)
-corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow
+## 執筆済み (2026-08-05時点、8本)
+corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow / wacc-practice
 
 ## キュー(優先順。上から1本ずつ書く)
 
@@ -25,7 +25,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 入門。営業CFと投資CFからの計算、成長企業のFCFマイナスは悪か、DCFの入力としてのFCF。内部リンク: dcf-method, financial-statements-basics
    Cluster: 決算書・財務分析(入門)
 
-3. slug: wacc-practice | status: pending
+3. slug: wacc-practice | status: done (published 2026-08-05)
    Title案: WACC(割引率)の求め方と実務の相場感|何%に設定すべきか
    KW: WACC 求め方, 割引率 設定 目安, WACC 計算 実務
    Angle: 実務。CAPMの各パラメータの実務的な置き方、業種別のざっくり相場、1%の違いが企業価値を数十%動かす感覚。内部リンク: dcf-method, corporate-valuation
