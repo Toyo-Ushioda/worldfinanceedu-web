@@ -8,8 +8,8 @@ Status values: pending → done (完了したら done に書き換え、公開�
 ヘッドキーワードでは大手と戦わず、実務者が検索する具体的な問いを取る。難易度は入門〜実務まで混在させ、
 実務レベルの記事ほどToyoの実体験(経営企画グローバル責任者・USCPA・エンジェル投資家)の視点を効かせる。
 
-## 執筆済み (2026-08-05時点、8本)
-corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow / wacc-practice
+## 執筆済み (2026-08-07時点、9本)
+corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow / wacc-practice / roic-management
 
 ## キュー(優先順。上から1本ずつ書く)
 
@@ -31,7 +31,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 実務。CAPMの各パラメータの実務的な置き方、業種別のざっくり相場、1%の違いが企業価値を数十%動かす感覚。内部リンク: dcf-method, corporate-valuation
    Cluster: 企業価値評価(実務)
 
-4. slug: roic-management | status: pending
+4. slug: roic-management | status: done (published 2026-08-07)
    Title案: ROICとは|ROEとの違いと「本当に稼ぐ力」の測り方
    KW: ROIC とは, ROIC ROE 違い, ROIC 計算式, 投下資本利益率
    Angle: 中級。ROEの弱点(レバレッジで化粧できる)、ROIC vs WACCスプレッド、事業別ROICの経営への使い方。内部リンク: financial-statements-basics, corporate-valuation
