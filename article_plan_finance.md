@@ -8,8 +8,8 @@ Status values: pending → done (完了したら done に書き換え、公開�
 ヘッドキーワードでは大手と戦わず、実務者が検索する具体的な問いを取る。難易度は入門〜実務まで混在させ、
 実務レベルの記事ほどToyoの実体験(経営企画グローバル責任者・USCPA・エンジェル投資家)の視点を効かせる。
 
-## 執筆済み (2026-08-07時点、9本)
-corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow / wacc-practice / roic-management
+## 執筆済み (2026-08-10時点、10本)
+corporate-valuation / dcf-method / multiples-valuation / financial-statements-basics / corporate-finance-self-study / npv-irr / free-cash-flow / wacc-practice / roic-management / startup-valuation
 
 ## キュー(優先順。上から1本ずつ書く)
 
@@ -37,7 +37,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 中級。ROEの弱点(レバレッジで化粧できる)、ROIC vs WACCスプレッド、事業別ROICの経営への使い方。内部リンク: financial-statements-basics, corporate-valuation
    Cluster: 決算書・財務分析(中級)
 
-5. slug: startup-valuation | status: pending
+5. slug: startup-valuation | status: done (published 2026-08-10)
    Title案: スタートアップの企業価値評価|売上のない会社に値段がつく理由
    KW: スタートアップ 企業価値 算定, スタートアップ バリュエーション, 資金調達 企業価値
    Angle: 中級。DCFが機能しない理由、類似会社・直近ラウンド・VC法、希薄化とポストマネー。エンジェル投資家としての視点を一言。内部リンク: corporate-valuation, multiples-valuation
