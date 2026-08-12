@@ -43,7 +43,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 中級。DCFが機能しない理由、類似会社・直近ラウンド・VC法、希薄化とポストマネー。エンジェル投資家としての視点を一言。内部リンク: corporate-valuation, multiples-valuation
    Cluster: 企業価値評価(中級)
 
-6. slug: ma-process | status: pending
+6. slug: ma-process | status: done (published 2026-08-12)
    Title案: M&Aの流れを図解|打診からクロージングまでの標準プロセス
    KW: M&A 流れ, M&A プロセス, M&A クロージングまで
    Angle: 入門。NDA→意向表明→DD→SPA→クロージングの時系列表、各段階の登場人物、価格が動くタイミング。内部リンク: corporate-valuation, dcf-method
@@ -162,3 +162,22 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     KW: ファイナンス キャリア AI, 経理 AI なくなる, ファイナンス 将来性
     Angle: キャリア(ブランドの旗)。AIが代替する作業と残る判断、これから学ぶべきは「問いの立て方」、コラム全体の世界観をまとめる記事。内部リンク: keiei-kikaku-career, fpa-career, corporate-finance-self-study
     Cluster: キャリア(中級)
+
+## 執筆ルール(毎回必ず適用)
+- テンプレート: 既存記事(例: articles/startup-valuation/index.html)の構造・CSS・GA4スニペット(localhostガード込み)をそのままコピーして使う
+- 文字数: 本文2,000〜3,000字。表またはboxを1つ以上使う
+- 構成: 導入(読者が詰まっている点) → 本論(h2) → 実務での使いどころ → まとめ
+- 禁止: emダッシュ、上部/左部のアクセントライン、捏造した個人エピソード・取引・数値、上から目線
+- 肩書: 「元外資系企業本社 経営企画グローバル責任者」(「グローバル金融ヘッド」は使用禁止)
+- 略語は各セクション初出で必ず展開: DCF法(割引キャッシュフロー法)、WACC(加重平均資本コスト)など
+- 著者ボックス: 既存記事と同一(sameAsのSNS4リンク+メディア掲載4リンク)
+- CTA: GYOSEKI × World Finance Edu 講座ブロック(`/gyoseki/` へのリンク)。説明文だけ記事のテーマに合わせる
+- 内部リンク: 本文中に既存記事へ2〜3本、関連記事欄にちょうど3本。存在する記事にのみリンクする
+- JSON-LD: Article + BreadcrumbList(既存記事と同形式、canonical/og:urlはこの記事のURL)
+- 公開後: articles/index.html にカード追加、sitemap.xml にURL追加(lastmod=当日)
+- デプロイ: リポジトリルートで `git add -A && git commit -m "Add article: <slug>" && git push origin main`(GitHub Pages、mainへのpushが公開)
+- 検証と done マーク: このファイルは手で編集しない。`_Automation/article-writer/run_article_writer.ps1` がライブURLの200を確認してから status を done に書き換える
+
+## 自動化
+このキューは `finance-article-writer` スケジュールタスク(月・水・金 14:08 SGT)が上から1本ずつ消化する。
+詳細は `03. WFE/_Automation/article-writer/README.md`。
