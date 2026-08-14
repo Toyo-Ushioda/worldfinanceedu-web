@@ -55,13 +55,13 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 中級。財務・税務・法務・ビジネスDDの違い、財務DDで必ず見るQoE(正常収益力)、売り手側の準備。内部リンク: ma-process, financial-statements-basics
    Cluster: M&A実務(中級)
 
-7-2. slug: corporate-finance-books | status: pending
+7-2. slug: corporate-finance-books | status: done (published 2026-08-14)
    Title案: コーポレートファイナンスの本と講座の選び方|独学者のための教材ガイド
    KW: コーポレートファイナンス 本 おすすめ, ファイナンス 独学 本, コーポレートファイナンス 講座
    Angle: 入門。corporate-finance-self-study の続編(2026-08-14追加: 同記事が「コーポレートファイナンス 独学」で実測2位のため独学クラスタを増強)。レベル別(入門/中級/実務)の教材の選び方、本で学べること/学べないこと(手を動かす練習)、講座の使いどころ。内部リンク: corporate-finance-self-study, dcf-method
    Cluster: コーポレートファイナンス実務(入門)
 
-8. slug: cost-of-capital-management | status: pending
+8. slug: cost-of-capital-management | status: done (published 2026-08-14)
    Title案: 資本コスト経営とは|東証のPBR改善要請で何が変わったのか
    KW: 資本コスト経営, PBR改善 東証, 資本コストを意識した経営
    Angle: 実務。東証要請の背景、PBR1倍割れの意味、ROIC>WACCの実装で現場に起きること。内部リンク: roic-management, multiples-valuation
