@@ -49,11 +49,17 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 入門。NDA→意向表明→DD→SPA→クロージングの時系列表、各段階の登場人物、価格が動くタイミング。内部リンク: corporate-valuation, dcf-method
    Cluster: M&A実務(入門)
 
-7. slug: due-diligence | status: pending
+7. slug: due-diligence | status: done (published 2026-08-12)
    Title案: デューデリジェンス(DD)とは|種類・進み方・実際に見られるポイント
    KW: デューデリジェンス とは, DD 種類, 財務DD 内容
    Angle: 中級。財務・税務・法務・ビジネスDDの違い、財務DDで必ず見るQoE(正常収益力)、売り手側の準備。内部リンク: ma-process, financial-statements-basics
    Cluster: M&A実務(中級)
+
+7-2. slug: corporate-finance-books | status: pending
+   Title案: コーポレートファイナンスの本と講座の選び方|独学者のための教材ガイド
+   KW: コーポレートファイナンス 本 おすすめ, ファイナンス 独学 本, コーポレートファイナンス 講座
+   Angle: 入門。corporate-finance-self-study の続編(2026-08-14追加: 同記事が「コーポレートファイナンス 独学」で実測2位のため独学クラスタを増強)。レベル別(入門/中級/実務)の教材の選び方、本で学べること/学べないこと(手を動かす練習)、講座の使いどころ。内部リンク: corporate-finance-self-study, dcf-method
+   Cluster: コーポレートファイナンス実務(入門)
 
 8. slug: cost-of-capital-management | status: pending
    Title案: 資本コスト経営とは|東証のPBR改善要請で何が変わったのか
@@ -164,6 +170,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Cluster: キャリア(中級)
 
 ## 執筆ルール(毎回必ず適用)
+- KW選定: 「◯◯とは」型のビッグワード単独より、「状況+悩み」の複合語(例: 独学, 順番, 実務, 目安, 選び方)を優先する。2026-08-14の検索順位実測で、新規ドメインでもロングテールなら上位が取れると確認済み(コーポレートファイナンス 独学 = 2位)
 - テンプレート: 既存記事(例: articles/startup-valuation/index.html)の構造・CSS・GA4スニペット(localhostガード込み)をそのままコピーして使う
 - 文字数: 本文2,000〜3,000字。表またはboxを1つ以上使う
 - 構成: 導入(読者が詰まっている点) → 本論(h2) → 実務での使いどころ → まとめ
