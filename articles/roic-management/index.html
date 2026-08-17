@@ -10,11 +10,11 @@
   gtag('js', new Date());
   if (!/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
-<title>ROICとは|ROEとの違いと「本当に稼ぐ力」の測り方 | World Finance Edu</title>
-<meta name="description" content="ROIC(投下資本利益率)の計算式を実務目線で解説。ROE(自己資本利益率)が借入で見栄えを良くできる仕組み、ROICとWACC(加重平均資本コスト)のスプレッド、事業別ROICを経営でどう使うかまで。">
+<title>ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け | World Finance Edu</title>
+<meta name="description" content="ROICとROEのどちらで事業を見るべきか。ROE(自己資本利益率)は借入で見栄えを良くできる一方、ROIC(投下資本利益率)は投下資本に対する実力を映します。計算式と2つの分解、WACCとのスプレッド、のれんや余剰現金の扱いまで実務目線で整理します。">
 <link rel="canonical" href="https://worldfinanceedu.com/articles/roic-management/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROICとは|ROEとの違いと「本当に稼ぐ力」の測り方">
+<meta property="og:title" content="ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け">
 <meta property="og:description" content="ROEはレバレッジで化粧できる。ROICとWACCのスプレッドで事業の実力を測る方法を、実務家が解説します。">
 <meta property="og:url" content="https://worldfinanceedu.com/articles/roic-management/">
 <script type="application/ld+json">
@@ -23,8 +23,8 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": "ROICとは|ROEとの違いと「本当に稼ぐ力」の測り方",
-      "description": "ROIC(投下資本利益率)の計算式、ROE(自己資本利益率)との違い、WACCとのスプレッド、事業別ROICの経営への使い方を解説。",
+      "headline": "ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け",
+      "description": "ROICとROEのどちらで事業を見るべきか。ROE(自己資本利益率)は借入で見栄えを良くできる一方、ROIC(投下資本利益率)は投下資本に対する実力を映します。計算式と2つの分解、WACCとのスプレッド、のれんや余剰現金の扱いまで実務目線で整理します。",
       "inLanguage": "ja",
       "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
       "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
@@ -36,7 +36,7 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
         { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
-        { "@type": "ListItem", "position": 3, "name": "ROICとは", "item": "https://worldfinanceedu.com/articles/roic-management/" }
+        { "@type": "ListItem", "position": 3, "name": "ROICとROEの違い", "item": "https://worldfinanceedu.com/articles/roic-management/" }
       ]
     }
   ]
@@ -102,7 +102,7 @@ footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 </nav>
 <main>
 <div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › ROICとは</div>
-<h1>ROICとは|ROEとの違いと「本当に稼ぐ力」の測り方</h1>
+<h1>ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け</h1>
 <div class="meta">2026年8月7日 · 潮田 豊幸(World Finance Edu)</div>
 <div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
 
@@ -152,7 +152,7 @@ ROIC = 売上高NOPATマージン(NOPAT ÷ 売上高) × 投下資本回転率(�
 <div class="box">
 経済的付加価値 = 投下資本 × (ROIC − WACC)
 </div>
-<p>ROICがWACCを上回っていれば、事業は資金の出し手が求める以上のリターンを生んでいます。下回っていれば、会計上は黒字でも価値を毀損しています。日本企業に「黒字なのに株価が上がらない」会社が多いのは、この差がゼロ近辺、あるいはマイナスだからです。WACCの水準感は<a href="/articles/wacc-practice/">WACC(割引率)の求め方と実務の相場感</a>にまとめています。</p>
+<p>ROICがWACCを上回っていれば、事業は資金の出し手が求める以上のリターンを生んでいます。下回っていれば、会計上は黒字でも価値を毀損しています。日本企業に「黒字なのに株価が上がらない」会社が多いのは、この差がゼロ近辺、あるいはマイナスだからです。WACCの水準感は<a href="/articles/wacc-practice/">WACCを何%に置くか迷ったら</a>にまとめています。</p>
 <p>事業別に並べると、経営会議の議論が変わります。</p>
 <table>
   <tr><th>事業</th><th>ROIC</th><th>WACC</th><th>スプレッド</th><th>示唆</th></tr>
@@ -202,7 +202,7 @@ ROIC = 売上高NOPATマージン(NOPAT ÷ 売上高) × 投下資本回転率(�
   <h2>関連記事</h2>
   <ul>
     <li>› <a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</a></li>
-    <li>› <a href="/articles/wacc-practice/">WACC(割引率)の求め方と実務の相場感|何%に設定すべきか</a></li>
+    <li>› <a href="/articles/wacc-practice/">WACCを何%に置くか迷ったら|割引率の求め方と業種別の相場感</a></li>
     <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
   </ul>
 </div>
