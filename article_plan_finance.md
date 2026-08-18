@@ -67,7 +67,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: 実務。東証要請の背景、PBR1倍割れの意味、ROIC>WACCの実装で現場に起きること。内部リンク: roic-management, multiples-valuation
    Cluster: コーポレートファイナンス実務(実務)
 
-9. slug: keiei-kikaku-career | status: pending
+9. slug: keiei-kikaku-career | status: done (published 2026-08-17)
    Title案: 経営企画に転職するには|求められるスキルと現実的なルート
    KW: 経営企画 転職, 経営企画 スキル, 経営企画 未経験
    Angle: キャリア。経営企画の実際の業務(予算・中計・M&A・投資判断)、経理/営業/コンサルからのルート、ファイナンススキルの独学順序。内部リンク: corporate-finance-self-study, budgeting-fpa
