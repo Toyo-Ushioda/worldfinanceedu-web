@@ -73,7 +73,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
    Angle: キャリア。経営企画の実際の業務(予算・中計・M&A・投資判断)、経理/営業/コンサルからのルート、ファイナンススキルの独学順序。内部リンク: corporate-finance-self-study, budgeting-fpa
    Cluster: キャリア(入門)
 
-10. slug: terminal-value | status: pending
+10. slug: terminal-value | status: done (published 2026-08-19)
     Title案: ターミナルバリューとは|DCFの結果を支配する継続価値の計算と罠
     KW: ターミナルバリュー 計算, 継続価値 とは, 永続成長率 目安
     Angle: 実務。TVが企業価値の5〜7割を占める構造、永続成長率の置き方、Exitマルチプル法との使い分け。内部リンク: dcf-method, wacc-practice
