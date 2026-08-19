@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>ターミナルバリューとは|DCF法で企業価値の大半を決める継続価値の求め方 | World Finance Edu</title>
+<meta name="description" content="ターミナルバリュー(継続価値)とは何かを実務目線で解説。DCF法で企業価値の5〜7割以上を占める理由、永久成長率法とExit倍率法の2つの計算方法、成長率やWACCの置き方でよくある落とし穴まで整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/terminal-value/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ターミナルバリューとは|DCF法で企業価値の大半を決める継続価値の求め方">
+<meta property="og:description" content="DCF法で企業価値の大半を占めるターミナルバリュー(継続価値)。永久成長率法とExit倍率法の使い分けと、実務でつまずく落とし穴を解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/terminal-value/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ターミナルバリューとは|DCF法で企業価値の大半を決める継続価値の求め方",
+      "description": "ターミナルバリュー(継続価値)とは何か。DCF法で企業価値の5〜7割以上を占める理由、永久成長率法とExit倍率法の2つの計算方法、実務での落とし穴を解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/terminal-value/",
+      "datePublished": "2026-08-19"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "ターミナルバリューとは", "item": "https://worldfinanceedu.com/articles/terminal-value/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › ターミナルバリューとは</div>
+<h1>ターミナルバリューとは|DCF法で企業価値の大半を決める継続価値の求め方</h1>
+<div class="meta">2026年8月19日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>DCF法(Discounted Cash Flow、割引キャッシュフロー法)のモデルを組んでみて、最後に出てくる「ターミナルバリュー」という項目で手が止まった経験はないでしょうか。5年分のキャッシュフローは丁寧に予想したのに、その先を一つの数字にまとめる段になると、途端に根拠が曖昧になります。</p>
+<p>やっかいなのは、この曖昧な部分が答えの大半を決めてしまうことです。多くの案件で、企業価値の5割から7割、成長企業なら8割以上がターミナルバリュー側に乗ります。つまり最後の1行の置き方で、結論はいくらでも動きます。この記事では、ターミナルバリューとは何か、2つの計算方法をどう使い分けるか、そして実務でつまずきやすい点を整理します。</p>
+
+<h2>ターミナルバリューとは何か</h2>
+<p>ターミナルバリュー(継続価値、残存価値)とは、詳細に予測する期間(通常5年程度)の後も事業が生み出し続けるキャッシュフローを、予測最終年の時点でまとめて一つの価値にしたものです。企業は理屈のうえでは半永久的に続く前提なので、6年目以降を毎年予測する代わりに、ここでひとまとめにします。</p>
+<p>DCF法の企業価値は、次の2階建てになります。</p>
+<div class="box">
+企業価値 = <b>予測期間のキャッシュフローの現在価値</b> + <b>ターミナルバリューの現在価値</b>
+</div>
+<p>この構造自体は<a href="/articles/dcf-method/">DCF法とは(初心者向け解説)</a>で扱ったとおりですが、実際にモデルを触ると、2階部分の重さに驚くはずです。当面の利益が薄い会社ほど、価値は遠い将来側に集まります。だからこそ、ここをどう置くかが評価の勝負どころになります。</p>
+
+<h2>2つの計算方法</h2>
+<p>ターミナルバリューの求め方は、実務では大きく2つです。両方を計算して、答えが近いかを確かめる使い方が基本になります。</p>
+<table>
+  <tr><th>方法</th><th>考え方</th><th>向いている場面</th></tr>
+  <tr><td>永久成長率法(ゴードン成長モデル)</td><td>最終年のキャッシュフローが一定率で永久に伸び続けると仮定して割り戻す</td><td>成熟事業、安定したインフラ・生活必需品</td></tr>
+  <tr><td>Exit倍率法(マルチプル法)</td><td>予測最終年のEBITDA(利払い前・税引き前・償却前利益)などに、類似会社の倍率を掛ける</td><td>M&Aや投資回収の想定がある案件</td></tr>
+</table>
+<h3>永久成長率法の計算</h3>
+<p>永久成長率法では、次の式を使います。gは永久成長率、WACC(Weighted Average Cost of Capital、加重平均資本コスト)は割引率です。</p>
+<div class="box">
+ターミナルバリュー = 最終年の翌年キャッシュフロー ÷ (WACC − g)<br>
+= 予測最終年キャッシュフロー × (1 + g) ÷ (WACC − g)
+</div>
+<p>たとえば予測最終年のフリーキャッシュフローが10億円、WACCが8%、gを1%と置くと、ターミナルバリューは10 × 1.01 ÷ (0.08 − 0.01) ≒ <b>144億円</b>です。これはあくまで予測最終年時点の価値なので、さらに現在価値へ割り引く必要があります。<a href="/articles/free-cash-flow/">フリーキャッシュフロー(FCF)の読み方</a>で触れたとおり、ここで使うキャッシュフローが正常な水準かどうかも効いてきます。</p>
+<h3>Exit倍率法の計算</h3>
+<p>Exit倍率法は、予測最終年のEBITDAに、市場で観察される倍率を掛けます。予測最終年EBITDAが15億円で、類似会社のEV/EBITDA(企業価値 ÷ EBITDA)が10倍なら、ターミナルバリューは<b>150億円</b>です。「その時点で売るとしたらいくらか」という発想なので、投資回収を意識する場面と相性がよい方法です。</p>
+
+<h2>実務でつまずく落とし穴</h2>
+<p>ターミナルバリューは、少し数字をいじるだけで結論が大きく変わります。私がモデルをレビューするとき、最初に確認するのは次の3点です。</p>
+<ul>
+  <li><b>永久成長率をWACCに近づけすぎる:</b>式の分母は (WACC − g) です。gをWACCに近づけると分母がゼロに近づき、ターミナルバリューが際限なく膨らみます。gは長期の経済成長率や物価上昇率の範囲、目安として0%から2%程度に収めるのが安全です。一企業が経済全体より速く永久に成長し続ける想定は、現実には成り立ちません。</li>
+  <li><b>Exit倍率を強気に置く:</b>好況期の高い倍率をそのまま将来に当てると、価値は簡単に水増しされます。景気の谷も含めた平均的な倍率を使うのが無難です。</li>
+  <li><b>2つの方法の答えを突き合わせない:</b>永久成長率法とExit倍率法の結果が大きくずれるなら、どちらかの前提が過激です。両者を並べて、暗黙に置いている成長率や倍率が整合しているかを確認します。</li>
+</ul>
+<div class="box">
+覚えておきたいのは、WACCの置き方がターミナルバリューを通じて価値を大きく揺らすことです。<a href="/articles/wacc-practice/">WACC(加重平均資本コスト)の求め方</a>で見たように、割引率が1%動くだけで企業価値は2割前後動きます。その感応度の多くは、実は2階部分のターミナルバリューから来ています。
+</div>
+
+<h2>感度を確かめる習慣を持つ</h2>
+<p>ターミナルバリューを一つの数字で出して終わりにすると、その1点が正しいかのように見えてしまいます。実務で説得力を持たせるには、前提を振ったときに価値がどう動くかを表にして示すのが有効です。</p>
+<table>
+  <tr><th>永久成長率 g</th><th>WACC 7%</th><th>WACC 8%</th><th>WACC 9%</th></tr>
+  <tr><td>0%</td><td>143億円</td><td>125億円</td><td>111億円</td></tr>
+  <tr><td>1%</td><td>168億円</td><td>144億円</td><td>126億円</td></tr>
+  <tr><td>2%</td><td>204億円</td><td>170億円</td><td>146億円</td></tr>
+</table>
+<p>同じ会社でも、前提の置き方だけでターミナルバリューは111億円から204億円まで動きます。この幅を隠さず見せることが、かえって数字への信頼につながります。単一の答えではなくレンジで語る姿勢は、スタートアップのように将来が読みにくい会社の評価でも同じで、その難しさは<a href="/articles/startup-valuation/">スタートアップの企業価値評価</a>で詳しく整理しています。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>ターミナルバリュー(継続価値)は、予測期間の後のキャッシュフローをまとめた価値で、DCF法では企業価値の大半を占める。</li>
+  <li>求め方は永久成長率法(ゴードン成長モデル)とExit倍率法(マルチプル法)の2つ。両方を計算して答えを突き合わせる。</li>
+  <li>永久成長率をWACCに近づけすぎない、強気の倍率を将来に当てない、2つの方法を整合させる、が実務の勘所。</li>
+  <li>一つの数字で出さず、前提を振った感応度表で幅を示すと信頼が高まる。</li>
+</ul>
+
+<div class="cta">
+  <h2>企業価値の「測り方」を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、DCF法やターミナルバリューを含む企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/dcf-method/">DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例</a></li>
+    <li>› <a href="/articles/wacc-practice/">WACCを何%に置くか迷ったら|割引率の求め方と業種別の相場感</a></li>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
