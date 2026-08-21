@@ -79,7 +79,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 実務。TVが企業価値の5〜7割を占める構造、永続成長率の置き方、Exitマルチプル法との使い分け。内部リンク: dcf-method, wacc-practice
     Cluster: 企業価値評価(実務)
 
-11. slug: goodwill-impairment | status: pending
+11. slug: goodwill-impairment | status: done (published 2026-08-21)
     Title案: のれんとは|M&Aで生まれる資産と減損リスクをわかりやすく解説
     KW: のれん とは, のれん 減損, のれん 償却 日本基準 IFRS
     Angle: 中級。のれんの発生メカニズム、日本基準とIFRSの償却の違い、減損の兆候を決算書のどこで見るか。内部リンク: ma-process, financial-statements-basics
