@@ -85,7 +85,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 中級。のれんの発生メカニズム、日本基準とIFRSの償却の違い、減損の兆候を決算書のどこで見るか。内部リンク: ma-process, financial-statements-basics
     Cluster: M&A実務(中級)
 
-12. slug: budgeting-fpa | status: pending
+12. slug: budgeting-fpa | status: done (published 2026-08-24)
     Title案: 予算策定の実務|FP&Aが回す予実管理とフォーキャストの型
     KW: 予算策定 流れ, 予実管理 やり方, フォーキャスト とは
     Angle: 実務。年間予算カレンダー、トップダウンとボトムアップの綱引き、ローリングフォーキャスト。グローバル企業の経営企画責任者としての実感を一言。内部リンク: keiei-kikaku-career, fpa-career
