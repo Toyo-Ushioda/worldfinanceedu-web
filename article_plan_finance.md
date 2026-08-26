@@ -91,7 +91,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 実務。年間予算カレンダー、トップダウンとボトムアップの綱引き、ローリングフォーキャスト。グローバル企業の経営企画責任者としての実感を一言。内部リンク: keiei-kikaku-career, fpa-career
     Cluster: コーポレートファイナンス実務(実務)
 
-13. slug: fpa-career | status: pending
+13. slug: fpa-career | status: done (published 2026-08-26)
     Title案: FP&Aとは|日本で増えるファイナンス職の仕事内容とキャリアパス
     KW: FP&A とは, FP&A 仕事内容, FP&A 転職
     Angle: キャリア。経理との違い、外資系でのFP&Aの位置づけ、日本企業への広がり、目指し方。内部リンク: keiei-kikaku-career, budgeting-fpa
