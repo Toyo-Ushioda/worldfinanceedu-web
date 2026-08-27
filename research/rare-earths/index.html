@@ -177,6 +177,72 @@
   #lang-ja .hero h1{line-height:1.4;}
   #lang-ja h2.section{line-height:1.45;}
   #lang-ja td,#lang-ja .stage p,#lang-ja .stage li{line-height:1.8;}
+  /* ---------- appendix band ---------- */
+  .parthead.apx{background:#101a33;}
+  .parthead.apx .pk{color:var(--gold);}
+  .parthead.apx + h2.section{margin-top:30px;}
+
+  /* ---------- shared readability ---------- */
+  body{overflow-wrap:break-word;-webkit-text-size-adjust:100%;}
+  h2.section,.parthead,.stage{scroll-margin-top:16px;}
+  .tw.scrollable::before{content:"⇄  Swipe the table sideways";display:block;position:sticky;left:0;
+    font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0 0 5px;}
+  #lang-ja .tw.scrollable::before{content:"⇄  横にスクロールできます";letter-spacing:.04em;}
+
+  /* ---------- phones ---------- */
+  @media(max-width:640px){
+    body{font-size:15.5px;line-height:1.65;}
+    .wrap{padding:0 14px 56px;}
+
+    header.hero{padding:32px 16px 26px;}
+    .hero h1{font-size:25px;line-height:1.3;}
+    .hero p{font-size:14.5px;}
+    .hero .kicker{font-size:11px;letter-spacing:.13em;}
+    .hero .meta{font-size:12px;margin-top:12px;}
+
+    .langbar{top:auto;bottom:14px;right:14px;padding:3px;box-shadow:0 4px 16px rgba(15,21,38,.3);}
+    .langbar button{font-size:12.5px;padding:7px 15px;}
+
+    h2.section{font-size:18.5px;margin:34px 0 6px;line-height:1.35;}
+    .parthead{margin:38px 0 0;padding:16px;border-radius:10px;}
+    .parthead h2{font-size:20px;line-height:1.35;}
+    .parthead p{font-size:13.2px;}
+    .subhead{font-size:12.5px;margin:22px 0 6px;}
+    .lede{font-size:14.5px;}
+
+    .card,.toc,.gbox,.rad{padding:14px 15px;border-radius:10px;}
+    .callout,.note,.warncall,.vnote{padding:12px 14px;}
+    .stage-head{padding:12px 14px;gap:11px;}
+    .stage-head .sn{flex:0 0 36px;width:36px;height:36px;border-radius:9px;font-size:15px;}
+    .stage-head h3{font-size:16px;}
+    .stage-body{padding:13px 14px;}
+    .stage p,.stage li{font-size:14px;}
+    .stage ul{padding-left:18px;}
+    .finding{padding:10px 13px;}
+
+    .tw{margin:8px -14px 0;padding:0 14px;}
+    .tw table{min-width:580px;}
+    th,td{padding:8px 9px;font-size:13px;}
+    th{font-size:12px;}
+    td.el{font-size:13px;}
+
+    .flow{gap:5px;}
+    .fstep{flex:1 1 46%;min-width:0;}
+    .fact{flex:1 1 100%;min-width:0;}
+    .c3{flex:1 1 100%;min-width:0;}
+    .toc{margin:18px 0 6px;}
+    .toc ol{font-size:14px;padding-left:20px;}
+    .toc li{margin:6px 0;}
+    .toc .glink{margin:12px 0 0;padding:11px 14px;}
+    .foot{font-size:12.5px;}
+    .foot p{margin:10px 0;}
+  }
+
+  @media(max-width:400px){
+    .hero h1{font-size:22.5px;}
+    .tw table{min-width:520px;}
+  }
+
   @media print{body{background:#fff;} .card,.stage,.callout{break-inside:avoid;} .langbar{display:none;}}
 </style>
 </head>
@@ -202,7 +268,6 @@
 
 <div class="toc">
   <h4>Contents</h4>
-  <a class="glink" href="#g1">Start here: the words and places that keep coming up &rarr;</a>
   <ol>
     <li><a href="#a1">The seventeen elements, one by one</a></li>
     <li><a href="#a2">Where the demand actually sits</a></li>
@@ -236,71 +301,13 @@
     <li><a href="#d6">Investment landscape and outlook</a></li>
     <li><a href="#d7">Verified findings, caveats, open questions</a></li>
   </ol>
+  <a class="glink" href="#g1">Appendix: the words and places that keep coming up &rarr;</a>
 </div>
 
 <div class="callout">
-  <b>How to read this document.</b> Part A answers "what is this stuff for". Part B answers "how does a rock become that". They are written to be read in order, but each stage in Part B is self-contained, so you can jump to the step you care about. The glossary immediately below explains the recurring jargon and, just as importantly, where each mine and plant physically is. Part C answers "who controls it and why does it matter", including the Malaysia and Japan policy picture.
+  <b>How to read this document.</b> Part A answers "what is this stuff for". Part B answers "how does a rock become that". They are written to be read in order, but each stage in Part B is self-contained, so you can jump to the step you care about. A glossary at the end of the report explains the recurring jargon and, just as importantly, where each mine and plant physically is. Part C answers "who controls it and why does it matter", including the Malaysia and Japan policy picture.
 </div>
 
-
-<h2 class="section" id="g1"><span class="n nw">Terms</span>The words and places that keep coming up</h2>
-<p class="lede">Worth reading before the rest. Skip it if you like, but come back here the moment something stops making sense.</p>
-
-<div class="subhead">The one thing to get straight first</div>
-<div class="gbox">
-  <p style="margin:0 0 8px;font-size:14.5px;"><b>The most misunderstood fact in this industry is that the place the material is dug up and the place it is processed are different countries.</b></p>
-  <div class="chain3">
-    <div class="c3"><span class="c3n">Dig</span><b>Mount Weld</b><span class="c3s">Western Australia</span><span class="c3d">Mine, crush, concentrate. Nothing more.</span></div>
-    <div class="c3arw">&#9654;</div>
-    <div class="c3"><span class="c3n">Ship</span><b>About 4,000 km by sea</b><span class="c3s">Fremantle to Kuantan</span><span class="c3d">It crosses the ocean as concentrate</span></div>
-    <div class="c3arw">&#9654;</div>
-    <div class="c3"><span class="c3n">Separate</span><b>Gebeng, Kuantan</b><span class="c3s">Pahang, Malaysia</span><span class="c3d">Cracking, solvent extraction, finished oxide</span></div>
-  </div>
-  <p style="margin:10px 0 0;font-size:13.5px;">Both ends are the same company, Lynas. The mine is Australian and the plant is Malaysian. <b>Malaysia is not processing its own ore.</b> It supplies the site, the workforce, the power and the water, and it keeps the radioactive residue. Almost every argument in Malaysia traces back to that single arrangement.</p>
-</div>
-
-<div class="subhead">Terms</div>
-<div class="tw">
-<table>
-  <thead><tr><th style="width:150px;">Term</th><th style="width:180px;">In one line</th><th>The fuller version</th></tr></thead>
-  <tbody>
-    <tr><td class="el">REO<br><span style="font-weight:400;color:var(--muted);font-size:12px;">rare earth oxide</span></td><td>The industry's common yardstick</td><td><b>Grade, reserves and production are all quoted as the oxide, not the metal.</b> Two reasons. First, the oxide is the first stable, weighable, saleable form the material takes. Second, each of the seventeen elements has a different metal-to-oxide weight ratio, so you cannot add them up unless you convert everything to oxide. "A deposit grading 5% REO" means 100 kg of rock yields 5 kg of oxide, not 5 kg of metal. For the light elements the metal weighs roughly 80% to 85% of the oxide.</td></tr>
-    <tr><td class="el">Concentrate</td><td>What is left after you throw the waste rock away</td><td>Ore that has been physically upgraded by removing worthless gangue. A few percent in the ground becomes 30% to 60% in the concentrate. No chemistry has happened yet.</td></tr>
-    <tr><td class="el">Tailings</td><td>The rock you threw away</td><td>The very large volume of waste rock and slurry rejected during beneficiation. The volume is the problem: a tailings storage facility needs land, engineering and permanent management, and it is one of the biggest liabilities on a mine site.</td></tr>
-    <tr><td class="el">Slurry</td><td>Ground rock mixed with water into a thick mud</td><td>Ore crushed to powder and suspended in water. <b>Why bother making it a liquid?</b> Because a liquid can be pumped, stirred, and dosed with reagents evenly. A dry powder can do none of those three things. Almost all wet mineral processing runs on slurry. Solids are typically 30% to 60% by weight, so the consistency is close to what is inside a concrete mixer before it is poured.</td></tr>
-    <tr><td class="el">Flotation</td><td>Stick it to a bubble and float it off</td><td>Reagents are added to the slurry that make the surface of the target mineral water repellent, then air is blown through. The target mineral sticks to the bubbles and rises as a froth, which is skimmed off. It looks simple, but finding the reagent combination that works on a specific ore is genuinely hard, and it is a classic place for a new project to stumble.</td></tr>
-    <tr><td class="el">Ion adsorption clay</td><td>Rare earths merely stuck to the surface of clay, not locked inside a crystal</td><td>Granite weathered by rain over millions of years. The rare earths released from the original minerals <b>did not form new crystals. They are held on the surface of clay particles as loose ions, by electrical attraction alone.</b> Because they are stuck on rather than chemically bonded, a room-temperature salt solution swaps them off. That single property produces three consequences: grade is extremely low at 0.05% to 0.3%; processing is nonetheless cheap because there is no crushing, grinding or acid bake; and the weathering process concentrates the <i>heavy</i> rare earths while leaving thorium behind. This is where the world's dysprosium and terbium actually come from, and it is the resource Malaysia holds.</td></tr>
-    <tr><td class="el">Three-way catalyst</td><td>The device that cleans a petrol car's exhaust</td><td>The canister in the exhaust line that cleans the gases. <b>"Three-way" means it deals with three pollutants at once:</b> carbon monoxide, unburned hydrocarbons, and nitrogen oxides. The hard part is that the first two must be oxidised, meaning oxygen added, while nitrogen oxides must be reduced, meaning oxygen removed. Two opposite reactions in the same box. Platinum, palladium and rhodium do the chemistry, but <b>cerium oxide absorbs and releases oxygen to smooth the swings</b>, which is what allows both reactions to work. Diesel aftertreatment is a different architecture and is not called a three-way catalyst.</td></tr>
-    <tr><td class="el">Fluid catalytic cracking<br><span style="font-weight:400;color:var(--muted);font-size:12px;">FCC</span></td><td>The refinery unit that breaks heavy oil into petrol</td><td>Distilling crude alone leaves far too much heavy oil, so a catalyst is used to break those large molecules into petrol and diesel. The catalyst is a fine powder that circulates through the unit behaving like a fluid, which is where the name comes from. Lanthanum is what keeps the zeolite catalyst from collapsing at operating temperature.</td></tr>
-    <tr><td class="el">Roasting and cracking</td><td>Burning the mineral to break it open</td><td>Rare earths are locked inside a crystal lattice and will not dissolve in water. Baking the concentrate with concentrated sulphuric acid at 200&deg;C to 500&deg;C, or boiling it in concentrated caustic, destroys that lattice and converts the rare earths into a soluble form. This is the step that concentrates thorium into the residue.</td></tr>
-    <tr><td class="el">Solvent extraction<br>Mixer-settler</td><td>Using two liquids that will not mix to separate elements a sliver at a time</td><td>Contact two liquids that do not mix, like water and oil, and one element will move into the oil side very slightly more readily than its neighbour. One pass is far too small a difference to be useful. So a unit that combines a stirred mixing chamber with a quiet settling chamber is repeated hundreds of times in series, compounding the tiny advantage. China's dominance lives in this step.</td></tr>
-    <tr><td class="el">Strip casting</td><td>Pouring molten alloy onto a spinning cooled wheel so it freezes instantly into thin flakes</td><td>Molten magnet alloy is poured onto a water-cooled copper wheel spinning at speed, and freezes within a fraction of a second into flakes 0.2 to 0.4 mm thick. <b>Why the hurry?</b> Metal cooled slowly grows large crystals and throws out free iron, and both wreck magnetic performance. Cooled fast, the crystals are fine and uniform and the neodymium-rich grain boundary phase is spread thinly in exactly the right places. That grain boundary phase is what makes sintering and grain boundary diffusion work later. Ice is a fair comparison: frozen slowly it grows big cloudy crystals, frozen fast the crystals are tiny. This is the same effect in an alloy. The technique spread in the 1990s and magnet performance rose sharply as a result.</td></tr>
-    <tr><td class="el">Sintering</td><td>Fusing powder into a solid with heat, without fully melting it</td><td>Pressed powder is heated to just below the melting point, 1,000&deg;C to 1,100&deg;C for NdFeB, so the particles bond and the gaps close to near full density. Because it is not fully melted, the crystal alignment set during pressing survives. That is how an anisotropic magnet is made.</td></tr>
-    <tr><td class="el">Grain boundary diffusion</td><td>Painting the expensive element onto the surface instead of mixing it through</td><td>Rather than blending dysprosium or terbium through the whole magnet, it is applied to the surface of the finished part and heated so it travels inward along the boundaries between crystals. Heat resistance is set at those boundaries, so the element only needs to be where it does the work. The same performance for a fraction of the heavy rare earth, which is why intensity has fallen so much over the last decade.</td></tr>
-    <tr><td class="el">Coercivity<br>Remanence</td><td>Resistance to demagnetising / raw strength</td><td>Remanence is how strong the magnet is. Coercivity is how hard it is to demagnetise. In an electric vehicle motor the second one is the problem: coercivity falls as temperature rises, and past a certain point the loss is permanent. Dysprosium and terbium are added specifically to raise it.</td></tr>
-    <tr><td class="el">Thorium<br><span style="font-weight:400;color:var(--muted);font-size:12px;">NORM</span></td><td>The reason any of this is a radiation question</td><td>Thorium rides along inside monazite because it is a chemical lookalike for the light rare earths. The rare earths themselves are not radioactive. NORM means naturally occurring radioactive material, the regulatory category that also covers phosphate fertiliser plants, oil and gas pipe scale and tin slag. Full explanation in Stage 3.</td></tr>
-    <tr><td class="el">NdPr</td><td>Neodymium and praseodymium sold as one product</td><td>The two are so chemically similar that separating them costs more than it is worth. The industry ships and prices them together. When you see an NdPr price quoted, this is what is being quoted.</td></tr>
-    <tr><td class="el">Mischmetal</td><td>Unseparated rare earth metal</td><td>Mostly cerium and lanthanum. Cheap because no separation was done. Used as a steel additive and in lighter flints.</td></tr>
-  </tbody>
-</table>
-</div>
-
-<div class="subhead">Places and mines</div>
-<div class="tw">
-<table>
-  <thead><tr><th style="width:170px;">Name</th><th style="width:200px;">Where it is</th><th>What it is, and why it matters</th></tr></thead>
-  <tbody>
-    <tr><td class="el">Bayan Obo</td><td>Inner Mongolia, China<br>About 150 km north of Baotou</td><td><b>The world's largest rare earth deposit.</b> It was developed as an iron ore mine and still produces iron ore. <b>The rare earths come out alongside the iron</b>, which is part of why Chinese costs are so hard to match. This single deposit accounts for a large share of world light rare earth supply, operated by China Northern Rare Earth. The name means "rich mountain" in Mongolian.</td></tr>
-    <tr><td class="el">Mountain Pass</td><td>California, United States<br>Mojave Desert near the Nevada border<br>About 85 km southwest of Las Vegas</td><td><b>The only site in North America that both mines and processes at commercial scale.</b> Owned and operated by MP Materials. It is a bastnasite deposit that supplied most of the world's rare earths from the 1960s to the 1980s, closed in 2002 under Chinese price pressure and environmental problems, and was later restarted. This is the asset the United States Department of Defense took a stake in.</td></tr>
-    <tr><td class="el">Mount Weld</td><td>Western Australia<br>Near Laverton<br>About 800 km northeast of Perth, inland desert</td><td><b>One of the highest grade deposits in the world, owned by Lynas.</b> What happens here is <b>mining and concentration only</b>. No separation. The concentrate is shipped from Fremantle to Kuantan in Malaysia. <b>Mount Weld is the mine, Kuantan is the plant.</b> Confusing those two makes the entire Malaysian debate impossible to follow.</td></tr>
-    <tr><td class="el">Kuantan</td><td>Capital of Pahang state, Malaysia<br>On the peninsula's <b>east coast</b>, facing the South China Sea<br>About 250 km east of Kuala Lumpur, roughly three and a half hours by road</td><td>An industrial city with a deepwater port. <b>The Lynas separation plant sits inside the Gebeng industrial estate just north of the city.</b> Press coverage calls it "the Kuantan plant" and "the Gebeng plant" interchangeably; they are the same facility. The magnet plant joint venture with South Korea's JS Link announced in 2026 is planned near the same refinery. Malaysia's east coast is less industrialised than the west, which is part of why the government is keen to attract industry there.</td></tr>
-    <tr><td class="el">Gebeng</td><td>Immediately north of Kuantan</td><td>A heavy chemical and petrochemical industrial estate. The Lynas Advanced Materials Plant occupies about 100 hectares inside it. Because the estate is zoned for heavy chemicals, it can host processes an ordinary industrial park cannot.</td></tr>
-    <tr><td class="el">Pahang, Perak<br>and Kerian</td><td>Pahang is on the east of the peninsula and contains Kuantan<br>Perak is in the northwest<br>Kerian is an industrial park in Perak</td><td>Malaysia's ionic clay resource sits in <b>five states: Kelantan, Terengganu, Pahang, Perak and Kedah</b>. Kerian in Perak is a frequently cited candidate location for magnet manufacturing, because it sits next to the northern semiconductor cluster and because Perak is one of those five states.</td></tr>
-    <tr><td class="el">Minamitorishima</td><td>Inside Japan's exclusive economic zone<br>About 1,900 km southeast of Tokyo</td><td>Seabed mud containing rare earths lies at roughly 6,000 metres depth. The mix is attractive, high in heavies and low in thorium, but nobody anywhere has ever lifted mud commercially from that depth. A lift test was targeted for January 2026 and a demonstration phase for 2027. <b>Manage expectations on this one.</b></td></tr>
-    <tr><td class="el">Kalgoorlie</td><td>Inland mining city, Western Australia</td><td>Lynas is building cracking and leaching capacity here. It is the move that would take the radioactive residue step out of Malaysia and back to Australia. The implication is that the Malaysian plant's role could narrow over time to separation and downstream only.</td></tr>
-  </tbody>
-</table>
-</div>
 
 <!-- ================= PART A ================= -->
 <div class="parthead">
@@ -1165,6 +1172,70 @@
   </ul>
 </div>
 
+<div class="parthead apx">
+  <div class="pk">Appendix</div>
+  <h2>Terms, mines and places</h2>
+  <p>Kept at the back on purpose. Nothing here is needed to follow the report, but every recurring word and every site named above is defined here.</p>
+</div>
+<h2 class="section" id="g1"><span class="n nw">Terms</span>The words and places that keep coming up</h2>
+<p class="lede">A reference list, not a prerequisite. Every term and every mine, plant and port named in the report is here, so come back the moment something stops making sense.</p>
+
+<div class="subhead">The one thing to get straight first</div>
+<div class="gbox">
+  <p style="margin:0 0 8px;font-size:14.5px;"><b>The most misunderstood fact in this industry is that the place the material is dug up and the place it is processed are different countries.</b></p>
+  <div class="chain3">
+    <div class="c3"><span class="c3n">Dig</span><b>Mount Weld</b><span class="c3s">Western Australia</span><span class="c3d">Mine, crush, concentrate. Nothing more.</span></div>
+    <div class="c3arw">&#9654;</div>
+    <div class="c3"><span class="c3n">Ship</span><b>About 4,000 km by sea</b><span class="c3s">Fremantle to Kuantan</span><span class="c3d">It crosses the ocean as concentrate</span></div>
+    <div class="c3arw">&#9654;</div>
+    <div class="c3"><span class="c3n">Separate</span><b>Gebeng, Kuantan</b><span class="c3s">Pahang, Malaysia</span><span class="c3d">Cracking, solvent extraction, finished oxide</span></div>
+  </div>
+  <p style="margin:10px 0 0;font-size:13.5px;">Both ends are the same company, Lynas. The mine is Australian and the plant is Malaysian. <b>Malaysia is not processing its own ore.</b> It supplies the site, the workforce, the power and the water, and it keeps the radioactive residue. Almost every argument in Malaysia traces back to that single arrangement.</p>
+</div>
+
+<div class="subhead">Terms</div>
+<div class="tw">
+<table>
+  <thead><tr><th style="width:150px;">Term</th><th style="width:180px;">In one line</th><th>The fuller version</th></tr></thead>
+  <tbody>
+    <tr><td class="el">REO<br><span style="font-weight:400;color:var(--muted);font-size:12px;">rare earth oxide</span></td><td>The industry's common yardstick</td><td><b>Grade, reserves and production are all quoted as the oxide, not the metal.</b> Two reasons. First, the oxide is the first stable, weighable, saleable form the material takes. Second, each of the seventeen elements has a different metal-to-oxide weight ratio, so you cannot add them up unless you convert everything to oxide. "A deposit grading 5% REO" means 100 kg of rock yields 5 kg of oxide, not 5 kg of metal. For the light elements the metal weighs roughly 80% to 85% of the oxide.</td></tr>
+    <tr><td class="el">Concentrate</td><td>What is left after you throw the waste rock away</td><td>Ore that has been physically upgraded by removing worthless gangue. A few percent in the ground becomes 30% to 60% in the concentrate. No chemistry has happened yet.</td></tr>
+    <tr><td class="el">Tailings</td><td>The rock you threw away</td><td>The very large volume of waste rock and slurry rejected during beneficiation. The volume is the problem: a tailings storage facility needs land, engineering and permanent management, and it is one of the biggest liabilities on a mine site.</td></tr>
+    <tr><td class="el">Slurry</td><td>Ground rock mixed with water into a thick mud</td><td>Ore crushed to powder and suspended in water. <b>Why bother making it a liquid?</b> Because a liquid can be pumped, stirred, and dosed with reagents evenly. A dry powder can do none of those three things. Almost all wet mineral processing runs on slurry. Solids are typically 30% to 60% by weight, so the consistency is close to what is inside a concrete mixer before it is poured.</td></tr>
+    <tr><td class="el">Flotation</td><td>Stick it to a bubble and float it off</td><td>Reagents are added to the slurry that make the surface of the target mineral water repellent, then air is blown through. The target mineral sticks to the bubbles and rises as a froth, which is skimmed off. It looks simple, but finding the reagent combination that works on a specific ore is genuinely hard, and it is a classic place for a new project to stumble.</td></tr>
+    <tr><td class="el">Ion adsorption clay</td><td>Rare earths merely stuck to the surface of clay, not locked inside a crystal</td><td>Granite weathered by rain over millions of years. The rare earths released from the original minerals <b>did not form new crystals. They are held on the surface of clay particles as loose ions, by electrical attraction alone.</b> Because they are stuck on rather than chemically bonded, a room-temperature salt solution swaps them off. That single property produces three consequences: grade is extremely low at 0.05% to 0.3%; processing is nonetheless cheap because there is no crushing, grinding or acid bake; and the weathering process concentrates the <i>heavy</i> rare earths while leaving thorium behind. This is where the world's dysprosium and terbium actually come from, and it is the resource Malaysia holds.</td></tr>
+    <tr><td class="el">Three-way catalyst</td><td>The device that cleans a petrol car's exhaust</td><td>The canister in the exhaust line that cleans the gases. <b>"Three-way" means it deals with three pollutants at once:</b> carbon monoxide, unburned hydrocarbons, and nitrogen oxides. The hard part is that the first two must be oxidised, meaning oxygen added, while nitrogen oxides must be reduced, meaning oxygen removed. Two opposite reactions in the same box. Platinum, palladium and rhodium do the chemistry, but <b>cerium oxide absorbs and releases oxygen to smooth the swings</b>, which is what allows both reactions to work. Diesel aftertreatment is a different architecture and is not called a three-way catalyst.</td></tr>
+    <tr><td class="el">Fluid catalytic cracking<br><span style="font-weight:400;color:var(--muted);font-size:12px;">FCC</span></td><td>The refinery unit that breaks heavy oil into petrol</td><td>Distilling crude alone leaves far too much heavy oil, so a catalyst is used to break those large molecules into petrol and diesel. The catalyst is a fine powder that circulates through the unit behaving like a fluid, which is where the name comes from. Lanthanum is what keeps the zeolite catalyst from collapsing at operating temperature.</td></tr>
+    <tr><td class="el">Roasting and cracking</td><td>Burning the mineral to break it open</td><td>Rare earths are locked inside a crystal lattice and will not dissolve in water. Baking the concentrate with concentrated sulphuric acid at 200&deg;C to 500&deg;C, or boiling it in concentrated caustic, destroys that lattice and converts the rare earths into a soluble form. This is the step that concentrates thorium into the residue.</td></tr>
+    <tr><td class="el">Solvent extraction<br>Mixer-settler</td><td>Using two liquids that will not mix to separate elements a sliver at a time</td><td>Contact two liquids that do not mix, like water and oil, and one element will move into the oil side very slightly more readily than its neighbour. One pass is far too small a difference to be useful. So a unit that combines a stirred mixing chamber with a quiet settling chamber is repeated hundreds of times in series, compounding the tiny advantage. China's dominance lives in this step.</td></tr>
+    <tr><td class="el">Strip casting</td><td>Pouring molten alloy onto a spinning cooled wheel so it freezes instantly into thin flakes</td><td>Molten magnet alloy is poured onto a water-cooled copper wheel spinning at speed, and freezes within a fraction of a second into flakes 0.2 to 0.4 mm thick. <b>Why the hurry?</b> Metal cooled slowly grows large crystals and throws out free iron, and both wreck magnetic performance. Cooled fast, the crystals are fine and uniform and the neodymium-rich grain boundary phase is spread thinly in exactly the right places. That grain boundary phase is what makes sintering and grain boundary diffusion work later. Ice is a fair comparison: frozen slowly it grows big cloudy crystals, frozen fast the crystals are tiny. This is the same effect in an alloy. The technique spread in the 1990s and magnet performance rose sharply as a result.</td></tr>
+    <tr><td class="el">Sintering</td><td>Fusing powder into a solid with heat, without fully melting it</td><td>Pressed powder is heated to just below the melting point, 1,000&deg;C to 1,100&deg;C for NdFeB, so the particles bond and the gaps close to near full density. Because it is not fully melted, the crystal alignment set during pressing survives. That is how an anisotropic magnet is made.</td></tr>
+    <tr><td class="el">Grain boundary diffusion</td><td>Painting the expensive element onto the surface instead of mixing it through</td><td>Rather than blending dysprosium or terbium through the whole magnet, it is applied to the surface of the finished part and heated so it travels inward along the boundaries between crystals. Heat resistance is set at those boundaries, so the element only needs to be where it does the work. The same performance for a fraction of the heavy rare earth, which is why intensity has fallen so much over the last decade.</td></tr>
+    <tr><td class="el">Coercivity<br>Remanence</td><td>Resistance to demagnetising / raw strength</td><td>Remanence is how strong the magnet is. Coercivity is how hard it is to demagnetise. In an electric vehicle motor the second one is the problem: coercivity falls as temperature rises, and past a certain point the loss is permanent. Dysprosium and terbium are added specifically to raise it.</td></tr>
+    <tr><td class="el">Thorium<br><span style="font-weight:400;color:var(--muted);font-size:12px;">NORM</span></td><td>The reason any of this is a radiation question</td><td>Thorium rides along inside monazite because it is a chemical lookalike for the light rare earths. The rare earths themselves are not radioactive. NORM means naturally occurring radioactive material, the regulatory category that also covers phosphate fertiliser plants, oil and gas pipe scale and tin slag. Full explanation in Stage 3.</td></tr>
+    <tr><td class="el">NdPr</td><td>Neodymium and praseodymium sold as one product</td><td>The two are so chemically similar that separating them costs more than it is worth. The industry ships and prices them together. When you see an NdPr price quoted, this is what is being quoted.</td></tr>
+    <tr><td class="el">Mischmetal</td><td>Unseparated rare earth metal</td><td>Mostly cerium and lanthanum. Cheap because no separation was done. Used as a steel additive and in lighter flints.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="subhead">Places and mines</div>
+<div class="tw">
+<table>
+  <thead><tr><th style="width:170px;">Name</th><th style="width:200px;">Where it is</th><th>What it is, and why it matters</th></tr></thead>
+  <tbody>
+    <tr><td class="el">Bayan Obo</td><td>Inner Mongolia, China<br>About 150 km north of Baotou</td><td><b>The world's largest rare earth deposit.</b> It was developed as an iron ore mine and still produces iron ore. <b>The rare earths come out alongside the iron</b>, which is part of why Chinese costs are so hard to match. This single deposit accounts for a large share of world light rare earth supply, operated by China Northern Rare Earth. The name means "rich mountain" in Mongolian.</td></tr>
+    <tr><td class="el">Mountain Pass</td><td>California, United States<br>Mojave Desert near the Nevada border<br>About 85 km southwest of Las Vegas</td><td><b>The only site in North America that both mines and processes at commercial scale.</b> Owned and operated by MP Materials. It is a bastnasite deposit that supplied most of the world's rare earths from the 1960s to the 1980s, closed in 2002 under Chinese price pressure and environmental problems, and was later restarted. This is the asset the United States Department of Defense took a stake in.</td></tr>
+    <tr><td class="el">Mount Weld</td><td>Western Australia<br>Near Laverton<br>About 800 km northeast of Perth, inland desert</td><td><b>One of the highest grade deposits in the world, owned by Lynas.</b> What happens here is <b>mining and concentration only</b>. No separation. The concentrate is shipped from Fremantle to Kuantan in Malaysia. <b>Mount Weld is the mine, Kuantan is the plant.</b> Confusing those two makes the entire Malaysian debate impossible to follow.</td></tr>
+    <tr><td class="el">Kuantan</td><td>Capital of Pahang state, Malaysia<br>On the peninsula's <b>east coast</b>, facing the South China Sea<br>About 250 km east of Kuala Lumpur, roughly three and a half hours by road</td><td>An industrial city with a deepwater port. <b>The Lynas separation plant sits inside the Gebeng industrial estate just north of the city.</b> Press coverage calls it "the Kuantan plant" and "the Gebeng plant" interchangeably; they are the same facility. The magnet plant joint venture with South Korea's JS Link announced in 2026 is planned near the same refinery. Malaysia's east coast is less industrialised than the west, which is part of why the government is keen to attract industry there.</td></tr>
+    <tr><td class="el">Gebeng</td><td>Immediately north of Kuantan</td><td>A heavy chemical and petrochemical industrial estate. The Lynas Advanced Materials Plant occupies about 100 hectares inside it. Because the estate is zoned for heavy chemicals, it can host processes an ordinary industrial park cannot.</td></tr>
+    <tr><td class="el">Pahang, Perak<br>and Kerian</td><td>Pahang is on the east of the peninsula and contains Kuantan<br>Perak is in the northwest<br>Kerian is an industrial park in Perak</td><td>Malaysia's ionic clay resource sits in <b>five states: Kelantan, Terengganu, Pahang, Perak and Kedah</b>. Kerian in Perak is a frequently cited candidate location for magnet manufacturing, because it sits next to the northern semiconductor cluster and because Perak is one of those five states.</td></tr>
+    <tr><td class="el">Minamitorishima</td><td>Inside Japan's exclusive economic zone<br>About 1,900 km southeast of Tokyo</td><td>Seabed mud containing rare earths lies at roughly 6,000 metres depth. The mix is attractive, high in heavies and low in thorium, but nobody anywhere has ever lifted mud commercially from that depth. A lift test was targeted for January 2026 and a demonstration phase for 2027. <b>Manage expectations on this one.</b></td></tr>
+    <tr><td class="el">Kalgoorlie</td><td>Inland mining city, Western Australia</td><td>Lynas is building cracking and leaching capacity here. It is the move that would take the radioactive residue step out of Malaysia and back to Australia. The implication is that the Malaysian plant's role could narrow over time to separation and downstream only.</td></tr>
+  </tbody>
+</table>
+</div>
+
 <div class="foot">
   <p><b>Sources and basis.</b> Process descriptions draw on EuRARE and EAG Laboratories process documentation, a 2025 Journal of Sustainable Metallurgy review of rare earth separation, published sintered NdFeB manufacturing process literature including strip casting, hydrogen decrepitation and jet milling parameters, IRENA's 2022 critical materials paper, and peer reviewed work on ion adsorption clay leaching in Malaysia. Application intensity figures draw on published magnet intensity studies for electric vehicles and direct drive wind, and on widely quoted United States Congressional Research Service and Government Accountability Office estimates for defence platforms. Market share and price figures draw on S&amp;P Global and industry price reporting on neodymium oxide as at March 2026.</p>
   <p><b>Part C sources.</b> Part C is merged from the standalone global rare earth industry report of July 2026, which drew on the European Commission Joint Research Centre, the United States Geological Survey, the Center for Strategic and International Studies, the International Energy Agency Global Critical Minerals Outlook 2025, World Economic Forum and JOGMEC material on Japan's post-2010 response, Lynas Rare Earths disclosures, South China Morning Post reporting on the Malaysian licence conditions, National Bureau of Asian Research on Indonesian downstreaming, Global Trade Alert on the export control sequence, and MP Materials SEC filings and quarterly releases. Findings carrying a vote count survived a three-vote adversarial verification in that report; a claim was killed only where two of three independent reviewers refuted it.</p>
@@ -1190,7 +1261,6 @@
 
 <div class="toc">
   <h4>目次</h4>
-  <a class="glink" href="#jg1">まずここから：くり返し出てくる言葉と場所 &rarr;</a>
   <ol>
     <li><a href="#ja1">17元素を一つずつ</a></li>
     <li><a href="#ja2">需要は実際どこにあるか</a></li>
@@ -1224,71 +1294,13 @@
     <li><a href="#jd6">投資環境と見通し</a></li>
     <li><a href="#jd7">検証済みの所見、留意点、未解決の問い</a></li>
   </ol>
+  <a class="glink" href="#jg1">付録：くり返し出てくる言葉と場所 &rarr;</a>
 </div>
 
 <div class="callout">
-  <b>この資料の読み方。</b>パートAは「これは何に使うのか」に答えます。パートBは「岩石がどうやってそれになるのか」に答えます。順番に読む前提で書いていますが、パートBの各工程は独立して読めるので、気になる工程に直接飛んでも構いません。すぐ下の用語集では、くり返し出てくる専門用語と、それぞれの鉱山や工場が物理的にどこにあるのかを説明しています。パートCは「誰が握っていて、なぜそれが効くのか」に答えます。マレーシアと日本の政策動向もここに含めています。
+  <b>この資料の読み方。</b>パートAは「これは何に使うのか」に答えます。パートBは「岩石がどうやってそれになるのか」に答えます。順番に読む前提で書いていますが、パートBの各工程は独立して読めるので、気になる工程に直接飛んでも構いません。巻末の用語集に、くり返し出てくる専門用語と、それぞれの鉱山や工場が物理的にどこにあるのかをまとめてあります。パートCは「誰が握っていて、なぜそれが効くのか」に答えます。マレーシアと日本の政策動向もここに含めています。
 </div>
 
-
-<h2 class="section" id="jg1"><span class="n nw">用語</span>くり返し出てくる言葉と場所</h2>
-<p class="lede">本文を読む前にここを押さえておくと、後がずっと楽になります。読み飛ばして構いませんが、途中で「これ何だっけ」と思ったらここに戻ってきてください。</p>
-
-<div class="subhead">まず、これだけは</div>
-<div class="gbox">
-  <p style="margin:0 0 8px;font-size:14.5px;"><b>この産業でいちばん誤解されているのは、「採る場所」と「処理する場所」が違うということです。</b></p>
-  <div class="chain3">
-    <div class="c3"><span class="c3n">採る</span><b>マウントウェルド</b><span class="c3s">西オーストラリア州</span><span class="c3d">掘って、砕いて、精鉱にするところまで</span></div>
-    <div class="c3arw">▶</div>
-    <div class="c3"><span class="c3n">運ぶ</span><b>船で約4,000km</b><span class="c3s">フリーマントル港 → クアンタン港</span><span class="c3d">精鉱の状態で海を渡る</span></div>
-    <div class="c3arw">▶</div>
-    <div class="c3"><span class="c3n">分ける</span><b>ゲベン（クアンタン）</b><span class="c3s">マレーシア・パハン州</span><span class="c3d">分解、溶媒抽出、酸化物に仕上げる</span></div>
-  </div>
-  <p style="margin:10px 0 0;font-size:13.5px;">同じライナス社の事業ですが、鉱山は豪州、工場はマレーシアです。マレーシアは自国の鉱石を処理しているのではありません。<b>場所と労働力と電力と水を提供し、放射性残渣を引き受けている</b>のです。マレーシアで起きている論争のほとんどは、この一点から生まれています。</p>
-</div>
-
-<div class="subhead">用語</div>
-<div class="tw">
-<table>
-  <thead><tr><th style="width:150px;">用語</th><th style="width:170px;">ひとことで言うと</th><th>もう少し詳しく</th></tr></thead>
-  <tbody>
-    <tr><td class="el">REO<br><span style="font-weight:400;color:var(--muted);font-size:12px;">酸化レアアース</span></td><td>この業界の「共通のものさし」</td><td>Rare Earth Oxide の略で、日本語では酸化レアアース、酸化希土類。<b>この業界では品位も埋蔵量も生産量も、金属ではなく「酸化物」に換算して表します。</b>理由は2つ。第一に、鉱山から出てきた材料が最初に安定して秤に乗せられ、売れる形が酸化物だからです。第二に、17元素は金属と酸化物の重量比がそれぞれ違うので、酸化物に揃えないと足し算ができません。「品位5% REO」とは、鉱石100kgから酸化物が5kg取れるという意味で、金属が5kg取れるという意味ではありません。軽希土なら金属重量は酸化物のおおむね80から85%です。</td></tr>
-    <tr><td class="el">精鉱</td><td>捨てる石を捨てた後の中身</td><td>掘り出した鉱石から、価値のない脈石（がんせき）を物理的に取り除いて濃くしたもの。品位数パーセントの鉱石が、精鉱では30から60%になります。まだ化学処理は一切していません。</td></tr>
-    <tr><td class="el">尾鉱</td><td>捨てたほうの石</td><td>選鉱で捨てられる大量の廃石と泥。英語ではテーリング。量が膨大なので、これを置いておく堆積場（たいせきじょう）の用地と管理が鉱山の大きな負担になります。</td></tr>
-    <tr><td class="el">スラリー</td><td>石を粉にして水と混ぜた「泥水」</td><td>鉱石を細かく砕いた粉に水を加えて、どろどろの液体にしたもの。<b>なぜわざわざ液体にするのか。</b>液体ならポンプで送れて、撹拌でき、薬剤を均一に混ぜられるからです。乾いた粉のままでは、この3つがどれもできません。湿式の鉱物処理はほぼすべてスラリーの状態で進みます。濃度は固体が重量で3割から6割程度、感覚としてはコンクリートを流す前のミキサーの中身に近い。</td></tr>
-    <tr><td class="el">浮遊選鉱</td><td>泡に付けて浮かせて分ける</td><td>スラリーに薬剤を加えて、狙った鉱物の表面だけを水をはじく性質（疎水性）に変え、そこへ空気を吹き込みます。目的の鉱物だけが気泡にくっついて泡として浮上するので、それをすくい取ります。単純に見えて、鉱石ごとに効く薬剤の組み合わせを見つけるのが難しく、新規案件がつまずく典型的な場所です。</td></tr>
-    <tr><td class="el">イオン吸着鉱</td><td>粘土の表面に「くっついているだけ」のレアアース</td><td>何百万年もの雨で風化した花崗岩（かこうがん）です。元の鉱物から溶け出したレアアースが、<b>新しい結晶をつくらずに、粘土粒子の表面に電気的な力でくっついたまま止まっている</b>状態を指します。化学結合ではなく、ただ吸着しているだけ。だから常温の塩水を流すだけで、塩のイオンと入れ替わって剥がれ落ちます。この性質が3つの結果を生みます。（1）品位は0.05から0.3%と極端に低い。（2）それでも破砕も粉砕も酸焙焼も不要なので処理費が安い。（3）風化の過程で重希土が濃縮され、トリウムは少ない。世界のジスプロシウムとテルビウムがここから出てくる理由であり、マレーシアが持っているのもこの鉱床です。</td></tr>
-    <tr><td class="el">三元触媒</td><td>ガソリン車の排ガス浄化装置</td><td>マフラーの途中に入っている、排ガスをきれいにする装置です。<b>「三元」とは、3種類の汚染物質を同時に処理するという意味</b>で、一酸化炭素（CO）、燃え残った炭化水素（HC）、窒素酸化物（NOx）の3つを指します。難しいのは、前の2つは酸素を加えて酸化しなければならず、NOxは逆に酸素を取り除いて還元しなければならないこと。正反対の反応を同じ箱の中でやる必要があります。実際の化学反応は白金、パラジウム、ロジウムが担いますが、<b>酸化セリウムが酸素を吸ったり吐いたりして酸素量を平準化する</b>ので、両方の反応が成立します。ディーゼル車の装置は仕組みが違い、三元触媒とは呼びません。</td></tr>
-    <tr><td class="el">流動接触分解<br><span style="font-weight:400;color:var(--muted);font-size:12px;">FCC</span></td><td>製油所で重い油をガソリンに割る装置</td><td>Fluid Catalytic Cracking の略。原油をそのまま蒸留すると重い油が大量に余るので、それを触媒で細かい分子に「割って」ガソリンや軽油に変えます。触媒は粉末状で、流動する砂のように装置内を循環します。この触媒（ゼオライト）を高温で壊れないように支えているのがランタンです。</td></tr>
-    <tr><td class="el">焙焼・分解</td><td>鉱物を焼いて壊す</td><td>レアアースは鉱物の結晶構造の中に閉じ込められていて、そのままでは水に溶けません。濃硫酸と混ぜて200度から500度で焼く、あるいは濃アルカリで煮ることで結晶構造を壊し、水に溶ける形に変えます。この工程でトリウムが残渣側に濃縮されます。</td></tr>
-    <tr><td class="el">溶媒抽出<br>ミキサーセトラー</td><td>混ざらない2つの液体を使って、少しずつより分ける</td><td>水と油のように混ざらない2つの液体を接触させると、ある元素が油側にほんのわずかだけ移りやすい、という差が出ます。その差は1回では小さすぎて使い物になりません。そこで「混ぜる部屋」と「静かに分かれるのを待つ部屋」を1組にした装置（ミキサーセトラー）を数百段つなぎ、わずかな差を積み上げます。中国の圧倒的な優位はこの工程にあります。</td></tr>
-    <tr><td class="el">ストリップキャスト<br><span style="font-weight:400;color:var(--muted);font-size:12px;">薄帯鋳造</span></td><td>溶けた合金を回る銅ロールに落として、一瞬で薄い板に固める</td><td>溶かした磁石合金を、水で冷やしながら高速回転する銅の車輪の上に注ぐと、コンマ数秒で厚さ0.2から0.4mmの薄片に固まります。<b>なぜ急いで固めるのか。</b>金属はゆっくり冷やすと結晶が大きく育ってしまい、さらに磁石の性能を落とす遊離した鉄が現れます。急冷すれば結晶は細かく揃い、ネオジムに富む「粒界相」が正しい位置に薄く行き渡ります。この粒界相が、後の焼結と粒界拡散を成立させます。氷を考えると分かりやすい。ゆっくり凍らせた氷は結晶が大きくて白く濁り、急速に凍らせた氷は結晶が細かい。それと同じことを合金でやっています。1990年代にこの方法が普及したことで、磁石の性能は大きく上がりました。</td></tr>
-    <tr><td class="el">焼結</td><td>粉を溶かし切らずに、熱で固めて一体にする</td><td>粉末を型で押し固めてから、融点よりやや低い温度（ネオジム磁石なら1,000から1,100度）で加熱すると、粒子の隙間が詰まってほぼ隙間のない固体になります。全部溶かすわけではないので、粉のときに揃えた結晶の向きがそのまま残ります。これが異方性磁石の作り方です。</td></tr>
-    <tr><td class="el">粒界拡散</td><td>高い元素を表面から染み込ませて節約する</td><td>ジスプロシウムやテルビウムを磁石全体に混ぜ込む代わりに、完成した磁石の表面に塗って加熱し、結晶と結晶の境目（粒界）に沿って内部へ染み込ませる方法。耐熱性は粒界で決まるので、必要なところにだけ効かせられます。同じ性能をはるかに少ない重希土で出せるため、この10年で使用量が大きく減りました。</td></tr>
-    <tr><td class="el">保磁力<br>残留磁束密度</td><td>減磁しにくさ／磁石の強さ</td><td>残留磁束密度は「どれだけ強いか」、保磁力は「どれだけ磁力を失いにくいか」。電気自動車のモーターで問題になるのは後者です。熱くなると保磁力が落ち、ある温度を超えると磁力が戻らなくなります。ジスプロシウムとテルビウムはこの保磁力を上げるために入れます。</td></tr>
-    <tr><td class="el">トリウム<br><span style="font-weight:400;color:var(--muted);font-size:12px;">NORM</span></td><td>この話が放射線の問題になる原因</td><td>トリウムは軽希土の化学的なそっくりさんであるため、モナザイトの結晶の中に一緒に入り込んでいます。レアアースそのものは放射性ではありません。NORMは自然起源放射性物質という規制上の区分で、リン酸肥料工場、石油ガス配管のスケール、錫のスラグなども同じ区分に入ります。詳しい説明は工程3にあります。</td></tr>
-    <tr><td class="el">NdPr</td><td>ネオジムとプラセオジムの混合物</td><td>この2つは化学的に似すぎていて、分けてもコストに見合いません。そのため業界は分離せず、混ざったまま1つの製品として売買します。価格報道で「NdPr」と出てくるのはこれです。</td></tr>
-    <tr><td class="el">ミッシュメタル</td><td>分けていないレアアース金属</td><td>主にセリウムとランタンの混合金属。分離していないので安く、鉄鋼添加剤や発火合金（ライターの石）に使われます。</td></tr>
-  </tbody>
-</table>
-</div>
-
-<div class="subhead">場所と鉱山</div>
-<div class="tw">
-<table>
-  <thead><tr><th style="width:170px;">名前</th><th style="width:190px;">どこにあるか</th><th>何であり、なぜ重要か</th></tr></thead>
-  <tbody>
-    <tr><td class="el">白雲鄂博<br><span style="font-weight:400;color:var(--muted);font-size:12px;">バヤンオボ<br>Bayan Obo</span></td><td>中国・内モンゴル自治区<br>包頭（パオトウ）市の北約150km</td><td><b>世界最大のレアアース鉱床。</b>元々は鉄鉱山として開発され、今も鉄鉱石を採っています。レアアースは<b>その鉄鉱石採掘に伴って出てくる</b>という構造で、これが中国のコスト優位の一因です。単独でも世界の軽希土供給の大きな部分を占め、北方稀土集団が操業しています。地名は中国語で「豊かな山」の意味です。</td></tr>
-    <tr><td class="el">マウンテンパス<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Mountain Pass</span></td><td>米国・カリフォルニア州<br>モハーベ砂漠、ネバダ州境近く<br>ラスベガスの南西約85km</td><td><b>北米で唯一、商業規模で「採掘から処理まで」を行っているサイト。</b>MPマテリアルズが保有・操業。バストネサイト鉱で、1960年代から80年代には世界のレアアース供給を担っていましたが、中国の低価格攻勢と環境問題で2002年に一度閉鎖され、その後再稼働しました。米国国防総省が出資しているのはここです。</td></tr>
-    <tr><td class="el">マウントウェルド<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Mount Weld</span></td><td>豪州・西オーストラリア州<br>ラバートン近郊<br>パースの北東約800km、内陸の砂漠地帯</td><td><b>世界有数の高品位鉱床。ライナスが保有。</b>ここで行うのは<b>採掘と選鉱まで</b>で、分離は行いません。精鉱はフリーマントル港から船でマレーシアのクアンタンへ運ばれます。<b>マウントウェルドは「鉱山」、クアンタンは「工場」。</b>この2つを混同すると、マレーシアの議論がまるで理解できなくなります。</td></tr>
-    <tr><td class="el">クアンタン<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Kuantan</span></td><td>マレーシア・パハン州の州都<br>マレー半島の<b>東海岸</b>、南シナ海に面する<br>クアラルンプールから東へ約250km、車で約3時間半</td><td>深水港（クアンタン港）を持つ工業都市です。<b>ライナスの分離工場は、クアンタン市街の北にあるゲベン（Gebeng）工業団地の中にあります。</b>報道では「クアンタンの工場」「ゲベンの工場」と両方の書き方が出てきますが、同じものを指しています。2026年に発表された韓国JSリンクとの磁石工場合弁も、この精錬所の近くに置かれる計画です。マレーシアの東海岸は西海岸に比べて工業化が遅れており、政府がこの地域の産業誘致に積極的な背景もここにあります。</td></tr>
-    <tr><td class="el">ゲベン<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Gebeng</span></td><td>クアンタン市の北隣</td><td>石油化学を中心とする重化学工業団地。ライナス先端材料工場（LAMP）はこの中の約100ヘクタールの敷地にあります。重化学向けに区分された団地なので、一般の産業団地では受け入れられない工程を置けます。</td></tr>
-    <tr><td class="el">パハン州・ペラ州<br>クリアン</td><td>パハン州はマレー半島東部（クアンタンを含む）<br>ペラ州は北西部<br>クリアンはペラ州の産業団地</td><td>マレーシアのイオン吸着鉱は<b>クランタン、トレンガヌ、パハン、ペラ、ケダの5州</b>に分布しています。磁石工場の候補地としてクリアン（ペラ州）がよく挙がるのは、北部の半導体クラスターに隣接し、かつペラ州がこの5州の一つだからです。</td></tr>
-    <tr><td class="el">南鳥島<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Minamitorishima</span></td><td>日本の排他的経済水域<br>東京の南東約1,900km</td><td>水深約6,000mの海底にレアアースを含む泥が広がっています。重希土の比率が高くトリウムが少ないという点で条件は良いのですが、6,000mから泥を引き上げて商業採算に乗せた例は世界にありません。2026年1月に揚泥試験、2027年に実証段階が目標とされています。<b>期待値の管理が必要な案件</b>です。</td></tr>
-    <tr><td class="el">カルグーリー<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Kalgoorlie</span></td><td>豪州・西オーストラリア州の内陸鉱山都市</td><td>ライナスがここに分解・浸出設備を建設しています。マレーシアで放射性残渣が問題になった工程を豪州側へ移すための布石です。つまりマレーシア工場の役割は、将来的に前工程が抜けて「分離から先」に絞られる可能性があります。</td></tr>
-  </tbody>
-</table>
-</div>
 
 <div class="parthead">
   <div class="pk">パートA</div>
@@ -2149,6 +2161,70 @@
   </ul>
 </div>
 
+<div class="parthead apx">
+  <div class="pk">付録</div>
+  <h2>用語、鉱山、地名</h2>
+  <p>あえて巻末に置いています。ここを読まなくても本文は追えます。本文にくり返し出てくる言葉と、登場した鉱山・工場・港はすべてここにまとめてあります。</p>
+</div>
+<h2 class="section" id="jg1"><span class="n nw">用語</span>くり返し出てくる言葉と場所</h2>
+<p class="lede">先に読む必要はありません。本文に出てくる専門用語と、鉱山・工場・港が物理的にどこにあるのかをまとめてあります。途中で「これ何だっけ」と思ったらここに戻ってきてください。</p>
+
+<div class="subhead">まず、これだけは</div>
+<div class="gbox">
+  <p style="margin:0 0 8px;font-size:14.5px;"><b>この産業でいちばん誤解されているのは、「採る場所」と「処理する場所」が違うということです。</b></p>
+  <div class="chain3">
+    <div class="c3"><span class="c3n">採る</span><b>マウントウェルド</b><span class="c3s">西オーストラリア州</span><span class="c3d">掘って、砕いて、精鉱にするところまで</span></div>
+    <div class="c3arw">▶</div>
+    <div class="c3"><span class="c3n">運ぶ</span><b>船で約4,000km</b><span class="c3s">フリーマントル港 → クアンタン港</span><span class="c3d">精鉱の状態で海を渡る</span></div>
+    <div class="c3arw">▶</div>
+    <div class="c3"><span class="c3n">分ける</span><b>ゲベン（クアンタン）</b><span class="c3s">マレーシア・パハン州</span><span class="c3d">分解、溶媒抽出、酸化物に仕上げる</span></div>
+  </div>
+  <p style="margin:10px 0 0;font-size:13.5px;">同じライナス社の事業ですが、鉱山は豪州、工場はマレーシアです。マレーシアは自国の鉱石を処理しているのではありません。<b>場所と労働力と電力と水を提供し、放射性残渣を引き受けている</b>のです。マレーシアで起きている論争のほとんどは、この一点から生まれています。</p>
+</div>
+
+<div class="subhead">用語</div>
+<div class="tw">
+<table>
+  <thead><tr><th style="width:150px;">用語</th><th style="width:170px;">ひとことで言うと</th><th>もう少し詳しく</th></tr></thead>
+  <tbody>
+    <tr><td class="el">REO<br><span style="font-weight:400;color:var(--muted);font-size:12px;">酸化レアアース</span></td><td>この業界の「共通のものさし」</td><td>Rare Earth Oxide の略で、日本語では酸化レアアース、酸化希土類。<b>この業界では品位も埋蔵量も生産量も、金属ではなく「酸化物」に換算して表します。</b>理由は2つ。第一に、鉱山から出てきた材料が最初に安定して秤に乗せられ、売れる形が酸化物だからです。第二に、17元素は金属と酸化物の重量比がそれぞれ違うので、酸化物に揃えないと足し算ができません。「品位5% REO」とは、鉱石100kgから酸化物が5kg取れるという意味で、金属が5kg取れるという意味ではありません。軽希土なら金属重量は酸化物のおおむね80から85%です。</td></tr>
+    <tr><td class="el">精鉱</td><td>捨てる石を捨てた後の中身</td><td>掘り出した鉱石から、価値のない脈石（がんせき）を物理的に取り除いて濃くしたもの。品位数パーセントの鉱石が、精鉱では30から60%になります。まだ化学処理は一切していません。</td></tr>
+    <tr><td class="el">尾鉱</td><td>捨てたほうの石</td><td>選鉱で捨てられる大量の廃石と泥。英語ではテーリング。量が膨大なので、これを置いておく堆積場（たいせきじょう）の用地と管理が鉱山の大きな負担になります。</td></tr>
+    <tr><td class="el">スラリー</td><td>石を粉にして水と混ぜた「泥水」</td><td>鉱石を細かく砕いた粉に水を加えて、どろどろの液体にしたもの。<b>なぜわざわざ液体にするのか。</b>液体ならポンプで送れて、撹拌でき、薬剤を均一に混ぜられるからです。乾いた粉のままでは、この3つがどれもできません。湿式の鉱物処理はほぼすべてスラリーの状態で進みます。濃度は固体が重量で3割から6割程度、感覚としてはコンクリートを流す前のミキサーの中身に近い。</td></tr>
+    <tr><td class="el">浮遊選鉱</td><td>泡に付けて浮かせて分ける</td><td>スラリーに薬剤を加えて、狙った鉱物の表面だけを水をはじく性質（疎水性）に変え、そこへ空気を吹き込みます。目的の鉱物だけが気泡にくっついて泡として浮上するので、それをすくい取ります。単純に見えて、鉱石ごとに効く薬剤の組み合わせを見つけるのが難しく、新規案件がつまずく典型的な場所です。</td></tr>
+    <tr><td class="el">イオン吸着鉱</td><td>粘土の表面に「くっついているだけ」のレアアース</td><td>何百万年もの雨で風化した花崗岩（かこうがん）です。元の鉱物から溶け出したレアアースが、<b>新しい結晶をつくらずに、粘土粒子の表面に電気的な力でくっついたまま止まっている</b>状態を指します。化学結合ではなく、ただ吸着しているだけ。だから常温の塩水を流すだけで、塩のイオンと入れ替わって剥がれ落ちます。この性質が3つの結果を生みます。（1）品位は0.05から0.3%と極端に低い。（2）それでも破砕も粉砕も酸焙焼も不要なので処理費が安い。（3）風化の過程で重希土が濃縮され、トリウムは少ない。世界のジスプロシウムとテルビウムがここから出てくる理由であり、マレーシアが持っているのもこの鉱床です。</td></tr>
+    <tr><td class="el">三元触媒</td><td>ガソリン車の排ガス浄化装置</td><td>マフラーの途中に入っている、排ガスをきれいにする装置です。<b>「三元」とは、3種類の汚染物質を同時に処理するという意味</b>で、一酸化炭素（CO）、燃え残った炭化水素（HC）、窒素酸化物（NOx）の3つを指します。難しいのは、前の2つは酸素を加えて酸化しなければならず、NOxは逆に酸素を取り除いて還元しなければならないこと。正反対の反応を同じ箱の中でやる必要があります。実際の化学反応は白金、パラジウム、ロジウムが担いますが、<b>酸化セリウムが酸素を吸ったり吐いたりして酸素量を平準化する</b>ので、両方の反応が成立します。ディーゼル車の装置は仕組みが違い、三元触媒とは呼びません。</td></tr>
+    <tr><td class="el">流動接触分解<br><span style="font-weight:400;color:var(--muted);font-size:12px;">FCC</span></td><td>製油所で重い油をガソリンに割る装置</td><td>Fluid Catalytic Cracking の略。原油をそのまま蒸留すると重い油が大量に余るので、それを触媒で細かい分子に「割って」ガソリンや軽油に変えます。触媒は粉末状で、流動する砂のように装置内を循環します。この触媒（ゼオライト）を高温で壊れないように支えているのがランタンです。</td></tr>
+    <tr><td class="el">焙焼・分解</td><td>鉱物を焼いて壊す</td><td>レアアースは鉱物の結晶構造の中に閉じ込められていて、そのままでは水に溶けません。濃硫酸と混ぜて200度から500度で焼く、あるいは濃アルカリで煮ることで結晶構造を壊し、水に溶ける形に変えます。この工程でトリウムが残渣側に濃縮されます。</td></tr>
+    <tr><td class="el">溶媒抽出<br>ミキサーセトラー</td><td>混ざらない2つの液体を使って、少しずつより分ける</td><td>水と油のように混ざらない2つの液体を接触させると、ある元素が油側にほんのわずかだけ移りやすい、という差が出ます。その差は1回では小さすぎて使い物になりません。そこで「混ぜる部屋」と「静かに分かれるのを待つ部屋」を1組にした装置（ミキサーセトラー）を数百段つなぎ、わずかな差を積み上げます。中国の圧倒的な優位はこの工程にあります。</td></tr>
+    <tr><td class="el">ストリップキャスト<br><span style="font-weight:400;color:var(--muted);font-size:12px;">薄帯鋳造</span></td><td>溶けた合金を回る銅ロールに落として、一瞬で薄い板に固める</td><td>溶かした磁石合金を、水で冷やしながら高速回転する銅の車輪の上に注ぐと、コンマ数秒で厚さ0.2から0.4mmの薄片に固まります。<b>なぜ急いで固めるのか。</b>金属はゆっくり冷やすと結晶が大きく育ってしまい、さらに磁石の性能を落とす遊離した鉄が現れます。急冷すれば結晶は細かく揃い、ネオジムに富む「粒界相」が正しい位置に薄く行き渡ります。この粒界相が、後の焼結と粒界拡散を成立させます。氷を考えると分かりやすい。ゆっくり凍らせた氷は結晶が大きくて白く濁り、急速に凍らせた氷は結晶が細かい。それと同じことを合金でやっています。1990年代にこの方法が普及したことで、磁石の性能は大きく上がりました。</td></tr>
+    <tr><td class="el">焼結</td><td>粉を溶かし切らずに、熱で固めて一体にする</td><td>粉末を型で押し固めてから、融点よりやや低い温度（ネオジム磁石なら1,000から1,100度）で加熱すると、粒子の隙間が詰まってほぼ隙間のない固体になります。全部溶かすわけではないので、粉のときに揃えた結晶の向きがそのまま残ります。これが異方性磁石の作り方です。</td></tr>
+    <tr><td class="el">粒界拡散</td><td>高い元素を表面から染み込ませて節約する</td><td>ジスプロシウムやテルビウムを磁石全体に混ぜ込む代わりに、完成した磁石の表面に塗って加熱し、結晶と結晶の境目（粒界）に沿って内部へ染み込ませる方法。耐熱性は粒界で決まるので、必要なところにだけ効かせられます。同じ性能をはるかに少ない重希土で出せるため、この10年で使用量が大きく減りました。</td></tr>
+    <tr><td class="el">保磁力<br>残留磁束密度</td><td>減磁しにくさ／磁石の強さ</td><td>残留磁束密度は「どれだけ強いか」、保磁力は「どれだけ磁力を失いにくいか」。電気自動車のモーターで問題になるのは後者です。熱くなると保磁力が落ち、ある温度を超えると磁力が戻らなくなります。ジスプロシウムとテルビウムはこの保磁力を上げるために入れます。</td></tr>
+    <tr><td class="el">トリウム<br><span style="font-weight:400;color:var(--muted);font-size:12px;">NORM</span></td><td>この話が放射線の問題になる原因</td><td>トリウムは軽希土の化学的なそっくりさんであるため、モナザイトの結晶の中に一緒に入り込んでいます。レアアースそのものは放射性ではありません。NORMは自然起源放射性物質という規制上の区分で、リン酸肥料工場、石油ガス配管のスケール、錫のスラグなども同じ区分に入ります。詳しい説明は工程3にあります。</td></tr>
+    <tr><td class="el">NdPr</td><td>ネオジムとプラセオジムの混合物</td><td>この2つは化学的に似すぎていて、分けてもコストに見合いません。そのため業界は分離せず、混ざったまま1つの製品として売買します。価格報道で「NdPr」と出てくるのはこれです。</td></tr>
+    <tr><td class="el">ミッシュメタル</td><td>分けていないレアアース金属</td><td>主にセリウムとランタンの混合金属。分離していないので安く、鉄鋼添加剤や発火合金（ライターの石）に使われます。</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="subhead">場所と鉱山</div>
+<div class="tw">
+<table>
+  <thead><tr><th style="width:170px;">名前</th><th style="width:190px;">どこにあるか</th><th>何であり、なぜ重要か</th></tr></thead>
+  <tbody>
+    <tr><td class="el">白雲鄂博<br><span style="font-weight:400;color:var(--muted);font-size:12px;">バヤンオボ<br>Bayan Obo</span></td><td>中国・内モンゴル自治区<br>包頭（パオトウ）市の北約150km</td><td><b>世界最大のレアアース鉱床。</b>元々は鉄鉱山として開発され、今も鉄鉱石を採っています。レアアースは<b>その鉄鉱石採掘に伴って出てくる</b>という構造で、これが中国のコスト優位の一因です。単独でも世界の軽希土供給の大きな部分を占め、北方稀土集団が操業しています。地名は中国語で「豊かな山」の意味です。</td></tr>
+    <tr><td class="el">マウンテンパス<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Mountain Pass</span></td><td>米国・カリフォルニア州<br>モハーベ砂漠、ネバダ州境近く<br>ラスベガスの南西約85km</td><td><b>北米で唯一、商業規模で「採掘から処理まで」を行っているサイト。</b>MPマテリアルズが保有・操業。バストネサイト鉱で、1960年代から80年代には世界のレアアース供給を担っていましたが、中国の低価格攻勢と環境問題で2002年に一度閉鎖され、その後再稼働しました。米国国防総省が出資しているのはここです。</td></tr>
+    <tr><td class="el">マウントウェルド<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Mount Weld</span></td><td>豪州・西オーストラリア州<br>ラバートン近郊<br>パースの北東約800km、内陸の砂漠地帯</td><td><b>世界有数の高品位鉱床。ライナスが保有。</b>ここで行うのは<b>採掘と選鉱まで</b>で、分離は行いません。精鉱はフリーマントル港から船でマレーシアのクアンタンへ運ばれます。<b>マウントウェルドは「鉱山」、クアンタンは「工場」。</b>この2つを混同すると、マレーシアの議論がまるで理解できなくなります。</td></tr>
+    <tr><td class="el">クアンタン<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Kuantan</span></td><td>マレーシア・パハン州の州都<br>マレー半島の<b>東海岸</b>、南シナ海に面する<br>クアラルンプールから東へ約250km、車で約3時間半</td><td>深水港（クアンタン港）を持つ工業都市です。<b>ライナスの分離工場は、クアンタン市街の北にあるゲベン（Gebeng）工業団地の中にあります。</b>報道では「クアンタンの工場」「ゲベンの工場」と両方の書き方が出てきますが、同じものを指しています。2026年に発表された韓国JSリンクとの磁石工場合弁も、この精錬所の近くに置かれる計画です。マレーシアの東海岸は西海岸に比べて工業化が遅れており、政府がこの地域の産業誘致に積極的な背景もここにあります。</td></tr>
+    <tr><td class="el">ゲベン<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Gebeng</span></td><td>クアンタン市の北隣</td><td>石油化学を中心とする重化学工業団地。ライナス先端材料工場（LAMP）はこの中の約100ヘクタールの敷地にあります。重化学向けに区分された団地なので、一般の産業団地では受け入れられない工程を置けます。</td></tr>
+    <tr><td class="el">パハン州・ペラ州<br>クリアン</td><td>パハン州はマレー半島東部（クアンタンを含む）<br>ペラ州は北西部<br>クリアンはペラ州の産業団地</td><td>マレーシアのイオン吸着鉱は<b>クランタン、トレンガヌ、パハン、ペラ、ケダの5州</b>に分布しています。磁石工場の候補地としてクリアン（ペラ州）がよく挙がるのは、北部の半導体クラスターに隣接し、かつペラ州がこの5州の一つだからです。</td></tr>
+    <tr><td class="el">南鳥島<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Minamitorishima</span></td><td>日本の排他的経済水域<br>東京の南東約1,900km</td><td>水深約6,000mの海底にレアアースを含む泥が広がっています。重希土の比率が高くトリウムが少ないという点で条件は良いのですが、6,000mから泥を引き上げて商業採算に乗せた例は世界にありません。2026年1月に揚泥試験、2027年に実証段階が目標とされています。<b>期待値の管理が必要な案件</b>です。</td></tr>
+    <tr><td class="el">カルグーリー<br><span style="font-weight:400;color:var(--muted);font-size:12px;">Kalgoorlie</span></td><td>豪州・西オーストラリア州の内陸鉱山都市</td><td>ライナスがここに分解・浸出設備を建設しています。マレーシアで放射性残渣が問題になった工程を豪州側へ移すための布石です。つまりマレーシア工場の役割は、将来的に前工程が抜けて「分離から先」に絞られる可能性があります。</td></tr>
+  </tbody>
+</table>
+</div>
+
 <div class="foot">
   <p><b>出典と根拠。</b>工程の記述は、EuRAREおよびEAG Laboratoriesの工程資料、2025年のJournal of Sustainable Metallurgy掲載のレアアース分離レビュー、ストリップキャスト・水素粉砕・ジェットミルの条件を含む焼結ネオジム磁石製造に関する公開文献、IRENAの2022年重要材料ペーパー、マレーシアのイオン吸着鉱浸出に関する査読論文に基づいています。用途別使用量は、電気自動車およびダイレクトドライブ風力の磁石原単位に関する公開研究と、防衛プラットフォームについて広く引用されている米国議会調査局および政府説明責任局の推計に基づいています。市場シェアと価格は、2026年3月時点の酸化ネオジムに関するS&amp;P Globalおよび業界価格レポートに基づいています。</p>
   <p><b>パートCの出典。</b>パートCは2026年7月に単独で作成したレアアース世界レポートを統合したものです。同レポートは、欧州委員会共同研究センター（JRC）、米国地質調査所（USGS）、戦略国際問題研究所（CSIS）、IEA『Global Critical Minerals Outlook 2025』、2010年以降の日本の対応に関する世界経済フォーラムおよびJOGMECの資料、ライナス・レアアースの開示、マレーシアの免許条件に関するSouth China Morning Postの報道、インドネシアのダウンストリーミングに関するNational Bureau of Asian Research、輸出管理の経緯に関するGlobal Trade Alert、MPマテリアルズのSEC提出書類と四半期開示に基づいています。投票結果が付された所見は、同レポートで3票の反証検証を通過したものです。3人の独立レビュアーのうち2人が否認した場合にのみ棄却されました。</p>
@@ -2160,6 +2236,16 @@
 </div><!-- /lang-ja -->
 
 <script>
+function markScrollableTables(){
+  var w=document.querySelectorAll(".tw");
+  for(var i=0;i<w.length;i++){
+    var el=w[i];
+    if(el.scrollWidth>el.clientWidth+2) el.classList.add("scrollable");
+    else el.classList.remove("scrollable");
+  }
+}
+window.addEventListener("load",markScrollableTables);
+window.addEventListener("resize",markScrollableTables);
 function setLang(l){
   var en=document.getElementById('lang-en'), ja=document.getElementById('lang-ja');
   var be=document.getElementById('btn-en'), bj=document.getElementById('btn-ja');
@@ -2168,6 +2254,7 @@ function setLang(l){
   else { ja.hidden=true; en.hidden=false; bj.classList.remove('on'); be.classList.add('on');
     document.documentElement.lang='en'; }
   try{ localStorage.setItem('re_deepdive_lang', l); }catch(e){}
+  markScrollableTables();
 }
 (function(){
   var s='en';
