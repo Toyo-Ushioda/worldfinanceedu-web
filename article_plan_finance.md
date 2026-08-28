@@ -97,7 +97,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: キャリア。経理との違い、外資系でのFP&Aの位置づけ、日本企業への広がり、目指し方。内部リンク: keiei-kikaku-career, budgeting-fpa
     Cluster: キャリア(入門)
 
-14. slug: cash-conversion-cycle | status: pending
+14. slug: cash-conversion-cycle | status: done (published 2026-08-28)
     Title案: CCC(キャッシュ・コンバージョン・サイクル)とは|資金繰りを数字で読む
     KW: CCC 計算式, キャッシュコンバージョンサイクル, 運転資本 改善
     Angle: 中級。売上債権・棚卸・仕入債務の回転日数、CCCマイナス企業(Amazon型)の仕組み、改善の実務。内部リンク: free-cash-flow, financial-statements-basics
