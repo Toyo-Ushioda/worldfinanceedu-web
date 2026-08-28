@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>CCC(キャッシュ・コンバージョン・サイクル)とは|計算方法と運転資本の考え方 | World Finance Edu</title>
+<meta name="description" content="黒字なのに現金が足りない理由を、CCC(キャッシュ・コンバージョン・サイクル)で読み解きます。DSO・DIO・DPOの計算方法、CCCがマイナスになる会社(Amazon型)の仕組み、運転資本の考え方を実務家が解説します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/cash-conversion-cycle/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCC(キャッシュ・コンバージョン・サイクル)とは|計算方法と運転資本の考え方">
+<meta property="og:description" content="黒字なのに現金がない。その正体を運転資本とCCCで読み解きます。計算方法とマイナスCCCの仕組みを実務家が解説。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/cash-conversion-cycle/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "CCC(キャッシュ・コンバージョン・サイクル)とは|計算方法と運転資本の考え方",
+      "description": "黒字なのに現金が足りない理由を、CCC(キャッシュ・コンバージョン・サイクル)で読み解く。DSO・DIO・DPOの計算方法、マイナスCCCの仕組み、運転資本の考え方を実務家が解説。",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
+      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/cash-conversion-cycle/",
+      "datePublished": "2026-08-28"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "CCC(キャッシュ・コンバージョン・サイクル)とは", "item": "https://worldfinanceedu.com/articles/cash-conversion-cycle/" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › CCC(キャッシュ・コンバージョン・サイクル)とは</div>
+<h1>CCC(キャッシュ・コンバージョン・サイクル)とは|計算方法と運転資本の考え方</h1>
+<div class="meta">2026年8月28日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>損益計算書は黒字なのに、通帳の残高が増えない。むしろ資金繰りが苦しくなっていく。成長している会社ほど、この感覚に覚えがあるのではないでしょうか。売上は伸びているのに現金が足りない、という状態は珍しくありません。</p>
+<p>その正体の多くは、利益と現金のあいだにある時間差です。この時間差を日数で測る指標が、CCC(キャッシュ・コンバージョン・サイクル、現金循環化日数)です。この記事では、CCCの計算方法と、その裏側にある運転資本の考え方を整理します。</p>
+
+<h2>なぜ黒字でも現金が足りなくなるのか</h2>
+<p>利益は「売った時点」で計上されますが、現金は「入金された時点」でしか増えません。この二つがずれるほど、会社は手元の現金を先に使い、後から回収することになります。</p>
+<p>ずれを生むのは、貸借対照表(BS)にある三つの項目です。仕入れて在庫として持つあいだ、現金は在庫に変わって寝ています。売っても掛け売りなら、入金までのあいだ現金は売上債権に変わって寝ています。逆に、仕入代金を後払いにできれば、その期間は取引先の資金で回せます。このように事業を回すために寝かせている現金のことを、運転資本(ワーキングキャピタル)と呼びます。PL・BS・キャッシュフロー計算書のつながりは<a href="/articles/financial-statements-basics/">決算書の読み方</a>で整理していますが、黒字倒産という言葉があるのは、この運転資本の膨張を利益の数字が見せてくれないからです。</p>
+<div class="box">
+売上が伸びるほど、必要な在庫も売上債権も増えます。つまり成長は、それ自体が現金を吸い込みます。<b>成長が速い会社ほど運転資本の負担が重くなる</b>という構造を、まず押さえておいてください。
+</div>
+
+<h2>CCCの計算方法|三つの日数に分解する</h2>
+<p>CCC(キャッシュ・コンバージョン・サイクル)は、現金が在庫や売上債権の形で会社を離れてから、再び現金として戻ってくるまでの日数です。次の三つの回転日数に分解して計算します。</p>
+<table>
+  <tr><th>指標</th><th>意味</th><th>計算式</th></tr>
+  <tr><td>DIO(棚卸資産回転日数)</td><td>仕入れた在庫が売れるまでの日数</td><td>棚卸資産 ÷ 売上原価 × 365</td></tr>
+  <tr><td>DSO(売上債権回転日数)</td><td>売ってから入金されるまでの日数</td><td>売上債権 ÷ 売上高 × 365</td></tr>
+  <tr><td>DPO(仕入債務回転日数)</td><td>仕入れてから支払うまでの日数</td><td>仕入債務 ÷ 売上原価 × 365</td></tr>
+</table>
+<p>三つを組み合わせると、CCCは次の式になります。</p>
+<div class="box">
+CCC = DIO(在庫が寝ている日数)+ DSO(入金を待つ日数)− DPO(支払を待ってもらえる日数)
+</div>
+<p>在庫と売上債権は現金が出ていく側、仕入債務は現金が出ていくのを遅らせる側です。だから前の二つは足し、最後の一つは引きます。CCCが短いほど、現金は早く手元に戻り、少ない運転資本で事業が回ります。</p>
+
+<h2>具体例で計算してみる</h2>
+<p>数字を入れると輪郭がはっきりします。売上高12億円、売上原価8億円の会社を例に、CCC(キャッシュ・コンバージョン・サイクル)を計算します。</p>
+<table>
+  <tr><th>項目</th><th>金額</th><th>回転日数</th></tr>
+  <tr><td>棚卸資産</td><td>1.5億円</td><td>DIO = 1.5 ÷ 8 × 365 ≒ 68日</td></tr>
+  <tr><td>売上債権</td><td>2.0億円</td><td>DSO = 2.0 ÷ 12 × 365 ≒ 61日</td></tr>
+  <tr><td>仕入債務</td><td>1.0億円</td><td>DPO = 1.0 ÷ 8 × 365 ≒ 46日</td></tr>
+</table>
+<p>これを式に入れると、CCC = 68 + 61 − 46 = <b>83日</b>です。つまりこの会社は、仕入代金を払ってから売上を回収するまで、約83日ぶんの現金を自前で立て替えています。売上が2割増えれば、在庫も売上債権もおおむね2割増え、立て替える現金も同じだけ増えます。利益が出ていても資金繰りが厳しいのは、この立替が成長とともに膨らむからです。</p>
+<h3>改善は「回収を早く、支払を遅く、在庫を薄く」</h3>
+<p>CCCを縮めるレバーは三つしかありません。売上債権の回収を早める(DSOを下げる)、在庫を薄くする(DIOを下げる)、仕入代金の支払を遅らせる(DPOを上げる)。上の例でDSOを61日から45日に、DIOを68日から50日に縮めれば、それだけでCCCは49日になり、立替は3割以上軽くなります。ここで浮いた現金は、そのまま<a href="/articles/free-cash-flow/">フリーキャッシュフロー(FCF)</a>を押し上げます。運転資本の減少は、企業価値評価でも現金の増加として効いてきます。</p>
+
+<h2>CCCがマイナスになる会社|Amazon型のビジネス</h2>
+<p>CCC(キャッシュ・コンバージョン・サイクル)は、条件が揃えばマイナスにもなります。マイナスとは、仕入代金を払う前に、すでに顧客から現金を回収し終えている状態です。代表例が大手のオンライン小売です。</p>
+<ul>
+  <li>顧客はカードや電子決済で支払うので、DSO(売上債権回転日数)がごく短い。</li>
+  <li>売れ筋を素早く回すので、DIO(棚卸資産回転日数)が短い。</li>
+  <li>強い交渉力で、仕入先への支払を長く待ってもらえる。つまりDPO(仕入債務回転日数)が長い。</li>
+</ul>
+<p>この結果、DPOがDIOとDSOの合計を上回り、CCCがマイナスになります。何が起きるかというと、成長すればするほど手元の現金が増えます。仕入先の資金で在庫を回し、顧客から先に現金を受け取っているので、売上の拡大が資金を吸い込むどころか、逆に供給してくれるのです。同じ売上成長でも、CCCがプラスの会社は現金を食われ、マイナスの会社は現金が生まれる。ビジネスモデルの強さが、この符号に表れます。</p>
+<div class="box">
+CCCがマイナスの会社は、実質的に取引先と顧客から無利子で運転資金を借りている状態です。<b>成長が現金を生む構造</b>を持つ会社は、外部資金に頼らずに再投資を続けられます。
+</div>
+
+<h2>まとめ</h2>
+<ul>
+  <li>黒字でも現金が足りないのは、利益と現金のあいだの時間差、つまり運転資本の膨張が原因。</li>
+  <li>CCC(キャッシュ・コンバージョン・サイクル)= DIO + DSO − DPO。現金が会社を離れて戻るまでの日数を測る。</li>
+  <li>CCCを縮めるレバーは、回収を早く、在庫を薄く、支払を遅く、の三つ。</li>
+  <li>CCCがマイナスの会社は、成長そのものが現金を生む。この符号にビジネスモデルの強さが出る。</li>
+</ul>
+
+<div class="cta">
+  <h2>数字の裏側を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、運転資本やキャッシュフローを含む「会社の現金の流れ」の読み方を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</a></li>
+    <li>› <a href="/articles/free-cash-flow/">フリーキャッシュフローがマイナスの会社は危ないのか|FCFの読み方</a></li>
+    <li>› <a href="/articles/roic-management/">ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
