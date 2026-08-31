@@ -105,7 +105,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 中級。売上債権・棚卸・仕入債務の回転日数、CCCマイナス企業(Amazon型)の仕組み、改善の実務。内部リンク: free-cash-flow, financial-statements-basics
     Cluster: 決算書・財務分析(中級)
 
-15. slug: share-vs-asset-deal | status: pending
+15. slug: share-vs-asset-deal | status: done (published 2026-08-31)
     Title案: 株式譲渡と事業譲渡の違い|税・リスク・手続きで比較する
     KW: 株式譲渡 事業譲渡 違い, M&A スキーム 選び方
     Angle: 中級。承継されるもの/されないものの比較表、簿外債務リスク、税務の違いの概要。内部リンク: ma-process, due-diligence
