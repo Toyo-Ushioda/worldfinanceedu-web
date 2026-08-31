@@ -276,7 +276,8 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
 - CTA: GYOSEKI × World Finance Edu 講座ブロック(`/gyoseki/` へのリンク)。説明文だけ記事のテーマに合わせる
 - 内部リンク: 本文中に既存記事へ2〜3本、関連記事欄にちょうど3本。存在する記事にのみリンクする
 - JSON-LD: Article + BreadcrumbList(既存記事と同形式、canonical/og:urlはこの記事のURL)
-- 公開後: articles/index.html にカード追加、sitemap.xml にURL追加(lastmod=当日)
+- 公開後: articles/index.html にカード追加、sitemap.xml にURL追加(lastmod=当日)、llms.txt の記事リストに1行追加
+- OGP画像: リポジトリルートで `node generate_og_images.js` を実行(新記事分だけ生成される)、`node inject_og_meta.js` でmeta挿入。og:imageの無い記事を公開しない
 - デプロイ: リポジトリルートで `git add -A && git commit -m "Add article: <slug>" && git push origin main`(GitHub Pages、mainへのpushが公開)
 - 検証と done マーク: このファイルは手で編集しない。`_Automation/article-writer/run_article_writer.ps1` がライブURLの200を確認してから status を done に書き換える
 

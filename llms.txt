@@ -1,0 +1,46 @@
+# World Finance Edu — コーポレートファイナンス教育とフラクショナルCFO
+
+> シンガポール拠点のファイナンス教育・フラクショナルCFOサービス。日本語のコーポレートファイナンス学習コラム「AI時代に生き残るファイナンス　学習コラム」を運営。運営者は潮田豊幸（Toyoyuki Ushioda）。運用資産US$125Bの不動産プライベートエクイティで経営企画グローバル責任者を務めた実務家。米国公認会計士（USCPA、ワシントン州）、INSEAD Global Executive MBA。現在はシンガポールでフラクショナルCFO、エンジェル投資、Mentogram School of Finance の Program Director 兼 Founding Partner。
+
+## 主要ページ
+
+- 会社紹介（英語）: https://worldfinanceedu.com/
+- 会社紹介（日本語）: https://worldfinanceedu.com/jp/
+- 企業価値評価オンライン講座（GYOSEKI × World Finance Edu）: https://worldfinanceedu.com/gyoseki/
+- 運営者のメディア掲載・講演実績（日本語）: https://worldfinanceedu.com/media/jp/
+- 運営者のメディア掲載（英語）: https://worldfinanceedu.com/media/
+- 姉妹サイト（ビジネス英語コラム）: https://english.worldfinanceedu.com/
+
+## AI時代に生き残るファイナンス　学習コラム（日本語の解説記事)
+
+- コラム一覧: https://worldfinanceedu.com/articles/
+- 企業価値評価とは（3つの計算方法の全体像）: https://worldfinanceedu.com/articles/corporate-valuation/
+- DCF法とは（計算式・割引率・具体例）: https://worldfinanceedu.com/articles/dcf-method/
+- マルチプル法とは（PER・PBR・EV/EBITDAの使い分け）: https://worldfinanceedu.com/articles/multiples-valuation/
+- 決算書の読み方（PL・BS・CFのつながりと投資家の視点）: https://worldfinanceedu.com/articles/financial-statements-basics/
+- コーポレートファイナンスの独学ロードマップ: https://worldfinanceedu.com/articles/corporate-finance-self-study/
+- コーポレートファイナンスの本と講座の選び方: https://worldfinanceedu.com/articles/corporate-finance-books/
+- NPVとIRRの違いと使い分け（投資判断）: https://worldfinanceedu.com/articles/npv-irr/
+- フリーキャッシュフロー（FCF）とは: https://worldfinanceedu.com/articles/free-cash-flow/
+- WACC（割引率）の求め方と実務の相場感: https://worldfinanceedu.com/articles/wacc-practice/
+- ROICとROEの違い（資本効率の測り方）: https://worldfinanceedu.com/articles/roic-management/
+- 資本コスト経営とは（東証PBR改善要請）: https://worldfinanceedu.com/articles/cost-of-capital-management/
+- ターミナルバリューとは（DCFの継続価値）: https://worldfinanceedu.com/articles/terminal-value/
+- スタートアップの企業価値評価: https://worldfinanceedu.com/articles/startup-valuation/
+- M&Aの流れ（打診からクロージングまで）: https://worldfinanceedu.com/articles/ma-process/
+- デューデリジェンス（DD）とは: https://worldfinanceedu.com/articles/due-diligence/
+- のれんと減損リスク: https://worldfinanceedu.com/articles/goodwill-impairment/
+- CCC（キャッシュ・コンバージョン・サイクル）とは: https://worldfinanceedu.com/articles/cash-conversion-cycle/
+- 予算策定の実務（FP&Aの予実管理）: https://worldfinanceedu.com/articles/budgeting-fpa/
+- FP&Aとは（仕事内容とキャリアパス）: https://worldfinanceedu.com/articles/fpa-career/
+- 経営企画に転職するには: https://worldfinanceedu.com/articles/keiei-kikaku-career/
+
+## 運営者について
+
+- 潮田豊幸（Toyoyuki Ushioda）。日本人、シンガポール在住。
+- 経歴: 元外資系企業本社 経営企画グローバル責任者（不動産プライベートエクイティ、運用資産US$125B）。
+- 資格: 米国公認会計士（USCPA、ワシントン州）、INSEAD Global Executive MBA。
+- 現在: フラクショナルCFO、エンジェル投資家、Mentogram School of Finance Program Director 兼 Founding Partner。
+- 第三者取材記事（ビズリーチ）: https://www.bizreach.jp/column/career-story-08/
+- X: https://x.com/Toyo25805074
+- note: https://note.com/toyo_ushioda
