@@ -1,7 +1,9 @@
 # AI時代に生き残るファイナンス　学習コラム 記事プラン(自動執筆キュー)
 
 Site: https://worldfinanceedu.com/articles/
-Goal: 30本体制(公開済み5本 + このキューの25本)
+Goal: 40本体制(2026-08-31拡張。勝ちクラスタ実証済みのため15本追加: GSC 28日でavg pos 18.1、
+corporate-finance-self-study 5.1位 / multiples 6.8位 / npv-irr 7.7位 / wacc 8.7位。
+独学・実務・M&A・キャリアのロングテールが数週間で1ページ目に入ると確認済み)
 Status values: pending → done (完了したら done に書き換え、公開日を追記)
 
 戦略: 5クラスタ(企業価値評価 / 決算書・財務分析 / コーポレートファイナンス実務 / M&A実務 / キャリア)。
@@ -167,6 +169,99 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Title案: AI時代のファイナンスキャリア|数字づくりはAIへ、判断は人に残る
     KW: ファイナンス キャリア AI, 経理 AI なくなる, ファイナンス 将来性
     Angle: キャリア(ブランドの旗)。AIが代替する作業と残る判断、これから学ぶべきは「問いの立て方」、コラム全体の世界観をまとめる記事。内部リンク: keiei-kikaku-career, fpa-career, corporate-finance-self-study
+    Cluster: キャリア(中級)
+
+(2026-08-31 追加15本: 実測で勝っているクラスタ[独学・実務・M&A・キャリア]への増強。
+「状況+悩み」複合KWルールは全記事に適用。追加後の合計40本)
+
+26. slug: financial-modeling-self-study | status: pending
+    Title案: 財務モデリングの独学|3表連動モデルを作れるようになる順番
+    KW: 財務モデリング 独学, 財務モデル 作り方 順番, 財務モデリング 勉強
+    Angle: 独学クラスタ増強(corporate-finance-self-study 実測5.1位の続編)。写経→変形→ゼロから、の3段階。教材の選び方、つまずきポイント。内部リンク: corporate-finance-self-study, dcf-excel
+    Cluster: コーポレートファイナンス実務(中級)
+
+27. slug: ebitda-multiple | status: pending
+    Title案: EV/EBITDA倍率の目安|業種別の相場と「何倍なら安い」の考え方
+    KW: EV/EBITDA 目安, EBITDA倍率 相場, EV/EBITDA 業種別
+    Angle: multiples-valuation(実測6.8位)の実務深掘り。業種でなぜ差が出るか、成長率・利益率との関係、単純比較の罠。内部リンク: multiples-valuation, corporate-valuation
+    Cluster: 企業価値評価(中級)
+
+28. slug: valuation-mistakes | status: pending
+    Title案: 企業価値評価でよくある間違い|実務でモデルが壊れる7つのパターン
+    KW: 企業価値評価 間違い, DCF よくあるミス, バリュエーション 注意点
+    Angle: 実務。TV偏重、WACCの機械的適用、シナジーの二重計上など。レビューする側の視点で書く。内部リンク: dcf-excel, terminal-value, wacc-practice
+    Cluster: 企業価値評価(実務)
+
+29. slug: cfo-career | status: pending
+    Title案: CFOになるには|経理・FP&A・投資銀行からのキャリアパスと必要スキル
+    KW: CFO なるには, CFO キャリアパス, CFO 必要なスキル
+    Angle: キャリア。CFOの実際の役割(資金調達・IR・管理会計・組織)、ルート別の強み弱み、スタートアップCFOという選択肢。内部リンク: fpa-career, keiei-kikaku-career
+    Cluster: キャリア(中級)
+
+30. slug: fractional-cfo | status: pending
+    Title案: 社外CFO(フラクショナルCFO)とは|スタートアップがフルタイムCFOを雇う前の選択肢
+    KW: 社外CFO とは, フラクショナルCFO, CFO 業務委託, スタートアップ CFO いつ
+    Angle: 実務+事業直結。フルタイム採用との違い、何を任せられるか、選び方。Toyo自身の現役Fractional CFOとしての実感を効かせる(捏造なしで書ける唯一の一次情報記事)。内部リンク: cfo-career, capital-policy
+    Cluster: キャリア(実務)
+
+31. slug: acquisition-premium | status: pending
+    Title案: 買収プレミアムとは|なぜ市場株価より3割高く買うのか
+    KW: 買収プレミアム 相場, 買収プレミアム なぜ, TOB プレミアム
+    Angle: 中級。支配権の価値、シナジーの分配、プレミアムの日本の相場観、高値掴みとの境界。内部リンク: ma-process, synergy-valuation
+    Cluster: M&A実務(中級)
+
+32. slug: synergy-valuation | status: pending
+    Title案: シナジー効果とは|M&Aで語られる「効果」を数字に落とす方法
+    KW: シナジー効果 とは, シナジー 定量化, M&A シナジー 算定
+    Angle: 中級。コスト/収益/財務シナジーの分解、実現確度で割り引く実務、シナジーの二重計上問題。内部リンク: acquisition-premium, pmi
+    Cluster: M&A実務(中級)
+
+33. slug: lbo-basics | status: pending
+    Title案: LBOとは|借金で会社を買う仕組みとPEファンドの稼ぎ方
+    KW: LBO とは わかりやすく, LBO 仕組み, PEファンド 仕組み
+    Angle: 中級。レバレッジがリターンを増幅する構造、LBOが成立する会社の条件、日本での事例傾向。内部リンク: debt-vs-equity, ma-process
+    Cluster: M&A実務(中級)
+
+34. slug: loi-mou | status: pending
+    Title案: 意向表明書と基本合意書の違い|M&A序盤の書類はどこまで拘束するか
+    KW: 意向表明書 とは, 基本合意書 法的拘束力, LOI MOU 違い
+    Angle: 中級。LOI/MOUの役割、独占交渉権、法的拘束力の範囲、価格レンジの意味。内部リンク: ma-process, due-diligence
+    Cluster: M&A実務(中級)
+
+35. slug: safe-jkiss | status: pending
+    Title案: J-KISS・SAFEとは|シード資金調達で企業価値を「決めない」仕組み
+    KW: J-KISS とは, SAFE 資金調達, コンバーティブル 投資
+    Angle: 中級。バリュエーションキャップとディスカウント、転換の仕組み、創業者側の注意点。エンジェル投資家の視点を一言。内部リンク: startup-valuation, capital-policy
+    Cluster: コーポレートファイナンス実務(中級)
+
+36. slug: preferred-shares | status: pending
+    Title案: 優先株式とは|VC投資の条件が普通株と違う理由
+    KW: 優先株式 スタートアップ, 種類株式 とは, 残余財産分配優先権
+    Angle: 中級。優先分配・参加型/非参加型・希薄化防止条項が創業者の手取りをどう変えるか。内部リンク: safe-jkiss, capital-policy
+    Cluster: コーポレートファイナンス実務(中級)
+
+37. slug: board-reporting | status: pending
+    Title案: 経営会議で通る数字の見せ方|取締役会資料のつくり方の実務
+    KW: 経営会議 資料 作り方, 取締役会 資料 数字, 役員 報告 資料
+    Angle: 実務。結論先行の構成、予実差異の説明の型、「で、どうしたいのか」に先回りする資料設計。経営企画責任者としての実感。内部リンク: budgeting-fpa, kpi-design
+    Cluster: コーポレートファイナンス実務(実務)
+
+38. slug: kpi-design | status: pending
+    Title案: KPI設計の実務|財務数字とつながらない指標が現場を壊す理由
+    KW: KPI 設計 方法, KPI ツリー 作り方, KPI 財務指標 連動
+    Angle: 実務。KPIツリーとPLの接続、先行指標と遅行指標、測れるが意味のない指標の罠。内部リンク: board-reporting, roic-management
+    Cluster: コーポレートファイナンス実務(実務)
+
+39. slug: ir-basics | status: pending
+    Title案: IRとは|決算説明で機関投資家が本当に見ているポイント
+    KW: IR とは 仕事, 決算説明会 見方, 機関投資家 何を見る
+    Angle: 中級。IRの実務(決算説明・1on1・株主構成分析)、投資家の質問の裏にある関心、エクイティストーリー。内部リンク: cost-of-capital-management, yuho-reading
+    Cluster: 決算書・財務分析(中級)
+
+40. slug: ma-career | status: pending
+    Title案: M&A業界への転職|FAS・投資銀行・事業会社M&A部門の違い
+    KW: M&A 転職 未経験, FAS とは 転職, 投資銀行 事業会社 M&A 違い
+    Angle: キャリア×M&A。3つの立場の業務・働き方・報酬の違い、入りやすいルート、身につくスキルの差。内部リンク: ma-process, keiei-kikaku-career
     Cluster: キャリア(中級)
 
 ## 執筆ルール(毎回必ず適用)
