@@ -42,17 +42,80 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
       "headline": "スタートアップの企業価値評価|売上のない会社に値段がつく理由",
       "description": "スタートアップの企業価値算定。DCF法が機能しない理由、類似会社比較・直近ラウンド・VC法の使い分け、プレマネーとポストマネー、希薄化の実務を解説。",
       "inLanguage": "ja",
-      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
-      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/startup-valuation/",
       "datePublished": "2026-08-10"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
-        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
-        { "@type": "ListItem", "position": 3, "name": "スタートアップの企業価値評価", "item": "https://worldfinanceedu.com/articles/startup-valuation/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "スタートアップの企業価値評価",
+          "item": "https://worldfinanceedu.com/articles/startup-valuation/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "なぜスタートアップにDCF法が使えないのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DCF法は5年程度の事業計画が読め、継続企業として存続することを前提にします。ところが創業間もない会社は来期の売上さえレンジが数倍変わり、数年内に消える可能性もあります。結果として価値のほぼ全部が最も不確かな将来部分に集まってしまうため、機能しません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "スタートアップの企業価値はどうやって決まりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "実務では4つを組み合わせ、最後は交渉で着地します。類似会社比較(同業の上場企業や買収事例の倍率を売上や利用者数に当てる)、直近ラウンド基準(前回調達の株価を起点に進捗に応じて引き上げる)、VC法(Exit時の価値から必要リターンで逆算する)、そしてステージごとの相場です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "プレマネーとポストマネーの違いは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ポストマネー企業価値 = プレマネー企業価値 + 今回の調達額 です。企業価値20億円で5億円調達と言われたとき、それがプレマネーなら投資家の持分は 5 ÷ 25 = 20%、ポストマネーなら 5 ÷ 20 = 25% になります。同じ言葉で5ポイント違うので、タームシートではどちらの定義かを必ず確認します。"
+          }
+        }
       ]
     }
   ]
@@ -214,6 +277,14 @@ DCF法をまったく作らないという意味ではありません。作る�
   <li>プレマネーとポストマネーの違いは持分比率を数ポイント動かす。定義の確認は必須。</li>
   <li>持分比率が下がること自体は損ではない。見るべきは持分価値と、価格に紐づく優先条項。</li>
 </ul>
+
+<h2>よくある質問</h2>
+<h3>Q. なぜスタートアップにDCF法が使えないのですか?</h3>
+<p>DCF法は5年程度の事業計画が読め、継続企業として存続することを前提にします。ところが創業間もない会社は来期の売上さえレンジが数倍変わり、数年内に消える可能性もあります。結果として価値のほぼ全部が最も不確かな将来部分に集まってしまうため、機能しません。</p>
+<h3>Q. スタートアップの企業価値はどうやって決まりますか?</h3>
+<p>実務では4つを組み合わせ、最後は交渉で着地します。類似会社比較(同業の上場企業や買収事例の倍率を売上や利用者数に当てる)、直近ラウンド基準(前回調達の株価を起点に進捗に応じて引き上げる)、VC法(Exit時の価値から必要リターンで逆算する)、そしてステージごとの相場です。</p>
+<h3>Q. プレマネーとポストマネーの違いは何ですか?</h3>
+<p>ポストマネー企業価値 = プレマネー企業価値 + 今回の調達額 です。企業価値20億円で5億円調達と言われたとき、それがプレマネーなら投資家の持分は 5 ÷ 25 = 20%、ポストマネーなら 5 ÷ 20 = 25% になります。同じ言葉で5ポイント違うので、タームシートではどちらの定義かを必ず確認します。</p>
 
 <div class="cta">
   <h2>企業価値評価を、体系的に学ぶ</h2>

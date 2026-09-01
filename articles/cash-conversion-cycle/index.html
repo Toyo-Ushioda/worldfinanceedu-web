@@ -42,17 +42,80 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
       "headline": "CCC(キャッシュ・コンバージョン・サイクル)とは|計算式と運転資本改善の実務",
       "description": "CCC(キャッシュ・コンバージョン・サイクル)の計算式、売上債権・棚卸資産・仕入債務の回転日数の出し方、CCCがマイナスになる会社の仕組み、運転資本改善の実務を整理。",
       "inLanguage": "ja",
-      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
-      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/cash-conversion-cycle/",
       "datePublished": "2026-08-28"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
-        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
-        { "@type": "ListItem", "position": 3, "name": "CCC(キャッシュ・コンバージョン・サイクル)とは", "item": "https://worldfinanceedu.com/articles/cash-conversion-cycle/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CCC(キャッシュ・コンバージョン・サイクル)とは",
+          "item": "https://worldfinanceedu.com/articles/cash-conversion-cycle/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "CCCの計算式を教えてください。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CCC = 売上債権回転日数 + 棚卸資産回転日数 − 仕入債務回転日数 です。売上債権回転日数は 売上債権 ÷ 売上高 × 365、棚卸資産回転日数は 棚卸資産 ÷ 売上原価 × 365、仕入債務回転日数は 仕入債務 ÷ 売上原価 × 365 で求めます。分母が売上高なのか売上原価なのかを取り違えやすいので、そこだけ注意してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "CCCがマイナスになるのはどんな会社ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "代金を先に受け取り、仕入先への支払いが後になる構造の会社です。ネット通販や一部の小売ではカード決済で入金がほぼ即時、仕入先への支払いは30日から60日後、在庫の回転も速い。この3つが重なるとCCCはマイナスになります。年額を前払いで受け取るサブスクリプション型も同じ構造です。CCCがプラスの会社は成長するほど資金を吸い込み、マイナスの会社は成長するほど現金が増えます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "CCCを見るときの注意点は何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "期末だけの数字は歪みます。決算期末に向けて回収を前倒しし、支払いを翌期に送ればCCCは一時的に短く見えるので、四半期の推移で見てください。また支払サイトの延長による改善は取引先への付け替えであって、事業の効率が上がったこととは別物です。CCCが良くても設備投資が大きければフリーキャッシュフローが出るとは限りません。"
+          }
+        }
       ]
     }
   ]
@@ -203,6 +266,14 @@ document.addEventListener('click', function (e) {
   <li>支払サイトの延長は取引先への負担の付け替えになりうる。早期支払割引を捨てる場合は年率換算で借入金利と比べる。</li>
   <li>運転資本は投下資本の一部なので、CCCの短縮はROIC(投下資本利益率)とフリーキャッシュフローの両方に効く。</li>
 </ul>
+
+<h2>よくある質問</h2>
+<h3>Q. CCCの計算式を教えてください。</h3>
+<p>CCC = 売上債権回転日数 + 棚卸資産回転日数 − 仕入債務回転日数 です。売上債権回転日数は 売上債権 ÷ 売上高 × 365、棚卸資産回転日数は 棚卸資産 ÷ 売上原価 × 365、仕入債務回転日数は 仕入債務 ÷ 売上原価 × 365 で求めます。分母が売上高なのか売上原価なのかを取り違えやすいので、そこだけ注意してください。</p>
+<h3>Q. CCCがマイナスになるのはどんな会社ですか?</h3>
+<p>代金を先に受け取り、仕入先への支払いが後になる構造の会社です。ネット通販や一部の小売ではカード決済で入金がほぼ即時、仕入先への支払いは30日から60日後、在庫の回転も速い。この3つが重なるとCCCはマイナスになります。年額を前払いで受け取るサブスクリプション型も同じ構造です。CCCがプラスの会社は成長するほど資金を吸い込み、マイナスの会社は成長するほど現金が増えます。</p>
+<h3>Q. CCCを見るときの注意点は何ですか?</h3>
+<p>期末だけの数字は歪みます。決算期末に向けて回収を前倒しし、支払いを翌期に送ればCCCは一時的に短く見えるので、四半期の推移で見てください。また支払サイトの延長による改善は取引先への付け替えであって、事業の効率が上がったこととは別物です。CCCが良くても設備投資が大きければフリーキャッシュフローが出るとは限りません。</p>
 
 <div class="cta">
   <h2>数字で経営を動かす力を、体系的に学ぶ</h2>
