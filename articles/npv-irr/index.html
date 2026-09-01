@@ -124,6 +124,14 @@ td{background:#fff}
 footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 @media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
 </style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
 </head>
 <body>
 <nav class="nav">

@@ -581,6 +581,14 @@ footer .fb .x { color: var(--accent-lt); padding: 0 5px; }
 .wl-done .wl-submit { max-width: 200px; margin-left: auto; margin-right: auto; }
 @media (max-width: 480px) { .wl-card { padding: 40px 26px 30px; } }
 </style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
 </head>
 <body>
 
@@ -1102,7 +1110,7 @@ submitBtn.addEventListener('click', async function(){
       body: JSON.stringify({ email: email, name: name }),
       keepalive: true
     }).catch(function(){});
-    if (typeof gtag === 'function') gtag('event', 'generate_lead', { source: 'gyoseki_lp' });
+    if (typeof gtag === 'function') gtag('event', 'waitlist_signup', { source: 'gyoseki_lp' });
     formView.hidden = true; doneView.hidden = false;
   } catch (err) {
     errEl.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
