@@ -3,12 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  if (!/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
 <title>フリーキャッシュフローがマイナスの会社は危ないのか|FCFの読み方 | World Finance Edu</title>
 <meta name="description" content="フリーキャッシュフローがマイナスの会社は危ないのか。FCFの計算式と決算書からの求め方、4つの構成要素の読み方、評価実務で使うFCFFの計算式までを、企業価値評価の実務家が整理します。">
@@ -128,6 +139,7 @@ footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 <script id="wfe-conv-events">
 /* GA4 key event: outbound click to the Udemy course */
 document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
