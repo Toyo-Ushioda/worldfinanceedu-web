@@ -42,17 +42,80 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
       "headline": "ターミナルバリューとは|DCF法で企業価値の大半を決める継続価値の求め方",
       "description": "ターミナルバリュー(継続価値)とは何か。DCF法で企業価値の5〜7割以上を占める理由、永久成長率法とExit倍率法の2つの計算方法、実務での落とし穴を解説。",
       "inLanguage": "ja",
-      "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
-      "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/terminal-value/",
       "datePublished": "2026-08-19"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://worldfinanceedu.com/" },
-        { "@type": "ListItem", "position": 2, "name": "AI時代に生き残るファイナンス　学習コラム", "item": "https://worldfinanceedu.com/articles/" },
-        { "@type": "ListItem", "position": 3, "name": "ターミナルバリューとは", "item": "https://worldfinanceedu.com/articles/terminal-value/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ターミナルバリューとは",
+          "item": "https://worldfinanceedu.com/articles/terminal-value/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "予測最終年のキャッシュフローはそのまま使ってよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ターミナルバリューは最終年のキャッシュフローを起点にするため、その年が異常だと2階部分がまるごと歪みます。設備投資と減価償却がおおむね同水準か、運転資本の増加が売上成長に見合っているか、利益率に一時的な特需が入っていないかを確認します。最終年が大型設備投資の年ならフリーキャッシュフローが凹み、ターミナルバリューが不当に小さく出ます。定常状態に均した数字を別に作るか、予測期間を1〜2年延ばして落ち着いた年まで引っ張る方法があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ターミナルバリューは企業価値の何割になるのが普通ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5年予測ならおおむね6割から8割です。5年より先の期間のほうが長いので、この比率自体は異常ではありません。90%を超える場合は予測期間の利益が小さすぎるかgが高すぎる可能性があり、50%未満なら予測期間が長いか成長を手前に寄せすぎている可能性があります。ただし創業まもない会社や開発中のパイプラインを抱える会社では比率が高くなるのが自然で、比率だけで良し悪しは決められません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "永久成長率(g)は何%に置くのが適切ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "目安として0%から2%程度です。式の分母が (WACC − g) なので、gをWACCに近づけると分母がゼロに近づき、ターミナルバリューが際限なく膨らみます。長期の経済成長率や物価上昇率の範囲に収めるのが安全で、一企業が経済全体より速く永久に成長し続ける想定は現実には成り立ちません。"
+          }
+        }
       ]
     }
   ]
@@ -159,6 +222,18 @@ document.addEventListener('click', function (e) {
 <h3>Exit倍率法の計算</h3>
 <p>Exit倍率法は、予測最終年のEBITDAに、市場で観察される倍率を掛けます。予測最終年EBITDAが15億円で、類似会社のEV/EBITDA(企業価値 ÷ EBITDA)が10倍なら、ターミナルバリューは<b>150億円</b>です。「その時点で売るとしたらいくらか」という発想なので、投資回収を意識する場面と相性がよい方法です。</p>
 
+<h2>最終年のキャッシュフローを正常化する</h2>
+<p>ターミナルバリューは予測最終年のキャッシュフローを起点に作ります。ということは、<b>その最終年が異常な年だと、2階部分がまるごと歪みます</b>。分母のWACCとgばかり議論されますが、分子の正常化も同じくらい効きます。</p>
+<p>確認するのは主に3点です。</p>
+<table>
+  <tr><th>項目</th><th>定常状態での姿</th></tr>
+  <tr><td>設備投資と減価償却</td><td>おおむね同水準。大型投資の直前直後は乖離する</td></tr>
+  <tr><td>運転資本の増加</td><td>売上成長に見合う水準。急拡大の年は過大になりがち</td></tr>
+  <tr><td>利益率</td><td>一時的な特需や在庫評価益を含まない水準</td></tr>
+</table>
+<p>たとえば予測最終年がたまたま大型設備投資の年に当たると、その年のフリーキャッシュフローは大きく凹みます。それを永久に続くものとして割り戻せば、ターミナルバリューは不当に小さく出ます。逆に投資を絞った年を最終年にすれば、価値は水増しされます。</p>
+<p>実務では、最終年をそのまま使わず、定常状態に均した数字を別に作って起点にすることがあります。予測期間を1年か2年延ばして、事業が落ち着いた年まで引っ張るやり方もあります。どちらが正しいというより、なぜその年を起点にしたのかを説明できるかどうかかと思います。</p>
+
 <h2>実務でつまずく落とし穴</h2>
 <p>ターミナルバリューは、少し数字をいじるだけで結論が大きく変わります。私がモデルをレビューするとき、最初に確認するのは次の3点です。</p>
 <ul>
@@ -180,6 +255,18 @@ document.addEventListener('click', function (e) {
 </table>
 <p>同じ会社でも、前提の置き方だけでターミナルバリューは111億円から204億円まで動きます。この幅を隠さず見せることが、かえって数字への信頼につながります。単一の答えではなくレンジで語る姿勢は、スタートアップのように将来が読みにくい会社の評価でも同じで、その難しさは<a href="/articles/startup-valuation/">スタートアップの企業価値評価</a>で詳しく整理しています。</p>
 
+<h2>企業価値の何割がターミナルバリューか</h2>
+<p>DCF法で価値を出すと、ターミナルバリューが全体の大半を占めます。5年予測ならおおむね6割から8割に落ち着くことが多いです。この比率自体は異常ではありません。5年より先の期間のほうが圧倒的に長いので、当然といえば当然です。</p>
+<p>ただ、比率が極端に振れているときは前提を見直す合図になります。</p>
+<table>
+  <tr><th>比率</th><th>読み方</th></tr>
+  <tr><td>おおむね60〜80%</td><td>5年予測では標準的</td></tr>
+  <tr><td>90%超</td><td>予測期間の利益が小さすぎるか、gが高すぎる可能性</td></tr>
+  <tr><td>50%未満</td><td>予測期間が長いか、成長を手前に寄せすぎている可能性</td></tr>
+</table>
+<p>比率が9割を超えると、そのDCFは実質的に遠い将来の仮定だけで価値を語っていることになります。数字は精緻に見えても、根拠の大半は検証できない領域に置かれた状態です。予測期間を延ばして価値の重心を手前に移せないか、検討する場面かと思います。</p>
+<p>もっとも、創業まもない会社や開発中のパイプラインを抱える会社では、比率が高くなるのがむしろ自然です。比率だけを見て機械的に良し悪しを決められるものでもありません。</p>
+
 <h2>まとめ</h2>
 <ul>
   <li>ターミナルバリュー(継続価値)は、予測期間の後のキャッシュフローをまとめた価値で、DCF法では企業価値の大半を占める。</li>
@@ -187,6 +274,14 @@ document.addEventListener('click', function (e) {
   <li>永久成長率をWACCに近づけすぎない、強気の倍率を将来に当てない、2つの方法を整合させる、が実務の勘所。</li>
   <li>一つの数字で出さず、前提を振った感応度表で幅を示すと信頼が高まる。</li>
 </ul>
+
+<h2>よくある質問</h2>
+<h3>Q. 予測最終年のキャッシュフローはそのまま使ってよいですか?</h3>
+<p>ターミナルバリューは最終年のキャッシュフローを起点にするため、その年が異常だと2階部分がまるごと歪みます。設備投資と減価償却がおおむね同水準か、運転資本の増加が売上成長に見合っているか、利益率に一時的な特需が入っていないかを確認します。最終年が大型設備投資の年ならフリーキャッシュフローが凹み、ターミナルバリューが不当に小さく出ます。定常状態に均した数字を別に作るか、予測期間を1〜2年延ばして落ち着いた年まで引っ張る方法があります。</p>
+<h3>Q. ターミナルバリューは企業価値の何割になるのが普通ですか?</h3>
+<p>5年予測ならおおむね6割から8割です。5年より先の期間のほうが長いので、この比率自体は異常ではありません。90%を超える場合は予測期間の利益が小さすぎるかgが高すぎる可能性があり、50%未満なら予測期間が長いか成長を手前に寄せすぎている可能性があります。ただし創業まもない会社や開発中のパイプラインを抱える会社では比率が高くなるのが自然で、比率だけで良し悪しは決められません。</p>
+<h3>Q. 永久成長率(g)は何%に置くのが適切ですか?</h3>
+<p>目安として0%から2%程度です。式の分母が (WACC − g) なので、gをWACCに近づけると分母がゼロに近づき、ターミナルバリューが際限なく膨らみます。長期の経済成長率や物価上昇率の範囲に収めるのが安全で、一企業が経済全体より速く永久に成長し続ける想定は現実には成り立ちません。</p>
 
 <div class="cta">
   <h2>企業価値の「測り方」を、体系的に学ぶ</h2>
