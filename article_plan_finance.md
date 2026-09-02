@@ -111,7 +111,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 中級。承継されるもの/されないものの比較表、簿外債務リスク、税務の違いの概要。内部リンク: ma-process, due-diligence
     Cluster: M&A実務(中級)
 
-16. slug: unlisted-shares-valuation | status: pending
+16. slug: unlisted-shares-valuation | status: done (published 2026-09-02)
     Title案: 非上場株式の評価方法|M&A・事業承継・税務で「正解」が違う理由
     KW: 非上場株式 評価方法, 非上場株式 時価, 事業承継 株価算定
     Angle: 中級。目的別(取引・税務・裁判)で評価が変わる構造、税務上の類似業種比準・純資産方式、M&A実務との乖離。内部リンク: corporate-valuation, startup-valuation
