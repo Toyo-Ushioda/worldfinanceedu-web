@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>非上場株式の評価方法|M&A・事業承継・税務で「正解」が違う理由 | World Finance Edu</title>
+<meta name="description" content="非上場株式の評価方法を実務目線で解説。市場価格がない株式の時価はどう決まるのか、税務上の類似業種比準方式・純資産価額方式と、M&A・事業承継で使われる株価算定の違い、非流動性ディスカウントの考え方まで実務家が整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/unlisted-shares-valuation/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非上場株式の評価方法|M&A・事業承継・税務で「正解」が違う理由">
+<meta property="og:description" content="非上場株式には市場価格がなく、目的によって「正解」が変わります。税務上の株価算定とM&Aの取引価格がなぜ食い違うのかを実務家が解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/unlisted-shares-valuation/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/unlisted-shares-valuation.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/unlisted-shares-valuation.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "非上場株式の評価方法|M&A・事業承継・税務で「正解」が違う理由",
+      "description": "非上場株式の評価方法を実務目線で解説。税務上の類似業種比準方式・純資産価額方式と、M&A・事業承継で使われる株価算定の違い、非流動性ディスカウントの考え方まで整理します。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/unlisted-shares-valuation/",
+      "datePublished": "2026-09-02"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "非上場株式の評価方法",
+          "item": "https://worldfinanceedu.com/articles/unlisted-shares-valuation/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "非上場株式の評価方法にはどんな種類がありますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "大きく3つの系統に分かれます。将来の稼ぐ力から逆算するインカムアプローチ、似た会社の株価倍率にあてはめるマーケットアプローチ、純資産をもとに積み上げるコストアプローチです。税務上の相続税評価では、類似業種比準方式と純資産価額方式、配当還元方式が使われ、会社の規模や株主の立場によって適用する方式が決まります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "税務上の評価額とM&Aの取引価格はなぜ違うのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "目的が違うからです。税務上の評価は課税の公平と計算の再現性を優先し、決められた算式に過去の決算数値をあてはめます。M&Aの価格は、買い手がその会社を持つことで将来いくら稼げるか、シナジーをどう見るかで決まる交渉の結果です。同じ会社でも、この2つが大きく離れることは珍しくありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "非上場株式に割引をかけるのはなぜですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "上場株式と違い、売りたいときにすぐ売れる市場がないためです。この売りにくさを価値の減額として反映するのが非流動性ディスカウントです。逆に、経営を決められる比率の株式には支配権プレミアムが乗ります。少数株主が持つ非上場株式は、この2つが両方効いて、1株あたりの理論値より低く評価されやすくなります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › 非上場株式の評価方法</div>
+<h1>非上場株式の評価方法|M&A・事業承継・税務で「正解」が違う理由</h1>
+<div class="meta">2026年9月2日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>非上場株式の評価でいちばん混乱するのは、同じ会社の同じ1株なのに、聞く相手によって金額がまるで違うことです。相続の相談で示された株価と、M&A(合併・買収)の場で買い手が出してくる価格が、何倍も離れている。どちらかが間違っているように見えますが、実際にはどちらも正しいことがあります。</p>
+<p>理由は単純で、非上場株式には上場株式のような市場価格が存在しないからです。市場がない以上、時価は「何のために測るか」という目的から逆算するしかありません。この記事では、目的によって評価が変わる構造を整理したうえで、税務の株価算定とM&A実務の評価方法がどこで分かれるのかを見ていきます。前提として<a href="/articles/corporate-valuation/">企業価値評価の基本</a>を押さえておくと理解が早くなります。</p>
+
+<h2>なぜ「正解」が一つに決まらないのか</h2>
+<p>上場株式なら、市場が毎日つけている株価がそのまま時価です。非上場株式にはそれがありません。売買もめったに起きないため、直近の取引実績も参考になりにくい。そこで実務では、目的ごとに別々のものさしを使います。</p>
+<table>
+  <tr><th>目的</th><th>使う評価</th><th>重視されること</th></tr>
+  <tr><td>相続・贈与(税務)</td><td>財産評価基本通達の方式</td><td>課税の公平と計算の再現性</td></tr>
+  <tr><td>M&A(第三者への売却)</td><td>DCF法・類似会社比較法など</td><td>買い手にとっての将来価値</td></tr>
+  <tr><td>親族内の事業承継</td><td>税務評価を軸に設計</td><td>納税資金と支配権の維持</td></tr>
+  <tr><td>少数株主からの買取・係争</td><td>複数手法の併用</td><td>当事者間の公平性</td></tr>
+</table>
+<p>税務の評価は、誰が計算しても同じ数字になることを重視して算式が決められています。一方でM&Aの価格は、その会社を買った買い手が将来どれだけ稼げるか、既存事業との組み合わせでどんな上乗せが生まれるかという見立ての結果です。前者は過去の決算数値から機械的に、後者は将来の予測と交渉から決まる。出発点が違うので、答えが揃わないのはむしろ自然なことです。</p>
+
+<h2>税務上の株価算定: 3つの方式と選び方</h2>
+<p>相続税や贈与税で使う非上場株式の評価は、国税庁の財産評価基本通達に沿って行います。中心になるのは次の3つです。</p>
+<ul>
+  <li><b>類似業種比準方式</b>: 同じ業種の上場企業の平均株価に、配当・利益・純資産の3要素の比率をかけて求める。会社の規模が大きいほど、この方式の比重が高くなる。</li>
+  <li><b>純資産価額方式</b>: 会社の資産を相続税評価額に置き直し、負債と含み益に対する法人税相当額を差し引いて算出する。小規模な会社ほどこちらが中心になる。</li>
+  <li><b>配当還元方式</b>: 受け取る配当だけを根拠に評価する。経営に関与しない少数株主が対象で、金額はかなり低く出る。</li>
+</ul>
+<p>どの方式を使うかは、その株主が支配株主グループに属するかどうかを先に判定し、そのうえで会社の規模(従業員数・総資産・取引金額)で区分する流れになります。ここで押さえておきたいのは、<b>同じ会社の同じ1株でも、誰が持っているかで評価額が変わる</b>という点です。オーナー一族が持つ株は原則的評価で高く出て、経営に関わらない少数株主の株は配当還元方式で低く出ます。事業承継の場面で「株価が思ったより高い」となるのは、たいていこの原則的評価が適用されるケースです。</p>
+<div class="box">
+利益が出ている会社ほど類似業種比準方式の株価が上がり、内部留保が厚い会社ほど純資産価額方式の株価が上がります。つまり<b>業績が良く、無借金で現金を貯めてきた会社ほど、承継時の株価が高くなる</b>という構造です。良い経営をしてきた結果が納税負担として跳ね返るため、承継の設計は業績が伸びきる前から考え始めるほうが選択肢は多く残ります。
+</div>
+
+<h2>M&A実務での評価方法: 3つのアプローチ</h2>
+<p>第三者に売る場面では、税務の算式は使いません。企業価値評価の標準的な枠組みである3つのアプローチをそのまま当てはめます。</p>
+<table>
+  <tr><th>アプローチ</th><th>代表的な手法</th><th>非上場での使いやすさ</th></tr>
+  <tr><td>インカム</td><td>DCF法(割引キャッシュフロー法)</td><td>事業計画があれば主軸になる</td></tr>
+  <tr><td>マーケット</td><td>類似会社比較法、類似取引法</td><td>比較対象の選定が難所</td></tr>
+  <tr><td>コスト</td><td>時価純資産法、年買法</td><td>小規模案件で多く使われる</td></tr>
+</table>
+<p>実務では複数を並べて価格の幅を見ます。<a href="/articles/dcf-method/">DCF法(割引キャッシュフロー法)</a>で理論値を出し、<a href="/articles/multiples-valuation/">類似会社比較法</a>で市場の相場観と照らし、時価純資産法で下限を確認する、という組み立てです。中小企業のM&Aでは、時価純資産に営業利益の3年から5年分を上乗せする年買法(年倍法)もよく登場します。理論的には荒い方法ですが、当事者双方が説明を受け入れやすく、交渉の出発点として機能しています。</p>
+<p>非上場企業でDCF法を使うときの難所は、事業計画の精度と割引率です。中小企業の計画は経営者の意欲がそのまま数字になっていることが多く、買い手は必ずそこを引き直します。割引率も、上場企業のように市場株価から逆算できないため、類似する上場企業のデータに規模リスク分を上乗せして組み立てるのが一般的です。将来予測に頼らざるを得ない点は、<a href="/articles/startup-valuation/">スタートアップの企業価値評価</a>で扱った論点と重なります。</p>
+
+<h2>非上場ゆえの2つの調整</h2>
+<p>理論値が出たあと、非上場株式には固有の調整が入ります。この2つを知らないと、算定結果の意味を読み違えます。</p>
+<h3>非流動性ディスカウント</h3>
+<p>上場株式は売りたいときにすぐ売れますが、非上場株式は買い手を探すところから始まります。譲渡制限が付いていれば会社の承認も要ります。この売りにくさを価値の減額として反映するのが非流動性ディスカウントです。実務では2割から3割程度が語られることが多いものの、決まった率があるわけではなく、会社の規模や株主構成、譲渡制限の内容によって幅が出ます。</p>
+<h3>支配権プレミアム</h3>
+<p>逆方向の調整もあります。過半数を握れば経営者を選び、配当方針も会社の売却も決められます。この決定権に対する上乗せが支配権プレミアムです。したがって非上場企業では、100%取得の価格を単純に持株比率で割った金額が、そのまま少数株式の価値にはなりません。少数株主が持つ株には非流動性ディスカウントと支配権の欠如が両方効くため、1株あたりの理論値よりかなり低く評価されます。</p>
+
+<h2>実務での使いどころ</h2>
+<p>非上場株式の評価を依頼するとき、あるいは受け取った評価書を読むとき、最初に確認すべきは金額ではなく前提です。何のための評価か、誰の持分を評価しているのか、どの手法を主軸に置いたのか。この3つが揃っていない評価書は、後で目的が変わったときに使えません。</p>
+<div class="box">
+実務での目安です。<br>
+・相続や贈与の税額を見積もりたい → <b>税務上の評価</b>(原則的評価か配当還元かをまず判定)<br>
+・第三者への売却価格の当たりをつけたい → <b>DCF法と類似会社比較法</b>で幅を出す<br>
+・少数株主の持分を買い取りたい → <b>複数手法の併用</b>と、ディスカウントの根拠を説明できる形に
+</div>
+<p>そして、税務評価とM&A価格が食い違うこと自体は問題ではありません。問題になるのは、片方の数字をもう片方の目的に流用したときです。税務評価額をそのまま第三者への売却価格にすれば売り手が損をしますし、M&Aの価格水準を根拠に親族へ株を移せば税負担が想定を超えます。数字を持ち出す前に、その数字がどの目的のために作られたものかを必ず確認してください。なお、具体的な税額や課税関係の判断は税理士など専門家に確認することをおすすめします。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>非上場株式には市場価格がないため、時価は「何のために測るか」という目的から逆算する。目的が違えば答えも違う。</li>
+  <li>税務上の株価算定は類似業種比準方式・純資産価額方式・配当還元方式が中心で、株主の立場と会社規模で適用が決まる。</li>
+  <li>M&Aではインカム・マーケット・コストの3アプローチを併用し、事業計画と割引率の置き方が価格を左右する。</li>
+  <li>非流動性ディスカウントと支配権プレミアムという非上場固有の調整が、1株あたりの価値を大きく動かす。</li>
+  <li>評価書は前提とセットで読む。目的の違う数字を流用しないことが、いちばん実害の大きい間違いを防ぐ。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<h3>Q. 非上場株式の評価方法にはどんな種類がありますか?</h3>
+<p>大きく3つの系統に分かれます。将来の稼ぐ力から逆算するインカムアプローチ(DCF法(割引キャッシュフロー法)など)、似た会社の株価倍率にあてはめるマーケットアプローチ、純資産をもとに積み上げるコストアプローチです。税務上の相続税評価では、類似業種比準方式と純資産価額方式、配当還元方式が使われ、会社の規模や株主の立場によって適用する方式が決まります。</p>
+<h3>Q. 税務上の評価額とM&Aの取引価格はなぜ違うのですか?</h3>
+<p>目的が違うからです。税務上の評価は課税の公平と計算の再現性を優先し、決められた算式に過去の決算数値をあてはめます。M&A(合併・買収)の価格は、買い手がその会社を持つことで将来いくら稼げるか、シナジーをどう見るかで決まる交渉の結果です。同じ会社でも、この2つが大きく離れることは珍しくありません。</p>
+<h3>Q. 非上場株式に割引をかけるのはなぜですか?</h3>
+<p>上場株式と違い、売りたいときにすぐ売れる市場がないためです。この売りにくさを価値の減額として反映するのが非流動性ディスカウントです。逆に、経営を決められる比率の株式には支配権プレミアムが乗ります。少数株主が持つ非上場株式は、この2つが両方効いて、1株あたりの理論値より低く評価されやすくなります。</p>
+
+<div class="cta">
+  <h2>企業価値の測り方を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、企業価値の「測り方」と、価値を「つくる」考え方を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/corporate-valuation/">企業価値評価(バリュエーション)とは?3つの計算方法をわかりやすく解説</a></li>
+    <li>› <a href="/articles/startup-valuation/">スタートアップの企業価値評価|売上のない会社に値段がつく理由</a></li>
+    <li>› <a href="/articles/multiples-valuation/">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>

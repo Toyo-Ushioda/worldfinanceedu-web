@@ -30,6 +30,7 @@
 - M&Aの流れ（打診からクロージングまで）: https://worldfinanceedu.com/articles/ma-process/
 - デューデリジェンス（DD）とは: https://worldfinanceedu.com/articles/due-diligence/
 - 株式譲渡と事業譲渡の違い（M&Aスキームの選び方）: https://worldfinanceedu.com/articles/share-vs-asset-deal/
+- 非上場株式の評価方法（M&A・事業承継・税務で「正解」が違う理由）: https://worldfinanceedu.com/articles/unlisted-shares-valuation/
 - のれんと減損リスク: https://worldfinanceedu.com/articles/goodwill-impairment/
 - CCC（キャッシュ・コンバージョン・サイクル）とは: https://worldfinanceedu.com/articles/cash-conversion-cycle/
 - 予算策定の実務（FP&Aの予実管理）: https://worldfinanceedu.com/articles/budgeting-fpa/
