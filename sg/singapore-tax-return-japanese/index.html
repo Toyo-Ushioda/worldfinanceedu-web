@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>日本人がシンガポールで確定申告するとき|日本側の申告はどうなるか | World Finance Edu</title>
+<meta name="description" content="シンガポールで働く日本人の確定申告を、シンガポール側と日本側の両方から整理。居住者判定の183日ルール、申告期限、日本の非居住者扱い、二重課税と租税条約の関係まで、順を追って整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/sg/singapore-tax-return-japanese/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日本人がシンガポールで確定申告するとき|日本側の申告はどうなるか">
+<meta property="og:description" content="シンガポールで働く日本人の確定申告を、シンガポール側と日本側の両方から整理。居住者判定の183日ルール、申告期限、日本の非居住者扱い、二重課税と租税条約の関係まで、順を追って整理します。">
+<meta property="og:url" content="https://worldfinanceedu.com/sg/singapore-tax-return-japanese/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/singapore-tax-return-japanese.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/singapore-tax-return-japanese.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "日本人がシンガポールで確定申告するとき|日本側の申告はどうなるか",
+      "description": "シンガポールで働く日本人の確定申告を、シンガポール側と日本側の両方から整理。居住者判定の183日ルール、申告期限、日本の非居住者扱い、二重課税と租税条約の関係まで、順を追って整理します。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "datePublished": "2026-09-02",
+      "dateModified": "2026-09-02",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://worldfinanceedu.com/sg/singapore-tax-return-japanese/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "シンガポール実務メモ",
+          "item": "https://worldfinanceedu.com/sg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "シンガポールの確定申告",
+          "item": "https://worldfinanceedu.com/sg/singapore-tax-return-japanese/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "シンガポールで働く日本人は、日本でも確定申告が必要ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "日本の税務上の非居住者であれば、シンガポールで得た給与は日本の課税対象になりません。ただし日本の不動産賃料や日本法人からの役員報酬など、日本の国内源泉所得が残っている場合は、その分について日本でも申告が必要です。その場合は出国前に納税管理人を届け出ておくのが通常の段取りになります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "シンガポールの税務上の居住者になる条件は何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "基本の判定線は、その暦年に183日以上シンガポールに滞在したかどうかです。居住者であれば累進税率と各種の控除が使えます。非居住者の場合、給与所得は15%か居住者の累進税率のいずれか高い方で課税され、その他の所得は原則24%、控除は基本的に使えません(税率は2026年9月時点)。着任が年の後半だった年は日数が足りず非居住者になることがあるため、確認が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日本とシンガポールで二重に課税されませんか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "両国の間には租税条約があり、所得の種類ごとにどちらの国が課税できるかを定めています。それでも両方で課税が生じる場合は、外国税額控除で調整します。実務でより多く見かけるのは二重課税そのものより居住者判定のずれで、家族や住居を日本に残していると日本側で居住者と判定されることがあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "住民票を抜けば日本の税金は関係なくなりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "なりません。日本の居住者判定は住民票の有無ではなく、生活の本拠が実質的にどこにあるかで行われます。住民票は判定材料のひとつにすぎず、家族が日本に残っている、日本の住居をいつでも使える状態にある、日本での滞在日数が多いといった要素が重なると、届出だけでは非居住者と説明しきれない場合があります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/sg/">シンガポール実務</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/sg/">シンガポール実務メモ</a> › シンガポールの確定申告</div>
+<h1>日本人がシンガポールで確定申告するとき|日本側の申告はどうなるか</h1>
+<div class="meta">2026年9月2日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+<div class="box"><b>この記事について。</b>筆者はシンガポール在住ですが、税理士ではありません。ここに書いているのは制度の整理であり、個別の税務判断ではありません。税率と期限は <b>2026年9月時点</b>の制度にもとづきます。税額や申告義務は所得の種類、滞在期間、生活の本拠の置き方で変わります。金額が大きい場合や判断に迷う場合は、日本とシンガポール両方の税務に詳しい専門家にご確認ください。制度は改正されるため、最終確認は IRAS(Inland Revenue Authority of Singapore、シンガポール内国歳入庁)と国税庁の一次情報でお願いします。</div>
+
+<p>シンガポールに移って最初の年に、必ず出てくる問いがあります。自分はどちらの国に申告するのか。給与はシンガポールで受け取っている、日本には家族や口座や不動産が残っている、住民票をどうしたかもよく覚えていない。この状態だと、両方に払うのか、どちらにも払わなくていいのか、感覚では判断がつきません。</p>
+<p>シンガポール側と日本側は、別々のルールでそれぞれ独立に判定します。順番に見ていきます。</p>
+
+<h2>シンガポール側は暦年で見て、翌年の4月に出す</h2>
+<p>シンガポールの個人所得税は、暦年(1月から12月)の所得を対象に、その翌年に申告します。この「翌年」を Year of Assessment(YA、賦課年度)と呼びます。日本の「令和何年分」と同じ発想ですが、呼び方が1年ずれるので混乱しやすいところです。</p>
+<table>
+<tr><th>項目</th><th>内容</th></tr>
+<tr><td>対象期間</td><td>暦年 1月〜12月</td></tr>
+<tr><td>申告先</td><td>IRAS(シンガポール内国歳入庁)</td></tr>
+<tr><td>申告期限(電子・書面とも)</td><td>翌年4月18日</td></tr>
+<tr><td>受付開始</td><td>その年の3月1日</td></tr>
+</table>
+<p>書面での申告期限は以前は4月15日でしたが、2025賦課年度から電子申告と同じ4月18日に揃えられています。古い解説記事では4月15日のままになっていることがあるので、念のため。</p>
+<p>多くの給与所得者にとって、申告作業そのものは思ったより軽くなります。雇用主が一定規模以上だと、給与情報が IRAS(シンガポール内国歳入庁)へ直接送られる仕組みがあるため、ログインすると数字がすでに入っています。自分で足すのは、副業や賃貸収入、寄附控除といった雇用主が知らない部分だけです。</p>
+
+<h2>居住者かどうかで税率が変わる</h2>
+<p>シンガポールでは、その暦年に183日以上滞在したかどうかが基本の判定線になります。</p>
+<ul>
+<li><b>税務上の居住者</b>。累進税率が適用され、各種の控除が使える</li>
+<li><b>非居住者</b>。給与所得は15%か居住者の累進税率のいずれか高い方。その他の所得は原則24%(2024賦課年度から。それ以前は22%)。役員報酬もこの24%の対象。控除は基本的に使えない</li>
+</ul>
+<p>移住した年は日数が足りず非居住者になることがありますが、年をまたぐ滞在を通算して判定する取扱いもあります。着任が年の後半だった年は、自己判断せず確認した方がよさそうな部分です。</p>
+
+<h2>日本側は、非居住者になっているかどうかで決まる</h2>
+<p>ここが本題です。日本の所得税は、住民票の有無ではなく<b>生活の本拠がどこにあるか</b>で居住者と非居住者を判定します。原則として、国外に1年以上住むことが明らかな状態で出国すれば、出国の翌日から非居住者として扱われます。</p>
+<p>非居住者になると、日本で課税されるのは<b>国内源泉所得だけ</b>になります。シンガポールで働いて得た給与は、日本の課税対象から外れます。一方で、日本に残したものから生じる所得は残ります。</p>
+<table>
+<tr><th>所得</th><th>非居住者の日本での扱い</th></tr>
+<tr><td>シンガポールでの給与</td><td>対象外</td></tr>
+<tr><td>日本の不動産の賃料</td><td>課税対象</td></tr>
+<tr><td>日本の不動産の売却益</td><td>課税対象</td></tr>
+<tr><td>日本法人からの役員報酬</td><td>課税対象</td></tr>
+</table>
+<p>日本で課税される所得が残る場合は、日本でも申告が要ります。自分で手続きできないため、出国前に<b>納税管理人</b>を届け出ておくのが通常の段取りです。これを出しそびれると、後から手間が増えます。</p>
+
+<h2>両方に課税されたらどうなるか</h2>
+<p>日本とシンガポールの間には租税条約があります。同じ所得に二重に課税されないよう調整する枠組みで、どちらの国が課税できるかを所得の種類ごとに決めています。それでも両方で課税が生じる場面では、外国税額控除で調整します。</p>
+<p>ただ、実務でより多く見かけるのは、二重課税そのものよりも<b>判定のずれ</b>ではないかと思います。日本側では非居住者のつもりでいても、生活の実態が日本に寄っていると見られれば居住者と判定されることがあります。家族が日本に残っている、日本の住居をいつでも使える状態にしている、日本での滞在日数が多い。こうした要素が積み重なると、書類上の届出だけでは説明しきれなくなります。</p>
+
+<h2>よくある3つの誤解</h2>
+<div class="box">
+<b>「住民票を抜いたから日本の税金は関係ない」。</b>住民票は判定材料のひとつにすぎません。生活の本拠が実質的にどこにあるかで判断されます。<br><br>
+<b>「シンガポールは税金が安いから何もしなくていい」。</b>安いことと申告が不要なことは別です。IRAS(シンガポール内国歳入庁)から通知が来たら、期限までの対応が要ります。<br><br>
+<b>「日本の口座に振り込まれる分は日本の所得」。</b>どこの口座で受け取ったかではなく、どこで働いて得たかで判定します。受取口座の場所は基本的に関係ありません。
+</div>
+
+<h2>まとめ</h2>
+<p>整理すると、判断すべきことは2つに絞れます。シンガポールにその年183日以上いたか。そして日本の税務上、非居住者と言える状態になっているか。この2つが決まれば、どちらに何を申告するかはほぼ自動的に決まります。</p>
+<p>迷いが生じやすいのは、移住した最初の年と、日本に資産や家族を残したままのケースかと思います。もっとも、勤務形態や滞在の仕方によっては単純な日数計算どおりにならない場合もあるとも聞きますので、線の近くにいる年ほど、数え方そのものを確認しておいた方がよさそうです。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. シンガポールで働く日本人は、日本でも確定申告が必要ですか?</h3>
+<p>日本の税務上の非居住者であれば、シンガポールで得た給与は日本の課税対象になりません。ただし日本の不動産賃料や日本法人からの役員報酬など、日本の国内源泉所得が残っている場合は、その分について日本でも申告が必要です。その場合は出国前に納税管理人を届け出ておくのが通常の段取りになります。</p>
+<h3>Q. シンガポールの税務上の居住者になる条件は何ですか?</h3>
+<p>基本の判定線は、その暦年に183日以上シンガポールに滞在したかどうかです。居住者であれば累進税率と各種の控除が使えます。非居住者の場合、給与所得は15%か居住者の累進税率のいずれか高い方で課税され、その他の所得は原則24%、控除は基本的に使えません(税率は2026年9月時点)。着任が年の後半だった年は日数が足りず非居住者になることがあるため、確認が必要です。</p>
+<h3>Q. 日本とシンガポールで二重に課税されませんか?</h3>
+<p>両国の間には租税条約があり、所得の種類ごとにどちらの国が課税できるかを定めています。それでも両方で課税が生じる場合は、外国税額控除で調整します。実務でより多く見かけるのは二重課税そのものより居住者判定のずれで、家族や住居を日本に残していると日本側で居住者と判定されることがあります。</p>
+<h3>Q. 住民票を抜けば日本の税金は関係なくなりますか?</h3>
+<p>なりません。日本の居住者判定は住民票の有無ではなく、生活の本拠が実質的にどこにあるかで行われます。住民票は判定材料のひとつにすぎず、家族が日本に残っている、日本の住居をいつでも使える状態にある、日本での滞在日数が多いといった要素が重なると、届出だけでは非居住者と説明しきれない場合があります。</p>
+<div class="cta">
+  <h2>シンガポールで事業と数字を見ている人へ</h2>
+  <p>World Finance Edu はシンガポール拠点で、フラクショナルCFOとしてスタートアップや中堅企業のファイナンスを見ています。会社を作ったあとに必ず出てくる資金繰り、資本政策、投資家対応の話は、ファイナンスの学習コラムで扱っています。</p>
+  <a class="btn" href="/articles/">ファイナンスの学習コラムを読む</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/sg/singapore-company-setup/">シンガポールで会社を作る手順|費用と日数、日本人がつまずく3点</a></li>
+    <li>› <a href="/sg/singapore-rent-negotiation/">シンガポールのコンド契約更新|交渉できること、できないこと</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>

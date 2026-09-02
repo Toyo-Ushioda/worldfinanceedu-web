@@ -25,6 +25,8 @@ const ENG = 'C:\\Users\\toyou\\OneDrive\\04. Work (TOYO) from 2025 Aug\\Work TOY
 const SITES = [
   { root: FIN, label: 'AI時代に生き残るファイナンス　学習コラム', extra: ['articles', 'links'] },
   { root: ENG, label: 'グローバルに活躍する日本人になるための英語力向上コラム', extra: ['articles'] },
+  { root: FIN, artDirName: 'sg', label: 'シンガポール実務メモ', extra: [] },
+  { root: FIN, artDirName: 'ai', label: 'AI×実務コラム', extra: [] },
 ];
 
 function pageTitle(file) {
@@ -36,7 +38,7 @@ function pageTitle(file) {
 
 function collect(site) {
   const jobs = [];
-  const artDir = path.join(site.root, 'articles');
+  const artDir = path.join(site.root, site.artDirName || 'articles');
   for (const d of fs.readdirSync(artDir, { withFileTypes: true })) {
     if (!d.isDirectory()) continue;
     const f = path.join(artDir, d.name, 'index.html');

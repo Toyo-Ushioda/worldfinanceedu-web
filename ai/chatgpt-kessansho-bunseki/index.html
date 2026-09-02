@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>ChatGPTに決算書を読ませてみた|どこまで正確で、どこが危ないか | World Finance Edu</title>
+<meta name="description" content="ChatGPTに決算書を読ませると、どこまで使えてどこから危ないのか。計算と要約は強く、前提の設定と数字の出どころは弱い。実務で使うときの渡し方と、自分で確認しておきたい箇所を整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/ai/chatgpt-kessansho-bunseki/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ChatGPTに決算書を読ませてみた|どこまで正確で、どこが危ないか">
+<meta property="og:description" content="ChatGPTに決算書を読ませると、どこまで使えてどこから危ないのか。計算と要約は強く、前提の設定と数字の出どころは弱い。実務で使うときの渡し方と、自分で確認しておきたい箇所を整理します。">
+<meta property="og:url" content="https://worldfinanceedu.com/ai/chatgpt-kessansho-bunseki/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/chatgpt-kessansho-bunseki.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/chatgpt-kessansho-bunseki.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ChatGPTに決算書を読ませてみた|どこまで正確で、どこが危ないか",
+      "description": "ChatGPTに決算書を読ませると、どこまで使えてどこから危ないのか。計算と要約は強く、前提の設定と数字の出どころは弱い。実務で使うときの渡し方と、自分で確認しておきたい箇所を整理します。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "datePublished": "2026-09-02",
+      "dateModified": "2026-09-02",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://worldfinanceedu.com/ai/chatgpt-kessansho-bunseki/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI×実務コラム",
+          "item": "https://worldfinanceedu.com/ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ChatGPTと決算書",
+          "item": "https://worldfinanceedu.com/ai/chatgpt-kessansho-bunseki/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ChatGPTで決算書の分析はできますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "指標の計算、長い注記の要約、複数期の増減の抽出といった作業は十分に実用的です。特に注記の要約は読む時間をかなり減らせます。ただし最終的な投資判断や会計処理の判断に直接使うのは危なく、当たりをつけて読む量を減らす道具として使うのが実務的かと思います。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIに決算書を読ませるとき、何に注意すべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "もっとも注意したいのは数字の出どころです。貼り付けた数字と、モデルが学習の中で持っている一般的な数字が混ざることがあり、出力は同じ調子で書かれるため見た目では区別がつきません。計算に使った数値を科目名と金額の表で先に出させると、混ざっていればその時点で気づけます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIのファイナンス分析はどこで間違えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "主に3か所かと思います。ひとつは前提を勝手に置いて明示しないこと。割引率や正常収益力の定義が変われば結論も変わりますが、その前提が隠れます。ふたつめは会計基準の細かい適用範囲や、日本基準と国際財務報告基準(IFRS)の違いが絡む部分。みっつめは、整理しきれない不確実性を落として、まとまりすぎた結論を出すことです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIが使えるようになれば、ファイナンスを学ぶ必要はなくなりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "むしろ上がっているのではないかと思います。AIの答えが正しいかを判断できるのは、その内容を自分で理解している人だけだからです。それらしい形で誤った出力が返ってきたときに気づけるかどうかが実務では効いてきますが、その力は自分でファイナンスを理解していないと身につきません。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/ai/">AI×実務</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/ai/">AI×実務コラム</a> › ChatGPTと決算書</div>
+<h1>ChatGPTに決算書を読ませてみた|どこまで正確で、どこが危ないか</h1>
+<div class="meta">2026年9月2日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>決算書をAIに読ませる使い方は、もう珍しくありません。ただ、返ってくる答えをどこまで信じてよいのかは、使っている人ほど迷っているように見えます。</p>
+<p>数字を扱う立場から見ると、AIは得意なところと危ないところの差がかなり大きい道具かと思います。境目を知らないまま使うのがいちばん危なくて、逆に境目を知っていれば強力です。</p>
+
+<h2>よくできること</h2>
+<table>
+<tr><th>タスク</th><th>実用度</th></tr>
+<tr><td>指標の計算</td><td>高い</td></tr>
+<tr><td>長い注記の要約</td><td>高い</td></tr>
+<tr><td>複数期の増減の抽出</td><td>高い</td></tr>
+<tr><td>会計用語の説明</td><td>高い</td></tr>
+<tr><td>見るべき論点の洗い出し</td><td>そこそこ高い</td></tr>
+</table>
+<p>とくに効くのが注記の要約です。有価証券報告書の注記は量が多く、読むだけで時間が溶けます。「偶発債務と後発事象に関する記載を抜き出して」と頼めば、当たりをつける時間がかなり縮みます。</p>
+<p>もうひとつ実用的なのが、論点の洗い出しです。自分がその業界に詳しくないとき、「この業種の決算で注意して見るべき項目は」と聞くと、抜けていた視点が出てきます。答えとしてではなく、チェックリストとして使う形です。</p>
+
+<h2>危ないところ</h2>
+
+<h3>1. 数字の出どころが曖昧になる</h3>
+<p>いちばん危ないのがこれかと思います。決算書を貼り付けて質問すると、貼った数字と、モデルが学習の中で覚えている一般的な数字が混ざることがあります。しかも出力は同じ調子で書かれるので、見た目では区別がつきません。</p>
+<p>対策は単純で、使った数字を必ず表で出させることです。「計算に使った数値を、科目名と金額の表で示してから結論を書いて」と指示すると、混ざっていればそこで気づけます。</p>
+
+<h3>2. 前提を勝手に置く</h3>
+<p>ファイナンスの計算は前提で答えが変わります。割引率をいくらに置くか、正常収益力をどう定義するか、一時的な損益をどこまで除くか。こうした前提を、聞かなければ勝手に置いて、置いたことを明示しないまま計算してきます。</p>
+<p>数字自体は正しく計算されているので、なおさら気づきにくい。前提が違えば結論も違う、というのはファイナンスの基本ですが、AIの出力はその基本を隠してしまいます。</p>
+
+<h3>3. 会計基準の細部で間違える</h3>
+<p>大枠の説明は正確ですが、基準の細かい適用範囲や、日本基準と IFRS(International Financial Reporting Standards、国際財務報告基準)の違いが絡む部分では、もっともらしく誤ることがあります。実務で判断に使うなら、基準の原文に当たる工程は省けなさそうです。</p>
+
+<h3>4. 都合よく整った結論を出す</h3>
+<p>「この会社の投資判断をどう考えるべきか」のような聞き方をすると、きれいにまとまった答えが返ってきます。ただ、実際の企業分析で重いのは、整理しきれない不確実性がどこにあるかの方です。整った答えほど、その部分が落ちているように見えます。</p>
+<p>もっとも、ここはモデルの世代によってもかなり違うようで、半年後に同じことが当てはまるかはわかりません。</p>
+
+<h2>実務での渡し方</h2>
+<p>次のような順番で渡すと、事故が起きにくいかと思います。</p>
+<ol>
+<li><b>数字は自分で用意して貼る。</b>「◯◯社の決算を分析して」と社名だけ渡すのがいちばん危ない。どの期の、どの開示から取った数字かを自分で確定させてから渡す</li>
+<li><b>使った数字を表で出させる。</b>結論より先に、計算の材料を並べさせる</li>
+<li><b>前提を明示させる。</b>「置いた前提をすべて列挙してから計算して」と指示する</li>
+<li><b>反対意見を書かせる。</b>「この結論が間違っているとしたら、原因は何か」と聞くと、落ちていた論点が出てくる</li>
+<li><b>検算する。</b>主要な指標は電卓で1つ2つ確かめる。ここを飛ばすと、上の4つをやった意味が薄くなる</li>
+</ol>
+
+<h2>結局、何に使う道具なのか</h2>
+<p>AIは結論を出す道具というより、当たりをつける道具として使うのが実務的かと思います。読む量を減らし、見落としを拾い、たたき台を作る。ここまではかなり速くなります。</p>
+<p>一方で、最終的な判断とその責任は動きません。数字を信じてよいかを決めるのは、その数字がどこから来たかを知っている人です。そして皮肉なことに、AIの答えが正しいかを判断できるのも、その内容を自分で理解している人だけになります。ファイナンスを学ぶ必要性は、AIによって下がるどころか上がっているのではないかと思います。</p>
+
+<h2>まとめ</h2>
+<p>ChatGPTは計算と要約では十分に実用的です。危ないのは、数字の出どころが混ざること、前提を勝手に置くこと、そして整いすぎた結論を返すことの3点かと思います。数字を自分で用意し、使った数字と前提を明示させ、最後に検算する。この手順を挟むかどうかで、道具としての信頼度はかなり変わってきます。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. ChatGPTで決算書の分析はできますか?</h3>
+<p>指標の計算、長い注記の要約、複数期の増減の抽出といった作業は十分に実用的です。特に注記の要約は読む時間をかなり減らせます。ただし最終的な投資判断や会計処理の判断に直接使うのは危なく、当たりをつけて読む量を減らす道具として使うのが実務的かと思います。</p>
+<h3>Q. AIに決算書を読ませるとき、何に注意すべきですか?</h3>
+<p>もっとも注意したいのは数字の出どころです。貼り付けた数字と、モデルが学習の中で持っている一般的な数字が混ざることがあり、出力は同じ調子で書かれるため見た目では区別がつきません。計算に使った数値を科目名と金額の表で先に出させると、混ざっていればその時点で気づけます。</p>
+<h3>Q. AIのファイナンス分析はどこで間違えますか?</h3>
+<p>主に3か所かと思います。ひとつは前提を勝手に置いて明示しないこと。割引率や正常収益力の定義が変われば結論も変わりますが、その前提が隠れます。ふたつめは会計基準の細かい適用範囲や、日本基準と国際財務報告基準(IFRS)の違いが絡む部分。みっつめは、整理しきれない不確実性を落として、まとまりすぎた結論を出すことです。</p>
+<h3>Q. AIが使えるようになれば、ファイナンスを学ぶ必要はなくなりますか?</h3>
+<p>むしろ上がっているのではないかと思います。AIの答えが正しいかを判断できるのは、その内容を自分で理解している人だけだからです。それらしい形で誤った出力が返ってきたときに気づけるかどうかが実務では効いてきますが、その力は自分でファイナンスを理解していないと身につきません。</p>
+<div class="cta">
+  <h2>AIに置き換わらない側の力をつける</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、企業価値の「測り方」と、数字から判断をつくる考え方を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/ai/keiri-ai-nakunaru/">経理の仕事はAIでなくなるのか|CFOとして見た、消える作業と残る判断</a></li>
+    <li>› <a href="/ai/ai-finance-kyoukaisen/">AIに任せてよい財務業務と、任せてはいけない業務</a></li>
+    <li>› <a href="/articles/financial-statements-basics/">財務諸表の基本|3つの表のつながりから読む</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
