@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>配当と自社株買いの違い|株主還元はどちらが「得」なのか | World Finance Edu</title>
+<meta name="description" content="配当と自社株買いの違いを実務目線で解説。自社株買いでEPSが増える仕組み、なぜ株価が上がるのか、シグナリング効果、日本企業の株主還元強化トレンドまで、どちらが「得」なのかを整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/dividend-vs-buyback/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配当と自社株買いの違い|株主還元はどちらが「得」なのか">
+<meta property="og:description" content="自社株買いでEPSが増えるのはなぜか。配当との違い、株価への効き方、シグナリング効果、日本企業の還元強化トレンドを実務家が解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/dividend-vs-buyback/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/dividend-vs-buyback.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/dividend-vs-buyback.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "配当と自社株買いの違い|株主還元はどちらが「得」なのか",
+      "description": "配当と自社株買いの違い。自社株買いでEPSが増える仕組み、株価への効き方、シグナリング効果、日本企業の株主還元強化トレンドを実務家が解説。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/dividend-vs-buyback/",
+      "datePublished": "2026-09-03"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "配当と自社株買いの違い",
+          "item": "https://worldfinanceedu.com/articles/dividend-vs-buyback/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "自社株買いをするとなぜEPSが増えるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EPS(Earnings Per Share、1株当たり利益)は利益を発行済株式数で割った値です。自社株買いは市場から自社の株を買い戻して数を減らすため、利益が同じでも1株当たりの取り分が増えます。たとえば利益100億円を1億株で割ると100円ですが、株を10%買い戻して9千万株にすると約111円になります。分子ではなく分母を減らすことでEPSが上がる、というのがポイントです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "配当と自社株買いはどちらが株主にとって得ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "理論上、株主が受け取る価値の合計は同じで、違いは受け取り方です。配当は現金が手元に入り課税されますが、自社株買いは1株当たりの価値が上がる形で株価に残るため、売るまで課税を先送りできます。現金収入が欲しい株主には配当、値上がり益で受け取りたい株主には自社株買いが向く、という整理になります。会社側の使い分けは、株価が割安かどうかと、安定した現金配当を約束できるかで決まります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "自社株買いをするとなぜ株価が上がるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "理由は2つあります。1つはEPSが増えるため、同じPER(株価収益率)なら理論株価が上がること。もう1つはシグナリング効果で、経営陣が自社株を割安だと判断し余剰資金を株主に返す姿勢を示すことが、市場に前向きに受け取られるためです。ただし借入をして無理に買い戻すなど、財務が弱る買い方は評価されないこともあります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › 配当と自社株買いの違い</div>
+<h1>配当と自社株買いの違い|株主還元はどちらが「得」なのか</h1>
+<div class="meta">2026年9月3日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>「今期は増配と自社株買いを両方やります」という決算発表を見て、この2つは何が違うのか、株主としてどちらがうれしいのか、はっきり答えられないという声をよく聞きます。どちらも株主にお金を返す手段なのに、株価への効き方も税金のかかり方も違うので、混乱するのは当然です。</p>
+<p>この記事では、配当と自社株買いがそれぞれ何をしているのか、なぜ自社株買いだと1株当たり利益が増えるのか、そしてどちらが「得」なのかを、実務で見てきた目線で整理します。結論から言えば、優劣は場面で入れ替わります。</p>
+
+<h2>そもそも株主還元とは何か</h2>
+<p>株主還元とは、会社が稼いだ利益のうち事業に再投資しない分を、株主に返すことです。返し方は大きく2つ、現金配当(以下、配当)と自社株買いです。配当は保有株数に応じて現金を配る方法、自社株買いは会社が市場から自社の株を買い戻す方法を指します。</p>
+<p>どちらを選ぶかは、余った現金をどう使うのが株主のためになるかという判断です。ここは<a href="/articles/cost-of-capital-management/">資本コスト経営</a>の考え方と直結します。手元資金を寝かせて自己資本利益率(ROE、Return on Equity)を下げるくらいなら株主に返す、という発想が背景にあります。</p>
+
+<h2>いちばんの違いは「1株当たり利益」への効き方</h2>
+<p>配当と自社株買いの決定的な違いは、EPS(Earnings Per Share、1株当たり利益)への効き方です。EPSは、利益を発行済株式数で割った値です。</p>
+<p>配当を払っても発行済株式数は変わらないので、EPSは動きません。一方、自社株買いは株の数そのものを減らすため、利益が同じでも1株当たりの取り分が増えます。分子(利益)ではなく分母(株数)を減らしてEPSを上げる、というのが自社株買いの正体です。数字で見ると効き方がはっきりします。</p>
+<table>
+  <tr><th>項目</th><th>配当を実施</th><th>自社株買いを実施</th></tr>
+  <tr><td>純利益</td><td>100億円</td><td>100億円</td></tr>
+  <tr><td>発行済株式数</td><td>1億株(変わらず)</td><td>9千万株(10%減)</td></tr>
+  <tr><td>EPS</td><td>100円</td><td>約111円</td></tr>
+  <tr><td>株主が受け取るもの</td><td>現金の配当</td><td>1株当たり価値の上昇</td></tr>
+</table>
+<p>EPSが増えると、同じPER(株価収益率、株価÷EPS)なら理論上の株価は上がります。PERなどの倍率の意味は<a href="/articles/multiples-valuation/">PER・PBR・EV/EBITDAとは</a>で整理していますが、ここでは「1株の価値が上がる」ととらえておけば十分です。これが「自社株買いをするとなぜ株価が上がるのか」という問いへの、いちばん素直な答えになります。</p>
+<div class="box">
+注意したいのは、EPSが増えても会社が生む利益そのものは1円も増えていないことです。パイは同じで、切り分ける人数を減らしただけです。つまり自社株買いは、成長そのものではなく、1株当たりの価値を高める操作だと理解しておくと、数字に振り回されずに済みます。
+</div>
+
+<h2>税金とシグナル、実際に効く2つの差</h2>
+<p>教科書的には、株主が受け取る価値の合計は配当でも自社株買いでも同じで、違うのは受け取り方だけ、とされます。ただ実務では次の2点が効いてきます。</p>
+<h3>受け取り方と課税のタイミング</h3>
+<p>配当は現金が手元に入り、その時点で課税されます。自社株買いは1株当たりの価値が株価に残る形なので、株を売るまで課税を先送りできます。だから毎年の現金収入が欲しい株主には配当が、値上がり益でまとめて受け取りたい株主には自社株買いが向きます。</p>
+<h3>シグナリング効果</h3>
+<p>もう1つがシグナリング効果です。自社株買いは、経営陣が「今の株価は割安だ」と考えていることや、余剰資金を株主に返す規律があることを、市場に伝える合図として受け取られます。逆に配当は、一度上げると簡単には下げられないため、安定して稼ぎ続ける自信の表明になります。減配は業績悪化のサインと見なされ、株価に強く響きます。</p>
+<div class="box">
+つまり配当は「これからも安定して稼げる」というメッセージ、自社株買いは「今の株価は割安で、資金の使い道として買い戻しが最善だ」というメッセージです。同じ還元でも、市場に送っている合図が違います。
+</div>
+
+<h2>日本企業で還元が強化されている背景</h2>
+<p>ここ数年、日本の上場企業で増配と自社株買いが目立って増えています。背景には、PBR(Price Book-value Ratio、株価純資産倍率)が1倍を割れる会社が多いことへの問題意識があります。PBR1倍割れは、市場が「その会社は持っている純資産以下の価値しか生んでいない」と見ている状態です。</p>
+<p>この状況で現金をため込み続けると、ROE(自己資本利益率)が下がり、評価はさらに沈みます。そこで、事業で使い切れない資金は株主に返して資本効率を上げよう、という圧力が強まりました。この構造をもう一段深く知りたい方は<a href="/articles/cost-of-capital-management/">資本コスト経営とPBR改善</a>を合わせて読むと、還元強化が「株主サービス」ではなく経営の一部だとわかります。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>配当も自社株買いも、事業に使わない資金を株主に返す株主還元。返し方が違う。</li>
+  <li>配当はEPS(1株当たり利益)を動かさないが、自社株買いは株数を減らしてEPSを上げる。</li>
+  <li>自社株買いで株価が上がるのは、EPS上昇とシグナリング効果の2つが理由。</li>
+  <li>配当は現金収入と安定のメッセージ、自社株買いは割安判断と課税の先送りに向く。どちらが得かは株主の事情と会社の局面で入れ替わる。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<h3>Q. 自社株買いをするとなぜEPSが増えるのですか?</h3>
+<p>EPS(Earnings Per Share、1株当たり利益)は利益を発行済株式数で割った値です。自社株買いは市場から自社の株を買い戻して数を減らすため、利益が同じでも1株当たりの取り分が増えます。たとえば利益100億円を1億株で割ると100円ですが、株を10%買い戻して9千万株にすると約111円になります。分子ではなく分母を減らすことでEPSが上がる、というのがポイントです。</p>
+<h3>Q. 配当と自社株買いはどちらが株主にとって得ですか?</h3>
+<p>理論上、株主が受け取る価値の合計は同じで、違いは受け取り方です。配当は現金が手元に入り課税されますが、自社株買いは1株当たりの価値が上がる形で株価に残るため、売るまで課税を先送りできます。現金収入が欲しい株主には配当、値上がり益で受け取りたい株主には自社株買いが向きます。</p>
+<h3>Q. 自社株買いをするとなぜ株価が上がるのですか?</h3>
+<p>理由は2つあります。1つはEPSが増えるため、同じPER(株価収益率)なら理論株価が上がること。もう1つはシグナリング効果で、経営陣が自社株を割安だと判断し余剰資金を株主に返す姿勢を示すことが、市場に前向きに受け取られるためです。ただし借入をして無理に買い戻すなど、財務が弱る買い方は評価されないこともあります。</p>
+
+<div class="cta">
+  <h2>株主還元と企業価値を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、配当や自社株買いを含む資本政策と企業価値の「測り方」と「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/cost-of-capital-management/">資本コスト経営とは|PBR改善の方法と資本コストを上回る経営</a></li>
+    <li>› <a href="/articles/multiples-valuation/">PER・PBR・EV/EBITDAとは?マルチプル法による企業価値評価入門</a></li>
+    <li>› <a href="/articles/roic-management/">ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
