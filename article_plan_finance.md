@@ -117,13 +117,13 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 中級。目的別(取引・税務・裁判)で評価が変わる構造、税務上の類似業種比準・純資産方式、M&A実務との乖離。内部リンク: corporate-valuation, startup-valuation
     Cluster: 企業価値評価(中級)
 
-17. slug: dividend-vs-buyback | status: pending
+17. slug: dividend-vs-buyback | status: done (published 2026-09-03)
     Title案: 配当と自社株買いの違い|株主還元はどちらが「得」なのか
     KW: 自社株買い 配当 違い, 自社株買い なぜ株価が上がる, 株主還元
     Angle: 中級。EPSと株価への効き方、シグナリング効果、日本企業の還元強化トレンド。内部リンク: cost-of-capital-management, multiples-valuation
     Cluster: コーポレートファイナンス実務(中級)
 
-18. slug: yuho-reading | status: pending
+18. slug: yuho-reading | status: done (published 2026-09-04)
     Title案: 有価証券報告書の読み方|投資家が最初に開く5つのセクション
     KW: 有価証券報告書 読み方, 有報 どこを見る
     Angle: 入門〜中級。事業等のリスク、MD&A、セグメント、役員報酬、大株主。決算短信との違い。内部リンク: financial-statements-basics, segment-analysis
