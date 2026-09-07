@@ -129,7 +129,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 入門〜中級。事業等のリスク、MD&A、セグメント、役員報酬、大株主。決算短信との違い。内部リンク: financial-statements-basics, segment-analysis
     Cluster: 決算書・財務分析(入門)
 
-19. slug: segment-analysis | status: pending
+19. slug: segment-analysis | status: done (published 2026-09-07)
     Title案: セグメント情報の読み方|多角化企業の「本当の稼ぎ頭」を見つける
     KW: セグメント情報 読み方, セグメント利益 分析
     Angle: 中級。全社数字に埋もれる事業別の実力、セグメントROICの簡易計算、コングロマリットディスカウント。内部リンク: yuho-reading, roic-management
