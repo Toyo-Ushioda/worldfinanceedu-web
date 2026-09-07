@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>セグメント分析とは|セグメント情報から事業別の稼ぐ力を読む方法 | World Finance Edu</title>
+<meta name="description" content="セグメント分析とは何かを実務目線で解説。セグメント情報の見方、事業別の売上・利益・資本効率の読み方、全社合計では見えない稼ぐ事業と足を引っ張る事業の見分け方、本社費用の配賦や区分変更の注意点まで整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/segment-analysis/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="セグメント分析とは|セグメント情報から事業別の稼ぐ力を読む方法">
+<meta property="og:description" content="全社の合計利益だけを見ても、どの事業が稼ぎ、どこが足を引っ張っているかはわかりません。セグメント情報から事業別の利益と資本効率を読む方法を実務家が解説します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/segment-analysis/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/segment-analysis.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/segment-analysis.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "セグメント分析とは|セグメント情報から事業別の稼ぐ力を読む方法",
+      "description": "セグメント分析とは何かを実務目線で解説。セグメント情報の見方、事業別の売上・利益・資本効率の読み方、本社費用の配賦や区分変更の注意点まで整理します。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/segment-analysis/",
+      "datePublished": "2026-09-07"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "セグメント分析とは",
+          "item": "https://worldfinanceedu.com/articles/segment-analysis/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "セグメント分析とは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "事業別や地域別に分けて開示されるセグメント情報を使い、どの事業が稼ぎ、どこが足を引っ張っているかを読み解く分析です。上場企業は経営者が実際に業績評価に使う区分でセグメント情報を開示するため、全社の合計利益では見えない事業ごとの実態を、外部からでもある程度つかめます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "セグメント情報はどこに載っていますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "有価証券報告書の財務諸表の注記と、決算短信に載ります。売上高だけでなく、セグメント利益、セグメント資産、減価償却費、設備投資額まで事業別に開示されるので、事業ごとの利益率や資本効率をおおまかに計算できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "セグメント分析で最初に気をつけることは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本社費用などの全社共通費が「調整額」としてまとめられている点と、区分変更で時系列がつながらなくなる点です。調整額が大きいと各事業の利益が実力より良く見えることがあり、区分が変わった年は前期との単純比較ができません。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › セグメント分析とは</div>
+<h1>セグメント分析とは|セグメント情報から事業別の稼ぐ力を読む方法</h1>
+<div class="meta">2026年9月7日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>ある会社の決算を見て「全社では増収増益、でも中身はどうなっているのか」が気になったのに、損益計算書(PL)の合計だけでは事業ごとの実態がわからず、そこで止まってしまった経験はないでしょうか。多角化した会社ほど、全社合計は複数の事業の足し算にすぎず、平均の裏に強い事業と弱い事業が隠れています。</p>
+<p>その隠れた中身を開ける入口が、セグメント情報です。この記事では、セグメント分析とは何か、セグメント情報はどこを見れば何が読めるのか、そして事業別の利益率と資本効率をどう読むか、最後に実務で必ずつまずく注意点までを整理します。</p>
+
+<h2>セグメント分析とは何か</h2>
+<p>セグメント分析とは、事業別や地域別に分けて開示される「セグメント情報」を使って、どの事業が稼ぎ、どこが足を引っ張っているかを読み解く作業です。上場企業は、経営者が社内で実際に業績評価に使っている区分でセグメントを開示します。この考え方をマネジメント・アプローチと呼びます。</p>
+<p>ここが重要です。区分は会計基準が機械的に決めるのではなく、経営陣が「自分たちはこの単位で会社を見ている」と示したものです。つまりセグメントの切り方そのものが、経営の関心のありかを表しています。セグメント情報は<a href="/articles/yuho-reading/">有価証券報告書</a>の注記に詳しく載るので、その読み方とあわせて押さえると理解が早まります。</p>
+
+<h2>どこに載っていて、何が読めるか</h2>
+<p>セグメント情報は、有価証券報告書の財務諸表の注記と、決算短信に載ります。売上高だけだと思われがちですが、実際にはもっと多くの項目が事業別に開示されています。</p>
+<table>
+  <tr><th>開示される主な項目</th><th>そこから読めること</th></tr>
+  <tr><td>外部売上高 / セグメント間の内部売上高</td><td>事業の規模と、社内取引への依存度</td></tr>
+  <tr><td>セグメント利益(または損失)</td><td>事業別の利益率と、赤字事業の有無</td></tr>
+  <tr><td>セグメント資産</td><td>その事業がどれだけの資産を使っているか</td></tr>
+  <tr><td>減価償却費 / 設備投資額</td><td>どの事業に会社が投資を振り向けているか</td></tr>
+</table>
+<p>とくにセグメント資産まで開示されている点が効きます。売上と利益に加えて「使っている資産」がわかるので、事業ごとの資本効率をおおまかに計算できます。合計利益だけを見る分析から、一段深いところへ進めるのはこのためです。</p>
+
+<h2>セグメント分析の3つの視点</h2>
+<p>私が事業ポートフォリオを見るとき、順番に確認しているのは次の3つです。</p>
+
+<h3>1. 利益率:事業ごとにどれだけ厚く稼いでいるか</h3>
+<p>まずセグメント利益 ÷ セグメント売上高で、事業別の利益率を出します。全社の利益率が10%でも、中身は「利益率20%の事業」と「利益率2%の事業」の合成かもしれません。平均の内訳を開くと、稼ぎ頭と課題事業が一目でわかります。</p>
+
+<h3>2. 資本効率:その利益を、いくらの資産で生んでいるか</h3>
+<p>利益率が高くても、そのために巨額の資産を寝かせているなら効率が良いとは言えません。そこでセグメント利益 ÷ セグメント資産で、事業別の資本効率をおおまかに見ます。より厳密には税引後の利益と投下資本で計算するROIC(投下資本利益率、Return on Invested Capital)を使いますが、考え方と分解の仕方は<a href="/articles/roic-management/">ROICとROEの違い</a>で整理しています。事業別に資本効率を並べると、経営会議の議論の質が変わります。</p>
+
+<h3>3. 投資配分:会社はどの事業に賭けているか</h3>
+<p>設備投資額を事業別に見ると、経営陣が言葉ではなく資金で示している優先順位が読めます。売上構成比よりも設備投資の構成比が大きい事業は、会社が伸ばそうとしている領域です。逆に、資産を多く抱えているのに投資が細っている事業は、静かに縮小フェーズに入っているサインのことがあります。</p>
+
+<div class="box">
+たとえば全社のセグメント利益率が同じ12%の2つの事業でも、片方はセグメント資産100に対して利益12(資本効率12%)、もう片方は資産300に対して利益12(資本効率4%)なら、経営の打ち手はまったく変わります。前者は資産を増やして伸ばす、後者は資産の圧縮を先に考える。<b>利益率だけでなく、その利益を生むのに使った資産まで見て初めて、事業の良し悪しが判断できます</b>(数値は仕組みを示すための架空例です)。
+</div>
+
+<h2>実務でつまずく4つの注意点</h2>
+<p>セグメント情報は便利ですが、素直に足し引きすると数字を読み違えます。現場で必ず確認しているのが次の4点です。</p>
+<ul>
+  <li><b>調整額(全社共通費)の大きさ:</b>本社の管理費や研究開発費などは、各事業に配賦されず「調整額」としてまとめて控除されることがあります。これが大きいと、各セグメント利益の合計と全社の営業利益が大きくずれ、事業の利益が実力より良く見えます。まず調整額の水準を確認します。</li>
+  <li><b>内部売上高の消去:</b>セグメント間で製品や役務をやり取りしている場合、その内部売上高は全社では消去されます。外部売上高と内部売上高を分けて見ないと、事業の本当の規模を過大評価します。</li>
+  <li><b>区分変更で時系列が切れる:</b>組織再編で報告セグメントの区分が変わった年は、前期と単純比較できません。会社は前期を新区分に組み替えた参考値を出すことが多いので、比較にはそちらを使います。</li>
+  <li><b>資産の配賦基準:</b>共用資産をどの事業に割り当てるかは会社の判断が入ります。事業別の資本効率はあくまで概算と割り切り、桁の違いを見る道具として使います。</li>
+</ul>
+<p>これらは細かく見えますが、見落とすと結論が反対になることがあります。財務諸表そのものの構造に不安がある場合は、先に<a href="/articles/financial-statements-basics/">決算書の読み方</a>を押さえておくと、注記の数字が具体的に見えてきます。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>セグメント分析とは、経営者が業績評価に使う区分で開示されるセグメント情報から、事業別の実態を読む作業。全社合計は強い事業と弱い事業の平均にすぎない。</li>
+  <li>セグメント情報は有価証券報告書の注記と決算短信に載り、売上・利益に加えてセグメント資産や設備投資額まで事業別にわかる。</li>
+  <li>見る順番は、利益率、資本効率(ROIC=投下資本利益率の考え方)、投資配分の3つ。</li>
+  <li>調整額の大きさ、内部売上高の消去、区分変更、資産の配賦基準の4点を確認しないと数字を読み違える。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<h3>Q. セグメント分析とは何ですか?</h3>
+<p>事業別や地域別に分けて開示されるセグメント情報を使い、どの事業が稼ぎ、どこが足を引っ張っているかを読み解く分析です。上場企業は経営者が実際に業績評価に使う区分でセグメント情報を開示するため、全社の合計利益では見えない事業ごとの実態を、外部からでもある程度つかめます。</p>
+<h3>Q. セグメント情報はどこに載っていますか?</h3>
+<p>有価証券報告書の財務諸表の注記と、決算短信に載ります。売上高だけでなく、セグメント利益、セグメント資産、減価償却費、設備投資額まで事業別に開示されるので、事業ごとの利益率や資本効率をおおまかに計算できます。</p>
+<h3>Q. セグメント分析で最初に気をつけることは何ですか?</h3>
+<p>本社費用などの全社共通費が「調整額」としてまとめられている点と、区分変更で時系列がつながらなくなる点です。調整額が大きいと各事業の利益が実力より良く見えることがあり、区分が変わった年は前期との単純比較ができません。</p>
+
+<div class="cta">
+  <h2>数字の読み方を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、セグメント情報を含む決算書の読み方と、事業ごとの稼ぐ力の測り方を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/yuho-reading/">有価証券報告書の読み方|投資家が最初に開く5つのセクション</a></li>
+    <li>› <a href="/articles/roic-management/">ROICとROEの違いに迷う人へ|数字の化粧を見抜く実務の使い分け</a></li>
+    <li>› <a href="/articles/financial-statements-basics/">決算書の読み方|初心者が最初に見るべき3つのポイント(投資家の視点)</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
