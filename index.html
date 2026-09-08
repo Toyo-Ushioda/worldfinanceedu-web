@@ -985,6 +985,64 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
     color: var(--ink-2);
   }
 
+
+  .angel-proof {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 18px;
+    align-items: center;
+    margin-top: 30px;
+    padding: 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .angel-proof:hover { border-color: var(--mint-deep); transform: translateY(-2px); }
+  .angel-proof-thumb {
+    aspect-ratio: 16 / 9;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .angel-proof-thumb::after {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent #fff;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.55));
+  }
+  .angel-proof-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mint-deep);
+  }
+  .angel-proof-title {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-top: 5px;
+  }
+  .angel-proof-go {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-2);
+    margin-top: 8px;
+  }
+
   .disclaimer-card {
     padding: 32px 28px;
     background: var(--paper);
@@ -2237,6 +2295,15 @@ document.addEventListener('click', function (e) {
           </div>
         </li>
       </ul>
+
+      <a class="angel-proof" href="https://www.youtube.com/watch?v=wbOw3GhK3Zc" target="_blank" rel="noopener">
+        <span class="angel-proof-thumb" style="background-image:url('/media/aav_lp_spotlight.jpg')"></span>
+        <span>
+          <span class="angel-proof-label">Video · Accelerating Asia</span>
+          <span class="angel-proof-title">Limited Partner Spotlight: Toyoyuki Ushioda</span>
+          <span class="angel-proof-go">Watch the interview (8 min) ›</span>
+        </span>
+      </a>
     </div>
 
     <div class="disclaimer-card">
