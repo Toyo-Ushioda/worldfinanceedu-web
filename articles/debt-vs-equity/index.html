@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>デットとエクイティの違い|資金調達はどちらを選ぶべきか | World Finance Edu</title>
+<meta name="description" content="デット(借入)とエクイティ(増資)の違いを実務目線で解説。返済義務と議決権、なぜエクイティのほうが資本コストが高いのか、借入が使える会社の条件、最適資本構成の考え方と選択の順番まで整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/debt-vs-equity/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="デットとエクイティの違い|資金調達はどちらを選ぶべきか">
+<meta property="og:description" content="借りるか、出してもらうか。返済義務・議決権・資本コストの違いから、どちらの資金調達を選ぶべきかを実務家が整理します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/debt-vs-equity/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/debt-vs-equity.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/debt-vs-equity.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "デットとエクイティの違い|資金調達はどちらを選ぶべきか",
+      "description": "デット(借入)とエクイティ(増資)の違いを実務目線で解説。返済義務と議決権、資本コストの差、最適資本構成の考え方と選択の順番まで整理します。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/debt-vs-equity/",
+      "datePublished": "2026-09-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "デットとエクイティの違い",
+          "item": "https://worldfinanceedu.com/articles/debt-vs-equity/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "デットとエクイティの違いは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "デット(Debt、借入による調達)は返済期限と利息が決まっている資金で、返せば関係が終わります。エクイティ(Equity、株式発行による調達)は返済義務がない代わりに、株主として議決権と利益の分け前を渡す資金です。返済義務があるかどうかと、経営への発言権を渡すかどうかが、いちばん大きな違いです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜエクイティのほうが資本コストが高いのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "会社が生んだお金は、まず利息と元本の返済に回り、残った分が株主のものになるからです。株主は最後に受け取る立場で、うまくいかなければ何も残りません。そのリスクに見合うだけ高いリターンを求めるため、エクイティの資本コストは借入金利より高くなります。加えて支払利息は損金になり法人税を減らす効果があり、この差はさらに広がります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "借入と増資はどちらを選ぶべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "返済に回せるキャッシュフローが読めるかどうかで決まります。既存事業の設備投資のように回収の見通しが立つ資金は借入が向きます。黒字化前のスタートアップや、成功確率が読めない新規事業は、返済圧力のないエクイティが向きます。金利の高さより、返済スケジュールに耐えられるかを先に確認します。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › デットとエクイティの違い</div>
+<h1>デットとエクイティの違い|資金調達はどちらを選ぶべきか</h1>
+<div class="meta">2026年9月9日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>事業に必要な資金を用意するとき、選択肢は大きく2つしかありません。銀行などから借りるか、株式を発行して出資してもらうか。前者をデット(Debt、借入による調達)、後者をエクイティ(Equity、株式発行による調達)と呼びます。</p>
+<p>「金利を払うのはもったいないから増資で」と考える経営者がいる一方、ファイナンスの世界ではエクイティのほうがはるかに高い資金だと扱われます。この感覚のずれが、資金調達の判断でいちばん最初につまずく点です。この記事では、両者の違い、なぜエクイティのほうが高いのか、どちらを選ぶべきかの判断の順番までを整理します。</p>
+
+<h2>デットとエクイティの違いを一覧で押さえる</h2>
+<p>デット(借入による調達)とエクイティ(株式発行による調達)は、返済義務、経営への発言権、コストの扱いのすべてが違います。まず全体像を並べます。</p>
+<table>
+  <tr><th>項目</th><th>デット(借入・社債)</th><th>エクイティ(増資)</th></tr>
+  <tr><td>返済義務</td><td>あり。期限までに元本と利息を支払う</td><td>なし。返す必要はない</td></tr>
+  <tr><td>資金の出し手</td><td>銀行、社債の投資家</td><td>株主、ベンチャーキャピタル、事業会社</td></tr>
+  <tr><td>経営への関与</td><td>議決権はない。財務制限条項で間接的に縛る</td><td>議決権を持ち、株主総会や取締役会に関わる</td></tr>
+  <tr><td>受け取る順番</td><td>先に受け取る(優先順位が高い)</td><td>最後に受け取る(残ったものだけ)</td></tr>
+  <tr><td>会社側のコスト</td><td>支払利息。損金になり法人税を減らす</td><td>配当と株価上昇への期待。損金にならない</td></tr>
+  <tr><td>失敗したときの重さ</td><td>返済できないと債務不履行になる</td><td>持分が薄まるが、倒産には直結しない</td></tr>
+</table>
+<p>表の中でいちばん重いのは「受け取る順番」です。会社が生んだお金は、まず取引先と従業員、次に貸し手の利息と元本に回り、残った分だけが株主のものになります。この順番が、次に見るコストの差を生みます。</p>
+
+<h2>なぜエクイティのほうが「高い」のか</h2>
+<p>株主は最後に受け取る立場です。会社がうまくいけば株価上昇という上振れを取れますが、傾けば手元に何も残りません。この不確実さを引き受ける以上、株主は貸し手より高いリターンを求めます。これが株主資本コストで、実務では借入金利の数倍になることも珍しくありません。</p>
+<p>さらに、支払利息は損金として法人税を減らします。同じ100を調達しても、デット(借入による調達)には節税効果がつくため、税引後で見た負担はもう一段軽くなります。会社全体の調達コストを、借入と株式の構成比で加重平均したものがWACC(加重平均資本コスト、Weighted Average Cost of Capital)です。<a href="/articles/wacc-practice/">WACCの求め方と実務の相場感</a>で各パラメータの置き方を整理していますが、この記事の文脈では「借入を混ぜるほどWACCは下がる方向に働く」と押さえれば十分です。</p>
+<div class="box">
+ここで注意したいのは、「エクイティは返さなくていいから安い」という直感が逆だという点です。返済義務がないのは、リスクを株主に肩代わりしてもらっているからで、その対価として高いリターンを期待されています。<b>返済スケジュールという目に見える負担がないだけで、コストが消えたわけではありません。</b>
+</div>
+
+<h2>デットが使える会社、使えない会社</h2>
+<p>ではWACC(加重平均資本コスト)が下がるなら借入だけで調達すればよいかというと、そうはなりません。借入には毎期の返済という固定的な支払いが伴い、業績が落ちた年でも待ってくれないからです。</p>
+<p>借入が向くのは、返済に回せる現金が読める会社です。既存事業の設備更新や、稼働率の見通しが立つ案件のように、キャッシュインのタイミングが読める資金使途は借入と相性が良い。判断の入口になるのは<a href="/articles/free-cash-flow/">フリーキャッシュフロー(FCF、Free Cash Flow)</a>の水準と安定性です。</p>
+<p>逆に、黒字化前のスタートアップや、成功確率が読めない新規事業に借入を当てると、事業が立ち上がる前に返済期日が来ます。こうした資金は返済圧力のないエクイティで受けるのが基本です。<a href="/articles/startup-valuation/">スタートアップの企業価値評価</a>で触れたとおり、そもそも売上のない段階では担保も実績もなく、貸し手側が引き受けられません。</p>
+<ul>
+  <li><b>借入が向く:</b>回収の見通しが立つ設備投資、運転資金、担保にできる資産がある、利益とFCF(フリーキャッシュフロー)が安定している</li>
+  <li><b>増資が向く:</b>黒字化前、先行投資が数年続く、失敗の可能性を織り込んだ挑戦、資金以外に株主の知見やネットワークも欲しい</li>
+</ul>
+
+<h2>最適資本構成という考え方</h2>
+<p>借入を増やすとWACC(加重平均資本コスト)は節税効果で下がりますが、財務の余裕がなくなるほど倒産のリスクが意識され、貸し手も株主もより高いリターンを求め始めます。下がる力と上がる力が釣り合うところが、理論上いちばん企業価値が高くなる資本構成で、これを最適資本構成と呼びます。</p>
+<p>実務では、この一点を計算で当てにいくことはしません。同業他社の負債比率、格付けを維持できる水準、金融機関が設定する財務制限条項、そして景気が悪化した年でも返済できるかというストレスシナリオ。この4つを見て、耐えられるレンジを決めます。東証の要請以降に注目が集まっている論点も、突き詰めればこの資本の使い方の問題で、<a href="/articles/cost-of-capital-management/">資本コスト経営</a>の記事で背景を扱っています。</p>
+
+<h2>実務での選び方</h2>
+<p>資金調達の相談を受けたとき、順番に確認するのは次の4点です。金利の高さから入らないのがポイントです。</p>
+<ol>
+  <li><b>資金使途は何か。</b>回収の時期が読める投資か、読めない挑戦か。ここでほぼ答えが決まります。</li>
+  <li><b>返済スケジュールに耐えられるか。</b>業績が計画の7割になった年でも返済できるかを試算します。</li>
+  <li><b>持分をどれだけ渡すことになるか。</b>増資は一度実行すると元に戻せません。今の調達額より、数年後の持分比率で考えます。</li>
+  <li><b>お金以外に何を求めるか。</b>販路や人材の紹介まで欲しいなら、株主として入ってもらう意味があります。</li>
+</ol>
+<p>実際には二択ではなく、借入を軸に一部を増資で補うといった組み合わせになることがほとんどです。大切なのは、どちらが安いかではなく、その資金が返ってこない可能性を誰が引き受けるのかを決めることです。</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>デット(借入による調達)は返済義務があり議決権を渡さない資金、エクイティ(株式発行による調達)は返済義務がない代わりに議決権と利益の分け前を渡す資金。</li>
+  <li>株主は最後に受け取る立場でリスクを引き受けるため、エクイティの資本コストは借入金利より高い。支払利息の節税効果が差をさらに広げる。</li>
+  <li>借入が向くのは回収の見通しが立つ資金使途、増資が向くのは黒字化前や先行投資が続く局面。</li>
+  <li>最適資本構成は計算で一点を当てるものではなく、同業比較、格付け、財務制限条項、ストレス時の返済可能性から耐えられるレンジを決める。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<h3>Q. デットとエクイティの違いは何ですか?</h3>
+<p>デット(Debt、借入による調達)は返済期限と利息が決まっている資金で、返せば関係が終わります。エクイティ(Equity、株式発行による調達)は返済義務がない代わりに、株主として議決権と利益の分け前を渡す資金です。返済義務があるかどうかと、経営への発言権を渡すかどうかが、いちばん大きな違いです。</p>
+<h3>Q. なぜエクイティのほうが資本コストが高いのですか?</h3>
+<p>会社が生んだお金は、まず利息と元本の返済に回り、残った分が株主のものになるからです。株主は最後に受け取る立場で、うまくいかなければ何も残りません。そのリスクに見合うだけ高いリターンを求めるため、エクイティの資本コストは借入金利より高くなります。加えて支払利息は損金になり法人税を減らす効果があり、この差はさらに広がります。</p>
+<h3>Q. 借入と増資はどちらを選ぶべきですか?</h3>
+<p>返済に回せるキャッシュフローが読めるかどうかで決まります。既存事業の設備投資のように回収の見通しが立つ資金は借入が向きます。黒字化前のスタートアップや、成功確率が読めない新規事業は、返済圧力のないエクイティが向きます。金利の高さより、返済スケジュールに耐えられるかを先に確認します。</p>
+
+<div class="cta">
+  <h2>資金調達の判断を、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、資本コストの考え方と企業価値の「測り方」「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/wacc-practice/">WACC(割引率)の求め方と実務の相場感|何%に設定すべきか</a></li>
+    <li>› <a href="/articles/cost-of-capital-management/">資本コスト経営とは|東証のPBR改善要請で何が変わったのか</a></li>
+    <li>› <a href="/articles/startup-valuation/">スタートアップの企業価値評価|売上のない会社に値段がつく理由</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
