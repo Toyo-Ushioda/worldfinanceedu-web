@@ -135,7 +135,7 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 中級。全社数字に埋もれる事業別の実力、セグメントROICの簡易計算、コングロマリットディスカウント。内部リンク: yuho-reading, roic-management
     Cluster: 決算書・財務分析(中級)
 
-20. slug: debt-vs-equity | status: pending
+20. slug: debt-vs-equity | status: done (published 2026-09-09)
     Title案: デットとエクイティの違い|資金調達はどちらを選ぶべきか
     KW: デット エクイティ 違い, 資金調達 種類, 借入 増資 どちら
     Angle: 入門。資本コストの違い(なぜエクイティは「高い」のか)、希薄化、最適資本構成の考え方。内部リンク: wacc-practice, capital-policy
