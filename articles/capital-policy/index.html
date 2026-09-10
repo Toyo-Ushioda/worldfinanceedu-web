@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="wfe-optout">
+/* 自分のアクセスを計測から外す。?ga_off=1 で停止、?ga_on=1 で再開。端末ごとに保存。 */
+(function(){var K='wfe_no_track',s=location.search,t=null;
+try{if(/[?&]ga_off=1/.test(s)){localStorage.setItem(K,'1');t='off';}else if(/[?&]ga_on=1/.test(s)){localStorage.removeItem(K);t='on';}
+window.__wfeNoTrack=localStorage.getItem(K)==='1';}catch(e){window.__wfeNoTrack=false;}
+if(window.__wfeNoTrack){try{console.info('[WFE] この端末では計測しません。戻すには URL に ?ga_on=1');}catch(e){}}
+if(t){document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');
+d.textContent=(t==='off')?'この端末では計測しません(?ga_on=1 で戻す)':'この端末の計測を再開しました';
+d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#0F1526;color:#fff;padding:12px 18px;border-radius:8px;font:14px/1.6 system-ui,-apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.35)';
+document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1SFEF5X3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
+</script>
+<title>資本政策とは|スタートアップの資金調達と持分設計の考え方 | World Finance Edu</title>
+<meta name="description" content="資本政策とは何かを実務目線で解説。スタートアップが資金調達で持分比率と議決権をどう設計するか、資本政策表(キャップテーブル)の読み方、希薄化でよくある失敗、創業者が守るべき3分の2の議決権ラインまで整理します。">
+<link rel="canonical" href="https://worldfinanceedu.com/articles/capital-policy/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="資本政策とは|スタートアップの資金調達と持分設計の考え方">
+<meta property="og:description" content="一度決めたらやり直せない資本政策。スタートアップの持分比率と議決権の設計、資本政策表の読み方、よくある失敗を実務家が整理します。">
+<meta property="og:url" content="https://worldfinanceedu.com/articles/capital-policy/">
+<meta property="og:image" content="https://worldfinanceedu.com/img/og/capital-policy.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worldfinanceedu.com/img/og/capital-policy.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "資本政策とは|スタートアップの資金調達と持分設計の考え方",
+      "description": "資本政策とは何か。スタートアップが資金調達で持分比率と議決権をどう設計するか、資本政策表の読み方、よくある失敗、3分の2の議決権ラインまで実務家が解説。",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "潮田 豊幸",
+        "jobTitle": "World Finance Edu 創業者 / 米国公認会計士",
+        "url": "https://worldfinanceedu.com/media/jp/",
+        "sameAs": [
+          "https://x.com/Toyo25805074",
+          "https://note.com/toyo_ushioda",
+          "https://www.linkedin.com/in/toyoyuki-ushioda/",
+          "https://toyoyukiushioda.substack.com/",
+          "https://www.bizreach.jp/column/career-story-08/",
+          "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/",
+          "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki",
+          "https://www.rickyfoo.com/toyoyukiushioda"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Finance Edu",
+        "url": "https://worldfinanceedu.com/"
+      },
+      "mainEntityOfPage": "https://worldfinanceedu.com/articles/capital-policy/",
+      "datePublished": "2026-09-10"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://worldfinanceedu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI時代に生き残るファイナンス　学習コラム",
+          "item": "https://worldfinanceedu.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "資本政策とは",
+          "item": "https://worldfinanceedu.com/articles/capital-policy/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "資本政策とは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "資本政策とは、会社が成長に必要な資金を、いつ・誰から・いくらで・どんな株式で調達し、その結果として持分比率と議決権をどう配分していくかの全体設計です。いくらで調達するかを決めるバリュエーションより広く、誰に・どの順番で・どの権利とともに株式を渡すかまで含みます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "資本政策表とは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "資本政策表(キャップテーブル)は、誰が何株・何パーセントを持っているかを調達ラウンドごとに並べた一覧表です。現在の持分だけでなく、次のラウンドで希薄化が進んだあとの比率まで試算しておくことで、将来どこで議決権を失うかが事前に見えます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "創業者は何パーセントの株式を持っておくべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一律の正解はありませんが、議決権のラインは意識する価値があります。普通決議には過半数、定款変更やM&Aなどの特別決議には3分の2以上が必要です。資金調達を重ねると持分は必ず下がるため、どのラウンドでどの議決権ラインを割るのかを資本政策表で先に確認しておくことが重要です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;color:#0F1526;background:#EDF0F6;line-height:1.9}
+a{color:#1F43C9}
+.nav{background:#0F1526;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav .brand{font-weight:800;color:#fff;text-decoration:none;font-size:15px}
+.nav .brand span{color:#86A2FF}
+.nav a.hub{font-size:13px;text-decoration:none;color:#C6CFE6;background:rgba(255,255,255,.08);padding:6px 14px;border-radius:999px}
+.nav a.hub:hover{background:rgba(255,255,255,.16)}
+main{max-width:760px;margin:26px auto 46px;padding:38px 34px 44px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(15,21,38,.06)}
+.crumb{font-size:12px;color:#8A90A2;margin-bottom:16px}
+.crumb a{color:#8A90A2;text-decoration:none}
+h1{font-size:28px;line-height:1.5;font-weight:900;margin-bottom:12px}
+.meta{font-size:13px;color:#8A90A2;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid #E8EBF2}
+.abio{font-size:12.5px;color:#4A5060;line-height:1.8;margin:-14px 0 28px;padding:13px 16px;background:#F2F5FA;border-radius:8px}
+.abio b{color:#0F1526}
+.abio a{color:#1F43C9;font-weight:700;white-space:nowrap}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px;color:#101A33}
+h3{font-size:16.5px;font-weight:700;margin:24px 0 8px;color:#1F2C55}
+p{margin:0 0 16px;font-size:15.5px}
+ul,ol{margin:0 0 16px 22px;font-size:15.5px}
+li{margin-bottom:6px}
+li::marker{color:#2E5BFF;font-weight:700}
+.box{background:#EEF3FF;border-radius:12px;padding:18px 20px;margin:0 0 16px;font-size:15px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:0 0 18px;font-size:14.5px;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid #E8EBF2;padding:9px 12px;text-align:left}
+tr:last-child td{border-bottom:none}
+th{background:#101A33;color:#fff;font-weight:700;border-bottom:none}
+td{background:#fff}
+.cta{background:linear-gradient(135deg,#2E5BFF,#1F43C9);color:#fff;border-radius:16px;padding:26px 24px;margin:42px 0;box-shadow:0 10px 24px rgba(46,91,255,.28)}
+.cta h2{margin:0 0 10px;font-size:19px;color:#fff}
+.cta p{font-size:14.5px;color:#DCE5FF}
+.cta a.btn{display:inline-block;background:#fff;color:#1F43C9;font-weight:800;padding:12px 24px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cta .sub{margin-top:12px;font-size:13px}
+.cta .sub a{color:#C6D4FF}
+.author{display:flex;gap:16px;align-items:flex-start;background:#F4F6FB;border-radius:14px;padding:18px 20px;margin:40px 0 0;font-size:13.5px;color:#4A5060}
+.author .aphoto{flex:0 0 64px;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.author .abody{flex:1;min-width:0}
+.author b{color:#0F1526;font-size:14.5px}
+.author .amedia{margin-top:10px;padding-top:10px;border-top:1px solid #E3E6EC;font-size:12.5px;line-height:1.9}
+@media(max-width:480px){.author{flex-direction:column}}
+.rel{margin-top:36px}
+.rel h2{font-size:16.5px;margin-top:0}
+.rel ul{list-style:none;margin:8px 0 0}
+.rel li{margin-bottom:8px;font-size:14.5px}
+.rel li a{font-weight:600}
+footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
+@media(max-width:640px){main{margin:0;border-radius:0;padding:30px 18px 40px}h1{font-size:23px}h2{font-size:19px}}
+</style>
+<script id="wfe-conv-events">
+/* GA4 key event: outbound click to the Udemy course */
+document.addEventListener('click', function (e) {
+  if (window.__wfeNoTrack) return;
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/udemy\.com/.test(a.href)) return;
+  if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
+}, true);
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">World Finance <span>Edu</span></a>
+  <a class="hub" href="/articles/">コラム一覧</a>
+</nav>
+<main>
+<div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › 資本政策とは</div>
+<h1>資本政策とは|スタートアップの資金調達と持分設計の考え方</h1>
+<div class="meta">2026年9月10日 · 潮田 豊幸(World Finance Edu)</div>
+<div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
+
+<p>「資本政策は、一度決めたらやり直しがきかない」。スタートアップの世界でよく言われる言葉です。事業計画は毎月書き直せますが、いちど発行した株式は簡単には買い戻せません。それでも、初めて資金調達に向き合う創業者の多くは、いくらで調達するかは調べても、誰に何パーセント渡すのか、次のラウンドで自分の持分がどこまで減るのかまでは設計しきれないまま、最初の契約に署名してしまいます。</p>
+<p>この記事では、資本政策とは何か、資本政策表(しほんせいさくひょう)で何を見るのか、そしてスタートアップの現場でよく起きる失敗を、投資する側と支援する側の両方から見てきた立場で整理します。</p>
+
+<h2>資本政策とは何か</h2>
+<p>資本政策とは、会社が成長に必要な資金を、いつ・誰から・いくらで・どんな株式で調達し、その結果として持分比率と議決権をどう配分していくかの全体設計を指します。いくらで調達するかだけを決めるバリュエーション(企業価値算定)より範囲が広く、誰に・どの順番で・どの権利とともに株式を渡すかまで含みます。</p>
+<p>資金調達の手段そのものは、大きく借りる(デット)か、出資を受ける(エクイティ)かに分かれます。両者の違いは<a href="/articles/debt-vs-equity/">デットとエクイティの違い</a>で整理しましたが、資本政策が効いてくるのは主にエクイティ側です。株式を出すということは、将来の利益とともに会社の意思決定権の一部も渡すことだからです。</p>
+<div class="box">
+資本政策が難しいのは、後戻りできないからです。増資で発行した株式は創業者の一存で消せませんし、早い段階で渡しすぎた持分は、あとから「返してほしい」と言っても戻りません。だからこそ、数字を埋める前に<b>どの順番で、誰に、どこまで渡すのか</b>を先に設計する必要があります。
+</div>
+
+<h2>資本政策表(キャップテーブル)の読み方</h2>
+<p>資本政策の全体像を一枚で管理する道具が、資本政策表です。英語ではキャピタライゼーション・テーブル、略してキャップテーブルと呼びます。誰が何株・何パーセントを持っているかを、調達ラウンドごとに並べた一覧表です。</p>
+<p>大事なのは、いまの持分だけでなく、<b>次のラウンドで希薄化(新株発行で既存株主の比率が下がること)が進んだあとの姿まで試算しておく</b>ことです。下は、シード、シリーズA、シリーズBと進んだときの典型的な動きです。</p>
+<table>
+  <tr><th>ラウンド</th><th>創業者</th><th>投資家(累計)</th><th>ストックオプション枠</th><th>合計</th></tr>
+  <tr><td>設立時</td><td>100%</td><td>-</td><td>-</td><td>100%</td></tr>
+  <tr><td>シード</td><td>75%</td><td>15%</td><td>10%</td><td>100%</td></tr>
+  <tr><td>シリーズA</td><td>57%</td><td>33%</td><td>10%</td><td>100%</td></tr>
+  <tr><td>シリーズB</td><td>45%</td><td>43%</td><td>12%</td><td>100%</td></tr>
+</table>
+<p>創業者の比率はラウンドごとに必ず下がります。ただし<a href="/articles/startup-valuation/">スタートアップの企業価値評価</a>で書いたとおり、比率が下がることと損をすることは同じではありません。企業価値が十分に伸びていれば、小さくなった比率でも持分の金額はむしろ増えます。資本政策表で本当に見るべきは、比率そのものより、<b>どのラウンドで、どの議決権ラインを割るのか</b>です。</p>
+
+<h2>スタートアップの資本政策でよくある失敗</h2>
+<p>支援先や投資検討の場で繰り返し見てきた、つまずきやすい3つの型です。いずれも、あとから修正が効きにくいという共通点があります。</p>
+<h3>初期に株を渡しすぎる</h3>
+<p>創業間もない時期は、会社の価値が低いぶん、少額の貢献や出資でも大きな比率を渡しがちです。共同創業者、初期のエンジェル投資家、外注先に安易に2割3割を渡すと、成長して会社が価値を持ったあとも、その比率は固定されたまま残ります。渡すなら、役割と期間に応じて権利が確定していく設計(ベスティング)を組み合わせるのが実務の基本です。</p>
+<h3>ストックオプションの枠を用意し忘れる</h3>
+<p>優秀な人材を採用するには、ストックオプション(将来あらかじめ決めた価格で株を買える権利)の枠が要ります。これを後から作ると、既存株主全員が希薄化します。投資家は多くの場合、自分が希薄化しないよう、増資前の段階で一定の枠を確保するよう求めます。つまり枠の負担は実質的に創業者側に寄りやすい。この点を知らないと、資本政策表の創業者比率が想定より大きく削られます。</p>
+<h3>バリュエーションを吊り上げすぎる</h3>
+<p>高い企業価値で調達できれば希薄化は抑えられますが、次のラウンドのハードルも上がります。届かなければ、前回より低い株価での調達(ダウンラウンド)になり、希薄化防止条項が発動して創業者と従業員の持分が想定以上に削られます。価格は条件の一部にすぎず、優先分配や拒否権といった条項とセットで効いてきます。</p>
+
+<h2>見落とされやすい「議決権の壁」</h2>
+<p>資本政策のもう一つの軸が議決権です。持分比率は、単にお金の取り分ではなく、会社の重要事項を決められるかどうかに直結します。会社法上、決議には段階があります。</p>
+<table>
+  <tr><th>議決権の比率</th><th>単独でできること</th></tr>
+  <tr><td>過半数(50%超)</td><td>取締役の選任・解任など、普通決議の可決</td></tr>
+  <tr><td>3分の2以上(約66.7%)</td><td>定款変更、募集株式の発行、合併やM&A(合併・買収)などの特別決議の可決</td></tr>
+  <tr><td>3分の1超</td><td>特別決議を単独で阻止できる(拒否権の目安)</td></tr>
+</table>
+<p>創業者がシリーズBで過半数を割ると、取締役会の構成すら単独では決められなくなります。特別決議に必要な3分の2を意識せずに調達を重ねると、気づいたときには会社の重要な意思決定を外部株主に握られている、という事態も起こります。資本政策表を作る目的の半分は、この壁をどのラウンドで越えるのかを事前に見ておくことにあります。</p>
+<div class="box">
+議決権は、持分比率だけで決まるわけではありません。種類株式(普通株と権利内容が異なる株式)を使えば、経済的な取り分と議決権を分けて設計することもできます。高度な設計ほど後工程に影響するので、契約前に専門家を交えて確認するのが安全です。
+</div>
+
+<h2>まとめ</h2>
+<ul>
+  <li>資本政策とは、いつ・誰から・いくらで・どんな株式で調達し、持分比率と議決権をどう配分するかの全体設計。やり直しがきかない。</li>
+  <li>資本政策表(キャップテーブル)は、次のラウンドの希薄化後まで試算して初めて役に立つ。</li>
+  <li>よくある失敗は、初期に渡しすぎる、ストックオプションの枠を忘れる、バリュエーションを吊り上げすぎるの3つ。</li>
+  <li>見るべきは比率そのものより、過半数と3分の2という議決権の壁をどのラウンドで割るか。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<h3>Q. 資本政策とは何ですか?</h3>
+<p>資本政策とは、会社が成長に必要な資金を、いつ・誰から・いくらで・どんな株式で調達し、その結果として持分比率と議決権をどう配分していくかの全体設計です。いくらで調達するかを決めるバリュエーション(企業価値算定)より広く、誰に・どの順番で・どの権利とともに株式を渡すかまで含みます。</p>
+<h3>Q. 資本政策表とは何ですか?</h3>
+<p>資本政策表(キャップテーブル)は、誰が何株・何パーセントを持っているかを調達ラウンドごとに並べた一覧表です。現在の持分だけでなく、次のラウンドで希薄化が進んだあとの比率まで試算しておくことで、将来どこで議決権を失うかが事前に見えます。</p>
+<h3>Q. 創業者は何パーセントの株式を持っておくべきですか?</h3>
+<p>一律の正解はありませんが、議決権のラインは意識する価値があります。普通決議には過半数、定款変更やM&A(合併・買収)などの特別決議には3分の2以上が必要です。資金調達を重ねると持分は必ず下がるため、どのラウンドでどの議決権ラインを割るのかを、資本政策表で先に確認しておくことが重要です。</p>
+
+<div class="cta">
+  <h2>資本政策とファイナンスを、体系的に学ぶ</h2>
+  <p>GYOSEKI × World Finance Edu 共同制作のオンライン講座「AI時代の、ファイナンス・キャリア再設計」。外資系エクイティアナリストとグローバル企業の経営企画責任者が、企業価値の「測り方」と、資金調達や持分設計につながる「つくり方」を約3〜3.5時間で解説します。</p>
+  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+</div>
+
+<div class="rel">
+  <h2>関連記事</h2>
+  <ul>
+    <li>› <a href="/articles/startup-valuation/">スタートアップの企業価値評価|売上のない会社に値段がつく理由</a></li>
+    <li>› <a href="/articles/debt-vs-equity/">デットとエクイティの違い|資金調達はどちらを選ぶべきか</a></li>
+    <li>› <a href="/articles/dividend-vs-buyback/">配当と自社株買いの違い|株主還元はどちらが「得」なのか</a></li>
+  </ul>
+</div>
+
+<div class="author"><img class="aphoto" src="/links/toyo_profile.jpeg" alt="潮田豊幸"><div class="abody">
+  <b>潮田 豊幸(Toyoyuki Ushioda)</b><br>
+  World Finance Edu 代表(シンガポール)。<br>
+  <span style="display:inline-block;margin-top:6px;"><a href="https://x.com/Toyo25805074" target="_blank" rel="noopener">X(旧Twitter)</a> · <a href="https://note.com/toyo_ushioda" target="_blank" rel="noopener">note</a> · <a href="https://www.linkedin.com/in/toyoyuki-ushioda/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://toyoyukiushioda.substack.com/" target="_blank" rel="noopener">Substack</a></span>
+  <div class="amedia">メディア掲載: <a href="https://www.bizreach.jp/column/career-story-08/" target="_blank" rel="noopener">ビズリーチ</a> · <a href="https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/" target="_blank" rel="noopener">Executives Diary(米国)</a> · <a href="https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki" target="_blank" rel="noopener">Maestro</a> · <a href="https://www.rickyfoo.com/toyoyukiushioda" target="_blank" rel="noopener">書籍『Jobhunting』に掲載</a> · <a href="https://worldfinanceedu.com/media/jp/"><b>登壇・審査員の実績も見る ›</b></a></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 World Finance Edu. All rights reserved. · <a href="/">worldfinanceedu.com</a></footer>
+</body>
+</html>
