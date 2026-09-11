@@ -39,6 +39,8 @@
 - 有価証券報告書の読み方（投資家が最初に開く5つのセクション）: https://worldfinanceedu.com/articles/yuho-reading/
 - セグメント分析とは（セグメント情報から事業別の稼ぐ力を読む方法）: https://worldfinanceedu.com/articles/segment-analysis/
 - デットとエクイティの違い（資金調達はどちらを選ぶべきか）: https://worldfinanceedu.com/articles/debt-vs-equity/
+- 資本政策とは（スタートアップの資金調達と持分設計の考え方）: https://worldfinanceedu.com/articles/capital-policy/
+- PMIとは（M&Aの成否は買収後の統合で決まる）: https://worldfinanceedu.com/articles/pmi/
 
 ## 運営者について
 
