@@ -141,13 +141,13 @@ corporate-valuation / dcf-method / multiples-valuation / financial-statements-ba
     Angle: 入門。資本コストの違い(なぜエクイティは「高い」のか)、希薄化、最適資本構成の考え方。内部リンク: wacc-practice, capital-policy
     Cluster: コーポレートファイナンス実務(入門)
 
-21. slug: capital-policy | status: pending
+21. slug: capital-policy | status: done (published 2026-09-10)
     Title案: 資本政策とは|スタートアップが最初に間違える「不可逆」の意思決定
     KW: 資本政策 スタートアップ, 資本政策 失敗, 持株比率 希薄化
     Angle: 実務。創業時の持分設計、ラウンドごとの希薄化シミュレーション、やり直せない理由。エンジェル投資家として見てきた失敗パターンを一言。内部リンク: startup-valuation, debt-vs-equity
     Cluster: コーポレートファイナンス実務(実務)
 
-22. slug: pmi | status: pending
+22. slug: pmi | status: done (published 2026-09-11)
     Title案: PMIとは|M&Aの成否は買収後の統合で決まる
     KW: PMI とは M&A, PMI 進め方, M&A 失敗 原因
     Angle: 中級。Day1/100日プラン、シナジーの実現責任、人と文化の統合が数字に効く理由。内部リンク: ma-process, goodwill-impairment
