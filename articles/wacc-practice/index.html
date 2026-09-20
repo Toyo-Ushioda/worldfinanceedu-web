@@ -21,12 +21,12 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   gtag('js', new Date());
   if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
-<title>WACCを何%に置くか迷ったら|割引率の求め方と業種別の相場感 | World Finance Edu</title>
-<meta name="description" content="WACC(割引率)を何%に置けばいいのか。CAPMの各パラメータの置き方、負債コストと節税効果、業種別のざっくりした相場感、そしてWACCが1%違うだけで企業価値が数十%動く感覚まで、実務目線で解説します。">
+<title>WACCの目安は何％？割引率の求め方と業種別相場を実務解説 | World Finance Edu</title>
+<meta name="description" content="WACCの目安は何％か。割引率の計算方法、CAPMの各パラメータ、負債コストと節税効果、業種別の相場感を実務目線で解説。WACCが1％変わると企業価値がどれだけ動くかも具体例で示します。">
 <link rel="canonical" href="https://worldfinanceedu.com/articles/wacc-practice/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WACCを何%に置くか迷ったら|割引率の求め方と業種別の相場感">
-<meta property="og:description" content="WACCを何%に置くか迷ったときの決め方と、業種別の相場感を実務家が解説します。">
+<meta property="og:title" content="WACCの目安は何％？割引率の求め方と業種別相場を実務解説">
+<meta property="og:description" content="WACCの目安、割引率の計算方法、業種別相場を実務目線で解説します。">
 <meta property="og:url" content="https://worldfinanceedu.com/articles/wacc-practice/">
 <meta property="og:image" content="https://worldfinanceedu.com/img/og/wacc-practice.jpg">
 <meta property="og:image:width" content="1200">
@@ -39,13 +39,14 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   "@graph": [
     {
       "@type": "Article",
-      "headline": "WACCを何%に置くか迷ったら|割引率の求め方と業種別の相場感",
-      "description": "WACC(割引率)を何%に置けばいいのか。CAPMの各パラメータの置き方、負債コストと節税効果、業種別のざっくりした相場感、そしてWACCが1%違うだけで企業価値が数十%動く感覚まで、実務目線で解説します。",
+"headline": "WACCの目安は何％？割引率の求め方と業種別相場を実務解説",
+"description": "WACCの目安は何％か。割引率の計算方法、CAPMの各パラメータ、負債コストと節税効果、業種別の相場感を実務目線で解説。WACCが1％変わると企業価値がどれだけ動くかも具体例で示します。",
       "inLanguage": "ja",
       "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
       "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/wacc-practice/",
-      "datePublished": "2026-08-05"
+"datePublished": "2026-08-05",
+"dateModified": "2026-09-20"
     },
     {
       "@type": "BreadcrumbList",
@@ -162,8 +163,8 @@ document.addEventListener('click', function (e) {
 </nav>
 <main>
 <div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › WACCの求め方</div>
-<h1>WACCを何%に置くか迷ったら</h1>
-<div class="meta">2026年8月5日 · 潮田 豊幸(World Finance Edu)</div>
+<h1>WACCの目安は何％？割引率の求め方と業種別相場を実務解説</h1>
+<div class="meta">2026年8月5日公開 · 2026年9月20日更新 · 潮田 豊幸(World Finance Edu)</div>
 <div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
 
 <p>WACC(Weighted Average Cost of Capital、加重平均資本コスト)は、企業価値評価で使う割引率です。教科書には計算式が載っていますが、実務でつまずくのはそこではありません。「で、結局何%を入れればいいのか」という一点です。</p>
