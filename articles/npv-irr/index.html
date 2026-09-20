@@ -21,12 +21,12 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   gtag('js', new Date());
   if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
-<title>NPVとIRRの違いと使い分け|結論が割れたときどちらを取るか | World Finance Edu</title>
-<meta name="description" content="NPVとIRRで結論が割れたとき、実務ではどちらを取るのか。NPV(正味現在価値)とIRR(内部収益率)の違いを計算式と具体例で整理し、ハードルレートと資本コストの関係、IRRの落とし穴、使い分けの判断基準までを実務家がまとめます。">
+<title>NPVとIRRの違いとは？金額と収益率の使い分けを実務解説 | World Finance Edu</title>
+<meta name="description" content="NPVとIRRの違いを実務目線で解説。NPVの単位は金額、IRRの単位は％です。計算方法、具体例、ハードルレートとの関係、結論が割れたときの判断基準、IRRの落とし穴まで整理します。">
 <link rel="canonical" href="https://worldfinanceedu.com/articles/npv-irr/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NPVとIRRの違いと使い分け|結論が割れたときどちらを取るか">
-<meta property="og:description" content="NPVとIRRで結論が割れたら、実務ではどちらを取るのか。判断基準を実務家が整理します。">
+<meta property="og:title" content="NPVとIRRの違いとは？金額と収益率の使い分けを実務解説">
+<meta property="og:description" content="NPVは金額、IRRは％。違い、計算方法、結論が割れたときの判断基準を実務目線で解説します。">
 <meta property="og:url" content="https://worldfinanceedu.com/articles/npv-irr/">
 <meta property="og:image" content="https://worldfinanceedu.com/img/og/npv-irr.jpg">
 <meta property="og:image:width" content="1200">
@@ -39,13 +39,14 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   "@graph": [
     {
       "@type": "Article",
-      "headline": "NPVとIRRの違いと使い分け|結論が割れたときどちらを取るか",
-      "description": "NPVとIRRで結論が割れたとき、実務ではどちらを取るのか。NPV(正味現在価値)とIRR(内部収益率)の違いを計算式と具体例で整理し、ハードルレートと資本コストの関係、IRRの落とし穴、使い分けの判断基準までを実務家がまとめます。",
+"headline": "NPVとIRRの違いとは？金額と収益率の使い分けを実務解説",
+"description": "NPVとIRRの違いを実務目線で解説。NPVの単位は金額、IRRの単位は％です。計算方法、具体例、ハードルレートとの関係、結論が割れたときの判断基準、IRRの落とし穴まで整理します。",
       "inLanguage": "ja",
       "author": { "@type": "Person", "name": "潮田 豊幸", "jobTitle": "World Finance Edu 創業者 / 米国公認会計士", "url": "https://worldfinanceedu.com/media/jp/", "sameAs": ["https://x.com/Toyo25805074", "https://note.com/toyo_ushioda", "https://www.linkedin.com/in/toyoyuki-ushioda/", "https://toyoyukiushioda.substack.com/", "https://www.bizreach.jp/column/career-story-08/", "https://executivesdiary.com/2026/08/01/toyoyuki-toyo-ushioda/", "https://www.letsmaestro.com/maestro-articles/meet-the-maestro-toyoyuki", "https://www.rickyfoo.com/toyoyukiushioda"] },
       "publisher": { "@type": "Organization", "name": "World Finance Edu", "url": "https://worldfinanceedu.com/" },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/npv-irr/",
-      "datePublished": "2026-08-01"
+"datePublished": "2026-08-01",
+"dateModified": "2026-09-20"
     },
     {
       "@type": "BreadcrumbList",
@@ -162,8 +163,8 @@ document.addEventListener('click', function (e) {
 </nav>
 <main>
 <div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › NPVとIRRの違い</div>
-<h1>NPVとIRRの違いと使い分け</h1>
-<div class="meta">2026年8月1日 · 潮田 豊幸(World Finance Edu)</div>
+<h1>NPVとIRRの違いとは？金額と収益率の使い分けを実務解説</h1>
+<div class="meta">2026年8月1日公開 · 2026年9月20日更新 · 潮田 豊幸(World Finance Edu)</div>
 <div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
 
 <p>設備投資、新規事業、M&A(Mergers and Acquisitions、企業の合併・買収)。会社が大きなお金を使うとき、その判断を数字で支える指標が2つあります。NPV(Net Present Value、正味現在価値)とIRR(Internal Rate of Return、内部収益率)です。</p>
