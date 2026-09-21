@@ -21,12 +21,12 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   gtag('js', new Date());
   if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
-<title>DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例 | World Finance Edu</title>
-<meta name="description" content="DCF法(ディスカウンテッド・キャッシュフロー法)とは、将来のキャッシュフローを現在価値に割り引いて企業価値を計算する方法です。計算式、割引率(WACC)、ターミナルバリュー、具体例まで、初心者にもわかりやすく解説します。">
+<title>DCF法とは｜企業価値の計算式を具体例でわかりやすく解説 | World Finance Edu</title>
+<meta name="description" content="DCF法で企業価値を計算する手順を具体例で解説。FCF、WACC、ターミナルバリューの意味、株式価値への変換、前提によって評価額が動く理由まで実務視点で整理します。">
 <link rel="canonical" href="https://worldfinanceedu.com/articles/dcf-method/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例">
-<meta property="og:description" content="DCF法の考え方、計算式、割引率(WACC)、ターミナルバリューまで。実務家がわかりやすく解説します。">
+<meta property="og:title" content="DCF法とは｜企業価値の計算式を具体例でわかりやすく解説">
+<meta property="og:description" content="DCF法で企業価値を計算する手順を具体例で解説。FCF、WACC、ターミナルバリュー、株式価値への変換まで実務視点で整理します。">
 <meta property="og:url" content="https://worldfinanceedu.com/articles/dcf-method/">
 <meta property="og:image" content="https://worldfinanceedu.com/img/og/dcf-method.jpg">
 <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   "@graph": [
     {
       "@type": "Article",
-      "headline": "DCF法とは?初心者にもわかりやすく解説|計算式・割引率・具体例",
-      "description": "DCF法(割引キャッシュフロー法)の考え方、計算式、割引率(WACC)、ターミナルバリューを初心者向けに解説。",
+      "headline": "DCF法とは｜企業価値の計算式を具体例でわかりやすく解説",
+      "description": "DCF法で企業価値を計算する手順を具体例で解説。FCF、WACC、ターミナルバリュー、株式価値への変換まで実務視点で整理します。",
       "inLanguage": "ja",
       "author": {
         "@type": "Person",
@@ -64,7 +64,8 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
         "url": "https://worldfinanceedu.com/"
       },
       "mainEntityOfPage": "https://worldfinanceedu.com/articles/dcf-method/",
-      "datePublished": "2026-07-31"
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-22"
     },
     {
       "@type": "BreadcrumbList",
@@ -190,12 +191,13 @@ document.addEventListener('click', function (e) {
 </nav>
 <main>
 <div class="crumb"><a href="/">ホーム</a> › <a href="/articles/">AI時代に生き残るファイナンス　学習コラム</a> › DCF法とは</div>
-<h1>DCF法とは?初心者にもわかりやすく解説</h1>
+<h1>DCF法とは｜企業価値の計算式と具体例</h1>
 <div class="meta">2026年7月31日 · 潮田 豊幸(World Finance Edu)</div>
 <div class="abio">著者:<b>潮田 豊幸</b>。運用資産 US$125B の不動産プライベートエクイティでグローバル経営企画責任者を務めた実務家。現在はシンガポールでフラクショナルCFO、エンジェル投資、そして Mentogram School of Finance の Program Director 兼 Founding Partner としてコーポレートファイナンス教育を手がけています。米国公認会計士(USCPA)、INSEAD Global Executive MBA。 <a href="/media/jp/">経歴・登壇・審査員の実績 ›</a></div>
 
 <p>DCF法(Discounted Cash Flow法、割引キャッシュフロー法)とは、企業や資産が将来生み出すキャッシュフローを現在の価値に割り引いて、その価値を計算する方法です。M&A(企業の合併・買収)の価格算定、株式投資、不動産評価、社内の投資判断まで、ファイナンスの実務で最も広く使われる企業価値評価の手法です。</p>
 <p>この記事では、DCF法の考え方、計算式、割引率の意味、そして前提の変更が算定結果に与える影響を、初心者にも分かりやすく解説します。</p>
+<div class="box"><b>先に結論。</b>DCF法は、将来のフリーキャッシュフローをWACCで現在価値に割り引き、企業価値を計算する方法です。実務ではFCFの予測、WACC、ターミナルバリューの3つが評価額を大きく左右します。</div>
 
 <h2>DCF法の基本的な考え方</h2>
 <p>DCF法の出発点は、「今日の100万円は、1年後の100万円より価値が高い」という考え方です。今日の100万円は運用すれば増やせるからです。これを「お金の時間的価値」と呼びます。</p>
@@ -224,6 +226,7 @@ document.addEventListener('click', function (e) {
 <p>永続成長率は、長期的な経済成長率やインフレ率を参考に、通常0〜2%程度の保守的な数字を置きます。</p>
 <h3>ステップ4:すべてを現在価値に割り引いて合計する</h3>
 <p>各年のFCFとターミナルバリューを割引率で現在価値に直し、合計したものが事業価値(エンタープライズバリュー)です。そこから純有利子負債を引くと、株式価値が出ます。</p>
+<div class="box"><b>DCF法を一つの企業事例で学ぶ。</b>計算式だけでなく、投資家と経営者が前提をどう置き、数字をどう判断するかを<a href="/gyoseki/">講座内容で確認できます</a>。</div>
 
 <h2>DCF法の注意点:算定結果は前提によって大きく変わる</h2>
 <p>DCF法は理論的に最も妥当な方法とされる一方、実務では、前提によって算定結果が大きく変わる点に注意が必要です。特に影響が大きいのは次の2つです。</p>
