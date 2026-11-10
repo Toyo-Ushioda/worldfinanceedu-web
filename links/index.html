@@ -95,6 +95,12 @@ footer a{color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -124,8 +130,8 @@ document.addEventListener('click', function (e) {
   <div class="inner">
     <span class="badge">Udemyで公開中</span>
     <div class="t"><a href="https://worldfinanceedu.com/gyoseki/" style="color:inherit;text-decoration:none;">企業価値評価を二つの視点で</a></div>
-    <div class="d">GYOSEKI × WFE 共同制作。CFOの経営戦略と株式アナリストの投資判断を学ぶUdemy講座。</div>
-    <div class="btnrow"><a class="go" href="https://worldfinanceedu.com/gyoseki/">講座の詳細 ›</a><a class="go ghost" href="https://worldfinanceedu.com/articles/">無料:学習コラムを読む ›</a></div>
+    <div class="d">CFOと株式アナリストの立場から、同じ会社を分析するUdemy講座。財務モデルとExcel演習10問付き。</div>
+    <div class="btnrow"><a class="go" href="https://worldfinanceedu.com/gyoseki/">Udemy講座の内容・教材を見る ›</a><a class="go ghost" href="https://worldfinanceedu.com/articles/">無料:学習コラムを読む ›</a></div>
   </div>
 </div>
 

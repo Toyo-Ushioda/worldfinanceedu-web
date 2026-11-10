@@ -1741,6 +1741,12 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -1967,7 +1973,7 @@ document.addEventListener('click', function (e) {
       across NUS, NTU and international MBA platforms — bringing corporate finance into
       founder education and academic curricula.
       Newest: two Japanese-language online programs, a
-      <a href="/gyoseki/" style="color:inherit; text-decoration:underline;">corporate valuation course</a>
+      <a href="/gyoseki/" style="color:inherit; text-decoration:underline;">Udemy course on corporate valuation from a CFO and an equity analyst’s perspective</a>
       created jointly with Gyoseki, and a
       <a href="https://english.worldfinanceedu.com/" style="color:inherit; text-decoration:underline;">business-English pronunciation and impression course</a>
       live on Udemy.

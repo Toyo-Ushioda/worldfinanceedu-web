@@ -150,6 +150,12 @@ footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -268,8 +274,8 @@ EV/EBITDA = 企業価値(EV) ÷ EBITDA(償却前営業利益)
 
 <div class="cta">
   <h2>マルチプルを、投資家の判断で使う</h2>
-  <p>GYOSEKI × World Finance Eduのオンライン講座では、PER・PBR・EV/EBITDAで会社の値段を測り、業績予想、同業他社のKPI、開示資料と合わせて、割安か割高かを判断します。</p>
-  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+  <p>EPS・PER・PBRをExcelで計算し、業績予想や同業比較とあわせて市場の評価を考えます。 GYOSEKI × World Finance EduのUdemy講座「企業価値評価を二つの視点で」。財務モデルとExcel演習10問付きです。</p>
+  <a class="btn" href="/gyoseki/">Udemy講座の内容・教材を見る</a>
 </div>
 
 <div class="rel">

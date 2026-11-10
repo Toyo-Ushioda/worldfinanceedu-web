@@ -76,6 +76,12 @@ footer a{color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -182,6 +188,11 @@ document.addEventListener('click', function (e) {
     <img src="/img/sutd.jpg" alt="Guest lecture on communication at SUTD, Singapore" style="object-position:center 40%">
     <figcaption>Guest lecture at the Singapore University of Technology and Design on effective communication, using the startup pitch structure as the worked example: each section answers the question the audience naturally asks next.</figcaption>
   </figure>
+</div>
+
+<div class="cta">
+  <p>Learn how a CFO and an equity analyst evaluate the same company. This Japanese-language Udemy course includes a financial model and 10 Excel exercises.</p>
+  <a class="btn" href="/gyoseki/">Explore the Udemy course (in Japanese)</a>
 </div>
 
 <div class="cta">

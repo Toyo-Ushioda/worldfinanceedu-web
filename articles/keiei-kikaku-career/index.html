@@ -178,6 +178,12 @@ footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -269,8 +275,8 @@ document.addEventListener('click', function (e) {
 
 <div class="cta">
   <h2>経営企画の判断を、企業ケースで体験する</h2>
-  <p>GYOSEKI × World Finance Eduのオンライン講座では、架空企業の投資判断、財務モデル、主要KPI、ROE改善、資本政策に取り組みます。経営側の提案を投資家がどう評価するかまで、一つの流れで学べます。</p>
-  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+  <p>財務モデルとKPIを使って経営改善を提案し、その提案を投資家がどう評価するかまで追います。 GYOSEKI × World Finance EduのUdemy講座「企業価値評価を二つの視点で」。財務モデルとExcel演習10問付きです。</p>
+  <a class="btn" href="/gyoseki/">Udemy講座の内容・教材を見る</a>
 </div>
 
 <div class="rel">

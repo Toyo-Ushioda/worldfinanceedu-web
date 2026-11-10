@@ -77,6 +77,12 @@ footer a{color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -183,6 +189,11 @@ document.addEventListener('click', function (e) {
     <img src="/img/sutd.jpg" alt="SUTDでの英語によるコミュニケーション講義" style="object-position:center 40%">
     <figcaption>シンガポール工科デザイン大学(SUTD)のゲスト講義。「伝わるコミュニケーション」をテーマに英語で講義しました。スタートアップのピッチ構成を題材に、聞き手が次に知りたいことの順に話を組み立てる方法を解説しています。</figcaption>
   </figure>
+</div>
+
+<div class="cta">
+  <p>日本語Udemy講座「企業価値評価を二つの視点で」では、同じ会社をCFOと株式アナリストの立場から分析します。財務モデルとExcel演習10問付きです。</p>
+  <a class="btn" href="/gyoseki/">Udemy講座の内容・教材を見る</a>
 </div>
 
 <div class="cta">

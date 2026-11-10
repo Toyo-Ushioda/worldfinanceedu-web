@@ -151,6 +151,12 @@ footer{padding:22px 20px;text-align:center;font-size:12.5px;color:#8A90A2}
 document.addEventListener('click', function (e) {
   if (window.__wfeNoTrack) return;
   var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (a && typeof gtag === 'function') {
+    var target = new URL(a.href);
+    if ((target.hostname === 'worldfinanceedu.com' || target.hostname === 'www.worldfinanceedu.com') && target.pathname === '/gyoseki/') {
+      gtag('event', 'course_lp_click', { source_path: location.pathname, link_url: target.href });
+    }
+  }
   if (!a || !/udemy\.com/.test(a.href)) return;
   if (typeof gtag === 'function') gtag('event', 'udemy_click', { link_url: a.href, source_path: location.pathname });
 }, true);
@@ -294,8 +300,8 @@ ROIC = 売上高NOPATマージン(NOPAT ÷ 売上高) × 投下資本回転率(�
 
 <div class="cta">
   <h2>資本効率を、企業ケースで考える</h2>
-  <p>GYOSEKI × World Finance Eduのオンライン講座では、架空の不動産会社をケースに、ROEが低い原因を分析し、アセットライト化、余剰資金、自社株買いなどの改善策を考えます。ROICを直接解説する講座ではありませんが、資本効率を経営判断につなげる視点を学べます。</p>
-  <a class="btn" href="/gyoseki/">講座の詳細を見る</a>
+  <p>事業を保有するモデルから運用するモデルへ。事業転換が資本効率やROEに与える影響を試算します。 GYOSEKI × World Finance EduのUdemy講座「企業価値評価を二つの視点で」。財務モデルとExcel演習10問付きです。</p>
+  <a class="btn" href="/gyoseki/">Udemy講座の内容・教材を見る</a>
 </div>
 
 <div class="rel">
