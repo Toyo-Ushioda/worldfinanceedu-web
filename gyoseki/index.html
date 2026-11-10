@@ -23,10 +23,10 @@ document.body.appendChild(d);setTimeout(function(){d.remove();},6000);});}})();
   if (!window.__wfeNoTrack && !/^(localhost|0\.0\.0\.0|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$|\.local$/.test(location.hostname)) gtag('config', 'G-N1SFEF5X3H');
 </script>
 <title>企業価値評価を二つの視点で｜CFOの経営戦略 × 株式アナリストの投資判断 | GYOSEKI × World Finance Edu</title>
-<meta name="description" content="同じ企業を、経営と投資の二つの視点から分析する約6時間のUdemy講座。CFOの経営戦略と株式アナリストの投資判断を、財務モデルと事業転換のケースで学びます。">
+<meta name="description" content="Udemyで公開中。CFOの経営戦略と株式アナリストの投資判断を、架空の上場不動産会社の事業転換から学ぶ約6時間の講座。財務モデルとExcel演習10問付き。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="企業価値評価を二つの視点で｜CFOの経営戦略 × 株式アナリストの投資判断">
-<meta property="og:description" content="同じ企業を、経営と投資の二つの視点から分析する約6時間のUdemy講座。CFOの経営戦略と株式アナリストの投資判断を、財務モデルと事業転換のケースで学びます。">
+<meta property="og:description" content="Udemyで公開中。CFOの経営戦略と株式アナリストの投資判断を、架空の上場不動産会社の事業転換から学ぶ約6時間の講座。財務モデルとExcel演習10問付き。">
 <meta property="og:site_name" content="GYOSEKI × World Finance Edu">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
@@ -456,74 +456,6 @@ footer .fb .x { color: var(--accent-lt); padding: 0 5px; }
   .ladder, .concept, .dialogue, .curr, .inst, .gains { padding: 72px 0; }
 }
 
-/* ═══════ waitlist modal ═══════ */
-.wl-overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(9,13,26,0.72); backdrop-filter: blur(4px);
-  display: flex; align-items: center; justify-content: center;
-  padding: 24px; opacity: 0; visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-.wl-overlay.open { opacity: 1; visibility: visible; }
-.wl-card {
-  background: var(--white); border-radius: 14px;
-  width: 100%; max-width: 460px; position: relative;
-  padding: 46px 44px 38px;
-  box-shadow: 0 30px 80px rgba(9,13,26,0.5);
-  transform: translateY(16px) scale(0.98); transition: transform 0.28s ease;
-  max-height: 92vh; overflow-y: auto;
-}
-.wl-overlay.open .wl-card { transform: none; }
-.wl-close {
-  position: absolute; top: 16px; right: 18px;
-  background: none; border: none; cursor: pointer;
-  font-size: 26px; line-height: 1; color: var(--grey-soft);
-  width: 34px; height: 34px; border-radius: 6px; transition: background 0.15s, color 0.15s;
-}
-.wl-close:hover { background: #EDEFF4; color: var(--ink); }
-.wl-kicker {
-  font-family: 'Inter', sans-serif;
-  font-size: 10.5px; letter-spacing: 2.5px; font-weight: 700; color: var(--accent);
-  margin-bottom: 12px;
-}
-.wl-title { font-size: 22px; font-weight: 900; line-height: 1.6; letter-spacing: 0.01em; color: var(--ink); }
-.wl-lead { margin-top: 12px; font-size: 13.5px; line-height: 1.9; color: var(--grey); }
-.wl-label {
-  display: block; margin-top: 22px; margin-bottom: 8px;
-  font-size: 12.5px; font-weight: 700; color: var(--ink);
-}
-.wl-label span { font-size: 10.5px; font-weight: 700; margin-left: 8px; padding: 2px 8px; border-radius: 3px; }
-.wl-label span { background: #E1E9FF; color: var(--accent-dk); }
-.wl-label:has(+ #wlName) span, .wl-label[for="wlName"] span { background: #EDEFF4; color: var(--grey-soft); }
-.wl-input {
-  width: 100%; font-size: 15px; font-family: inherit;
-  padding: 13px 15px; border: 1px solid var(--line); border-radius: 7px;
-  color: var(--ink); background: var(--bg); transition: border-color 0.15s, box-shadow 0.15s;
-}
-.wl-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,91,255,0.12); background: var(--white); }
-.wl-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-.wl-err { margin-top: 14px; font-size: 12.5px; color: #C0392B; min-height: 0; }
-.wl-err:empty { margin-top: 0; }
-.wl-submit {
-  width: 100%; margin-top: 24px; cursor: pointer;
-  background: var(--accent); color: var(--white); border: none;
-  font-size: 15px; font-weight: 700; letter-spacing: 0.5px; font-family: inherit;
-  padding: 15px 20px; border-radius: 7px;
-  box-shadow: 0 8px 24px rgba(46,91,255,0.3); transition: background 0.2s, transform 0.15s;
-}
-.wl-submit:hover { background: var(--accent-dk); transform: translateY(-1px); }
-.wl-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
-.wl-fine { margin-top: 16px; font-size: 11.5px; line-height: 1.7; color: var(--grey-soft); text-align: center; }
-.wl-done { text-align: center; padding: 8px 0; }
-.wl-check {
-  width: 58px; height: 58px; margin: 0 auto 20px;
-  border-radius: 50%; background: #E0F0E8; color: var(--inv-green);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 30px; font-weight: 800;
-}
-.wl-done .wl-lead { max-width: 340px; margin-left: auto; margin-right: auto; }
-.wl-done .wl-submit { max-width: 200px; margin-left: auto; margin-right: auto; }
-@media (max-width: 480px) { .wl-card { padding: 40px 26px 30px; } }
 /* Course photography */
 .case-photo-note { color: #c2cbe1; margin-top: 28px; font-size: 13px; }
 .case-gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(245px,1fr)); gap: 20px; margin-top: 12px; }
@@ -552,7 +484,7 @@ document.addEventListener('click', function (e) {
     {
       "@type": "Course",
       "name": "企業価値評価を二つの視点で｜CFOの経営戦略 × 株式アナリストの投資判断",
-      "description": "同じ企業を、経営と投資の二つの視点から分析する約6時間のUdemy講座。CFOの経営戦略と株式アナリストの投資判断を、財務モデルと事業転換のケースで学びます。",
+      "description": "Udemyで公開中。CFOの経営戦略と株式アナリストの投資判断を、架空の上場不動産会社の事業転換から学ぶ約6時間の講座。財務モデルとExcel演習10問付き。",
       "url": "https://worldfinanceedu.com/gyoseki/",
       "inLanguage": "ja",
       "provider": [
@@ -612,7 +544,7 @@ document.addEventListener('click', function (e) {
           "name": "どのように受講しますか。",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Udemyで配信予定のオンデマンド動画講座です。全6セクションで、動画は約6時間です。"
+            "text": "Udemyで受講するオンデマンド動画講座です。全6セクション、動画は約6時間で、財務モデルとExcel演習10問が付いています。"
           }
         },
         {
@@ -620,7 +552,7 @@ document.addEventListener('click', function (e) {
           "name": "いつから受講できますか。",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "配信開始が決まり次第、先行案内にご登録いただいた方へメールでお知らせします。"
+            "text": "Udemyで公開中です。講座ページからお申し込みいただくと、すぐにご自身のペースで受講できます。"
           }
         }
       ]
@@ -634,7 +566,7 @@ document.addEventListener('click', function (e) {
 <header>
   <div class="header-inner">
     <div class="brand">GYOSEKI<span class="x">×</span>World Finance Edu</div>
-    <a class="header-cta" href="#cta" data-waitlist>先行案内を受け取る</a>
+    <a class="header-cta" href="https://www.udemy.com/course/cfo-equityana/?referralCode=49EE759CE2CFB72C5921">Udemyで講座を見る</a>
   </div>
 </header>
 
@@ -650,14 +582,14 @@ document.addEventListener('click', function (e) {
       株式アナリストは事業の実力、計画の実現性、株価を見極めます。
     </p>
     <div class="hero-cta-row rv">
-      <a class="btn-main" href="#cta" data-waitlist>開講の先行案内を受け取る</a>
-      <span class="cta-note">メールアドレスのみで登録完了。<br>開講が決まり次第、最初にご案内します。</span>
+      <a class="btn-main" href="https://www.udemy.com/course/cfo-equityana/?referralCode=49EE759CE2CFB72C5921">Udemyで講座を見る</a>
+      <span class="cta-note">Udemyで公開中。<br>カリキュラムと受講料は講座ページでご確認ください。</span>
     </div>
   </div>
   <div class="hero-meta rv">
     <div><b>約6時間</b>のオンデマンド講座</div>
     <div><b>全6セクション</b>で一社のケースを分析</div>
-    <div><b>Udemy</b>で配信予定</div>
+    <div><b>Udemyで公開中</b>財務モデルとExcel演習10問付き</div>
   </div>
 </section>
 
@@ -846,8 +778,8 @@ document.addEventListener('click', function (e) {
       <details><summary>事業会社の財務や経営企画を目指す人にも役立ちますか。</summary><p class="a">CFOの視点では、事業転換、資金調達、株主還元といった選択肢を財務モデルで検討します。株式アナリストの視点も学ぶことで、事業計画を立てる際に、投資家がどの前提やリスクに注目するかも考えられます。</p></details>
       <details><summary>不動産業界の知識は必要ですか。</summary><p class="a">ケースの分析に使う不動産の収益指標（NOI・キャップレート）や、不動産ファンドの仕組みは講座内で取り上げます。</p></details>
       <details><summary>講座では生成AIをどう使いますか。</summary><p class="a">生成AIに財務モデルの作成を指示し、計算結果を検証する流れを取り上げます。ケースの経営判断や投資判断では、モデルの数字とその前提をどう読むかを考えます。</p></details>
-      <details><summary>どのように受講しますか。</summary><p class="a">Udemyで配信予定のオンデマンド動画講座です。全6セクションで、動画は約6時間です。</p></details>
-      <details><summary>いつから受講できますか。</summary><p class="a">配信開始が決まり次第、先行案内にご登録いただいた方へメールでお知らせします。</p></details>
+      <details><summary>どのように受講しますか。</summary><p class="a">Udemyで受講するオンデマンド動画講座です。全6セクション、動画は約6時間で、財務モデルとExcel演習10問が付いています。</p></details>
+      <details><summary>いつから受講できますか。</summary><p class="a">Udemyで公開中です。講座ページからお申し込みいただくと、すぐにご自身のペースで受講できます。</p></details>
     </div>
   </div>
 </section>
@@ -856,10 +788,10 @@ document.addEventListener('click', function (e) {
 <section class="final" id="cta">
   <div class="container">
     <h2 class="rv">企業価値評価を、<br>一社のケースから学ぶ</h2>
-    <p class="rv">Udemyでの開講情報をメールでお届けします。</p>
+    <p class="rv">財務モデルとExcel演習を使い、CFOと株式アナリストが同じ企業をどう分析するかを学べます。</p>
     <div class="rv">
-      <a class="btn-main" href="#cta" data-waitlist>開講の先行案内を受け取る</a>
-      <span class="cta-note">登録無料 / メールアドレスのみ / 配信はいつでも解除できます</span>
+      <a class="btn-main" href="https://www.udemy.com/course/cfo-equityana/?referralCode=49EE759CE2CFB72C5921">Udemyで講座を見る</a>
+      <span class="cta-note">カリキュラム・受講料・お申し込みはUdemyへ</span>
     </div>
   </div>
 </section>
@@ -889,105 +821,5 @@ document.addEventListener('click', function (e) {
 })();
 </script>
 
-<!-- ═══════════════ WAITLIST MODAL ═══════════════ -->
-<div class="wl-overlay" id="wlOverlay" aria-hidden="true">
-  <div class="wl-card" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
-    <button class="wl-close" id="wlClose" type="button" aria-label="閉じる">×</button>
-    <div id="wlForm">
-      <div class="wl-kicker">GYOSEKI × WORLD FINANCE EDU</div>
-      <h3 class="wl-title" id="wlTitle">開講の先行案内を受け取る</h3>
-      <p class="wl-lead">このコースは現在制作中です。開講が決まり次第、ご登録いただいた方へ最初にメールでご案内します。登録は無料で、配信はいつでも解除できます。</p>
-      <label class="wl-label" for="wlEmail">メールアドレス <span>必須</span></label>
-      <input class="wl-input" id="wlEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
-      <label class="wl-label" for="wlName">お名前 <span>任意</span></label>
-      <input class="wl-input" id="wlName" type="text" autocomplete="name" placeholder="山田 太郎">
-      <input class="wl-hp" id="wlCompany" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <p class="wl-err" id="wlErr"></p>
-      <button class="wl-submit" id="wlSubmit" type="button">先行案内リストに登録する</button>
-      <p class="wl-fine">ご登録は開講のご案内のみに利用し、第三者に提供することはありません。</p>
-    </div>
-    <div id="wlDone" class="wl-done" hidden>
-      <div class="wl-check">✓</div>
-      <h3 class="wl-title">ご登録ありがとうございます</h3>
-      <p class="wl-lead">開講が決まり次第、ご案内メールをお送りします。楽しみにお待ちください。</p>
-      <button class="wl-submit" id="wlDoneClose" type="button">閉じる</button>
-    </div>
-  </div>
-</div>
-
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const app = initializeApp({
-  apiKey: "AIzaSyCYrNQfL4CzRyaKJMdSx-S0xDoDfFrVrGQ",
-  authDomain: "wfe-to-do-list.web.app",
-  projectId: "wfe-to-do-list",
-  storageBucket: "wfe-to-do-list.firebasestorage.app",
-  messagingSenderId: "614510292339",
-  appId: "1:614510292339:web:63c51c7110819b16646906"
-});
-const db = getFirestore(app);
-
-const overlay  = document.getElementById('wlOverlay');
-const formView = document.getElementById('wlForm');
-const doneView = document.getElementById('wlDone');
-const emailEl  = document.getElementById('wlEmail');
-const nameEl   = document.getElementById('wlName');
-const hpEl     = document.getElementById('wlCompany');
-const errEl    = document.getElementById('wlErr');
-const submitBtn = document.getElementById('wlSubmit');
-const emailRe  = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-
-function openModal(e){
-  if (e) e.preventDefault();
-  formView.hidden = false; doneView.hidden = true;
-  errEl.textContent = '';
-  submitBtn.disabled = false; submitBtn.textContent = '先行案内リストに登録する';
-  overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
-  document.body.style.overflow = 'hidden';
-  setTimeout(function(){ emailEl.focus(); }, 90);
-}
-function closeModal(){
-  overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('[data-waitlist]').forEach(function(el){ el.addEventListener('click', openModal); });
-document.getElementById('wlClose').addEventListener('click', closeModal);
-document.getElementById('wlDoneClose').addEventListener('click', closeModal);
-overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
-document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
-emailEl.addEventListener('keydown', function(e){ if (e.key === 'Enter') { e.preventDefault(); submitBtn.click(); } });
-
-submitBtn.addEventListener('click', async function(){
-  errEl.textContent = '';
-  if (hpEl.value) { closeModal(); return; }            // honeypot: silently drop bots
-  const email = emailEl.value.trim();
-  const name  = nameEl.value.trim();
-  if (!emailRe.test(email) || email.length >= 200) {
-    errEl.textContent = '正しいメールアドレスをご入力ください。';
-    emailEl.focus(); return;
-  }
-  submitBtn.disabled = true; submitBtn.textContent = '送信中...';
-  try {
-    await addDoc(collection(db, 'gyoseki_waitlist'), {
-      email: email, name: name, source: 'landing_page', createdAt: serverTimestamp()
-    });
-    // Confirmation email (fire and forget — signup is already saved even if this fails)
-    fetch('https://wfe-po-system.up.railway.app/gyoseki-waitlist', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, name: name }),
-      keepalive: true
-    }).catch(function(){});
-    if (typeof gtag === 'function') gtag('event', 'waitlist_signup', { source: 'gyoseki_lp' });
-    formView.hidden = true; doneView.hidden = false;
-  } catch (err) {
-    errEl.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
-    submitBtn.disabled = false; submitBtn.textContent = '先行案内リストに登録する';
-  }
-});
-</script>
 </body>
 </html>
